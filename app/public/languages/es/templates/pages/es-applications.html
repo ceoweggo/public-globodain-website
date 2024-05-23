@@ -1,0 +1,228 @@
+{% extends 'bases/es-base.html' %}
+
+{% set title = lang_data.page.page_title %}
+{% set meta_description = lang_data.page.page_metadescription %}
+{% set meta_keywords = lang_data.page.page_keywords %}
+
+{% block navbar_sticky_function %}{% endblock%}
+
+{% block content %}
+<main class="page-wrapper"> 
+    <section id="applications-hero" class="bg-dark">
+        <div class="container fade">
+            <div class="row align-items-center pb-1">
+            </div>
+        </div>
+
+        <div class="position-relative py-lg-4 py-xl-5">
+            
+            <style>
+                .applications-img {
+                    background: url("{{url_for('static',filename='img/backgrounds/landing/globodain-landing-2-50.jpg')}}") no-repeat center center;
+                }
+            </style>
+
+            <div class="position-absolute top-0 start-0 w-100 h-100">
+            <div id="image-1" class="jarallax position-absolute top-0 start-0 w-100 h-100 swiper-tab active" data-jarallax data-speed="0.4">
+                <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-35"></span>
+                <div class="jarallax-img applications-img"></div>
+            </div>
+            </div>
+
+            <div class="container position-relative zindex-5 py-5">
+                <div class="row py-2 py-md-3">
+                    <div class="col-xl-6 col-lg-8 col-md-9">
+                        <div class="card bg-white shadow-sm p-1">
+                            <div class="card-body">
+                                <h1 class="pb-3 mb-3 border-bottom text-gradient-primary">{{lang_data.page.hero.title}}</h1>
+                                <span class="fs-6 pb-2 pb-lg-3 mb-3">{{lang_data.page.hero.subtitle}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="navigation">
+        <style>
+            .gtc-sidebar-ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                position: -webkit-sticky; /* Safari */
+                position: sticky;
+                top: 0;
+            }
+            
+            .gtc-sidebar-li {
+                float: left;
+            }
+            
+            .gtc-sidebar-li a {
+                display: block;
+                text-align: center;
+                text-decoration: none;
+            }
+
+            .gtc-sidebar{
+                background-color: #0b0f19;
+            }
+
+            .gtc-sidebar a{
+                font-size: 14px;
+                color: white;
+                padding: 14px 16px;
+            }
+
+            .gtc-sidebar a:hover {
+                color: #f2f2f2;
+                background-color: #000;
+            }
+
+        </style>
+                
+                <ul class="gtc-sidebar gtc-sidebar-ul">
+                    <div class="container">
+                        <li class="gtc-sidebar-li">
+                            <a href="#AI">Artificial Intelligence</a>
+                        </li>
+                        <li class="gtc-sidebar-li">
+                            <a href="#BD">Big Data</a>
+                        </li>
+                        <li class="gtc-sidebar-li">
+                            <a href="#BC">Blockchain</a>
+                        </li>
+                        <li class="gtc-sidebar-li">
+                            <a href="#ML">Machine Learning</a>
+                        </li>
+                        <li class="gtc-sidebar-li">
+                            <a href="#DL">Deep Learning</a>
+                        </li>
+                        <li class="gtc-sidebar-li">
+                            <a href="#VR">Visual Recognition</a>
+                        </li>
+                    </div>
+                </ul>
+                       
+                <div id="AI" class="container mt-5">
+                    <div class="row align-items-center pb-5 mb-2 mb-md-3 mb-lg-4 mb-xl-5">
+                        <div class="col-md-6 col-lg-6">
+                            <div class="ps-md-4 ps-lg-0 col-10">
+                                <div class="text-primary fs-xl fw-bold pb-1 mb-2">{{lang_data.page.content.services.0.title}}</div>
+                                <h2 class="mb-lg-4">{{lang_data.page.content.services.0.subtitle}}</h2>
+                                <p class="mb-0 fs-6">{{lang_data.page.content.services.0.description|safe}}</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pb-2 pb-md-0 mb-4 mb-md-0">
+                            <div class="rounded-3">
+                                <div class="bg-gradient-primary top-0 start-0 w-100 h-100"></div>
+                                <img src="{{url_for('static',filename='img/applications/{}'.format(lang_data.page.content.services.0.img))}}" class="d-block " width="600" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="BD" class="container mt-2">
+                    <div class="row align-items-center pb-5 mb-2 mb-md-3 mb-lg-4 mb-xl-5">
+                        <div class="col-md-6 pb-2 pb-md-0 mb-4 mb-md-0">
+                            <div class="rounded-3">
+                                <div class="bg-gradient-primary top-0 w-100 h-100"></div>
+                                <img src="{{url_for('static',filename='img/applications/{}'.format(lang_data.page.content.services.1.img))}}" class="d-block " width="600" alt="Image">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-5 offset-lg-1">
+                            <div class="text-primary fw-bold pb-1 mb-2">{{lang_data.page.content.services.1.title}}</div>
+                            <h2 class="mb-lg-4">{{lang_data.page.content.services.1.subtitle}}</h2>
+                            <p class="mb-0 fs-6">{{lang_data.page.content.services.1.description|safe}}</p>
+                        </div>
+                    </div>
+
+                    {% if lang_data.page.content.services.1.subapplications %}
+                    <div id="BD-columns" class="fs-xl">
+                        <div class="col-12 row">
+                            {% for item in lang_data.page.content.services.1.subapplications %}
+                            <div class="col-md-4">
+                                <h3 class="h4 mb-lg-4">{{item.title}}</h3>
+                                <p class="fs-6">{{item.description|safe}}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+
+                </div>
+
+                <div id="BC" class="container mt-4">
+                    <div class="row align-items-center pb-5 mb-2 mb-md-3 mb-lg-4 mb-xl-5">
+                        <div class="col-md-6 col-lg-6">
+                            <div class="ps-md-4 ps-lg-0 col-10">
+                                <div class="text-primary fs-xl fw-bold pb-1 mb-2">{{lang_data.page.content.services.2.title}}</div>
+                                <h2 class="mb-lg-4">{{lang_data.page.content.services.2.subtitle}}</h2>
+                                <p class="fs-6">{{lang_data.page.content.services.2.description|safe}}</p>                            
+                            </div>
+                        </div>
+                        <div class="col-md-6 pb-2 pb-md-0 mb-4 mb-md-0">
+                            <div class="rounded-3">
+                                <div class="bg-gradient-primary top-0 start-0 w-100 h-100"></div>
+                                <img src="{{url_for('static',filename='img/applications/{}'.format(lang_data.page.content.services.2.img))}}" class="d-block " width="600" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ML" class="container mt-4">
+                    <div class="row align-items-center pb-5 mb-2 mb-md-3 mb-lg-4 mb-xl-5">
+                        <div class="col-md-6 pb-2 pb-md-0 mb-4 mb-md-0">
+                            <div class="rounded-3">
+                                <div class="bg-gradient-primary top-0 w-100 h-100"></div>
+                                <img src="{{url_for('static',filename='img/applications/{}'.format(lang_data.page.content.services.3.img))}}" class="d-block " width="600" alt="Image">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-5 offset-lg-1">
+                            <div class="text-primary fw-bold pb-1 mb-2">{{lang_data.page.content.services.3.title}}</div>
+                            <h2 class="mb-lg-4">{{lang_data.page.content.services.3.subtitle}}</h2>
+                            <p class="fs-6">{{lang_data.page.content.services.3.description|safe}}</p>                        
+                            </div>
+                    </div>
+                </div>
+
+                <div id="DL" class="container mt-4">
+                    <div class="row align-items-center pb-5 mb-2 mb-md-3 mb-lg-4 mb-xl-5">
+                        <div class="col-md-6 col-lg-6">
+                            <div class="ps-md-4 ps-lg-0 col-10">
+                                <div class="text-primary fs-xl fw-bold pb-1 mb-2">{{lang_data.page.content.services.4.title}}</div>
+                                <h2 class="mb-lg-4">{{lang_data.page.content.services.4.subtitle}}</h2>
+                                <p class="fs-6">{{lang_data.page.content.services.4.description|safe}}</p>                            
+                            </div>
+                        </div>
+                        <div class="col-md-6 pb-2 pb-md-0 mb-4 mb-md-0">
+                            <div class="rounded-3">
+                                <div class="bg-gradient-primary top-0 start-0 w-100 h-100"></div>
+                                <img src="{{url_for('static',filename='img/applications/{}'.format(lang_data.page.content.services.4.img))}}" class="d-block " width="600" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="VR" class="container mt-4">
+                    <div class="row align-items-center pb-5 mb-2">
+                        <div class="col-md-6 pb-2 pb-md-0 mb-4 mb-md-0">
+                            <div class="rounded-3">
+                                <div class="bg-gradient-primary top-0 w-100 h-100"></div>
+                                <img src="{{url_for('static',filename='img/applications/{}'.format(lang_data.page.content.services.5.img))}}" class="d-block " width="600" alt="Image">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-5 offset-lg-1">
+                            <div class="text-primary fw-bold pb-1 mb-2">{{lang_data.page.content.services.5.title}}</div>
+                            <h2 class="mb-lg-4">{{lang_data.page.content.services.5.subtitle}}</h2>
+                            <p class="fs-6">{{lang_data.page.content.services.5.description|safe}}</p>                    
+                        </div>
+                    </div>
+                </div>
+    </section>
+</main>
+{% endblock %}
+
+

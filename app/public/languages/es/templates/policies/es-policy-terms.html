@@ -1,0 +1,27 @@
+{% extends 'bases/es-base.html' %}
+
+{% set title = lang_data.page.page_title %}
+{% set meta_description = lang_data.page.page_metadescription %}
+{% set meta_keywords = lang_data.page.page_keywords %}
+
+{% block content %}
+<main class="page-wrapper">
+  <section class="position-relative pt-lg-5 pb-5">
+    <div class="container position-relative zindex-2 pt-5">
+      <div class="text-center mx-md-auto">
+        <h1>{{lang_data.page.content.title}}</h1>
+        <p class="mr-2">{{lang_data.page.content.date.title}}</p><p>{{lang_data.page.content.date.text}}</p>
+      </div>
+    </div>
+  </section>
+  <!-- Terms Content Section -->
+  <div class="container">
+    <div class="row pb-6">
+      {{lang_data.page.content.body|safe}}
+
+      <!-- Sticky Block End Point -->
+      <div id="stickyBlockEndPoint"></div>
+    </div>
+  </div>
+</div>
+{% endblock %}

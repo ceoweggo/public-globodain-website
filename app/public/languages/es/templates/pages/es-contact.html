@@ -1,0 +1,172 @@
+{% extends 'bases/es-es-base.html' %}
+
+{% block content %}
+<main class="page-wrapper">
+    <section class="dark-mode position-relative pt-5" style="background-color: #151922;">
+
+      <!-- Content -->
+      <div class="container position-relative zindex-2 pt-5 pb-2 pb-md-0">
+
+        {% block breadcrumb %}
+        <nav class="pt-lg-4" aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <i class="bx bx-home-alt fs-lg me-1"></i>
+            {%- for breadcrumb in breadcrumbs -%}
+            <li class="breadcrumb-item">
+              <a href="{{ breadcrumb.url }}">{{ breadcrumb.text }}</a>
+            </li>
+            {%- endfor -%}
+          </ol>
+        </nav>
+        {% endblock %}
+        
+        <div class="row justify-content-center pt-3 mt-3">
+          <div class="col-xl-6 col-lg-7 col-md-8 col-sm-10 text-center">
+            <h1 class="mb-4">Póngase en contacto con nosotros</h1>
+            <p class="fs-lg pb-3 mb-3">¿Tiene un proyecto en mente? Para solicitar un presupuesto, póngase en contacto con nosotros directamente o rellene el formulario y díganos cómo podemos ayudarle.</p>
+            <div class="d-flex justify-content-center">
+              <a href="https://linkedin.com/company/globodain" class="btn btn-icon btn-secondary btn-linkedin rounded-circle mx-2">
+                <i class="bx bxl-linkedin"></i>
+              </a>
+              <a href="#" class="btn btn-icon btn-secondary btn-twitter rounded-circle mx-2">
+                <i class="bx bxl-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom shape -->
+      <div class="d-flex position-absolute top-100 start-0 w-100 overflow-hidden mt-n5" style="color: #151922;">
+        <div class="position-relative start-50 translate-middle-x flex-shrink-0 mt-n5 mt-md-n3 mt-lg-n1" style="width: 3788px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="3788" height="144" viewBox="0 0 3788 144"><path fill="currentColor" d="M0,0h3788.7c-525,90.2-1181.7,143.9-1894.3,143.9S525,90.2,0,0z"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-5 my-md-2 my-lg-4 my-xl-5">
+      <div class="row justify-content-center pt-5 pb-1 pb-sm-2 pb-md-3">
+        <div class="col-xxl-8 col-xl-9 col-lg-10 pt-sm-2 pt-md-5">
+          <div class="d-sm-flex">
+            <div class="d-flex flex-column w-sm-50 border-0 bg-transparent text-center px-sm-1 px-md-5 pb-3 pb-sm-0 mb-4 mb-sm-0">
+              <div class="card-body p-0">
+                <div class="d-inline-block bg-secondary text-primary rounded-circle fs-3 lh-1 p-3 mb-3">
+                  <i class="bx bx-envelope"></i>
+                </div>
+                <p class="pb-2 pb-sm-3 mb-3">No dude en ponerse en contacto con nosotros. Le responderemos lo antes posible</p>
+              </div>
+              <div class="card-footer border-0 p-0">
+                <a href="mailto:admin@globodain.com" class="btn btn-lg btn-primary">Enviar email</a>
+              </div>
+            </div>
+            <div class="vr text-border d-none d-sm-inline-block m-4"></div>
+            <div class="card w-sm-50 border-0 bg-transparent text-center px-sm-1 px-md-5">
+              <div class="card-body p-0">
+                <div class="d-inline-block bg-secondary text-primary rounded-circle fs-3 lh-1 p-3 mb-3">
+                  <i class="bx bx-phone-call"></i>
+                </div>
+                <p class="pb-2 pb-sm-3 mb-3">Si necesita asistencia inmediata no dude en llamarnos en cualquier momento</p>
+              </div>
+              <div class="card-footer border-0 p-0">
+                <a href="tel:+34611746455" class="btn btn-lg btn-primary">Llámenos</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="bg-secondary rounded-3 py-5 px-3 px-sm-4 px-md-0">
+        <h2 class="text-center pt-md-1 pt-lg-3 pt-xl-4 pb-4 mt-xl-1 mb-2">Preguntas frecuentes</h2>
+        <div class="row justify-content-center pb-lg-4 pb-xl-5">
+          <div class="col-xl-8 col-lg-9 col-md-10 pb-md-2">
+            <div class="accordion" id="faq">
+
+              <!-- Item -->
+              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                <h3 class="accordion-header">
+                  <button class="accordion-button shadow-none rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#q-1" aria-expanded="true" aria-controls="q-1">¿Qué servicios ofrecéis?</button>
+                </h3>
+                <div class="accordion-collapse collapse show" id="q-1" data-bs-parent="#faq">
+                  <div class="accordion-body fs-sm pt-0">
+                    <p>Globodain ofrece soluciones tecnológicas enfocado al negocio en cuestión. Aplica tecnologías para el análisis de datos, automatización de procesos, desarrollo de plataformas con implementación de APIs, etcétera.</p>
+                    <p>Los servicios son implementados según el análisis previo de necesidad de la empresa y el estudio del proyecto. En algunos proyectos se requiere aplicar diversas tecnologías de manera simultánea.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                <h3 class="accordion-header">
+                  <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q-2" aria-expanded="false" aria-controls="q-2">¿Por qué contratar los servicios de Globodain?</button>
+                </h3>
+                <div class="accordion-collapse collapse" id="q-2" data-bs-parent="#faq">
+                  <div class="accordion-body fs-sm pt-0">
+                    <p>Globodain se implementa, principalmente, en pequeñas empresas y proyectos que no tienen capacidad de desarrollar la tecnología necesaria. Se tiene un continuo seguimiento del proyecto desde cerca, completamente integrado en él.</p>
+                    <p>La ventaja de Globodain es que desarrolla la tecnología e implementa sus servicios dentro del proyecto a un coste asociado a los beneficios de la empresa, dando flexibilidad de pago a los proyectos.</p>
+                    <p>Globodain también desarrolla tecnología propia. Lamentablemente, aún no podemos compartir esta información por motivos de ética empresarial. </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                <h3 class="accordion-header">
+                  <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q-3" aria-expanded="false" aria-controls="q-3">Quiero analizar mi proyecto. ¿Qué hago?</button>
+                </h3>
+                <div class="accordion-collapse collapse" id="q-3" data-bs-parent="#faq">
+                  <div class="accordion-body fs-sm pt-0">
+                    <p>Lo primero es tener claro lo que se quiere. Nosotros desarrollamos la tecnología, pero tenemos que adentrarnos en la mente y captar la idea de la mejor manera posible.</p>
+                    <p>Si tienes claro lo que vais a desarrollar, tienes los recursos mínimos o quieres hacernos una propuesta y eres capaz de explicarnos tu proyecto; Entonces sí, estás en el momento ideal de contactarnos a través del <a href="{{url_for('public_es_es.request_services')}}" class="text-body">formulario de contacto</a> o de los canales que dispones en la parte superior.</p>
+                    <p>Estaremos encantados de leer/escuchar tu proyecto y poder analizarlo en mayor profundidad.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                <h3 class="accordion-header">
+                  <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q-4" aria-expanded="false" aria-controls="q-4">¿Qué tecnologías aplicáis?</button>
+                </h3>
+                <div class="accordion-collapse collapse" id="q-4" data-bs-parent="#faq">
+                  <div class="accordion-body fs-sm pt-0">
+                    <p>Globodain aplica las siguientes tecnologías:</p>
+                    <ul>
+                      <li>Desarrollo front-end: Lenguajes tradicionales (HTML, CSS, Javascript)</li>
+                      <li>Desarrollo back-end: Python, Java </li>
+                      <li>Preprocesadores: Sass, Typescript</li>
+                      <li>Frameworks: Flask, Django, React, Angular ..</li>
+                      <li>Bases de datos relacionales y no relacionales: MySQL, PostgreSQL, MongoDB ..</li>
+                      <li>Servidores: Linux/Windows</li>
+                      <li>Otros servicios:
+                        <ol>Despliegue de servidores en Linux/Windows: AWS ElasticBeanStalk, AWS EC2, Heroku</ol>
+                        <ol>Dominios: AWS Route 53</ol>
+                        <ol>Storage: AWS S3</ol>
+                        <ol>Control de escalabilidad: Docker</ol>
+                        <ol>APIs: Redsys, Stripe, Twilio, Sendgrid</ol>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                <h3 class="accordion-header">
+                  <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q-5" aria-expanded="false" aria-controls="q-5">Quiero cuanto antes mi proyecto. ¿Cuántos tardaréis?</button>
+                </h3>
+                <div class="accordion-collapse collapse" id="q-5" data-bs-parent="#faq">
+                  <div class="accordion-body fs-sm pt-0">
+                    <p>Desarrollamos los proyectos en función de una lista de prioridad. Todo depende de la magnitud del proyecto a desarrollar, las tecnologías a desarrollar o implementar y la complejidad de las mismas.</p>
+                    <p>Requerir terminar un proyecto en menor tiempo del ofrecido en el proyecto aumentará el precio; Integraremos mayor cantidad de empleados en tu proyecto para avanzar lo más rápido posible.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+{% endblock %}
