@@ -1,0 +1,267 @@
+{% extends 'bases/es-education-base.html' %}
+
+{% set title = lang_data.page.page_title %}
+{% set meta_description = lang_data.page.page_metadescription %}
+{% set meta_keywords = lang_data.page.page_keywords %}
+
+{% block page_css %}
+<link rel="stylesheet" media="screen" href="{{url_for('static',filename='vendor/lightgallery/css/lightgallery-bundle.min.css')}}"/>
+<link rel="stylesheet" href="{{url_for('static',filename='vendor/img-comparison-slider/dist/styles.css')}}"/>
+
+<style>
+  section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #hero::after {
+      content: "";
+      background-repeat: no-repeat;
+      opacity: 1;
+      background-color: rgba(1, 20, 56, 0.5); /* Oscurece la imagen */
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;   
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<main class="page-wrapper">
+  <section class="mt-2 pt-5 mb-0 pb-0">    
+    <div class="bg-primary py-3" style="border: none; border-radius: 0; min-width: 100%;">
+      <div class="container">
+        <span class='fw-bold text-light'>{{lang_data.page.message.text}} <a href='{{url_for("public_{}.education_programs_mobility_erasmus".format(session["lang"].replace("-","_")))}}' class="text-light" data-bs-toggle="tooltip" data-bs-title="{{lang_data.page.message.link.tooltip}}">{{lang_data.page.message.link.text}}</a></span> 
+      </div>
+    </div>
+  </section>
+
+  <section id="breadcrumb" class="">
+    {% block breadcrumb %}
+    <nav class="container" aria-label="breadcrumb">
+    <ol class="breadcrumb mb-0">
+        
+        {%- for breadcrumb in breadcrumbs -%}
+            {% if breadcrumb.text != "Globodain" %}
+
+            {% if loop.last %}
+            <li class="breadcrumb-item">
+                <a href="{{ breadcrumb.url }}" class="text-primary">{{ breadcrumb.text }}</a>
+            </li>              
+            {% else %}  
+            <li class="breadcrumb-item">
+                <a href="{{ breadcrumb.url }}">{{ breadcrumb.text }}</a>
+            </li>
+            {% endif %}
+            {% endif %}
+        {%- endfor -%}
+    </ol>
+    </nav>
+    {% endblock %}
+  </section>
+  
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  <section id="messages" class="container">
+    {% for category, message in messages %}
+    <div class="fw-bold alert alert-{{ category }}" role="alert">
+      {{ message }}
+      </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+  {% endwith %}  
+
+  <section id="hero" class="jarallax dark-mode position-relative d-flex align-items-center pt-5" style="background-image: url(https://europe-weggo-bucket.s3.eu-west-3.amazonaws.com/globodain.com/static/for-students-hero.jpg); background-position: top;" data-jarallax data-img-position="0% 100%" data-speed="0.5">
+    <div class="container position-relative zindex-5 py-5">
+      <div class="row justify-content-md-start">
+          <div class="col-md-8 col-sm-8 order-md-1 order-2 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
+              <div class="mb-md-5 pb-xl-5 mb-4">
+                <h1 class="display-6">{{lang_data.page.hero.title}}</h1>
+                <p class="text-white mb-0 mb-md-5 mb-3 pb-3 py-2 lead">{{lang_data.page.hero.subtitle}}</p>
+              </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="what" class="container py-lg-5 mt-5">
+    <h2 class="h1 mb-4 text-center">{{lang_data.page.what.title}}</h2>
+    <p class="mb-4 pb-5 fs-lg text-center">{{lang_data.page.what.text}}</p>
+
+    <div class="row pt-5">
+      {% for item in lang_data.page.what.cols %}
+      <div class="col-lg-4 px-2 mb-4">
+          <div class="text-center mb-4">
+              <h3 class="mb-2 pb-1">{{item.title}}</h3>
+              <p class="mx-auto fs-6" style="max-width: 336px;">{{item.text}}</p>
+          </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="program" class="container mt-5 mb-5">
+    <div class="row p-5 mt-5 mb-5 mb-md-2 mb-lg-4 mb-xl-5">
+      <div class="col-lg-6">
+        <h2 class="display-4 mb-0 text-primary">{{lang_data.page.program.title}}</h2>
+      </div>
+      <div class="col-lg-6 col-xl-5 offset-xl-1 pt-3 pb-3 pt-sm-4 pt-lg-3">
+        <p class="fs-xl pb-4 mb-1 mb-md-2 mb-xl-3">{{lang_data.page.program.text|safe}}</p>
+        <a href='{{url_for("public_{}.education_programs_mobility".format(session["lang"].replace("-","_")))}}' class="btn btn-lg btn-primary shadow-primary">{{lang_data.page.program.button}} <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="container pt-4 pt-lg-0 pb-4 pb-lg-5 mb-lg-5">
+    <h2 class="h1 text-center pt-4 pb-3 pb-md-0 mb-md-5">{{lang_data.page.how.title}}</h2>
+    <div class="steps">
+      {% for item in lang_data.page.how.steps %}
+      <div class="step pt-0 pt-md-3 pb-5">
+        <div class="step-number">
+          <div class="step-number-inner">{{item.step}}</div>
+        </div>
+        <div class="step-body d-flex align-items-center ps-xl-5">
+          <div class="rellax ps-md-4 ps-xl-5" data-rellax-percentage="0.5" data-rellax-speed="0.4" data-disable-parallax-down="lg">
+            <h3 class="h4">{{item.title}}</h3>
+            <p class="mb-0 fs-6">Ofrecemos realizar una colaboración para que estudiantes como tú podáis realizar programas de estudio o prácticas en el extranjero a través de Globodain Education</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="call_action" class="bg-secondary pb-lg-5">
+    <div class="container pt-2 pt-md-3 pt-lg-5 pb-5">
+      <h2 class="h1 text-center pb-2 mb-4 mb-lg-5">{{lang_data.page.call_action.title}}</h2>
+      <div class="row pb-3">
+        <div class="col-xl-7 col-md-6">
+          <div class="d-flex flex-column w-100 h-100 rounded-3 bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(https://europe-weggo-bucket.s3.eu-west-3.amazonaws.com/globodain.com/static/for-students-section-1.jpg);"></div>
+        </div>
+        <div class="col-xl-5 col-md-6">
+          <div class="card border-0 p-lg-4">
+            <div class="card-body">
+              <h3 class="pb-3 pb-lg-4">{{lang_data.page.call_action.subtitle|safe}}</h3>
+              <form action="" class="needs-validation row row-cols-sm-auto g-3 align-items-center" novalidate method="post">
+                <div class="col-12">
+                  <input class="form-control" id="inline-form-input" name="email" type="email" placeholder="{{lang_data.page.call_action.button.placeholder}}" required>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">{{lang_data.page.call_action.button.text}}</button>
+                </div>            
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="container mb-5 pt-lg-2 pt-xl-5 mt-xl-5 pb-2 pb-md-3 pb-lg-5">
+    <h2 class="h1 mb-4 text-center">{{lang_data.page.gallery.title}}</h2>
+    <p class="mb-4 mx-auto pb-3 fs-lg text-center" style="max-width: 636px;"></p>
+    <!-- Gallery inside carousel -->
+    <div class="position-relative px-md-5">
+      <button type="button" id="prev" class="btn btn-prev btn-icon btn-sm position-absolute top-50 translate-middle-y start-0 d-none d-md-inline-flex mt-n4" aria-label="Previous">
+        <i class="bx bx-chevron-left"></i>
+      </button>
+      <button type="button" id="next" class="btn btn-next btn-icon btn-sm position-absolute top-50 translate-middle-y end-0 d-none d-md-inline-flex mt-n4" aria-label="Next">
+        <i class="bx bx-chevron-right"></i>
+      </button>
+      <div class="swiper pt-1" data-swiper-options='{
+        "slidesPerView": 1,
+        "spaceBetween": 20,
+        "loop": true,
+        "pagination": {
+          "el": ".swiper-pagination",
+          "clickable": true
+        },
+        "navigation": {
+          "prevEl": "#prev",
+          "nextEl": "#next"
+        },
+        "breakpoints": {
+          "500": {
+            "slidesPerView": 2,
+            "spaceBetween": 16
+          },
+          "700": {
+            "slidesPerView": 2,
+            "spaceBetween": 24
+          },
+          "1000": {
+            "slidesPerView": 3,
+            "spaceBetween": 24
+          }
+        }
+      }'>
+        <div class="swiper-wrapper gallery" data-video="true">
+
+          {% for image in gallery %}
+          <!-- Item -->
+          <div class="swiper-slide">
+            <a href="https://europe-weggo-bucket.s3.eu-west-3.amazonaws.com/{{image}}" class="gallery-item rounded-3" data-sub-html='<h6 class="fs-sm text-light">{{lang_data.page.gallery.text}}</h6>'>
+              <img src="https://europe-weggo-bucket.s3.eu-west-3.amazonaws.com/{{image}}" alt="Gallery thumbnail">
+              <div class="gallery-item-caption fs-sm fw-medium">{{lang_data.page.gallery.text}}</div>
+            </a>    
+          </div>
+          {% endfor %}
+
+        </div>
+        <div class="swiper-pagination position-relative pt-3 pt-sm-4 mt-4"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="end" class="container pb-5 mb-md-2 mb-lg-4 mb-xl-5 ">
+    <div class="row p-5 mt-4">
+      <div class="col-sm-6 bg-primary">
+        <h2 class="display-3 text-light p-4">{{lang_data.page.end.title}}</h2>
+      </div>
+      <div class="col-sm-6">
+        <img-comparison-slider>
+          <figure slot="first" class="position-relative">
+            <img src="https://europe-weggo-bucket.s3.eu-west-3.amazonaws.com/globodain.com/static/for-students-section-2-1.jpg" alt="Image before">
+            <figcaption class="badge position-absolute top-50 start-0 translate-middle-y bg-white rounded text-nav fs-sm fw-semibold lh-1 px-3 py-2 ms-3 ms-sm-4">{{lang_data.page.end.buttons.0}}</figcaption>
+          </figure>
+          <figure slot="second" class="position-relative">
+            <img src="https://europe-weggo-bucket.s3.eu-west-3.amazonaws.com/globodain.com/static/for-students-section-2-2.jpg" alt="Image after">
+            <figcaption class="badge position-absolute top-50 end-0 translate-middle-y bg-white rounded text-nav fs-sm fw-semibold lh-1 px-3 py-2 me-3 me-sm-4">{{lang_data.page.end.buttons.1}}</figcaption>
+          </figure>
+          <div slot="handle">
+            <svg class="text-primary shadow-primary rounded-circle" width="36" height="36" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 36 36"><g><circle fill="currentColor" cx="18" cy="18" r="18"/></g><path fill="#fff" d="M22.2,17.2h-8.3v-3.3L9.7,18l4.2,4.2v-3.3h8.3v3.3l4.2-4.2l-4.2-4.2V17.2z"/></svg>
+          </div>
+        </img-comparison-slider>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script type="text/javascript">
+  function inIframe() {
+      try {
+          return window.self !== window.top;
+      } catch (e) {
+          return true;
+      }
+  }
+
+  if(inIframe()){
+      // Aquí puedes redirigir a los usuarios a una página de error o realizar otra acción.
+      window.location.href = "/prevent";
+  }
+</script>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{url_for('static',filename='vendor/lightgallery/lightgallery.min.js')}}"></script>
+<script src="{{url_for('static',filename='vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js')}}"></script>
+<script src="{{url_for('static',filename='vendor/lightgallery/plugins/thumbnail/lg-thumbnail.min.js')}}"></script>
+<script src="{{url_for('static',filename='vendor/lightgallery/plugins/zoom/lg-zoom.min.js')}}"></script>
+<script src="{{url_for('static',filename='vendor/lightgallery/plugins/video/lg-video.min.js')}}"></script>
+<script src="{{url_for('static',filename='vendor/img-comparison-slider/dist/index.js')}}"></script>
+{% endblock %}

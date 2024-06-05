@@ -1,0 +1,1212 @@
+[
+    {
+        "page": "data_lang_common",
+        "selected": "English",
+        "navbar": {
+            "logo_title": "Globodain Technology Corporation",
+            "applications": "Applications",
+            "services": "Services",
+            "education": {
+                "name": "Education",
+                "programs": {
+                    "name": "Programs",
+                    "href": "education_programs",
+                    "list": [
+                        {
+                            "name": "Erasmus+ Mobility",
+                            "status": "active",
+                            "href": "education_programs_mobility_erasmus"
+                        },
+                         {
+                            "name": "Seameo Rihed Mobility",
+                            "status": "disabled",
+                            "href": "education_programs_mobility_erasmus"
+                        },
+                         {
+                            "name": "IIE USA Mobility",
+                            "status": "disabled",
+                            "href": "education_programs_mobility_erasmus"
+                        },
+                         {
+                            "name": "British Council Mobility",
+                            "status": "disabled",
+                            "href": "education_programs_mobility_erasmus"
+                        }
+                    ]
+                },
+                "students": {
+                    "name": "Students",
+                    "href": "education_students",
+                    "list": [
+                        {
+                            "name": "Projects",
+                            "status": "disabled",
+                            "href": "education_students_projects"
+                        },
+                        {
+                            "name": "Gallery",
+                            "status": "active",
+                            "href": "education_students_gallery"
+                        }
+                    ]
+                },
+                "partnership": {
+                    "name": "Collaborations",
+                    "href": "education_partnership",
+                    "list": [
+                         {
+                            "name": "For businesses",
+                            "href": "education_partnership_companies"
+                        },
+                         {
+                            "name": "For schools",
+                            "href": "education_partnership_schools"
+                        }
+                    ]
+                },
+                "services": {
+                    "name": "Services",
+                    "href": "education_programs_mobility_services",
+                    "list": [
+                         {
+                            "name": "Student reception",
+                            "href": "education_programs_mobility_services_host"
+                        },
+                         {
+                            "name": "Accommodation",
+                            "href": "education_programs_mobility_services_accommodation"
+                        },
+                         {
+                            "name": "Experiences",
+                            "href": "education_programs_mobility_services_experiences"
+                        },
+                         {
+                            "name": "Trips",
+                            "href": "education_programs_mobility_services_trips"
+                        }
+                    ]
+                },
+                "areas": {
+                    "name": "Education areas",
+                    "href": "education_areas",
+                    "list": [
+                         {
+                            "name": "Programming",
+                            "href": "education_areas_programming"
+                        },
+                         {
+                            "name": "Marketing",
+                            "href": "education_areas_marketing"
+                        },
+                         {
+                            "name": "UI/UX Design",
+                            "href": "education_areas_uiux"
+                        }
+                    ]
+                },
+                "button": "See page"
+            },
+            "languages": [
+                 {
+                    "code": "es",
+                    "name": "Spanish"
+                },
+                 {
+                    "code": "en",
+                    "name": "English"
+                },
+                 {
+                    "code": "fr",
+                    "name": "French"
+                },
+                 {
+                    "code": "it",
+                    "name": "Italian"
+                },
+                 {
+                    "code": "de",
+                    "name": "German"
+                },
+                 {
+                    "code": "pl",
+                    "name": "Polish"
+                }
+            ]
+        },
+        "footer": {
+            "desc": "Globodain is a Spanish technology company that operates mainly in software development, creating technological solutions in different sectors. Currently operating in Europe",
+            "copyright": "<p class='mb-0'>Registered trademark of <a href='https://globodain.com' class='btn-link'>Globodain</a><span class='d-none d-sm -inline-block ms-2'>|</span><br class='d-sm-none' /> 2023 © Technological Solutions</p>",
+            "nav_items": [
+                {
+                    "title": "policies",
+                    "url": "terms"
+                },
+                {
+                    "title": "education",
+                    "url": "education"
+                }
+            ]
+        }
+    },
+    {
+        "page": "index",
+        "page_title": "Globodain: technology & education",
+        "page_metadescription": "Innovation, efficiency and quality in cutting-edge technological solutions. We transform companies and individuals in Europe with custom software development in AI, IoT and Business Intelligence.",
+        "page_keywords": "innovation, deep tech, technological solutions, software development, artificial intelligence, digital transformation in Europe, internet of things, business intelligence, software services",
+        "hero": {
+            "title": "<span class='text-gradient-primary'>Technological solutions</span>",
+            "subtitle": "On-demand software development, technology consulting and logistical support for infrastructure deployments.",
+            "action": "See collaboration program"
+        },
+        "categories": [
+             {
+                "title": "E-commerce",
+                "subtitle": "Listing of products or services, payment processing and connectivity with third parties",
+                "url": "/",
+                "img": "ecommerce.jpg"
+            },
+             {
+                "title": "Business Intelligence",
+                "subtitle": "Applications for data collection, analysis and advanced visualization",
+                "url": "/",
+                "img": "transportation.jpg"
+            },
+             {
+                "title": "Marketing",
+                "subtitle": "Market research, data visualization, user testing",
+                "url": "/",
+                "img": "marketing.jpg"
+            },
+             {
+                "title": "Programming",
+                "subtitle": "Code generation, debugging and optimization",
+                "url": "/",
+                "img": "programming.jpg"
+            }
+        ],
+        "benefits": [
+             {
+                "title": "Innovation",
+                "subtitle": "Tailored technological solutions with the latest technology."
+            },
+             {
+                "title": "Efficiency",
+                "subtitle": "We look for the most optimal application to maximize the usefulness of the service."
+            },
+             {
+                "title": "Quality",
+                "subtitle": "With the guarantee of its operation based on a safe and dynamic service"
+            }
+        ],
+        "sections": {
+            "title": "We create technology to solve problems",
+            "subtitle": "Globodain offers <strong>consulting services</strong> in leading areas through partners and the development of internal projects. You can see more about Globodain's technological applications in the section: <br>",
+            "call_action": "Applications",
+            "list": [
+                 {
+                    "section": "finances",
+                    "name": "Finance",
+                    "img": "finances-section.jpg"
+                },
+                 {
+                    "section": "accounting",
+                    "name": "Accounting",
+                    "img": "accounting-section.jpg"
+                },
+                 {
+                    "section": "business",
+                    "name": "Intelligence applied to business",
+                    "img": "farming-section.jpg"
+                },
+                 {
+                    "section": "city30",
+                    "name": "Intelligence applied to urban industry",
+                    "img": "city30-section.jpg"
+                }
+            ],
+            "action": "See section"
+        },
+        "profiles": {
+            "title": "For any type of project",
+            "subtitle": "It doesn't matter if you are a small, medium-sized company, or if you are a professional. <br><strong>We adapt the project</strong> adjusting the budget to the needs",
+            "examples": [
+                 "Entrepreneurs",
+                 "Professionals",
+                 "Startups",
+                 "SMEs",
+                 "Large corporations"
+            ]
+        },
+        "services": {
+            "title": "Our services",
+            "description": "Globodain focuses on helping brands grow through digital transformation services. We provide real solutions to each client's problems through a deep knowledge of their market, solution and vision: <strong>Market studies, realization of MVPs, infrastructure layout </strong>...",
+            "button": "Contact sales",
+            "list": [
+                 {
+                    "img": "cms.svg",
+                    "title": "Automation",
+                    "description": "Globodain <strong>connects different services used by the company through code</strong> or parallel services configured by our team. We automate different tasks such as accounting or registration of operations",
+                    "href": ""
+                },
+                 {
+                    "img": "rocket.svg",
+                    "title": "Software Integration",
+                    "description": "Globodain <strong>integrates software services</strong> requested by the company into the applicable process. If the service is digital, it must have an API for integration",
+                    "href": ""
+                },
+                 {
+                    "img": "mobile-app.svg",
+                    "title": "Website Application",
+                    "description": "Globodain <strong>develops web applications integrated with parallel services</strong> at the client's request. We use technology such as Python (Flask/Django), JavaScript, React, Node...",
+                    "href": ""
+                },
+                 {
+                    "img": "analytics.svg",
+                    "title": "Business analysis",
+                    "description": "Globodain <strong data-toggle='tooltip' data-placement='top' title='If you click on the button above you can see the technology we apply'>adapt the technology</strong> to your company to analyze the data and provide detailed reports on customer needs.",
+                    "href": ""
+                },
+                 {
+                    "img": "audit.svg",
+                    "title": "Financial reports",
+                    "description": "Globodain <strong>analyzes the financial health of your business through metrics</strong> and the relationship between the items, generating a report",
+                    "href": ""
+                },
+                 {
+                    "img": "finance.svg",
+                    "title": "Financial planning",
+                    "description": "Globodain <strong>creates intelligent projections</strong> and applies ratios to predict the evolution of certain variables",
+                    "href": ""
+                }
+            ]
+        },
+        "cases": {
+            "title": "Study cases",
+            "subtitle": "We provide real solutions to each client's problems through market research, solutions and vision.",
+            "list": [
+                 {
+                    "img": "softcamp-light.svg",
+                    "title": "Technological development",
+                    "subtitle": "Campsite management software",
+                    "description": "SoftCamp is an internal project of <strong>Globodain</strong>. SoftCamp is a free management software for campsites that <strong>can be customized to any type of business </strong> and scale the platform's functionalities through the contracting of <strong>modules and integrations</strong>.",
+                    "action": {
+                        "title": "See case study",
+                        "href": "https://softcamp.eu"
+                    }
+                },
+                 {
+                    "img": "weggo-light.svg",
+                    "title": "Technological development",
+                    "subtitle": "RV Rental & Travel Planning Application",
+                    "description": "Globodain created and implemented automated services on the <strong>Weggo</strong> platform. Weggo is an application that allows users in the motorhome sector to <strong>hire rental services and plan trips through a single process</strong>. Weggo allows the user to <strong>export the planning</strong> and permanently access it.",
+                    "href": "https://weggo.es",
+                    "action": {
+                        "title": "See case study",
+                        "href": "https://weggo.es"
+                    }
+                },
+                 {
+                    "img": "whaterapp-light.svg",
+                    "title": "Technological development",
+                    "subtitle": "Application to activate water fountains",
+                    "description": "Whaterapp is a <strong>digital solution to activate drinking water sources</strong> distributed by clients. Customer users can access the app in which they have a wallet that they use to refill their water bottle by activating a button in the app that collects the source ID.",
+                    "href": "https://rellenaragua.es",
+                    "action": {
+                        "title": "See case study",
+                        "href": "https://rellenaragua.es"
+                    }
+                }
+            ]
+        },
+        "country_list": [
+             {
+                "name": "Spain",
+                "short": "ES"
+            },
+             {
+                "name": "France",
+                "short": "FR"
+            },
+             {
+                "name": "United Kingdom",
+                "short": "UK"
+            },
+             {
+                "name": "Italy",
+                "short": "IT"
+            },
+             {
+                "name": "Germany",
+                "short": "DE"
+            }
+        ]
+    },
+    {
+        "page": "services",
+        "page_title": "Cutting-edge technology services | Globodain",
+        "page_metadescription": "We offer cutting-edge technology services to transform companies and individuals in Europe. Our services include custom software development in AI, IoT and Business Intelligence.",
+        "page_keywords": "technology services, innovation, deep tech, technological solutions, software development, artificial intelligence, digital transformation in Europe, internet of things, business intelligence, software services",
+        "message": {
+            "title": "If you have a proposal or need a custom project, you can contact us and explain your needs.",
+            "link": {
+                "text": "Click here to contact us",
+                "tooltip": "Go to the page of interest"
+            }
+        },
+        "sections": {
+            "title": "We create technology to solve problems",
+            "subtitle": "Globodain offers <strong>consulting services</strong> in leading areas through partners and the development of internal projects. You can see more about Globodain's technological applications in the section: <br>",
+            "call_action": "Applications",
+            "list": [
+                 {
+                    "section": "finance",
+                    "name": "Finance",
+                    "img": "finances-section.jpg"
+                },
+                 {
+                    "section": "accounting",
+                    "name": "Accounting",
+                    "img": "accounting-section.jpg"
+                },
+                 {
+                    "section": "business",
+                    "name": "Intelligence applied to business",
+                    "img": "farming-section.jpg"
+                },
+                 {
+                    "section": "city30",
+                    "name": "Intelligence applied to urban industry",
+                    "img": "city30-section.jpg"
+                }
+            ],
+            "action": "See section"
+        },
+        "profiles": {
+            "title": "For any type of project",
+            "subtitle": "It doesn't matter if you are a small, medium-sized company, or if you are a professional. <br><strong>We adapt the project</strong> adjusting the budget to the needs",
+            "examples": [
+                 "Entrepreneurs",
+                 "Professionals",
+                 "Startups",
+                 "SMEs",
+                 "Large corporations"
+            ]
+        },
+        "services": {
+            "title": "Our services",
+            "description": "Globodain focuses on helping brands grow through digital transformation services. We provide real solutions to each client's problems through a deep knowledge of their market, solution and vision: <strong>Market studies, realization of MVPs, infrastructure layout </strong>...",
+            "button": "Contact sales",
+            "list": [
+                 {
+                    "img": "cms.svg",
+                    "title": "Automation",
+                    "description": "Globodain <strong>connects different services used by the company through code</strong> or parallel services configured by our team. We automate different tasks such as accounting or registration of operations",
+                    "href": ""
+                },
+                 {
+                    "img": "rocket.svg",
+                    "title": "Software Integration",
+                    "description": "Globodain <strong>integrates software services</strong> requested by the company into the applicable process. If the service is digital, it must have an API for integration",
+                    "href": ""
+                },
+                 {
+                    "img": "mobile-app.svg",
+                    "title": "Website Application",
+                    "description": "Globodain <strong>develops web applications integrated with parallel services</strong> at the client's request. We use technology such as Python (Flask/Django), JavaScript, React, Node...",
+                    "href": ""
+                },
+                 {
+                    "img": "analytics.svg",
+                    "title": "Business analysis",
+                    "description": "Globodain <strong data-toggle='tooltip' data-placement='top' title='If you click on the button above you can see the technology we apply'>adapt the technology</strong> to your company to analyze the data and provide detailed reports on customer needs.",
+                    "href": ""
+                },
+                 {
+                    "img": "audit.svg",
+                    "title": "Financial reports",
+                    "description": "Globodain <strong>analyzes the financial health of your business through metrics</strong> and the relationship between the items, generating a report",
+                    "href": ""
+                },
+                 {
+                    "img": "finance.svg",
+                    "title": "Financial planning",
+                    "description": "Globodain <strong>creates intelligent projections</strong> and applies ratios to predict the evolution of certain variables",
+                    "href": ""
+                }
+            ]
+        },
+        "cases": {
+            "title": "Study cases",
+            "subtitle": "We provide real solutions to each client's problems through market research, solutions and vision.",
+            "list": [
+                 {
+                    "img": "softcamp-light.svg",
+                    "title": "Technological development",
+                    "subtitle": "Campsite management software",
+                    "description": "SoftCamp is an internal project of <strong>Globodain</strong>. SoftCamp is a free management software for campsites that <strong>can be customized to any type of business </strong> and scale the platform's functionalities through the contracting of <strong>modules and integrations</strong>.",
+                    "action": {
+                        "title": "See case study",
+                        "href": "https://softcamp.eu"
+                    }
+                },
+                 {
+                    "img": "weggo-light.svg",
+                    "title": "Technological development",
+                    "subtitle": "RV Rental & Travel Planning Application",
+                    "description": "Globodain created and implemented automated services on the <strong>Weggo</strong> platform. Weggo is an application that allows users in the motorhome sector to <strong>hire rental services and plan trips through a single process</strong>. Weggo allows the user to <strong>export the planning</strong> and permanently access it.",
+                    "href": "https://weggo.es",
+                    "action": {
+                        "title": "See case study",
+                        "href": "https://weggo.es"
+                    }
+                },
+                 {
+                    "img": "whaterapp-light.svg",
+                    "title": "Technological development",
+                    "subtitle": "Application to activate water fountains",
+                    "description": "Whaterapp is a <strong>digital solution to activate drinking water sources</strong> distributed by clients. Customer users can access the app in which they have a wallet that they use to refill their water bottle by activating a button in the app that collects the source ID.",
+                    "href": "https://rellenaragua.es",
+                    "action": {
+                        "title": "See case study",
+                        "href": "https://rellenaragua.es"
+                    }
+                }
+            ]
+        },
+        "country_list": [
+             {
+                "name": "Spain",
+                "short": "ES"
+            },
+             {
+                "name": "France",
+                "short": "FR"
+            },
+             {
+                "name": "United Kingdom",
+                "short": "UK"
+            },
+             {
+                "name": "Italy",
+                "short": "IT"
+            },
+             {
+                "name": "Germany",
+                "short": "DE"
+            }
+        ]
+    },
+    {
+        "page": "applications",
+        "page_title": "Advanced technology applications | Globodain",
+        "page_metadescription": "Explore the various applications of the technology we use at Globodain. From data analytics to cross-platform programming, robotics and digital infrastructure deployment, our technology applications are designed to drive innovation and efficiency.",
+        "page_keywords": "technology applications, data analysis, website programming, multiplatform programming, robotics, digital infrastructures, Globodain services",
+        "hero": {
+            "title": "Globodain Applications",
+            "subtitle": "Innovate and accelerate with powerful tools and services that put the latest technology within the reach of all developers."
+        },
+        "content": {
+            "services": [
+                { 
+                "img": "artificial-intelligence-image.jpg", 
+                "title": "Artificial Intelligence", 
+                "subtitle": "Implementation of innovative AI solutions", 
+                "description": "<strong>The Globodain AI system</strong> can be used to understand customers' needs and preferences and offer them the best possible service. Additionally, the AI system can also be used to improve customer service by providing real-time feedback and suggestions. Overall, Globodain provides an excellent platform to use AI technology to improve customer service and support." 
+                }, 
+                { 
+                "img": "big-data-image.jpg", 
+                "title": "Big Data", 
+                "subtitle": "Data Analysis", 
+                "description": "Globodain applies Big Data technology in order to <strong>manage and analyze large data sets</strong>, thus facilitating decision making. It can be used to assist clients with their projects and analysis. By using Globodain, companies can better understand their customers, products, and services. Additionally, Globodain can assist with marketing efforts by providing insights into customer behavior.", 
+                "subapplications": [ 
+                    { 
+                    "title": "Big Data in Finance", 
+                    "description": "With the arrival of Big Data technology, organizations have been able to take advantage of this data to obtain new insights into the behavior of accounting accounts, optimize prices, reduce costs, and verify the financial health of accounting accounts. Additionally, they are also using big data to develop new products and services that can help them compete in a rapidly changing market." 
+                    }, 
+                    { 
+                    "title": "Big Data in Agriculture", 
+                    "description": "Farmers can use big data to select specific areas for planting and harvesting activity. By analyzing data related to climate and soil type, farmers can make stronger decisions about where to plant crops and when to harvest. This allows them to maximize the efficiency of their farming operations and produce more food with fewer resources." 
+                    }, 
+                    { 
+                    "title": "Big Data in the Urban Industry", 
+                    "description": "Cities collect more data every day as they become 'smart' or 'connected'. This <strong>data can be used to make improvements, from reducing traffic to greater safety on public roads.</strong>. For example, Barcelona uses Big Data to <strong>monitor air quality</strong>, <strong>optimize public transport</strong> or reduce organized crime. San Francisco uses Big Data to <strong>optimize drinking water use</strong>, while Chicago uses it to <strong>reduce response times</strong> in emergency cases." 
+                    } 
+                ] 
+                },
+                { 
+                "img": "blockchain-image.jpg", 
+                "title": "Blockchain", 
+                "subtitle": "Building complex systems", 
+                "description": "Blockchain technology is being explored for a variety of different applications across different sectors. Some of the most promising projects leveraging blockchain technology are:<br><br><small><strong>1)</strong> The development of a decentralized Internet, also known as the 'Web 3.0'. This would allow users to interact and <strong>exchange data without the need for third parties</strong> (intermediaries).</small><br> <small><strong>2)</strong> The creation of a <strong>new global financial system</strong> that is more equitable and efficient than the current one. This would include a new form of currency that is not subject to government control or central bank control</small><br> <small><strong>3)</strong>The <strong>digitization of physical assets</strong>, such as properties, vehicles, and works of art, to facilitate their trade and management.</small><br> <small><strong>4)</strong>The development of 'smart contracts', which are <strong>self-executing contracts</strong> that can automatically execute based on predetermined conditions.</small><br> <small><strong>5)</strong>The use of blockchain technology for <strong>identity management and authentication</strong>.</small>", 
+                "subapplications": [] 
+                }, 
+                { 
+                "img": "machine-learning-image.jpg", 
+                "title": "Machine Learning", 
+                "subtitle": "Optimization of results with Machine Learning", 
+                "description": "Machine learning has a large number of applications, from facial recognition in photos to automatic mail classification. In many cases, machine learning can be used to achieve <strong>better results than traditional programming techniques</strong>. For example, a machine learning algorithm can be used to learn to distinguish between different types of objects, while a programmer would have to code the rules into the program.", 
+                "subapplications": [] 
+                }, 
+                { 
+                "img": "deep-learning-image.jpg", 
+                "title": "Deep Learning", 
+                "subtitle": "Self-learning with Deep Learning", 
+                "description": "Deep learning has found a series of applications in recent years, the main one in the field of <strong>image recognition</strong>. Deep learning algorithms have proven to be more accurate than traditional machine learning algorithms when it comes to recognizing objects in images and videos. This is due to the <strong>ability of the deep learning algorithm</strong> to learn features of the data set that are important for classification. Other applications of deep learning include:<br><br>- Autonomous vehicles<br> - Fraud detection<br>- Voice recognition", 
+                "subapplications": [] 
+                }, 
+                { 
+                "img": "visual-recognition-image.jpg", 
+                "title": "Visual Recognition", 
+                "subtitle": "Object search with visual recognition technology", 
+                "description": "Visual recognition technology is used in a wide variety of applications. Some of the most common applications are <strong>facial recognition, object recognition, and scene recognition</strong>. Facial recognition is used to identify people in photos or videos, object recognition is used to identify objects in photos or videos, and scene recognition is used to identify the type of scene in a photo or video.", 
+                "subapplications": [] 
+                }
+            ]
+        }
+    },
+    {
+        "page": "applications_finances",
+        "page_title": "Financial Intelligence Applications | Globodain",
+        "page_metadescription": "Discover how Globodain applies Financial Intelligence to drive efficiency and innovation. Our applications range from data analysis and predictions to anomaly detection and personalized recommendations",
+        "page_keywords": "financial intelligence, data analysis, predictions, anomaly detection, personalized recommendations, artificial intelligence in finance, natural language processing, image recognition, user behavior analysis, fraud detection, anti-money laundering",
+        "hero": {
+            "title": "Financial intelligence",
+            "description": "Globodain, together with its trusted partners, develops algorithms to reduce costs, customer payment risks and other applications, especially in the banking and investment sector.",
+            "action": "Contact sales"
+        }
+    },
+    {
+        "page": "applications_accounting",
+        "page_title": "Accounting Intelligence Applications | Globodain",
+        "page_metadescription": "At Globodain, we use Accounting Intelligence to improve the efficiency and reliability of accounting information. Our accounting intelligence applications include data analysis, predictions, anomaly detection, and personalized recommendations. These applications reduce fraud, automate repetitive tasks and promote business development.",
+        "page_keywords": "accounting intelligence, data analysis, predictions, anomaly detection, personalized recommendations, artificial intelligence in accounting, natural language processing, image recognition, user behavior analysis, fraud detection, anti-money laundering",
+        "hero": {
+            "title": "accounting intelligence",
+            "description": "Automate accounting processes. We study your project and provide you with a process automation algorithm adapted to your project. You will see all the information in your user panel.",
+            "action": "Contact sales"
+        }
+    },
+    {
+        "page": "applications_business",
+        "page_title": "Intelligence applied to business | Globodain",
+        "page_metadescription": "At Globodain, we use Business Intelligence to drive efficiency and innovation. Our business intelligence applications include data analytics, natural language processing, image recognition, user behavior analysis, fraud detection and anti-money laundering. These applications are applied differently in various sectors such as finance, retail and consumer goods, energy, technology, government, education, healthcare, manufacturing and professional services.",
+        "page_keywords": "business intelligence, data analysis, natural language processing, image recognition, user behavior analysis, fraud detection, anti-money laundering",
+        "hero": {
+            "title": "Business Intelligence",
+            "description": "We offer different solutions within our service: digitization, use of software for business analysis, situation predictions...",
+            "action": "Contact sales"
+        }
+    },
+    {
+        "page": "applications_ecity",
+        "page_title": "Digital solutions applied to cities | Globodain",
+        "page_metadescription": "At Globodain, our eCity applications use advanced technology to improve city services. From improving passenger transportation to analyzing big people data, our applications are designed to make cities more efficient and liveable.",
+        "page_keywords": "eCity applications, city technology, passenger transportation, big data analytics, artificial intelligence in cities, natural language processing, image recognition, user behavior analysis, fraud detection, anti-money laundering",
+        "hero": {
+            "title": "eCity Solutions",
+            "description": "Globodain offers algorithms for face detection, image recognition, behavior prediction and other applications in security, automotive and other areas.",
+            "action": "Contact sales"
+        }
+    },
+    {
+        "page": "education",
+        "page_title": "Globodain Education: Empowering young people through technology",
+        "page_metadescription": "Globodain Education is a project focused on educational programs to empower young people and teach about technology. We offer mobility programs through Erasmus+ where students can do internships in foreign companies or intensive courses in a specific area. Our goal is to train a greater number of potential people for future hires.",
+        "page_keywords": "Globodain Education, educational programs, technology, Erasmus+, internships in foreign companies, intensive courses, teacher training, technological training, bootcamps",
+        "message": {
+            "text": "Are you an institution that participates in Erasmus+ projects or other programs?",
+            "link": {
+                "text": "maybe this will interest you",
+                "tooltip": "Go to the page of interest"
+            }
+        },
+        "hero": {
+            "title": "Participate in our <span class='text-gradient-primary'>educational programs</span>",
+            "subtitle": "Education is the base of the pyramid. <br>We allow students and educational institutions to participate in our training programs",
+            "buttons": [
+                 "I am a student",
+                 "I am an educational institution"
+            ]
+        },
+        "benefits": [
+             {
+                "title": "Real projects",
+                "subtitle": "Our educational programs are focused on showing day-to-day life in an office."
+            },
+             {
+                "title": "Collaborative work",
+                "subtitle": "We use tools that allow us to carry out tasks together with the group."
+            },
+             {
+                "title": "Immersive experience",
+                "subtitle": "We take the program one step further, offering complete integration with the team."
+            }
+        ],
+        "testimonials": {
+            "title": "What our students think of us",
+            "list": [
+                 {
+                    "title": "Jakub Barszcz",
+                    "subtitle": "Erasmus+ Internship (Poland)",
+                    "message": "We worked at Globodain on a 1-month immersive technology project to develop the planning part of the Weggo map. What I liked most about the experience was being able to work with my colleagues and friends on the same project and the kindness of the company team."
+                },
+                 {
+                    "title": "Manouela Kiosia",
+                    "subtitle": "Erasmus+ Internship (Greece)",
+                    "message": "I had my first professional experience at Globodain during a 2-week stay with my friends from high school and it was fantastic!! We had time to work and at the same time visit Seville and enjoy the wonderful climate. I would repeat 100% :)"
+                },
+                 {
+                    "title": "Aleksi Tuomola",
+                    "subtitle": "Erasmus+ Internship (Finland)",
+                    "message": "I really enjoyed my internship because I was able to learn more about technology and make my own website with Python. I really liked Seville and Spain in general :)"
+                },
+                 {
+                    "title": "Esther Nørgaard",
+                    "subtitle": "Erasmus+ Internship (Denmark)",
+                    "message": "I was working at Globodain with my colleagues in the Graphic Design area developing the user interface for a part of the website. Thanks to Rubén for the support during my experience and for taking us to see the Sevilla team after he returned :) it was an incredible experience!!"
+                }
+            ]
+        },
+        "brands": {
+            "title": "Institutions that trust us"
+        },
+        "educative_programs": {
+            "title": "Learn about our educational programs",
+            "erasmus": {
+                "statistics": [
+                     "Satisfied <strong>experiences</strong>",
+                     "international <strong>groups</strong>"
+                ],
+                "desc": {
+                    "text": "We collaborate with certain companies through the Mobility projects of the <strong>Erasmus+ program of the European Union</strong> to offer <strong>accommodation in our offices</strong> to hundreds of students who wish to do their internships in the",
+                    "text2": "Through our program, students learn to work as a team in dynamic, real-world environments – no sorting papers.",
+                    "link": {
+                        "text": "defined areas",
+                        "tooltip": "See available areas"
+                    },
+                    "points": [
+                         "Office and remote equipment",
+                         "Collaborative projects",
+                         "Agile Methodologies"
+                    ],
+                    "button": "See program"
+                }
+            }
+        },
+        "call_action": ""
+    },
+    {
+        "page": "for-students",
+        "page_title": "Boost your professional career with our educational programs | Globodain Education",
+        "page_metadescription": "Globodain Education invites students to train professionally abroad through programs such as Erasmus+. Our goal is to provide students with opportunities for hands-on learning, developing intercultural skills, and establishing global connections. We invite students to explore these opportunities and join us on this exciting educational adventure.",
+        "page_keywords": "Globodain Education, vocational training, students, Erasmus+, practical learning, intercultural skills, global connections, social programs, training abroad, internships abroad, courses abroad",
+        "message": {
+            "text": "Did you know that students who do international internships get better job offers?",
+            "link": {
+                "text": "maybe this will interest you",
+                "tooltip": "Go to the page of interest"
+            }
+        },
+        "hero": {
+            "title": "Boost your professional career",
+            "subtitle": "We offer educational programs so that students can develop their skills and learn in companies abroad."
+        },
+        "what": {
+            "title": "Get an internship abroad",
+            "text": "Have you ever dreamed of the opportunity to work abroad, immerse yourself in a new culture and expand your professional horizons? Your dream can come true!",
+            "cols": [
+                 {
+                    "title": "International experience",
+                    "text": "Acquire work experience in companies in other countries, a valuable asset on your resume that will highlight your profile to others in job demand."
+                },
+                 {
+                    "title": "Collaborative environment",
+                    "text": "Work in companies with a team collaboration environment based on Agile methodologies, learning to use digital tools."
+                },
+                 {
+                    "title": "Personal growth",
+                    "text": "Developing your skills abroad involves adapting to adversities, learning other cultures and improving your linguistic communication."
+                }
+            ]
+        },
+        "program": {
+            "title": "Learn abroad",
+            "text": "If you are from a country in the European Union <strong>you can work in companies in other countries</strong> of the European Union",
+            "button": "See Mobility program"
+        },
+        "how": {
+            "title": "Is that how it works",
+            "steps": [
+                 {
+                    "step": "1",
+                    "title": "We contact your school",
+                    "text": "We offer to carry out a collaboration so that students like you can carry out study programs or internships abroad through Globodain Education"
+                },
+                 {
+                    "step": "2",
+                    "title": "We propose project",
+                    "text": "Based on the characteristics of your school, we study the optimal conditions so that the study or internship project adapts to your profile."
+                },
+                 {
+                    "step": "3",
+                    "title": "We confirm details",
+                    "text": "If your school gives approval, we begin to prepare the details of the project so that everything goes great and that your experience can be comfortable and enjoyable."
+                },
+                 {
+                    "step": "4",
+                    "title": "We set date",
+                    "text": "Once everything is prepared, all that remains is to establish the date chosen by your school so that you can have a unique experience and learn everything possible abroad."
+                }
+            ]
+        },
+        "call_action": {
+            "title": "Invite your school to participate in the program",
+            "subtitle": "Enter your contact <span class='text-primary'>email</span>",
+            "button": {
+                "text": "Send invitation",
+                "placeholder": "Write here .."
+            }
+        },
+        "gallery": {
+            "title": "Some of the groups that have already participated with us",
+            "text": "Group of students from the European Union's Erasmus+ international mobility program"
+        },
+        "end": {
+            "title": "Don't give up on your future",
+            "buttons": [
+                 "Before",
+                 "After"
+            ]
+        }
+    },
+    {
+        "page": "for-schools",
+        "page_title": "Educational programs for educational institutions | Globodain Education",
+        "page_metadescription": "Globodain Education invites students to train professionally abroad through programs such as Erasmus+. Our goal is to provide students with opportunities for hands-on learning, developing intercultural skills, and establishing global connections. Collaborate with us in our educational programs in favor of quality education.",
+        "page_keywords": "Globodain Education, vocational training, schools, Erasmus+, practical learning, intercultural skills, global connections, social programs, training abroad, internships abroad, courses abroad, educational programs, collaborations, partnership",
+        "message": {
+            "text": "Did you know that by collaborating with Globodain you will be able to offer students and teachers international mobility programs with scholarships?",
+            "link": {
+                "text": "we contact you",
+                "tooltip": "Go to the page of interest"
+            }
+        },
+        "hero": {
+            "title": "Collaborate in educational programs",
+            "text": "Through our educational programs you will be able to offer your students and teachers courses or internships abroad with full scholarships."
+        },
+        "program": {
+            "title": "Mobility program",
+            "text": "If you are from a country in the European Union <strong>your students can work in other countries</strong> of the European Union and your <strong>teachers can be trained in intensive courses</strong>",
+            "button": "See Mobility program",
+            "features": {
+                "title": "Program Features",
+                "ul": [
+                     "Expand knowledge in the selected area in companies",
+                     "Improve language level and team communication",
+                     "Get to know a new culture and adapt to adversity"
+                ],
+                "cols": [
+                     {
+                        "border": "border-bottom border-end-sm",
+                        "title": "Internship",
+                        "text": "Internships in foreign companies lasting 4 weeks or more"
+                    },
+                     {
+                        "border": "border-bottom",
+                        "title": "Teachers",
+                        "text": "Training courses specially adapted for teachers"
+                    },
+                     {
+                        "border": "border-end-sm",
+                        "title": "Short-terms",
+                        "text": "Internships in foreign companies less than 4 weeks"
+                    },
+                     {
+                        "border": "",
+                        "title": "courses",
+                        "text": "Intensive training from 2 to 10 days for students"
+                    }
+                ]
+            }
+        },
+        "how_works": {
+            "title": "Is that how it works",
+            "steps": [
+                 {
+                    "step": "1",
+                    "title": "Initial meeting",
+                    "text": "We offer to carry out a collaboration so that students can carry out study programs or internships abroad through Globodain Education, or teachers can carry out intensive training courses abroad"
+                },
+                 {
+                    "step": "2",
+                    "title": "We study the project",
+                    "text": "Based on the characteristics of the school, we study the optimal conditions so that the project adapts to the required demands"
+                },
+                 {
+                    "step": "3",
+                    "title": "We confirm the details",
+                    "text": "If the conditions and characteristics are accepted, we close the group date for the start of the project."
+                }
+            ]
+        },
+        "call_action": {
+            "title": "Start participating in scholarship programmes",
+            "text": "Enter your <span class='text-primary'>contact email address</span>.",
+            "button": {
+                "text": "Receive invitation",
+                "placeholder": "Write here .."
+            }
+        }
+    },
+    {
+        "page": "education_partnership",
+        "page_title": "Start collaborating with us and increase your operational capacity | Globodain",
+        "page_metadescription": "Globodain is looking for companies to collaborate in our Mobility Programme. This collaboration will allow companies to increase their operational capacity and benefit from the opportunity to work with highly qualified students and staff. Our aim is to establish a mutually beneficial cooperation that will drive innovation and development.",
+        "page_keywords": "collaboration, Globodain, Mobility Programme, operational capacity, students, staff, faculty, courses abroad, internship abroad, innovation, development.",
+        "message": {
+            "text": "Do you want to know our prices?",
+            "link": {
+                "text": "request pricing model here",
+                "tooltip": "Request pricing for services"
+            }
+        },
+        "hero": { 
+            "title": "Boost education, <br>be our <span class='pt-0 display-3 text-light border p-2' style='border-color: #fff !important; border-width: 5px !important; border-radius: 2px !important;'>partner</span>", 
+            "subtitle": "Direct your future towards technological development and economic cooperation through educational projects" 
+        }, 
+        "benefits": [ 
+        { "title": "+500 students", "text": "We have been participating in Mobility projects since 2021" }, 
+        { "title": "+15 projects", "text": "Projects developed internally by the interns" }, 
+        { "title": "+20 countries", "text": "Groups from most countries in the European Union" } 
+        ], 
+        "mobility": { 
+        "title": "Cover more, with less", 
+        "text": "Increase your operating time and <strong>do not look for 200 companies</strong>. Find out how to do it <strong>by meeting with us</strong> after seeing the conditions and other data.", 
+        "button": "See Mobility program" 
+        }, 
+        "why": { 
+        "title": "Why us?", 
+        "list": [ 
+            { "title": "Collaborative environment", "text": "Students participate in team work environments regardless of their abilities." }, 
+            { "title": "New technologies", "text": "We use the latest technologies in programming and work methodologies." }, 
+            { "title": "Integration", "text": "We involve the company team with the interns and vice versa to achieve a common goal." }, 
+            { "title": "Experience", "text": "More than 500 students have passed through our offices in the almost three years that we have been working in this field." } 
+        ] 
+        }, 
+        "advantages": [ 
+        { "title": "Increase your ability to implement projects", "text": "Thanks to our operational load <strong>you will be able to expand your operations allowing you to focus on logistical or planning operations</strong> of the group and not on the search for" }, 
+        { "title": "Increase the return rate of schools", "text": "Offering a unique experience to <strong>students makes the school want to come back</strong> to work with us: we will all be happy if things are done well, and we take care of that.", 
+            "ul": [ 
+            "We assign a <strong>training program</strong> for each group", 
+            "We offer <strong>assistance</strong> in logistical operations", 
+            "We provide leisure and complete a <strong>unique experience</strong>." 
+            ] 
+        } 
+        ], 
+        "rate": { 
+        "title": "Still having doubts?", 
+        "text": "<strong>Our services will help improve your company's internal processes</strong>, reducing the high cost of searching for partners for Host Organization and closing projects quickly and reliably. <br><br> We invite you to <strong>contact our team</strong> to initiate a first contact and resolve doubts.", 
+        "button": "Contact representative", 
+        "points": [ 
+            { "title": "+ Projects", "text": "<span class='fw-semibold'>Increase</span> your operations" }, 
+            { "title": "+ Income", "text": "<span class='fw-semibold'>Optimize</span> your processes" } 
+        ] 
+        }, 
+        "how_works": { 
+        "title": "This is how we work", 
+        "line": [ 
+            { "title": "Initial meeting", "text": "We know the projects and those responsible, as well as the <strong>needs of the company</strong>." }, 
+            { "title": "Signature of the agreement", "text": "If both parties agree with the <strong>business model and associated operations</strong>, we proceed to begin the collaboration." }, 
+            { "title": "Price negotiation", "text": "We negotiate prices based on the needs required by the project and <strong>the payment date is agreed</strong>." }, 
+            { "title": "Execution", "text": "<strong>We begin to work</strong> with the group according to the requirements and needs of the project." } 
+        ] 
+        }, 
+        "call_action": { 
+        "title": "Collaborate with us", 
+        "text": "We invite you to talk to the team and learn in detail how we can work", 
+        "button": "I want to collaborate" 
+        }
+          
+    },
+    {
+        "page": "education_partnership_prices",
+        "page_title": "Request prices for our services | Globodain",
+        "page_metadescription": "At Globodain, we offer a variety of technological services. If you are interested in collaborating with us, you can request prices for our services. Our team will contact you to provide you with a personalized quote that suits your needs.",
+        "page_keywords": "price request, Globodain services, collaboration, personalized quote, technology",
+        "message": {
+            "text": "<strong>Article of interest:</strong>",
+            "link": {
+                "text": "Why Globodain Education services can benefit your company",
+                "tooltip": "Click here to go to the link"
+            }
+        },
+        "form": {
+            "title": "Learn about our services in detail",
+            "subtitle": "The moment is now",
+            "text": "A member of the team will contact you to learn more about your interest in our services and help you through the process.",
+            "fullname": {
+                "field": "Full name",
+                "msg": "Enter your full name"
+            },
+            "email": {
+                "field": "Email",
+                "msg": "Enter your professional email"
+            },
+            "business_name": {
+                "field": "Company",
+                "msg": "It is necessary to write the name of the company"
+            },
+            "business_title": {
+                "field": "Post",
+                "msg": "It is necessary to write the position you hold"
+            },
+            "button": "Request prices"
+        }
+    },
+    {
+        "page": "education_programs",
+        "page_title": "Offer of educational programs | Globodain Education",
+        "page_metadescription": "Globodain Education offers international programs for students and teachers. The programs provide a unique learning and fun experience in a technological and competitive environment, showing the reality of the world of work. We invite students, teachers and companies interested in collaborating in our educational programs.",
+        "page_keywords": "Globodain Education, International Mobility Program, Mobility, study programs, European internships, students, teachers, learning, technology, world of work, collaboration",
+        "message": {
+            "text": "Empower yourself by expanding your knowledge in technology.",
+            "link": {
+                "text": "Enter here to find out more",
+                "tooltip": "Go to the page of interest"
+            }
+        },
+        "hero": {
+            "title": "Program offering",
+            "text": "We collaborate with the main educational institutions to offer quality educational programs that benefit training"
+        },
+        "programs": {
+            "title": "International mobility",
+            "text": "Offers <strong>vocational training in other countries</strong> of the European Union",
+            "button": "See Mobility program",
+            "features": {
+                "title": "Learn while traveling",
+                "list": [
+                     "Expand knowledge in the selected area in companies",
+                     "Improve language level and communication with the team",
+                     "Learn about a new culture and adapt to adversities"
+                ],
+                "cols": [
+                     {
+                        "border": "border-bottom border-end-sm",
+                        "title": "Internship",
+                        "text": "Internships in foreign companies lasting 4 weeks or more"
+                    },
+                     {
+                        "border": "border-bottom",
+                        "title": "Faculty",
+                        "text": "Training courses specially adapted for teachers"
+                    },
+                     {
+                        "border": "border-end-sm",
+                        "title": "Short-terms",
+                        "text": "Internships in foreign companies less than 4 weeks"
+                    },
+                     {
+                        "border": "",
+                        "title": "courses",
+                        "text": "Intensive training from 2 to 10 days for students"
+                    }
+                ]
+            }
+        },
+        "call_action": {
+            "title": "Expand your range of possibilities",
+            "text": "Contact our Mobility team to start offering quality <strong>international mobility services</strong> in your institution, school or partner network",
+            "button": "Contact the team"
+        }
+    },
+    {
+        "page": "education_programs_mobility",
+        "page_title": "Connecting students and teachers with global opportunities | Globodain Education",
+        "page_metadescription": "The Globodain Mobility Program offers international opportunities for students and teachers. Through this program, participants can gain hands-on experience, develop intercultural skills, and establish global connections. Our goal is to attract students, teachers and companies interested in collaborating in this program.",
+        "page_keywords": "Mobility Program, mobility, students, teachers, international opportunities, practical experience, intercultural skills, global connections, collaboration",
+        "message": {
+            "text": "<strong>Links associated with the program:</strong>",
+            "link": {
+                "text": "Erasmus+",
+                "tooltip": "See Erasmus+ program of the European Union in the area of ​​International Mobility"
+            }
+        },
+        "hero": {
+            "title": "Internship abroad",
+            "subtitle": "Program subsidized by the European Union",
+            "text": "Globodain offers international students a <strong>unique learning and fun experience</strong> in a technological and competitive environment where <strong>the reality of the world of work is shown</strong>.",
+            "list": [
+                 {
+                    "title": "+50",
+                    "text": "<strong>Locations</strong> available"
+                },
+                 {
+                    "title": "+300",
+                    "text": "Affiliated <strong>Companies</strong>"
+                },
+                 {
+                    "title": "+100",
+                    "text": "Educational <strong>Institutions</strong>"
+                }
+            ]
+        },
+        "areas": {
+            "title": "Collaboration areas",
+            "list": [
+                 {
+                    "title": "Software - IT",
+                    "text": "<strong>Development of cloud-based software applications</strong> with technologies such as Python, Javascript, MongoDB, ..."
+                },
+                 {
+                    "title": "Marketing",
+                    "text": "<strong>Development of physical and digital sales strategies</strong>, sales channels, leads (Hubspot), KPI analysis, etc."
+                },
+                 {
+                    "title": "UI/UX Design",
+                    "text": "<strong>User interface design</strong> with Figma, Adobe XD, Sketch... and, of course, pencil and paper!"
+                }
+            ]
+        },
+        "benefits": {
+            "title": "Program benefits",
+            "text": "Undergoing professional training in an international company will be <strong>a challenge for the student both professionally and culturally and socially</strong>. Communication is crucial for the development of daily work, so they can significantly improve:",
+            "ul": [
+                 "<strong>The language</strong>, having to improve their communication skills in a foreign language (especially English).",
+                 "<strong>The skills</strong>, acquiring the ability to perform certain tasks effectively.",
+                 "<strong>The attitudes</strong>, perfecting their response to certain situations and promoting self-confidence."
+            ]
+        },
+        "conditions": {
+            "title": "Conditions",
+            "ul": [
+                 "The student or teacher must <strong>bring their own material</strong> with the minimum conditions to carry out the practices as indicated in the program.",
+                 "<strong>The days are 4 hours daily</strong> from Monday to Friday. Consult program for teacher courses",
+                 "The daily schedule can be chosen by the school or the group, in <strong>slots from 08:00 to 12:00, from 12:00 to 16:00 or from 16:00 to 20:00</strong>, as long as there is availability."
+            ]
+        },
+        "social": {
+            "title": "A picture is worth a thousand words",
+            "subtitle": "Follow us on social networks and take a look at this program"
+        }        
+    },
+    {
+        "page": "education_programs_mobility_erasmus",
+        "page_title": "Erasmus+ Program of the European Union | Globodain Education",
+        "page_metadescription": "Globodain Education offers the Erasmus+ Program for students and teachers from educational institutions in Europe. This program provides a unique learning and fun experience in a technological and competitive environment, showing the reality of the working world.",
+        "page_keywords": "Globodain Education, Erasmus+ Program, europe, students, teachers, learning, technology, working world, collaboration",
+        "message": {
+            "text": "Are you an educational institution? then you might be interested in",
+            "link": {
+                "text": "collaborating with us",
+                "tooltip": "Expand information about collaboration with Globodain Education"
+            }
+        },
+        "hero": {
+            "title": "Erasmus+ Programs",
+            "subtitle": "Erasmus+ EU Mobility Programs",
+            "text": "We organize <strong>company internships</strong> and <strong>training courses</strong> for students and teachers in European countries in collaboration with the Erasmus+ program of the European Union"
+        },
+        "call_action": {
+            "title": "Do you want to expand information?",
+            "text": "Contact the Globodain Education team through the form available on the contact page",
+            "button": "Contact the team"
+        }
+    },    
+    {
+        "page": "terms",
+        "page_title": "Términos y condiciones de nuestros servicios | Globodain",
+        "page_metadescription": "Los términos y condiciones de Globodain establecen las reglas para el uso de nuestros servicios. Al utilizar nuestros servicios, aceptas estos términos. Te recomendamos que los leas detenidamente para entender tus derechos y responsabilidades.",
+        "page_keywords": "términos y condiciones, servicios de Globodain, derechos, responsabilidades",
+        "content": {
+            "title": "Términos y condiciones",
+            "date": {
+                "title": "Fecha de la última actualización:",
+                "text": "27 de diciembre de 2023"
+            },
+            "body": "<div id='intro' class='space-bottom-1'><div class='mb-3'><h2 class='h3'>Welcome to Globodain Technology Corporation</h2></div> <p>Thank you for trusting <strong>Globodain</strong>. The services offered are managed by the registered trademark Globodain under the corporate name Plataforma Weggo España Sociedad Limitada, whose physical offices are located at the postal address Calle Bartolomé de Medina, 1 41004 Seville, Spain.</p> <p>Our services They vary between different categories, so sometimes different terms or requirements (including age) may apply. Additional terms will apply to the most relevant services, and these terms will have to be accepted if you use the requested services. </p> <p>To use our services, you must agree to our conditions. Please read each point carefully.</p> </div> <div id='services' class='space-bottom-1'> <div class='mb-3'> <h3>1 . Using our services</h3> </div> <p>You must follow all policies made available to you within the platform.</p> <p>Do not misuse our Services. For example, do not interfere with our Services or attempt to access them using any method other than the interface and instructions we provide. You may use our Services as permitted by law, including applicable export and re-export control laws and regulations. We may suspend or stop providing our Services to you if you do not comply with our terms or policies or if we are investigating suspected misconduct.</p> <p>Using our Services does not give you ownership of any intellectual property rights in our Services or the content you access. You may not use content from our Services unless you obtain permission from its owner or are permitted by law. These Terms do not grant you the right to use any trademark or logo used on our Services. Please do not remove, obscure or modify any legal notice displayed on or with our Services.</p> <div id='personal-data' class='mb-3'> <h4>A. Personal data we collect about you.</h4> </div> <p>Personal data is any information that relates to an identified or identifiable person. Personal Data that you provide to us directly through our platform will be apparent from the context in which you provide the data. In particular:</p> <ul> <li class='pb-2'>When you register for a user account, we collect your full name, email address and account login credentials.</li> <li class='pb-2'>When you register for a collaborator account, we collect your full name, company name, CIF or NIF , company and individual contact details, and account login credentials.</li> <li class='pb-2'>When you complete our online form to contact our sales team, We collect your full name, work email, country, and anything else you tell us about your project, needs, and timeline.</li> <li class='pb-2'>When you use the 'Remember Me' feature in payment services, we collect your email address, cardholder, payment card number, CVV code, and expiration date. </li> </ul> <p>When you respond to emails or surveys from Globodain , we collect your email address, name, and any other information you choose to include in the body of your email or responses. If you contact us by telephone, we will collect the telephone number that you use to call the company. If you contact us by phone as a Globodain user, we may collect additional information to verify your identity.</p> <div id='information' class='mb-3'> <h4>B. Information we collect automatically on our Sites.</h4> </div> <p>We may also collect information about your online activities across websites and connected devices over time and across websites, devices, applications and other features. and third-party online services. We use Google Analytics on our Sites to help us analyze the use of our site and diagnose technical problems.</p> <p>For more information about the cookies that may be served through our platform and how you can control our use of cookies and third-party analytics, see our <a href='/es/cookies'>Cookie Policy</a>.</p> </div> <div id='privacy' class='space-bottom-1 '> <div class='mb-3'> <h3>2. Privacy and Copyright Protection</h3> </div> <p>Globodain's privacy policies explain how we treat your personal data and protect your privacy when you use our Services. By using our Services, you agree that Globodain Spain may use such data in accordance with our privacy policies. </p> <p>We respond to notifications of alleged copyright infringements and cancel the accounts of repeat infringers in accordance with the process established in the Intellectual Property Law regulated by article 428 of the Civil and Royal Code Legislative Decree 1/1996, of April 12.</p> <p>We provide information to help copyright holders manage their intellectual property online. If you believe someone is infringing your copyright and want to notify us, you can find information on how to send notifications and Globodain's policy on responding to notifications. Contact us via email.</p> <p>You can get more information about the <a href='/es/privacy'>Privacy Policy</a></p> </div> <div id='yourContent'> <div class='mb-3'> <h3>3. Your content on our services</h3> </div> <p>Some of our Services allow you to upload, submit, store, send or receive content. You retain ownership of any intellectual property rights you have in that content. In short, what belongs to you is still yours.</p> <p>When you upload, send, store or receive content through our Services, you grant Globodain España (and those we work with) a worldwide license to use , host, store, reproduce, modify and create derivative works (such as those resulting from translations, adaptations or other changes we make to make your content work better with our Services), communicate, publish, publicly perform, publicly display and distribute such content . The rights you grant in this license are for the limited purpose of operating, promoting and improving our Services, and developing new ones. This license continues even if you stop using our Services. Some Services may offer you ways to access and delete content that has been provided to that Service. Additionally, on some of our Services, there are terms or settings that limit the scope of our use of content submitted on those Services. Please ensure that you have the necessary rights to grant us this license for any content you submit to our Services.</p> </div> </p> <p>You can get more information about the <a href='/es/privacy'>Privacy Policy</a></p> </div> <div id='yourContent'> <div class= 'mb-3'> <h3>3. Your content on our services</h3> </div> <p>Some of our Services allow you to upload, submit, store, send or receive content. You retain ownership of any intellectual property rights you have in that content. In short, what belongs to you is still yours.</p> <p>When you upload, send, store or receive content through our Services, you grant Globodain España (and those we work with) a worldwide license to use , host, store, reproduce, modify and create derivative works (such as those resulting from translations, adaptations or other changes we make to make your content work better with our Services), communicate, publish, publicly perform, publicly display and distribute such content . The rights you grant in this license are for the limited purpose of operating, promoting and improving our Services, and developing new ones. This license continues even if you stop using our Services. Some Services may offer you ways to access and delete content that has been provided to that Service. Additionally, on some of our Services, there are terms or settings that limit the scope of our use of content submitted on those Services. Please ensure that you have the necessary rights to grant us this license for any content you submit to our Services.</p> </div> </p> <p>You can get more information about the <a href='/es/privacy'>Privacy Policy</a></p> </div> <div id='yourContent'> <div class= 'mb-3'> <h3>3. Your content on our services</h3> </div> <p>Some of our Services allow you to upload, submit, store, send or receive content. You retain ownership of any intellectual property rights you have in that content. In short, what belongs to you is still yours.</p> <p>When you upload, send, store or receive content through our Services, you grant Globodain España (and those we work with) a worldwide license to use , host, store, reproduce, modify and create derivative works (such as those resulting from translations, adaptations or other changes we make to make your content work better with our Services), communicate, publish, publicly perform, publicly display and distribute such content . The rights you grant in this license are for the limited purpose of operating, promoting and improving our Services, and developing new ones. This license continues even if you stop using our Services. Some Services may offer you ways to access and delete content that has been provided to that Service. Additionally, on some of our Services, there are terms or settings that limit the scope of our use of content submitted on those Services. Please ensure that you have the necessary rights to grant us this license for any content you submit to our Services.</p> </div> There are terms or settings that limit the scope of our use of content submitted on those Services. Please ensure that you have the necessary rights to grant us this license for any content you submit to our Services.</p> </div> There are terms or settings that limit the scope of our use of content submitted on those Services. Please ensure that you have the necessary rights to grant us this license for any content you submit to our Services.</p> </div>"
+        }
+    },
+    {
+        "page": "cookies",
+        "page_title": "Política de cookies | Globodain",
+        "page_metadescription": "En Globodain, utilizamos cookies para mejorar la experiencia del usuario en nuestro sitio web. Nuestra Política de Cookies explica qué cookies utilizamos, por qué las utilizamos y cómo puedes gestionar tus preferencias de cookies. Te recomendamos que leas nuestra Política de Cookies para entender cómo usamos esta información para mejorar nuestros servicios.",
+        "page_keywords": "Política de Cookies, Globodain, experiencia del usuario, gestión de cookies, servicios de Globodain",
+        "content": {
+            "title": "Política de Cookies",
+            "date": {
+                "title": "Última modificación:",
+                "text": "27 de diciembre de 2023"
+            },
+            "body": "<p><strong>¿Qué son las Cookies?</strong></p> <p>Como es práctica común en casi todos los sitios web profesionales, este sitio utiliza cookies, que son pequeños archivos que se descargan a tu ordenador, para mejorar tu experiencia. Esta página describe qué información recopilan, cómo la usamos y por qué a veces necesitamos almacenar estas cookies. También compartiremos cómo puedes evitar que se almacenen estas cookies, aunque esto puede degradar o 'romper' ciertos elementos de la funcionalidad del sitio.</p> <p><strong>Cómo utilizamos las Cookies</strong></p> <p>Utilizamos cookies por una variedad de razones detalladas a continuación. Desafortunadamente, en la mayoría de los casos no hay opciones estándar de la industria para deshabilitar las cookies sin deshabilitar completamente la funcionalidad y las características que añaden a este sitio. Se recomienda que dejes todas las cookies si no estás seguro de si las necesitas o no en caso de que se utilicen para proporcionar un servicio que utilizas.</p> <p>Utilizamos un tercer servicio como Cookies para obtener y gestionar todas las preferencias de los usuarios.</p> <p><strong>Deshabilitar las Cookies</strong></p> <p>Puedes evitar la configuración de las cookies ajustando la configuración de tu navegador (consulta la Ayuda de tu navegador para saber cómo hacerlo). Ten en cuenta que deshabilitar las cookies afectará la funcionalidad de este y muchos otros sitios web que visites. Deshabilitar las cookies generalmente resultará también en la deshabilitación de ciertas funcionalidades y características de este sitio. Por lo tanto, se recomienda que no deshabilites las cookies.</p> <p><strong>Las Cookies que establecemos</strong></p> <ul> <li> <p>Cookies relacionadas con la cuenta</p> <p>Si creas una cuenta con nosotros, entonces utilizaremos cookies para la gestión del proceso de registro y la administración general. Estas cookies normalmente se eliminarán cuando cierres la sesión, sin embargo, en algunos casos pueden permanecer después para recordar tus preferencias del sitio cuando hayas cerrado la sesión.</p> </li> <li> <p>Cookies relacionadas con el inicio de sesión</p> <p>Utilizamos cookies cuando has iniciado sesión para que podamos recordar este hecho. Esto evita que tengas que iniciar sesión cada vez que visitas una nueva página. Estas cookies se eliminan o se borran normalmente cuando cierras la sesión para asegurar que sólo puedes acceder a las funciones y áreas restringidas cuando has iniciado sesión.</p> </li> <li> <p>Cookies relacionadas con boletines de noticias por correo electrónico</p> <p>Este sitio ofrece servicios de suscripción a boletines de noticias o correo electrónico y las cookies pueden ser utilizadas para recordar si ya estás registrado y si se deben mostrar ciertas notificaciones que sólo pueden ser válidas para usuarios suscritos/no suscritos.</p> </li> <li> <p>Cookies de preferencias del sitio</p> <p>Para proporcionarte una gran experiencia en este sitio, proporcionamos la funcionalidad para establecer tus preferencias de cómo se ejecuta este sitio cuando lo utilizas. Para recordar tus preferencias, necesitamos establecer cookies para que esta información pueda ser llamada cada vez que interactúas con una página que se ve afectada por tus preferencias.</p> </li> </ul> <p><strong>Cookies de Terceros</strong></p> <p>En algunos casos especiales también utilizamos cookies proporcionadas por terceros de confianza. La siguiente sección detalla qué cookies de terceros puedes encontrar en este sitio.</p> <ul> <li> <p>Este sitio utiliza Google Analytics, que es una de las soluciones de análisis más extendidas y confiables en la web para ayudarnos a entender cómo utilizas el sitio y las formas en que podemos mejorar tu experiencia. Estas cookies pueden rastrear cosas como cuánto tiempo pasas en el sitio y las páginas que visitas para que podamos seguir produciendo contenido atractivo.</p> <p>Para obtener más información sobre las cookies de Google Analytics, consulta la página oficial de Google Analytics.</p> </li> <li> <p>Se utilizan análisis de terceros para rastrear y medir el uso de este sitio para que podamos seguir produciendo contenido atractivo. Estas cookies pueden rastrear cosas como cuánto tiempo pasas en el sitio o las páginas que visitas, lo que nos ayuda a entender cómo podemos mejorar el sitio para ti.</p> </li> <li> <p>De vez en cuando probamos nuevas características y hacemos cambios sutiles en la forma en que se entrega el sitio. Cuando todavía estamos probando nuevas características, estas cookies pueden ser utilizadas para asegurar que recibes una experiencia consistente mientras estás en el sitio, asegurando que entendemos qué optimizaciones nuestros usuarios aprecian más.</p> </li> <li> <p>El servicio Google AdSense que utilizamos para servir publicidad utiliza una cookie DoubleClick para servir anuncios más relevantes en la web y limitar la cantidad de veces que se muestra un anuncio dado.</p> <p>Para obtener más información sobre Google AdSense, consulta las preguntas frecuentes sobre privacidad de Google AdSense.</p> </li> <li> <p>Varios socios publicitan en nuestro nombre y las cookies de seguimiento de afiliados simplemente nos permiten ver si nuestros clientes han llegado al sitio a través de uno de nuestros sitios asociados para que podamos acreditarlos adecuadamente y, cuando corresponda, permitir que nuestros socios afiliados proporcionen cualquier bonificación que puedan proporcionarte por hacer una compra.</p> </li> </ul> <p><strong>Más Información</strong></p> <p>Esperamos que eso haya aclarado las cosas para ti y como se mencionó anteriormente si hay algo de lo que no estás seguro si necesitas o no, generalmente es más seguro dejar las cookies habilitadas en caso de que interactúen con una de las características que utilizas en nuestro sitio.</p> <p>Si todavía estás buscando más información, entonces puedes contactarnos a través de uno de nuestros métodos de contacto preferidos:</p> <ul> <li>Email: admin@globodain.com</li> </ul>"
+        }
+    },
+    {
+        "page": "privacy",
+        "page_title": "Política de privacidad | Globodain",
+        "page_metadescription": "La Política de Privacidad de Globodain explica cómo recopilamos, usamos, compartimos y protegemos tu información personal cuando utilizas nuestros servicios. Te recomendamos que leas nuestra Política de Privacidad para entender tus derechos y responsabilidades.",
+        "page_keywords": "Política de Privacidad, Globodain, recopilación de información, uso de información, compartición de información, protección de información, derechos, responsabilidades",
+        "content": {
+            "title": "Política de privacidad",
+            "date": {
+                "title": "Última modificación:",
+                "text": "27 de diciembre de 2023"
+            },
+            "body": "<div class='mb-7'> <div class='mb-3'> <h2 class='h3'>Introduction</h2> </div> <p>Globodain Technology Corporation S.L, as Data Controller, informs you that, in accordance with the provisions of Regulation (EU) 2016/679, of April 27, (RGPD) and LO 3/2018, of December 5, on data protection and guarantee of digital rights (LOPDGDD ), we will treat your data as reflected in this Privacy Policy.</p> <p>The Company's privacy policy follows international and European legislation (GDPR) on data protection. In addition, the Company intends to inform the user through this document of their rights and obligations regarding the privacy of their data, in addition to explaining the reason for the storage and use of the data.</p> <p>This Policy applies to the processing of your personal data collected by the company for the provision of its services. If you accept the measures in this Policy, you agree that we process your personal data as defined in this Policy.</p> </div> <div class='mb-7'> <div class='mb-3'> <h3>Data collected by the company</h3> </div> <p>The Company collects all the information entered into the application by the user and stores it on its own servers or on the servers of the Company's storage provider. As it is a Cloud service, storage on servers is a requirement for the operation of the application, which is why the user accepts this fact.</p> <p>The Company classifies the data into two categories: user data and account details. User data includes the user's name and personal data, as well as photographs and other documentation that the user decides to upload to the application in the account information part. The account data is those related to the business account created by the user, in any of its different forms: Self-Employed, Personal Civil Society or Limited Company, which includes billing data, expenses, contacts, products and clients.</p> <p>Finally, the Company collects data from the connecting device through cookies. The user can disable cookies in their browser so that the Company does not collect said information if the user does not want it to be so. This information is used to carry out navigation studies and access to the application, as well as its use. Navigation information includes the type of device and its characteristics, location and connection times.</p> </div> <div class='mb-7'> <div class='mb-3'> <h3>Who is responsible for the processing of your data?</h3> </div> <p>Company name: Globodain Technology Corporation S.L</p> <p>Commercial name: Globodain</p> <p>National commercial name: Globodain Spain</p> <p>Address: Calle bartolomé de medina 1, floor 1, module D3, 41004 Seville, Spain.</p> <p>Email: admin@globodain.com</p> </div> <div class='mb-7'> <div class='mb-3'> <h3>For what purpose do we process your personal data?</h3> </div> <p>At Globodain Spain we process the information provided to us by interested parties in order to provide and/or market the products and/or services offered by our firm.</p> </div> <div class= 'mb-7'> <div class='mb-3'> <h3>How long will we keep your data?</h3> </div> <p>The personal data provided will be kept for the time essential for the provision of the requested service or marketing of the product and during the legally established deadlines.</p> </div> <div class='mb-7'> <div class='mb-3'> <h3>What is the legitimacy for the processing of your data?</h3> </div> <p>The legal basis for the processing of your data is through the consent of the affected party, the execution of a service contract and the provision of responses to your queries received through the contact form or email (in accordance with the terms and conditions contained in our privacy policy).</p> </div> <div class='mb-7'> <div class ='mb-3'> <h3>To which recipients will your data be communicated?</h3> </div> <p>The data will not be communicated to third parties except by legal obligation.</p> <p>For The purpose of being an intermediary between suppliers and demanders, the data, in a limited manner, will be communicated with the requested companies to offer a higher quality experience to the user. This information will never be processed with third parties unrelated to the company's own work activity.</p> </div> <div class='mb-7'> <div class='mb-3'> <h3>Which Are your rights when you provide us with your data?</h3> </div> <p>Any person has the right to obtain information about whether the Company is processing personal data that concerns them, or not.</p> <p> Interested persons have the right to access their personal data, as well as to request the rectification of inaccurate data or, where appropriate, request its deletion when, among other reasons, the data is no longer necessary for the purposes for which it was collected. </p> <p>In certain circumstances, interested parties may request the limitation of the processing of their data, in which case we will only keep them for the exercise or defense of claims.</p> <p>You can materially exercise your rights. in the following way: by sending an email to hello@holded.com duly identifying yourself and expressly indicating the specific right that you want to exercise.</p> <p>If you have given your consent for a specific purpose, you have the right to withdraw the consent granted in at any time, without affecting the legality of the treatment based on consent prior to your withdrawal.</p> <p>In the event that you feel your rights have been violated regarding the protection of your personal data, especially when you do not has obtained satisfaction in the exercise of your rights, you can file a claim with the competent Data Protection Control Authority through its website: www.agpd.es</p> </div> <div class= 'mb-7'> <div class='mb-3'> <h3>How have we obtained your data?</h3> </div> <p>All personal data obtained by the Company have been provided directly by the user. We do not process special categories of personal data in accordance with Article 9 of the EU General Data Protection Regulation (personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs or trade union membership).</p> </div> <div class='mb-7'> <div class='mb-3'> <h3>Data shared by the user</h3> </div> <p>Many of our services allow you share information with other users. Remember that when you share information publicly, it can be indexed by search engines. Our services provide you with different options on how to share and delete your content. How to access and update your personal data whenever you use our services, our goal is to provide you with access to your personal information. If that information is not correct, we strive to provide you with ways to quickly delete or update it, unless we need to maintain that information for legitimate business or legal reasons. When updating your personal information, we may ask you to verify your identity so that we can process your request.</p> <p>We may reject requests that are more repetitive than reasonable, that require disproportionate technical effort (for example, developing a new system or radically change an existing practice), that endanger the privacy of other users or are not practical at all (for example, requests that refer to information stored in backup systems). When we can offer you the possibility of accessing and modifying your personal data, we will do so free of charge, unless this requires a disproportionate effort.</p> <p>When providing our services, We will protect your data by ensuring that it cannot be deleted accidentally or intentionally. For this reason, even if you delete your data from our services, we may not immediately destroy residual copies stored on our active servers or data stored in our security systems.</p> </div> <div class=' mb-7'> <div class='mb-3'> <h3>Access and modification of user data</h3> </div> <p>The user may modify his or her user data at any time. the accounts you own. The Company does not store the modified information, so once the user modifies or deletes the information, they will lose it forever within the application.</p> </div> <div class='mb-7'> <div class='mb-3'> <h3>The data we share</h3> </div> <p>We do not share personal information with companies, organizations or individuals that have no relationship with the Company, unless there is a of the following circumstances:</p> <ul>Consent: We will share your personal data with companies, organizations or individuals outside the Company when you have given us your consent to do so. Your consent will be necessary to share specially protected personal data.</ul> <ul>External processing: We provide personal information to our affiliates or other trusted people or companies for processing by the Company, following our instructions and in accordance with our Privacy Policy, and adopting other appropriate security and confidentiality measures.</ul> <ul>Legal reasons: We will share your personal data with companies, organizations or individuals outside the Company if we believe in good faith that There is a reasonable need to access or use, preserve or disclose said data to: comply with any requirement set forth in applicable legislation or regulations or meet any requirement of an administrative or judicial body, comply with the provisions of the current Terms of Service, including the investigation of possible violations, detect or prevent any fraud or technical or security incident or otherwise address them, protect the rights, property or safety of the Company, our users or the general public to the extent required or permitted by applicable legislation</ul> </div> <div class='mb-7'> <div class='mb-3'> <h3>Data security</h3> </div> <p> For the Company, security is the most important thing. Currently, the data storage service is provided through specialized providers with security certificates and anti-hacking systems. The Company has decided to outsource storage to ensure that the provider meets the highest security standards, at levels that the Company could not offer on its own storage servers.</p> <p>We strive to protect the Company and our customers. users against any unauthorized modification, disclosure or destruction of the data we keep against unauthorized access to them. In particular: We encrypt many of our services using the SSL protocol. We review our policy on data collection, storage and processing, including physical security measures, to prevent unauthorized access to our systems. We limit the access of the Company's contractors, agents and employees to the personal information they are required to process for the Company and ensure that they comply with strict contractual confidentiality obligations and are subject to appropriate disciplinary conditions or dismissal. if they do not comply with these obligations. Our Privacy Policy applies to all services offered by the Company and its affiliates, including the Company, but excludes those services that are subject to separate privacy policies that do not incorporate this Privacy Policy.</p> </div> <div class='mb-7'> <div class='mb-3'> <h3>When this Privacy Policy applies</h3> </div> <p>Our Privacy Policy applies to everyone the services offered by the Company and its affiliates, but excludes those services that are subject to independent privacy policies that do not incorporate this Privacy Policy.</p> </div> <div class='mb-7'> <div class='mb-3'> <h3>Compliance with the law</h3> </div> <p>At Globodain Spain we verify compliance with our Privacy Policy on a regular basis. Likewise, we adhere to different self-regulation codes. If we receive a formal written complaint, we will contact the person who made it to follow up on it. We will work with the relevant regulatory authorities, including local data protection authorities, to resolve any complaints related to the transfer of personal data that we have not been able to resolve directly with the user.</p> </div> <div class ='mb-7'> <div class='mb-3'> <h3>Modifications</h3> </div> <p>Our Privacy Policy may be modified at any time. We will not limit your rights under this Privacy Policy without your express consent. We will post all changes to this Privacy Policy on this page and, if significant, We will make a more prominent notification (for example, we will send you an email notification if the change affects certain services). In addition, we will archive previous versions of this Privacy Policy so that you can consult them.</p> <p>When we need to obtain information from you, we will always ask you to provide it to us voluntarily by giving your express consent through the means enabled for this.</p> <p>The processing of data collected through the data collection forms on the website or other means will be incorporated into the Register of Processing Activities for which Globodain Spain is responsible</ p> <p>The Company treats the data confidentially and adopts the appropriate technical and organizational measures to guarantee the appropriate level of security for the processing, in compliance with the requirements of Regulation (EU) 2016/679 of the European Parliament and the Council of April 27, 2016 and other applicable regulations on Data Protection.</p> <p>However, the Company cannot guarantee the absolute invulnerability of the systems, therefore, it does not assume any responsibility for damages. and damages resulting from alterations that third parties may cause in the user's computer systems, electronic documents or files.</p> <p>If you choose to leave our website through links to websites that do not belong to our entity, Globodain España will not be responsible for the privacy policies of said websites or the cookies that they may store on the user's computer.</p> <p>Our policy regarding the sending of our emails focuses on sending only communications that you have requested to receive. If you prefer not to receive these messages by email, we will offer you through them the possibility of exercising your right to delete and waive the receipt of these messages, in accordance with the provisions of Title III, article 22 of Law 34/ 2002, Services for the Information Society and Electronic Commerce.</p> </div> will be incorporated into the Register of Processing Activities for which Globodain España is responsible</p> <p>The Company treats the data confidentially and adopts the appropriate technical and organizational measures to guarantee the level of security appropriate to the processing, in compliance with as required by Regulation (EU) 2016/679 of the European Parliament and of the Council of April 27, 2016 and other applicable regulations on Data Protection.</p> <p>However, the Company cannot guarantee the absolute invulnerability of the systems, therefore, it does not assume any responsibility for damages derived from alterations that third parties may cause in the user's computer systems, electronic documents or files.</p> <p>If you choose to leave our site web through links to websites not belonging to our entity, Globodain Spain will not be responsible for the privacy policies of said websites or the cookies that they may store on the user's computer.</p> <p> Our policy regarding the sending of our emails focuses on only sending communications that you have requested to receive. If you prefer not to receive these messages by email, we will offer you through them the possibility of exercising your right to delete and waive the receipt of these messages, in accordance with the provisions of Title III, article 22 of Law 34/ 2002, Services for the Information Society and Electronic Commerce.</p> </div> will be incorporated into the Register of Processing Activities for which Globodain Spain is responsible</p> <p>The Company treats the data confidentially and adopts the appropriate technical and organizational measures to guarantee the level of security appropriate to the processing, in compliance with as required by Regulation (EU) 2016/679 of the European Parliament and of the Council of April 27, 2016 and other applicable regulations on Data Protection.</p> <p>However, the Company cannot guarantee the absolute invulnerability of the systems, therefore, it does not assume any responsibility for damages derived from alterations that third parties may cause in the user's computer systems, electronic documents or files.</p> <p>If you choose to leave our site web through links to websites not belonging to our entity, Globodain Spain will not be responsible for the privacy policies of said websites or the cookies that they may store on the user's computer.</p> <p> Our policy regarding the sending of our emails focuses on only sending communications that you have requested to receive. If you prefer not to receive these messages by email, we will offer you through them the possibility of exercising your right to delete and waive the receipt of these messages, in accordance with the provisions of Title III, article 22 of Law 34/ 2002, Services for the Information Society and Electronic Commerce.</p> </div>"
+        }
+    },
+    {
+        "page": "request-services",
+        "page_title": "Contact form | Globodain",
+        "page_metadescription": "Contact the Globodain team through the form to submit requests to the team",
+        "page_keywords": "Globodain contact, contact Globodain, help, technological support, technology in Europe, human team",
+        "message": {
+            "text": "Globodain Education: professional training in technology for students and teachers through educational programs.",
+            "link": {
+                "text": "See section",
+                "tooltip": "Go to the page of interest"
+            }
+        },
+        "content": {
+            "title": "Contact Form",
+            "links": [
+                 {
+                    "title": "Start working with Globodain technology",
+                    "text": "<p class='mb-2'>A specialized team will study your project and the needs it needs to cover. <br><br> We will present a proposal with dates and implementation guidelines, technology and route to follow. You can see some of the technologies and methodologies that Globodain applies in the development of its project by clicking on the following link.</p>",
+                    "button": "See applications"
+                },
+                 {
+                    "title": "Collaborate in Globodain educational programs",
+                    "text": "<p class='mb-2'>We have a wide network of collaborators to offer a unique experience in the professional training of students and teachers at a European level. <br><br> We offer companies or educational institutions to collaborate with us for the joint development of projects within the framework of the European Union programs.</p>",
+                    "button": "See partnership"
+                }
+            ],
+            "form": {
+                "message": "The message was sent successfully.<br> A member of the Globodain team will review your request.",
+                "title": "Fill the form",
+                "inputs": [
+                     "Full name",
+                     "Email",
+                     "Telephone number <small>(enter the prefix)</small>",
+                     "Company name <small>(leave blank if professional)</small>",
+                     "Position held <small>(leave blank if professional)</small>",
+                     "How can we help you?"
+                ],
+                "terms": {
+                    "text": "I confirm that I have read and accept the",
+                    "link": "Privacy Policy"
+                },
+                "button": "Send form"
+            }
+        },
+        "location": {
+            "title": "Central office",
+            "days": [
+                 "Mon - Fri",
+                 "Sat - Sun",
+                 "Closed"
+            ]
+        }
+    }
+]

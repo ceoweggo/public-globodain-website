@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta name="twitter:title" content="Globodain: página de prevención" />
+  <meta name="twitter:description"
+      content="Mejora la eficiencia de tus procesos con Globodain. Explora nuestros servicios para tu escuela o negocio. Desarrolla tu proyecto tecnológico en otro nivel." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="exp-visitor-anchor" content="" />
+  <meta name="exp-atjs-anchor" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+  <meta name="msapplication-TileColor" content="#080032">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" media="screen" href="{{url_for('static',filename='vendor/boxicons/css/boxicons.min.css')}}"/>
+  <link rel="stylesheet" media="screen" href="{{url_for('static',filename='vendor/swiper/swiper-bundle.min.css')}}"/>
+  <link rel="stylesheet" media="screen" href="{{url_for('static',filename='vendor/lightgallery/css/lightgallery-bundle.min.css')}}"/>
+
+  <link rel='stylesheet' href="{{url_for('static',filename='css/theme.min.css')}}" type='text/css' />
+
+
+<!-- Theme CSS -->
+<title> Estás realizando una acción no permitida - Globodain </title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/theme.minc619.css') }}">
+</head>
+
+<body>
+ <!-- Page Content -->
+ <div class="container d-flex flex-column">
+  <div class="row align-items-center justify-content-center no-gutters min-vh-100">
+
+   <!-- Docs -->
+   <div class="col-lg-10 col-md-6 col-12 text-center text-lg-center">
+    <h1 class="display-1 mb-3">Página de prevención</h1>
+    <p class="h6">Hemos detectado que estás realizando una acción no permitida. <br>Con la finalidad de evitar ataques a nuestros sistemas, hemos bloqueado tu acción.</p>
+    <p class="mb-4 small">Error Code: 5006 Attack prevention.</p>
+    <a href="{{ url_for('public.index') }}" class="btn btn-primary text-white mr-2">Volver a la web</a>
+   </div>
+
+   <!-- img -->
+   <div class="offset-lg-1 col-lg-6 col-md-12 col-12">
+    <img src="{{ url_for('static', filename='svg/404-error-img.svg') }}" alt="" class="w-100" />
+   </div>
+  </div>
+ </div>
+</body>
+
+</html>
