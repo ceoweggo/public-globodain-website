@@ -293,3 +293,7 @@ section {
 .dModel ul {
   visibility: visible !important
 }
+
+.larger-text {
+  font-size: 15px; /* Adjust the font size as needed */
+}
