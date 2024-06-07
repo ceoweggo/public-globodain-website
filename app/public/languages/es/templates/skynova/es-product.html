@@ -2,80 +2,86 @@
 
 {% block content %}
 <main class="page-wrapper">
-<section class="bg-[#06191d] mb-0">
-	<div class="container pt-4">
-		<h2 class="font-semibold text-center text-white text-4xl my-8">About Our Product</h2>
+	<section class="d-flex justify-content-center align-items-center text-center" style="background: url('{{url_for('static',filename='img/backgrounds/space.png')}}') no-repeat center center; background-size: cover; height: 23%; position: relative;">
+    <div class="container pt-4">
+		<h2 class="font-semibold text-center text-white text-6xl my-8">About Our Product</h2>
 		<div class="flex-col">
-			<p class="text-lg mt-3 text-white text-center">Skynova is an innovative company transforming the way police, firefighters, and other emergency services respond to crises. Our mission is to provide instant access to drone hangars, significantly enhancing the efficiency and speed of emergency responses.</p>
+			<p class="text-xl mt-3 text-white text-center">Skynova is an innovative company transforming the way police, firefighters, and other emergency services respond to crises. Our mission is to provide instant access to drone hangars, significantly enhancing the efficiency and speed of emergency responses.</p>
 		</div>
+  </br>
+</br>
+    <a href='{{url_for("public_{}.skynova_models".format(session["lang"].replace("-","_")))}}' class="btn btn-dark btn-lg px-5">
+      More Info
+    </a>  
 	</div>
-	<model-viewer
-		class="h-[25rem] w-full bg-transparent"
-		alt="A 3D model of our product."
-		src={{url_for('static',filename='3D/drone_home.glb')}}
-		poster=""
-		shadow-intensity="1"
-		camera-controls
-		touch-action="pan-y"
-		disable-zoom
-	></model-viewer>
+  <model-viewer
+  class="h-[25rem] w-full bg-transparent"
+  alt="A 3D model of our product."
+  src={{url_for('static',filename='3D/drone_home.glb')}}
+  poster=""
+  shadow-intensity="1"
+  camera-controls
+  touch-action="pan-y"
+  disable-zoom
+></model-viewer>
+  
 </section>
-  <section class="py-5" id="features">
-    <div class="container px-5 my-5 pt-10">
-      <div class="section-title" >
-        <h2 class="mb-5">Benefits</h2>
-      </div>
-      <div class="col-lg-8">
-        <div class="row gx-5 row-cols-1 row-cols-md-2">
-            <div class="col mb-5 h-100">
-              <i class="bx bx-rocket fs-2 text-gradient-primary"></i>
-              <h2 class="h5">Optimized Resource Utilization</h2>
-              <p class="mb-0">Maximizes efficiency in using personnel and equipment.</p>
-            </div>
-            <div class="col mb-5 h-100">
-              <i class="bx bxs-hourglass fs-2 text-gradient-primary"></i>
-              <h2 class="h5">Reduced Response Time</h2>
-              <p class="mb-0">Advanced systems decrease the delay between notifications and responder arrival.</p>
-            </div>
-            <div class="col mb-5 mb-md-0 h-100">
-              <i class="bx bxs-chip fs-2 text-gradient-primary"></i>
-              <h2 class="h5">Enhanced Situational Awareness</h2>
-              <p class="mb-0">Real-time assessments improve decision-making and resource allocation.</p>
-            </div>
-            <div class="col h-100">
-              <i class="bx bxs-time fs-2 text-gradient-primary"></i>
-              <h2 class="h5">Continuous Availability</h2>
-              <p class="mb-0">Operates 24/7, ensuring constant readiness.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="py-5 bg-light" id="flytbase">
+  <<section class="py-5 bg-light" id="flytbase">
     <div class="container px-5 my-5">
-      <div class="section-title" >
-        <h2 class="mb-5">Partnership</h2>
-      </div>
-      <div class="row gx-5 align-items-center">
-        <div class="col-lg-6 order-first order-lg-last">
-          <img class="img-fluid w-50 mx-auto d-block" src="https://i.ibb.co/4Vdhk2L/Partnership.png" alt="Partnership" border="0">
+        <div class="section-title text-center">
+            <h2 class="mb-5">Partnership</h2>
         </div>
-        <div class="col-lg-6">
-          <h2 class="fw-bolder fs-4">Our Partnership</h2>
-          <p class="lead fw-normal text-muted mb-0">
-            Our partnership integrates Flytbase's digital platform with a specialized company's physical infrastructure for drone deployment. We will jointly design, build, and maintain the hardware while Flytbase manages the digital aspects, enhancing operational efficiency across various industries.
-          </p>
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="text-center">
+                    <img class="img-fluid w-75 mx-auto d-block mb-4" src="https://th.bing.com/th/id/R.4893eda0cd52a867c91c2301ae96bc42?rik=khnxHPawUaI4XA&riu=http%3a%2f%2fdronebelow.com%2fwp-content%2fuploads%2f2018%2f11%2fFlytBase-Logo.png&ehk=E%2fZsydwbDqXSyxxm5DSn%2bK5JunY%2fRvuS1vuFW2vBOzA%3d&risl=&pid=ImgRaw&r=0" alt="Partnership" border="0"> 
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center">
+                    <img class="img-fluid w-75 mx-auto d-block mb-4" src="https://i.ibb.co/4Vdhk2L/Partnership.png" alt="Flytbase Logo">
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="text-center">
+                    <h2 class="fw-bolder fs-4 p-2">Who</h2>
+                    <p class="lead fw-normal text-muted mb-0">
+                        Our partnership integrates Flytbase's digital platform with a specialized company's physical infrastructure for drone deployment. We will jointly design, build, and maintain the hardware while Flytbase manages the digital aspects, enhancing operational efficiency across various industries.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center">
+                    <h2 class="fw-bolder fs-4 p-2">Why</h2>
+                    <p class="lead fw-normal text-muted mb-0">
+                        Our partnership merges Flytbase's digital platform with a company specializing in physical drone infrastructure. Together, we co-create, build, and manage hardware, while Flytbase optimizes digital operations. This synergy enhances operational efficiency across diverse industries.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-12" style="padding: 5%;">
+                <div class="text-center">
+                    <h2 class="fw-bolder fs-4 p-2">What We Can Achieve Together</h2>
+                    <p class="lead fw-normal text-muted mb-0">
+                        Collaboratively, we can revolutionize the drone industry by seamlessly integrating digital and physical infrastructure, optimizing operations, and driving innovation across various sectors. Drones can be utilized by government agencies such as police, firefighters, and ambulance services for surveillance, search and rescue operations, and disaster management. Additionally, they can be employed in agriculture for crop monitoring, spraying, and yield optimization, as well as in safety inspections of infrastructure and environmental monitoring.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary rounded-pill" id="show-more" onclick="redirectToFlytbase()">Go To Flytbase</button>
+        </div>
     </div>
-  </section>
+</section>
 
-  <div class="section-title" >
-    <h2 class="mb-5">Components</h2>
-  </div>
   <section class="py-5 bg-secondary" id="scroll-target">
+    <div class="section-title" >
+      <h2 class="mb-5">Components</h2>
+    </div>
     <div class="container px-5 my-5">
         <div class="row gx-5 align-items-center">
           <div class="col-lg-6"><img class="img-fluid mx-auto d-block" src="https://i.ibb.co/rcf1Bmb/Drone-Model1.png" alt="Drone-Model1" border="0"></div>
@@ -138,8 +144,8 @@
       </div>
     </div>
   </section>
-
-  <section>
+  
+  <section class="page-wrapper">
 		<div class="container mt-20" id="contact">
 			<div class="w-full mt-4 flex flex-col gap-1 items-center relative md:items-start justify-center">
 				<div class="flex md:w-1/2 md:absolute w-full flex-col gap-8 card md:right-16 border-light shadow-lg py-3 p-sm-4 p-md-5">
@@ -154,17 +160,4 @@
 			</div>
 		</div>
 	</section>
-
-</main>
-        </div>
-      </div>
-    </div>
-    <div class="d-none d-lg-block" style="height: 480px;"></div>
-    <div class="d-lg-none" style="height: 400px;"></div>
-    <div class="d-flex position-absolute bottom-0 start-0 w-100 overflow-hidden mb-n1" style="color: var(--gtc-body-bg);">
-      <div class="position-relative start-50 translate-middle-x flex-shrink-0" style="width: 3774px;">
-        <svg width="3774" height="201" viewBox="0 0 3774 201" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
-      </div>
-    </div>
-</section>
 {% endblock %}
