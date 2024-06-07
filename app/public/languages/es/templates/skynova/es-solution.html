@@ -6,39 +6,45 @@
 	<link rel='stylesheet' href="{{url_for('static',filename='css/solution.css')}}" type='text/css' />
 </head>
 <main class="page-wrapper">
-	<section class="bg-transparent flex justify-center items-center h-[50dvh] py-10 lg:mt-[3.169375rem] mt-[2.815625rem]" style="background: url('{{url_for('static',filename='img/backgrounds/space.png')}}'); background-opacity: 0.1;">
-		<h1 class="font-bold text-center uppercase mb-3 text-white text-6xl">
-			The solution for your needs
-		</h1>
-	</section>
+	<section class="d-flex justify-content-center align-items-center text-center" style="background: url('{{url_for('static',filename='img/backgrounds/landing/globodain-landing-1.jpg')}}') no-repeat center center; background-size: cover; height: 23%; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);"></div>
+        <div style="position: relative; z-index: 2;">
+            <h1 class="font-weight-bold text-gradient-primary text-uppercase mb-3 display-4 text-white" style="font-family: 'Serif'; letter-spacing: 2px;">
+                The solution for your needs
+            </h1>
+            <p class="lead text-white" style="font-family: 'serif'; margin-bottom: 20px; ">
+                Discover innovative solutions that meet your specific needs.
+            </p>
+            <a href="#about" class="btn btn-primary btn-lg" style="font-family: 'Roboto', sans-serif; border-radius: 30px; padding: 10px 20px;">
+                Learn More
+            </a>
+        </div>
+    </section>
 
-  	<section id="about" class="about">
-    	<div class="container">
-      		<div class="section-title">
-        		<h2>Why Skynova</h2>
-      		</div>
-      		<div class="row content">
-        		<div class="col-lg-6" >
-          			<p>
-           				Welcome to Skynova, where drones find their home. Our mission is to leverage cutting-edge technology to enhance the efficiency and responsiveness of public services. Skynova aims to revolutionize the way police, firefighters, and other state agencies deploy drones, providing them with a seamless and effective solution.
-          			</p>
-          			<ul>
-            			<li><i class='bx bx-check-double'></i> Our company is pioneering in drone charging station technology</li>
-            			<li><i class='bx bx-check-double'></i> We guarantee effectiveness in our power supply solution</li>
-            			<li><i class='bx bx-check-double'></i> Materials used for station are of the highest quality</li>
-            			<li><i class='bx bx-check-double'></i> We guarantee effectiveness in our charging solution</li>
-            			<li><i class='bx bx-check-double'></i> Our experts will take care of the drone station installation</li>
-          			</ul>
-        		</div>
-        		<div class="col-lg-6 pt-4 pt-lg-0" >
-          			<p>
-           				A key component of our strategy is partnering with Flytbase, allowing us to cover both the physical and digital aspects of drone deployment, ensuring a comprehensive and robust solution. Join us in this exciting journey as we bring innovation to the forefront of public service through advanced drone technology. Together, we can make a significant impact on the efficiency and effectiveness of first responders, ultimately saving lives and resources.
-          			</p>
-        		</div>
-      		</div>
+	<section id="about" class="about">
+		<div class="container">
+			<div class="section-title">
+				<h2>Why Skynova</h2>
+			</div>
+			<div class="row content">
+				<div class="col-lg-6">
+					<p>
+						Welcome to Skynova, where drones find their home. Our mission is to enhance public services with cutting-edge drone technology. By partnering with Flytbase, we provide a seamless and effective solution for deploying drones in police, fire, and other state agencies. Join us in revolutionizing public service and improving the efficiency of first responders to save lives and resources.
+					</p>
+				</div>
+				<div class="col-lg-6 pt-4 pt-lg-0" style="border-left: 2px solid #004AAD;">
+					<ul class="text-md">
+						<li class="list-group-item larger-text"><i class='bx bx-check-double'></i> Our company is pioneering in drone charging station technology</li><br>
+						<li class="list-group-item larger-text"><i class='bx bx-check-double'></i> We guarantee effectiveness in our power supply solution</li><br>
+						<li class="list-group-item larger-text"><i class='bx bx-check-double'></i> Materials used for the station are of the highest quality</li><br>
+						<li class="list-group-item larger-text"><i class='bx bx-check-double'></i> We guarantee effectiveness in our charging solution</li><br>
+						<li class="list-group-item larger-text"><i class='bx bx-check-double'></i> Our experts will take care of the drone station installation</li><br>
+					</ul>
+				</div>
+			</div>
 		</div>
-  	</section>
-
+	</section>
+	
     <section id="benefits" class="benefits">
         <div class="container">
             <div class="section-title" >
@@ -168,24 +174,52 @@
               	<div class="col-lg-6 how-img" data-aos="fade" data-aos-delay="100">
                 	<img src="{{url_for('static', filename='img/solutions/4986248.png')}}" class="img-fluid animated" alt="">
               	</div>
-              	<div class="col-lg-6 order-1 order-lg-2 ">
-                	<h6>Connectivity</h6>
-                	<p>
+              	<div class="col-lg-6 order-1 order-lg-2">
+					<br><br><br>
+					<div class="flex w-full flex-col border p-4 mb-3">
+					  <i class="ri-question-line"></i>
+					  <button class="flex items-center tracking-wider" onclick="toggleText(5)">
+						<img src={{url_for('static',filename='svg/icons/arrow.svg')}} class="w-4 transform transition-all duration-300" id="icon-5">
+						<span class="text-2xl ml-2">&nbsp;Connectivity</span>
+					  </button>
+					  <p id="text-5" class="text-lg text-left mt-3 text-black ml-5" style="display: none;">
 						Our drone station employs advanced connectivity technologies to ensure uninterrupted and reliable communication between the drones and the operations center, where operators monitor and manage missions. A key component of this system is the integration with the <strong>StarLink satellite network.</strong>
-					</p>
-                	<h6>Connectivity with StarLink</h6>
-                	<p>
+					  </p>
+					</div>
+				  
+					<div class="flex w-full flex-col border p-4 mb-3">
+					  <i class="ri-question-line"></i>
+					  <button class="flex items-center tracking-wider" onclick="toggleText(6)">
+						<img src={{url_for('static',filename='svg/icons/arrow.svg')}} class="w-4 transform transition-all duration-300" id="icon-6">
+						<span class="text-2xl ml-2">&nbsp;Connectivity with StarLink</span>
+					  </button>
+					  <p id="text-6" class="text-lg text-left mt-3 text-black ml-5" style="display: none;">
 						Thanks to the <strong>Starling satellite network</strong>, our drones have access to high-speed broadband connectivity even in the most remote and hard-to-reach areas. StarLink offers global coverage and low latency, which is crucial for the rapid transmission of data and real-time monitoring.
-					</p>
-                	<h6>Connectivity with the Operations Center</h6>
-                	<p>
+					  </p>
+					</div>
+				  
+					<div class="flex w-full flex-col border p-4 mb-3">
+					  <i class="ri-question-line"></i>
+					  <button class="flex items-center tracking-wider" onclick="toggleText(7)">
+						<img src={{url_for('static',filename='svg/icons/arrow.svg')}} class="w-4 transform transition-all duration-300" id="icon-7">
+						<span class="text-2xl ml-2">&nbsp;Connectivity with the Operations Center</span>
+					  </button>
+					  <p id="text-7" class="text-lg text-left mt-3 text-black ml-5" style="display: none;">
 						At the operations center, our operators use <strong>advanced software</strong> to monitor and manage the drone fleet in real-time. Operators have access to live video feeds, telemetry data, and diagnostic reports, allowing for quick responses to changing conditions and threats.
-					</p>
-                	<h6>Security and Reliability</h6>
-                	<p>
+					  </p>
+					</div>
+				  
+					<div class="flex w-full flex-col border p-4 mb-3">
+					  <i class="ri-question-line"></i>
+					  <button class="flex items-center tracking-wider" onclick="toggleText(8)">
+						<img src={{url_for('static',filename='svg/icons/arrow.svg')}} class="w-4 transform transition-all duration-300" id="icon-8">
+						<span class="text-2xl ml-2">&nbsp;Security and Reliability</span>
+					  </button>
+					  <p id="text-8" class="text-lg text-left mt-3 text-black ml-5" style="display: none;">
 						The connectivity system is designed with security and reliability in mind. Data transmissions are encrypted to protect against unauthorized access. Additionally, connection redundancy and automatic switching to alternative <strong>StarLink satellites</strong> ensure operational continuity even if a single satellite fails.
-                	</p>
-              	</div>
+					  </p>
+					</div>
+				  </div>
             </div>
         </div>
     </section>
@@ -214,12 +248,12 @@
 		<section>
 			<div class="container mt-20" id="contact">
 				<div class="w-full mt-4 flex flex-col gap-1 items-center relative md:items-start justify-center">
-					<div class="flex md:w-1/2 md:absolute w-full flex-col gap-8 card md:right-16 border-light shadow-lg py-3 p-sm-4 p-md-5">
+					<div class="flex md:w-1/2 md:absolute w-full flex-col gap-8 card md:right-16 border-light shadow-lg py-3 p-sm-4 p-md-5" style="text-align: center;">
 						<span class="text-2xl">Interested in our products?</span>
 						<span>Feel free to let us know! We are looking forward to cooparate with you.</span>
 						{# TODO: Change contact href #}
 						<div class="flex justify-center">
-							<a href="/en/request" target="_blank" class="btn btn-lg btn-primary w-full md:w-1/2">Contact</a>
+							<a href="/en/request" target="_blank" class="btn btn-lg btn-primary w-full md:w-1/2 border" style="border-radius: 10px">Contact</a>
 						</div>
 					</div>
 					<img class="hidden md:block w-1/2 ml-16" src="{{url_for('static',filename='img/backgrounds/drones-ilustration.jpg')}}" alt="Ilustration image">
