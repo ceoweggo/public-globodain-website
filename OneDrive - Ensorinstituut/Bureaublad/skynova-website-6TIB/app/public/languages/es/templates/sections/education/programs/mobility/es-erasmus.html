@@ -1,0 +1,113 @@
+{% extends 'bases/es-education-base.html' %}
+
+{% set title = lang_data.page.page_title %}
+{% set meta_description = lang_data.page.page_metadescription %}
+{% set meta_keywords = lang_data.page.page_keywords %}
+
+{% block content %}
+<main class="page-wrapper">
+  <section class="mt-2 pt-5 mb-0 pb-0 ">    
+      <div class="bg-primary py-3" style="border: none; border-radius: 0; min-width: 100%;">
+        <div class="container">
+          <span class='fw-bold text-light'>{{lang_data.page.message.text}} <a href='{{url_for("public_{}.education_partnership".format(session["lang"].replace("-","_")))}}' class="text-light" data-bs-toggle="tooltip" data-bs-title="{{lang_data.page.message.link.tooltip}}">{{lang_data.page.message.link.text}}</a></span> 
+        </div>
+      </div>
+  </section>
+  
+  <section id="breadcrumb" class="my-3">
+      {% block breadcrumb %}
+      <nav class="container" aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+          
+          {%- for breadcrumb in breadcrumbs -%}
+              {% if breadcrumb.text != "Globodain" %}
+
+              {% if loop.last %}
+              <li class="breadcrumb-item">
+                  <a href="{{ breadcrumb.url }}" class="text-primary">{{ breadcrumb.text }}</a>
+              </li>              
+              {% else %}  
+              <li class="breadcrumb-item">
+                  <a href="{{ breadcrumb.url }}">{{ breadcrumb.text }}</a>
+              </li>
+              {% endif %}
+              {% endif %}
+          {%- endfor -%}
+      </ol>
+      </nav>
+      {% endblock %}
+  </section>
+
+  <section id="hero" class="">
+      <div class="position-relative py-lg-4 py-xl-5">
+              
+          <style>
+              .case-studies-img {
+                  background: url("{{url_for('static',filename='img/education/erasmus-internship-banner1.jpg')}}") no-repeat center center;
+              }
+          </style>
+
+        <div class="position-absolute top-0 start-0 w-100 h-100">
+          <div id="image-1" class="jarallax position-absolute top-0 start-0 w-100 h-100 swiper-tab active" data-jarallax data-speed="0.4">
+            <span class="position-absolute top-0 start-0 w-100 h-100"></span>
+            <div class="jarallax-img case-studies-img"></div>
+          </div>
+        </div>
+
+        <!-- Swiper slider -->
+        <div class="container position-relative zindex-5 py-5">
+          <div class="row py-2 py-md-3">
+            <div class="col-xl-5 col-lg-7 col-md-9">
+
+              <!-- Card -->
+              <div class="card bg-white shadow-sm p-3">
+                <div class="card-body">
+                  <div class="swiper" data-swiper-options='{
+                    "spaceBetween": 30,
+                    "loop": false,
+                    "tabs": false,
+                    "pagination": {
+                      "el": "#case-study-pagination",
+                      "clickable": false
+                    },
+                    "navigation": {
+                      "prevEl": "#case-study-prev",
+                      "nextEl": "#case-study-next"
+                    }
+                  }'>
+                    <div class="swiper-wrapper">
+
+                      <!-- Item -->
+                      <div class="swiper-slide" data-swiper-tab="#image-1">
+                          <a href="https://globodain.com">
+                              <img src="{{url_for('static',filename='img/education/erasmus-plus-logo.png')}}" class="d-block mb-3" width="180" alt="Logo">
+                          </a>
+                        <h1 class="mb-2 text-primary">{{lang_data.page.hero.title}}</h1>
+                        <span class="fs-sm text-muted border-bottom pb-3 mb-3">{{lang_data.page.hero.subtitle}}</span>
+                        <p class="pb-2 pb-lg-3 mb-3 fs-6">{{lang_data.page.hero.text|safe}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pagination (bullets) -->
+              <div class="dark-mode pt-4 mt-3">
+                <div id="case-study-pagination" class="swiper-pagination position-relative bottom-0"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section id="call_action" class="position-relative bg-dark py-5">
+    <span class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255, 255, 255, .05)"></span>
+    <div class="container position-relative zindex-5 text-center my-xl-3 py-1 py-md-4 py-lg-5 col-md-7">
+        <h2 class="h1 text-light mb-3">{{lang_data.page.call_action.title}}</h2>
+        <p class="lead text-light opacity-70 mb-lg-5 pb-3 pb-lg-0">{{lang_data.page.call_action.text}}</p>
+      <a href='{{url_for("public_{}.request_services".format(session["lang"].replace("-","_")))}}' class="btn btn-primary shadow-primary btn-lg">{{lang_data.page.call_action.button}}</a>
+    </div>
+  </section>
+</main>
+{% endblock %}

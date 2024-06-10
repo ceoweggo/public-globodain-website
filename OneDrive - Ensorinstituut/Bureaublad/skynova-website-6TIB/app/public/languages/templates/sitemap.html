@@ -1,0 +1,32 @@
+{% extends 'bases/es-base.html'.format(session["lang"]) %}
+
+{% block content %}
+<style>
+    .sitemap-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .sitemap-area {
+        list-style-type: none;
+    }
+</style>
+
+<main class="page-wrapper pt-5 mt-4">
+    <section id="index" class="container mt-2">
+        <div class="sitemap-grid">
+            {% for area, links in sitemap_structure.items() %}
+                <div>
+                    <h2>{{ area }}</h2>
+                    <ul class="sitemap-area">
+                    {% for link in links %}
+                        <li><a href="{{ link.route }}">{{ link.name }}</a></li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+    </section>    
+</main>
+
+{% endblock %}

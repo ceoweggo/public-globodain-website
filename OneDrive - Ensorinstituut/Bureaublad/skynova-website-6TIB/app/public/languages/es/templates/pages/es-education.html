@@ -1,0 +1,327 @@
+{% extends 'bases/es-education-base.html' %}
+
+{% set title = lang_data.page.page_title %}
+{% set meta_description = lang_data.page.page_metadescription %}
+{% set meta_keywords = lang_data.page.page_keywords %}
+
+{% block content %}
+<main class="page-wrapper">
+  <section class="mt-2 pt-5 mb-0 pb-0 ">    
+    <div class="bg-primary py-3" style="border: none; border-radius: 0; min-width: 100%;">
+      <div class="container">
+        <span class='fw-bold text-light'>{{lang_data.page.message.text}} <a href='{{url_for("public_{}.education_partnership".format(session["lang"].replace("-","_")))}}' class="text-light" data-bs-toggle="tooltip" data-bs-title="{{lang_data.page.message.link.tooltip}}">{{lang_data.page.message.link.text}}</a></span> 
+      </div>
+    </div>
+  </section>
+
+  <section id="hero" class="jarallax position-relative d-flex align-items-center" style="background-image: url(../../../../static/img/heros/education-hero-section.jpg);" data-jarallax data-img-position="0% 100%" data-speed="0.5">
+      <div class="container position-relative zindex-5 py-3">
+      <div class="row justify-content-md-start justify-content-center">
+        <div class="col-md-7 col-sm-8 order-md-1 order-2 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
+          <div class="mb-md-5 pb-xl-5 mb-4">
+
+            <!-- Text -->
+            <h1 class="display-4">{{lang_data.page.hero.title|safe}}</h1>
+            <p class="lead d-lg-block d-none mb-0 ps-md-3 mb-md-5 mb-3 pb-3">{{lang_data.page.hero.subtitle|safe}}</p>
+            <div class="mt-4 pt-4 mt-md-0 pt-md-0 d-md-flex align-items-md-start">
+              <a href='{{url_for("public_{}.education_students".format(session["lang"].replace("-","_")))}}' class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">{{lang_data.page.hero.buttons.0}} <i class="bx bx-chevron-right"></i></a>
+              <a href='{{url_for("public_{}.education_schools".format(session["lang"].replace("-","_")))}}' class="btn btn-lg btn-secondary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">{{lang_data.page.hero.buttons.1}} <i class="bx bx-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="benefits" class="container pt-4 pb-5">
+    <div class="swiper swiper-nav-onhover mt-n3 mx-n2" data-swiper-options='{
+      "slidesPerView": 1,
+      "spaceBetween": 8,
+      "pagination": {
+        "el": ".swiper-pagination",
+        "clickable": true
+      },
+      "breakpoints": {
+        "600": {
+          "slidesPerView": 2
+        },
+        "1000": {
+          "slidesPerView": 3
+        }
+      }
+    }'>
+      <div class="swiper-wrapper">
+        {% for benefit in lang_data.page.benefits %}
+        <!-- Item -->
+        <div class="swiper-slide h-auto py-3">
+          <div class="card card-hover h-100 mx-2">
+            <div class="card-body">
+              <h3 class="h5 py-2 mb-2">{{benefit.title}}</h3>
+              <p class="mb-0">{{benefit.subtitle}}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Pagination (bullets) -->
+      <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="container pt-md-2 pb-5">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="card h-100 border-0 overflow-hidden px-md-4">
+          <span class="bg-gradient-primary position-absolute top-0 start-0 w-100 h-100 opacity-10 d-none d-md-block"></span>
+          <div class="card-body d-flex flex-column align-items-center justify-content-center position-relative zindex-2 p-0 pb-2 p-lg-4">
+            <h2 class="h1 text-center text-md-start p-lg-4">{{lang_data.page.testimonials.title}}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="card border-0 shadow-sm p-4 p-xxl-5">
+          <div class="d-flex justify-content-between pb-4 mb-2">
+            <span class="btn btn-icon btn-primary btn-lg shadow-primary pe-none">
+              <i class="bx bxs-quote-left"></i>
+            </span>
+            <div class="d-flex">
+              <button type="button" id="testimonials-prev" class="btn btn-prev btn-icon btn-sm me-2" aria-label="Previous">
+                <i class="bx bx-chevron-left"></i>
+              </button>
+              <button type="button" id="testimonials-next" class="btn btn-next btn-icon btn-sm ms-2" aria-label="Next">
+                <i class="bx bx-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Slider -->
+          <div class="swiper mx-0 mb-md-n2 mb-xxl-n3" data-swiper-options='{
+            "spaceBetween": 24,
+            "loop": true,
+            "pagination": {
+              "el": ".swiper-pagination",
+              "clickable": true
+            },
+            "navigation": {
+              "prevEl": "#testimonials-prev",
+              "nextEl": "#testimonials-next"
+            }
+          }'>
+            <div class="swiper-wrapper">
+              {% for item in lang_data.page.testimonials.list %}
+              <div class="swiper-slide h-auto">
+                <figure class="card h-100 position-relative border-0 bg-transparent">
+                  <blockquote class="card-body p-0 mb-0">
+                    <p class="fs-lg mb-0">{{item.message}}</p>
+                  </blockquote>
+                  <figcaption class="card-footer border-0 d-flex align-items-center w-100 pb-2">
+                    <div class="ps-3">
+                      <h3 class="h6   fw-semibold lh-base mb-0">{{item.title}}</h3>
+                      <span class="fs-sm text-muted">{{item.subtitle}}</span>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
+              {% endfor %}
+            </div>
+
+            <!-- Pagination (bullets) -->
+            <div class="swiper-pagination position-relative mt-5"></div>
+          </div>        
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands (Carousel) -->
+  <section class="container mt-2 mb-lg-2 mb-xl-4 pt-3 pt-lg-5 pb-5">
+    <h2 class="text-center pb-md-2">{{lang_data.page.brands.title}}</h2>
+
+    <style>
+      .div-cover {
+        min-height: 153px;
+        max-height: 153px;
+      }
+
+      .img-centered {
+        position: absolute; 
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        max-width: 140px; 
+        max-height: 140px; 
+        max-height: 140px; 
+      }
+    </style>
+
+    <div class="swiper mx-n2" data-swiper-options='{
+      "slidesPerView": 2,
+      "pagination": {
+        "el": ".swiper-pagination",
+        "clickable": true
+      },
+      "breakpoints": {
+        "500": {
+          "slidesPerView": 3,
+          "spaceBetween": 8
+        },
+        "650": {
+          "slidesPerView": 4,
+          "spaceBetween": 8
+        },
+        "900": {
+          "slidesPerView": 5,
+          "spaceBetween": 8
+        },
+        "1100": {
+          "slidesPerView": 6,
+          "spaceBetween": 8
+        }
+      }
+    }'>
+      <div class="swiper-wrapper">
+
+        <!-- Item -->
+        <div class="swiper-slide py-3">
+          <a href="https://www.espamob.com/" class="card card-body card-hover px-2 mx-2 div-cover" target="_blank">
+            <img src="{{url_for('static',filename='img/brands/espamob-brand.png')}}" class="d-block mx-auto my-2 img-centered" alt="Espamob - ES">
+          </a>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide py-3">
+          <a href="https://ec.europa.eu/regional_policy/funding/erdf_en?etrans=es" class="card card-body card-hover px-2 mx-2 div-cover" target="_blank">
+            <img src="{{url_for('static',filename='img/brands/ue-brand.jpeg')}}" class="d-block mx-auto my-2 img-centered" alt="FEDER - EUROPE">
+          </a>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide py-3">
+          <a href="https://euromind.es" class="card card-body card-hover px-2 mx-2 div-cover" target="_blank">
+            <img src="{{url_for('static',filename='img/brands/euromind-brand.png')}}" class="d-block mx-auto my-2 img-centered" alt="Euromind - ES/PT/PL">
+          </a>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide py-3">
+          <a href="https://ibdpartnership.co.uk" class="card card-body card-hover px-2 mx-2 div-cover" target="_blank">
+            <img src="{{url_for('static',filename='img/brands/ibd-brand.png')}}" class="d-block mx-auto my-2 img-centered" alt="IBD - UK">
+          </a>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide py-3">
+          <a href="https://prakticaformacion.eu/" class="card card-body card-hover px-2 mx-2 div-cover" target="_blank">
+            <img src="{{url_for('static',filename='img/brands/praktica-brand.png')}}" class="d-block mx-auto my-2 img-centered" alt="Praktica - ES">
+          </a>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide py-3">
+          <a href="https://www.upo.es/" class="card card-body card-hover px-2 mx-2 div-cover" target="_blank">
+            <img src="{{url_for('static',filename='img/brands/upo-brand.jpg')}}" class="d-block mx-auto my-2 img-centered" alt="Universidad Pablo de Olavide - Sevilla">
+          </a>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide py-3">
+          <a href="https://www.andaluciaemprende.es/" class="card card-body card-hover px-2 mx-2 div-cover" target="_blank">
+            <img src="{{url_for('static',filename='img/brands/andalucia-emprende-brand.png')}}" class="d-block mx-auto my-2 img-centered" alt="Andalucía Emprende - ES">
+          </a>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide py-3">
+          <a href="https://www.urjc.es/" class="card card-body card-hover px-2 mx-2 div-cover" target="_blank">
+            <img src="{{url_for('static',filename='img/brands/urjc-brand.png')}}" class="d-block mx-auto my-2 img-centered" alt="Universidad Rey Juan Carlos - Madrid">
+          </a>
+        </div>
+
+        <!-- Item -->
+        <div class="swiper-slide py-3">
+          <a href="https://www.us.es/" class="card card-body card-hover px-2 mx-2 div-cover" target="_blank">
+            <img src="{{url_for('static',filename='img/brands/us-brand.png')}}" class="d-block mx-auto my-2 img-centered" alt="Universidad de Sevilla - Sevilla">
+          </a>
+        </div>
+          
+        <!-- Item -->
+        <div class="swiper-slide py-3">
+          <a href="https://lafabricadesevilla.com/" class="card card-body card-hover px-2 mx-2 div-cover" target="_blank">
+            <img src="{{url_for('static',filename='img/brands/la-fabrica-brand.png')}}" class="d-block mx-auto my-2 img-centered" alt="La Fábrica de Sevilla - Sevilla">
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Pagination (bullets) -->
+      <div class="swiper-pagination position-relative pt-2 mt-4"></div>
+    </div>
+  </section>
+
+  <section id="programs" class="container mb-5 py-lg-5">
+    <h2 class="h1 mb-4 pb-3 text-center">{{lang_data.page.educative_programs.title}}</h2>
+    <div class="row p-5 bg-secondary">
+      <div class="col-xl-5 col-md-6 offset-xl-1 pb-4 pb-sm-3 pb-lg-0 mb-4 mb-sm-5 mb-lg-0 pe-5">
+        <img src="{{url_for('static',filename='img/programs/mobility/erasmus/erasmus-img.png')}}" class="rounded-3 shadow-sm" alt="Erasmus+ Program">
+      </div>
+      <div class="col-md-6">
+        <h2 class="mb-4 text-primary">Erasmus+ Mobility</h2>
+        <div class="rounded-3 mb-4 mb-lg-5">
+          <div class="row row-cols-1 row-cols-sm-2 g-0">
+            <div class="col d-flex align-items-center p-3">
+              <div class="ps-2 ms-1">
+                <h3 class="display-4 text-primary mb-1">+500</h3>
+                <p class="mb-0">{{lang_data.page.educative_programs.erasmus.statistics.0|safe}}</p>
+              </div>
+            </div>
+            <div class="col d-flex align-items-center p-3">
+              <div class="ps-2 ms-1">
+                <h3 class="display-4 text-primary mb-1">+40</h3>
+                <p class="mb-0">{{lang_data.page.educative_programs.erasmus.statistics.1|safe}}</p>
+              </div>
+            </div>
+          </div>
+          {{lang_data.page.educative_programs.erasmus.desc.text|safe}}
+          <a href="{{url_for('public_{}.index'.format(session['lang'].replace('-','_')))}}" data-bs-toggle="tooltip" data-bs-title="{{ lang_data.page.educative_programs.erasmus.desc.link.tooltip }}" style="text-decoration: none;">{{ lang_data.page.educative_programs.erasmus.desc.link.text }}</a>.
+          <p class="mt-2">{{lang_data.page.educative_programs.erasmus.desc.text2|safe}}</p>
+          <ul class="list-unstyled d-md-none d-xl-block pb-2 pb-md-3 mb-3">
+            {% for item in lang_data.page.educative_programs.erasmus.desc.points %}
+            <li class="d-flex align-items-center mb-2">
+              <i class="bx bx-check lead text-primary me-2"></i>
+              {{item}}
+            </li>
+            {% endfor %}
+          </ul>
+          <a href='{{url_for("public_{}.education_programs_mobility_erasmus".format(session["lang"].replace("-","_")))}}' class="btn btn-primary mb-3 mb-sm-0 me-sm-3">
+            {{lang_data.page.educative_programs.erasmus.desc.button}}
+            <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--<div class="col-12 mt-4 pt-lg-4 pt-3 text-center">
+      <a href="" class="btn btn-lg btn-outline-primary w-sm-auto w-100">Ver otros programas</a>
+    </div>-->
+  </section>
+
+  {#
+  <!-- Contact CTA -->
+  <section class="container pt-3 pb-4 pb-md-5" style="margin-top: -156px; margin-bottom: 120px; transform: translateY(156px);">
+    <div class="card border-0 bg-gradient-primary">
+      <div class="card-body p-md-5 p-4 bg-size-cover">
+        <div class="py-md-5 py-4 text-center">
+          <h3 class="fw-bold text-light mb-2 fs-3">¿Quieres participar en los proyectos de Globodain?</h3>
+          <p class="text-light fs-6">Colabora con nosotros para adquirir experiencia y mejorar habilidades</p>
+          <div class="pt-3 pb-md-2">
+            <a href='{{url_for("public_{}.request_services".format(session["lang"].replace("-","_")))}}' class="btn btn-lg btn-light">Contáctanos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  #}
+</main>
+{% endblock %}
