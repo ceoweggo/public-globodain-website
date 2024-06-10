@@ -1,0 +1,97 @@
+<!-- -| 
+  
+  * WEGGO is a registered trademark in Spain as Plataforma Weggo Espana, S.L
+  * Any disclosure of this code violates intellectual property laws.
+  * By Ruben Ayuso. 
+  
+|- -->
+
+<!-- * -| Marked as important for SEO |- -->
+<!-- URL -| Change to dynamic url |- -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+ <!-- Meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<!-- Favicon icon-->
+<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
+
+
+<!-- Librerias -->
+<link href="{{ url_for('static', filename='fonts/feather/feather.css') }}" rel="stylesheet" />
+<link href="{{ url_for('static', filename='libs/dragula/dist/dragula.min.css') }}" rel="stylesheet" />
+<link href="{{ url_for('static', filename='libs/%40mdi/font/css/materialdesignicons.min.css') }}" rel="stylesheet" />
+<link href="{{ url_for('static', filename='libs/prismjs/themes/prism.css') }}" rel="stylesheet" />
+<link href="{{ url_for('static', filename='libs/dropzone/dist/dropzone.css') }}" rel="stylesheet" />
+<link href="{{ url_for('static', filename='libs/magnific-popup/dist/magnific-popup.css') }}" rel="stylesheet" />
+<link href="{{ url_for('static', filename='libs/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='libs/%40yaireo/tagify/dist/tagify.css') }}" rel="stylesheet">
+
+
+<!-- Theme CSS -->
+<title> Sólo los colaboradores pueden acceder - Weggo España </title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/theme.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+
+ <!-- Page Content -->
+ <div class="container d-flex flex-column">
+  <div class="row align-items-center justify-content-center no-gutters min-vh-100">
+
+   <!-- Docs -->
+   <div class="offset-lg-1 col-lg-4 col-md-12 col-12 text-center text-lg-left">
+    <h1 class="display-1 mb-3">Vaya...</h1>
+    <h3>No tienes permisos suficientes para acceder a esta página. Por favor, vuelve al índice</h3>
+    <p class="mb-4 small">Error Code: 401 
+      You do not have authorization, you are not colaborator.</p>
+    <a href="{{ url_for('public.index') }}" class="btn btn-primary mr-2">Volver a la web</a>
+   </div>
+
+   <!-- img -->
+   <div class="offset-lg-1 col-lg-6 col-md-12 col-12">
+    <img src="{{ url_for('static', filename='images/404-error-img.svg') }}" alt="" class="w-100" />
+   </div>
+  </div>
+ </div>
+
+   <!-- Scripts -->
+  <!-- Librerias JS -->
+  <script src="{{ url_for('static', filename='libs/jquery/dist/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='libs/odometer/odometer.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='libs/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='libs/magnific-popup/dist/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='libs/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='libs/flatpickr/dist/flatpickr.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='libs/inputmask/dist/jquery.inputmask.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='libs/apexcharts/dist/apexcharts.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='libs/quill/dist/quill.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='libs/file-upload-with-preview/dist/file-upload-with-preview.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='libs/dragula/dist/dragula.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='libs/bs-stepper/dist/js/bs-stepper.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='libs/dropzone/dist/min/dropzone.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='libs/jQuery.print/jQuery.print.js') }}"></script>
+  <script src="{{ url_for('static', filename='libs/prismjs/prism.js') }}"></script>
+  <script src="{{ url_for('static', filename='libs/prismjs/components/prism-scss.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='libs/%40yaireo/tagify/dist/tagify.min.js') }}"></script>
+  
+  
+  <!-- clipboard -->
+  <script src="{{ url_for('static', filename='libs/clipboard.js/1.5.12/clipboard.min.js') }}"></script>
+  
+  
+  <!-- Theme JS -->
+  <script src="{{ url_for('static', filename='js/theme.min.js') }}"></script>
+
+
+</body>
+
+</html>
