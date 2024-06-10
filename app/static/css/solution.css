@@ -297,3 +297,23 @@ section {
 .larger-text {
   font-size: 15px; /* Adjust the font size as needed */
 }
+
+.card-img-top {
+  height: 300px; /* adjust the value to your desired height */
+  width: 100%;
+}
+
+.row {
+  flex-wrap: wrap; /* ensure the row can wrap to the next line */
+}
+
+.col-12 {
+  width: 100%; /* ensure columns take full width on small screens */
+  margin-bottom: 20px; /* add some margin between rows */
+}
+
+@media (min-width: 992px) {
+  .col-lg-6 {
+    width: 50%; /* make each column take up 50% of the width on large screens */
+  }
+}
