@@ -6,27 +6,27 @@
     <div class="container pt-4">
 		<h2 class="font-semibold text-center text-white text-6xl my-8">About Our Product</h2>
 		<div class="flex-col">
-			<p class="text-xl mt-3 text-white text-center">Skynova is an innovative company transforming the way police, firefighters, and other emergency services respond to crises. Our mission is to provide instant access to drone hangars, significantly enhancing the efficiency and speed of emergency responses.</p>
+			<p class="text-lg mt-3 text-white text-center"> 
+        Skynova is an innovative company transforming the way police, firefighters, and other emergency services respond to crises. Our mission is to provide instant access to drone hangars, significantly enhancing the efficiency and speed of emergency responses.
+      </p>
 		</div>
-  </br>
-</br>
-    <a href='{{url_for("public_{}.skynova_models".format(session["lang"].replace("-","_")))}}' class="btn btn-dark btn-lg px-5">
+    </br>
+    </br>
+    <a href='#scroll-target' class="btn btn-dark btn-lg px-5">
       More Info
-    </a>  
+    </a>
+    <model-viewer
+    class="h-[25rem] w-full bg-transparent"
+    alt="A 3D model of our product."
+    src={{url_for('static',filename='3D/drone_home.glb')}}
+    poster=""
+    shadow-intensity="1"
+    camera-controls
+    touch-action="pan-y"
+    disable-zoom
+  ></model-viewer>  
 	</div>
-  <model-viewer
-  class="h-[25rem] w-full bg-transparent"
-  alt="A 3D model of our product."
-  src={{url_for('static',filename='3D/drone_home.glb')}}
-  poster=""
-  shadow-intensity="1"
-  camera-controls
-  touch-action="pan-y"
-  disable-zoom
-></model-viewer>
-  
 </section>
-
 <section class="py-5 bg-light" id="flytbase">
   <div class="container px-5 my-5">
       <div class="section-title text-center">
@@ -47,18 +47,17 @@
       <div class="row gx-5 align-items-center">
           <div class="col-lg-6">
               <div class="text-center">
-                  <h2 class="fw-bolder fs-4 p-2">Who</h2>
+                  <h2 class="fw-bolder fs-4 p-2">Who?</h2>
                   <p class="lead fw-normal text-muted mb-0">
-                      Our partnership integrates Flytbase's digital platform with a specialized company's physical infrastructure for drone deployment. We will jointly design, build, and maintain the hardware while Flytbase manages the digital aspects, enhancing operational efficiency across various industries.
-                  </p>
+                    Our partnership combines Flytbase's digital platform with a specialized company's physical infrastructure to design, build, and maintain drone hardware, while Flytbase manages the digital operations, enhancing efficiency across various industries.                  </p>
               </div>
           </div>
           <div class="col-lg-6">
               <div class="text-center">
-                  <h2 class="fw-bolder fs-4 p-2">Why</h2>
+                  <h2 class="fw-bolder fs-4 p-2">Why?</h2>
                   <p class="lead fw-normal text-muted mb-0">
-                      Our partnership merges Flytbase's digital platform with a company specializing in physical drone infrastructure. Together, we co-create, build, and manage hardware, while Flytbase optimizes digital operations. This synergy enhances operational efficiency across diverse industries.
-                  </p>
+
+                    Our partnership merges Flytbase's digital platform with a company specializing in physical drone infrastructure. Together, we co-create, build, and manage hardware, while Flytbase optimizes digital operations, enhancing efficiency across diverse industries.                  </p>
               </div>
           </div>
       </div>
@@ -67,8 +66,7 @@
               <div class="text-center">
                   <h2 class="fw-bolder fs-4 p-2">What We Can Achieve Together</h2>
                   <p class="lead fw-normal text-muted mb-0">
-                      Collaboratively, we can revolutionize the drone industry by seamlessly integrating digital and physical infrastructure, optimizing operations, and driving innovation across various sectors. Drones can be utilized by government agencies such as police, firefighters, and ambulance services for surveillance, search and rescue operations, and disaster management. Additionally, they can be employed in agriculture for crop monitoring, spraying, and yield optimization, as well as in safety inspections of infrastructure and environmental monitoring.
-                  </p>
+                    Together, we can revolutionize the drone industry by integrating digital and physical infrastructure, optimizing operations, and driving innovation across sectors. Drones can be used by government agencies for surveillance, search and rescue, and disaster management, as well as in agriculture for crop monitoring, spraying, yield optimization, safety inspections, and environmental monitoring.                  </p>
               </div>
           </div>
       </div>
@@ -78,18 +76,19 @@
   </div>
 </section>
 
-  <section class="py-5 bg-secondary" id="scroll-target">
+  <section class="py-5 bg-secondary" id="scroll-target" style="height: 10%;">
     <div class="section-title" >
-      <h2 class="mb-5">Components</h2>
+      <h2 class="mb-5">Utilities</h2>
     </div>
     <div class="container px-5 my-5">
         <div class="row gx-5 align-items-center">
           <div class="col-lg-6"><img class="img-fluid mx-auto d-block" src="https://i.ibb.co/rcf1Bmb/Drone-Model1.png" alt="Drone-Model1" border="0"></div>
           <div class="col-lg-6">
             <h2 class="fw-bolder fs-4">Flight Management &amp; Power Supply</h2>
+          </br>
             <p class="lead fw-normal text-muted mb-0">
               Operators assign drones to calls, which then receive
-              coordinates, execute tasks, and return to the hangar.<br>
+              coordinates, execute tasks, and return to the hangar.
               The station uses the main power grid and has emergency batteries
               powered by solar panels, providing 6-8 hours of backup.<br>
             </p>
@@ -98,7 +97,7 @@
     </div>
   </section>
 
-  <section class="py-5 bg-light">
+  <section class="py-5 bg-light"style="height: 10%;">
     <div class="container px-5 my-5">
       <div class="row gx-5 align-items-center">
         <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid mx-auto d-block" src="https://i.ibb.co/dDgMpZB/Drone-Model2.png" alt="Drone-Model2" border="0"></div>
@@ -115,7 +114,7 @@
     </div>
   </section>
 
-  <section class="py-5 bg-secondary" id="scroll-target">
+  <section class="py-5 bg-secondary" id="scroll-target"style="height: 10%;">
     <div class="container px-5 my-5">
       <div class="row gx-5 align-items-center">
         <div class="col-lg-6"><img class="img-fluid mx-auto d-block" src="https://i.ibb.co/fCsSpqv/Drone-Model3.png" alt="Drone-Model3" border="0"></div>
@@ -129,7 +128,7 @@
     </div>
   </section>
 
-  <section class="py-5 bg-light">
+  <section class="py-5 bg-light" style="height: 10%;">
     <div class="container px-5 my-5">
       <div class="row gx-5 align-items-center">
         <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mx-auto d-block" src="https://i.ibb.co/d0QBVWq/Project-Of-Skyline.png" alt="Project-Of-Skyline" border="0"></div>
@@ -144,20 +143,58 @@
       </div>
     </div>
   </section>
+
+  <section id="benefits" class="benefits">
+    <div class="container">
+        <div class="section-title" >
+            <h2>Materials</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box">
+                <div class="col-lg-6"><img class="img-fluid mx-auto d-block" src="{{url_for('static',filename='img/models/aluminium.png')}}"  alt="Aluminum" border="0"></div>
+                <h4 class="title"><a>Steel & aluminum</a></h4>
+                    <p class="description">Structural support for the dome. It can be combined with other materials.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box">
+                  <div class="col-lg-6"><img class="img-fluid mx-auto d-block" src="{{url_for('static',filename='img/models/Fiberglass_or_polycarbonate.png')}}" alt="Fiberglass" border="0"></div>
+                      <h4 class="title"><a>Fiberglass or polycarbonate</a></h4>
+                      <p class="description">can be used ont the shell to provide further waterproofing and sustainabiliy for the rain.</p>
+                  </div>
+                </div>
+              <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box" >
+                  <div class="col-lg-6"><img class="img-fluid mx-auto d-block" src="{{url_for('static',filename='img/models/speed_controller.png')}}" alt="Electrical speed controller" border="0"></div>
+                      <h4 class="title"><a>Electrical speed controller</a></h4>
+                      <p class="description">This is gong to lower the speed of the drone when it gets nearby the hangars</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box" >
+                  <div class="col-lg-6"><img class="img-fluid mx-auto d-block" src="{{url_for('static',filename='img/models/Power_destribution_board.png')}}" alt="Power destribution board" border="0"></div>
+                      <h4 class="title"><a></a>Power destribution board</h4>
+                      <p class="description">Distributes power power from the main power source to all components within the dome</p>
+                </div>
+              </div>
+        </div>
+      </div>
+</section>
   
-  <section class="page-wrapper">
-		<div class="container mt-20" id="contact">
-			<div class="w-full mt-4 flex flex-col gap-1 items-center relative md:items-start justify-center">
-				<div class="flex md:w-1/2 md:absolute w-full flex-col gap-8 card md:right-16 border-light shadow-lg py-3 p-sm-4 p-md-5">
-					<span class="text-2xl">Interested in our products?</span>
-					<span>Feel free to let us know! We are looking forward to cooparate with you.</span>
-					{# TODO: Change contact href #}
-					<div class="flex justify-center">
-						<a href="/en/request" target="_blank" class="btn btn-lg btn-primary w-full md:w-1/2">Contact</a>
-					</div>
-				</div>
-				<img class="hidden md:block w-1/2 ml-16" src="{{url_for('static',filename='img/backgrounds/drones-ilustration.jpg')}}" alt="Ilustration image">
-			</div>
-		</div>
-	</section>
+<section class="page-wrapper">
+  <div class="container mt-20" id="contact">
+    <div class="w-full mt-4 flex flex-col gap-1 items-center relative md:items-start justify-center">
+      <div class="flex md:w-1/2 md:absolute w-full flex-col gap-8 card md:right-16 border-light shadow-lg py-3 p-sm-4 p-md-5">
+        <span class="text-2xl font-bold">Interested in our products?</span>
+        <span class="text-lg">Feel free to let us know! We are looking forward to cooperating with you.</span>
+        {# TODO: Change contact href #}
+        <div class="flex justify-center">
+          <a href="/en/request" target="_blank" class="btn btn-lg btn-primary w-full md:w-1/2">Contact</a>
+        </div>
+      </div>
+      <img class="hidden md:block w-1/2 ml-16" src="{{url_for('static',filename='img/backgrounds/drones-ilustration.jpg')}}" alt="Ilustration image">
+    </div>
+  </div>
+</section>
 {% endblock %}
