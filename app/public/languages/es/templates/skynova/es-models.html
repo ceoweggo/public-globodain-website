@@ -1,9 +1,19 @@
 {% extends 'bases/es-skynova-base.html' %}
 
 {% block content %}
-<!--<head>
-    <link rel='stylesheet' href="{{url_for('static',filename='css/solution.css')}}" type='text/css' />
-</head>-->
+<head>
+ <!-- <link rel='stylesheet' href="{{url_for('static',filename='css/solution.css')}}" type='text/css' />-->
+ <style>
+    .card {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+ </style>
+</head>
 <main>
     <div class="bg-[#cedcf2] page-wrapper">
         <section class="w-full container py-10 lg:mt-[3.169375rem] mt-[2.815625rem] ">
@@ -15,16 +25,16 @@
                     </a>
                     <p class="text-center text-lg">Click on this card for more information</p>
                 </div>
-                <div class="flex card border-light shadow-lg py-3 p-sm-4 p-md-5 mt-3 md:mt-0 hover:scale-105 duration-300 items-center justify-between">
-                    <p class="text-center text-black text-xl font-semibold">Materials</p>
-                    <img src="{{url_for('static',filename='img/models/Materials.jpg')}}">
-                    <p class="text-center text-lg">Click on this card for more information</p>
-                </div>
-                <div class="flex card border-light shadow-lg py-3 p-sm-4 p-md-5 mt-3 md:mt-0 hover:scale-105 duration-300 items-center justify-between">
-                    <p class="text-center text-black text-xl font-semibold">Components</p>
-                    <img src="{{url_for('static',filename='img/models/Components.png')}}" class="w-[60%]">
-                    <p class="text-center text-lg">Click on this card for more information</p>
-                </div>
+                <div class="flex card border-light shadow-lg py-3 p-sm-4 p-md-5 mt-3 md:mt-0 hover:scale-105 duration-300 items-center justify-between" onclick="scrollToSection('materials-section')">
+                  <p class="text-center text-black text-xl font-semibold">Materials</p>
+                  <img src="{{url_for('static',filename='img/models/Materials.jpg')}}">
+                  <p class="text-center text-lg">Click on this card for more information</p>
+              </div>
+              <div class="flex card border-light shadow-lg py-3 p-sm-4 p-md-5 mt-3 md:mt-0 hover:scale-105 duration-300 items-center justify-between" onclick="scrollToSection('components-section')">
+                  <p class="text-center text-black text-xl font-semibold">Components</p>
+                  <img src="{{url_for('static',filename='img/models/Components.png')}}" class="w-[60%]">
+                  <p class="text-center text-lg">Click on this card for more information</p>
+              </div>
             </div>
         </section>
     </div>
@@ -59,82 +69,13 @@
                   </div>
                 </div>
                 <div class="d-lg-none border-bottom"></div>
-                <div class="col-lg-6">
-                  <div class="row spec-item d-flex align-items-stretch" >
-                    <div class="secTitle">
-                      <a class="" data-bs-toggle="collapse" href="#Materials" role="button" aria-expanded="false" aria-controls="collapseExample">
-                      <i class='bx bxs-component'></i>
-                      <h4>Main Materials:</h4>
-                    </a>
-                    </div>
-                      <ul class="lText mb-1 collapse" id="Materials">
-                        <li>
-                          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid earum laboriosam ipsam iste illo aliquam magnam, voluptatum at nisi assumenda officiis enim, temporibus beatae, impedit reprehenderit quia explicabo laborum repellat!
-                        </li>
-                        <li>
-                          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid earum laboriosam ipsam iste illo aliquam magnam, voluptatum at nisi assumenda officiis enim, temporibus beatae, impedit reprehenderit quia explicabo laborum repellat!
-                        </li>
-                        <li>
-                          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid earum laboriosam ipsam iste illo aliquam magnam, voluptatum at nisi assumenda officiis enim, temporibus beatae, impedit reprehenderit quia explicabo laborum repellat!
-                        </li>
-                      </ul>
-                  </div>
-                </div>
-                <div class="d-lg-none border-bottom"></div>
-                <div class="col-lg-6">
-                  <div class="row spec-item d-flex align-items-stretch" >
-                    <div class="secTitle">
-                      <a class="" data-bs-toggle="collapse" href="#CComp" role="button" aria-expanded="false" aria-controls="collapseExample">
-                      <i class='bx bxs-component'></i>
-                      <h4>Core Components:</h4>
-                    </a>
-                    </div>
-                      <ul class="lText mb-3 collapse" id="CComp">
-                        <li>
-                          Automatic Fuses: Six robust automatic fuses safeguard your
-                          drone station from electrical overloads, ensuring continuous
-                          and safe operation.
-                        </li>
-                        <li>
-                          Surge Protector (330V): Provides superior protection against
-                          voltage spikes, maintaining the integrity of your electronic
-                          components.
-                        </li>
-                        <li>
-                          Power Extension Cord & Large Distributor: Facilitates the
-                          efficient distribution of power, enhancing operational
-                          flexibility.
-                        </li>
-                        <li>
-                          Electric Cables (10m) & Connectors: High-quality cables and
-                          connectors ensure seamless electrical connectivity.
-                        </li>
-                        <li>
-                          Arduino Uno & Arduino Cable Kit: The powerful and versatile
-                          Arduino Uno forms the heart of our station, supported by a
-                          comprehensive cable kit for easy connectivity.
-                        </li>
-                        <li>
-                          IR Sensor, Ultrasonic Sensor & Temperature Sensors (TMP36):
-                          Enhance the station’s monitoring capabilities with advanced
-                          sensors for infrared, ultrasonic, and temperature data
-                          collection.
-                        </li>
-                        <li>
-                          LCD 16x2: A clear and informative display screen for real-time
-                          data monitoring and feedback.
-                        </li>
-                      </ul>
-                      <!-- awdjawjpale ci zryja jebei xdddd -->
-                  </div>
-                </div>
                 <div class="d-lg-none border-bottom"></div>
                 <div class="col-lg-6">
                   <div class="row spec-item d-flex align-items-stretch" >
                     <div class="secTitle">
                       <a class="" data-bs-toggle="collapse" href="#Feat" role="button" aria-expanded="false" aria-controls="collapseExample">
                       <i class='bx bxs-component'></i>
-                      <h4>Main Features:</h4>
+                      <h4>Main Features</h4>
                       </a>
                     </div>
                       <ul class="lText mb-1 collapse" id="Feat">
@@ -155,103 +96,147 @@
             </div>
         </div>
     </section>
-    <!--<section>
-        <div class="d-lg-none border-bottom"></div>
-        <div class="col-lg-6">
-          <div class="row spec-item d-flex align-items-stretch" >
-            <div class="secTitle">
-              <a class="" data-bs-toggle="collapse" href="#Materials" role="button" aria-expanded="false" aria-controls="collapseExample">
-              <i class='bx bxs-component'></i>
-              <h4>Main Materials:</h4>
-            </a>
-            </div>
-              <ul class="lText mb-1 collapse" id="Materials">
-                <li>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid earum laboriosam ipsam iste illo aliquam magnam, voluptatum at nisi assumenda officiis enim, temporibus beatae, impedit reprehenderit quia explicabo laborum repellat!
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid earum laboriosam ipsam iste illo aliquam magnam, voluptatum at nisi assumenda officiis enim, temporibus beatae, impedit reprehenderit quia explicabo laborum repellat!
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid earum laboriosam ipsam iste illo aliquam magnam, voluptatum at nisi assumenda officiis enim, temporibus beatae, impedit reprehenderit quia explicabo laborum repellat!
-                </li>
-              </ul>
+    <section id="materials-section">
+      <style>.mat img {height: 200px; width: 100%;}</style>
+      <div class="container">
+          <div class="section-title">
+              <h2>Materials</h2>
           </div>
-        </div>
-        <div class="d-lg-none border-bottom"></div>
-        <div class="col-lg-6">
-          <div class="row spec-item d-flex align-items-stretch" >
-            <div class="secTitle">
-              <a class="" data-bs-toggle="collapse" href="#CComp" role="button" aria-expanded="false" aria-controls="collapseExample">
-              <i class='bx bxs-component'></i>
-              <h4>Core Components:</h4>
-            </a>
-            </div>
-              <ul class="lText mb-3 collapse" id="CComp">
-                <li>
-                  Automatic Fuses: Six robust automatic fuses safeguard your
-                  drone station from electrical overloads, ensuring continuous
-                  and safe operation.
-                </li>
-                <li>
-                  Surge Protector (330V): Provides superior protection against
-                  voltage spikes, maintaining the integrity of your electronic
-                  components.
-                </li>
-                <li>
-                  Power Extension Cord & Large Distributor: Facilitates the
-                  efficient distribution of power, enhancing operational
-                  flexibility.
-                </li>
-                <li>
-                  Electric Cables (10m) & Connectors: High-quality cables and
-                  connectors ensure seamless electrical connectivity.
-                </li>
-                <li>
-                  Arduino Uno & Arduino Cable Kit: The powerful and versatile
-                  Arduino Uno forms the heart of our station, supported by a
-                  comprehensive cable kit for easy connectivity.
-                </li>
-                <li>
-                  IR Sensor, Ultrasonic Sensor & Temperature Sensors (TMP36):
-                  Enhance the station’s monitoring capabilities with advanced
-                  sensors for infrared, ultrasonic, and temperature data
-                  collection.
-                </li>
-                <li>
-                  LCD 16x2: A clear and informative display screen for real-time
-                  data monitoring and feedback.
-                </li>
-              </ul>
+          <div class="row">
+              <div class="col-md-6 col-lg-3 mb-4">
+                  <div class="card h-100">
+                      <div class="image-container mat">
+                          <img src="{{url_for('static',filename='img/models/aluminium.png')}}" class="img-fluid max-height-200" alt="Aluminum">
+                      </div>
+                      <div class="card-body">
+                          <h5 class="card-title">Steel & aluminum</h5>
+                          <p class="card-text">Structural support for the dome. It can be combined with other materials.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-3 mb-4">
+                  <div class="card h-100">
+                      <div class="image-container mat">
+                          <img src="{{url_for('static',filename='img/models/Fiberglass_or_polycarbonate.png')}}" class="img-fluid max-height-200" alt="Fiberglass">
+                      </div>
+                      <div class="card-body">
+                          <h5 class="card-title">Fiberglass or polycarbonate</h5>
+                          <p class="card-text">Can be used on the shell to provide further waterproofing and sustainability for the rain.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-3 mb-4">
+                  <div class="card h-100">
+                      <div class="image-container mat">
+                          <img src="{{url_for('static',filename='img/models/speed_controller.png')}}" class="img-fluid max-height-200" alt="Electrical speed controller">
+                      </div>
+                      <div class="card-body">
+                          <h5 class="card-title">Electrical speed controller</h5>
+                          <p class="card-text">This is going to lower the speed of the drone when it gets nearby the hangars.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-3 mb-4">
+                  <div class="card h-100">
+                      <div class="image-container mat">
+                          <img src="{{url_for('static',filename='img/models/Power_destribution_board.png')}}" class="img-fluid max-height-200" alt="Power destribution board">
+                      </div>
+                      <div class="card-body">
+                          <h5 class="card-title">Power destribution board</h5>
+                          <p class="card-text">Distributes power from the main power source to all components within the dome.</p>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="d-lg-none border-bottom"></div>
-        <div class="col-lg-6">
-          <div class="row spec-item d-flex align-items-stretch" >
-            <div class="secTitle">
-              <a class="" data-bs-toggle="collapse" href="#Feat" role="button" aria-expanded="false" aria-controls="collapseExample">
-              <i class='bx bxs-component'></i>
-              <h4>Main Features:</h4>
-              </a>
-            </div>
-              <ul class="lText mb-1 collapse" id="Feat">
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor error expedita illo quasi libero veniam perspiciatis, temporibus aliquam laudantium excepturi sequi nesciunt laborum sit quam sed facilis aperiam porro deserunt?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor error expedita illo quasi libero veniam perspiciatis, temporibus aliquam laudantium excepturi sequi nesciunt laborum sit quam sed facilis aperiam porro deserunt?
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor error expedita illo quasi libero veniam perspiciatis, temporibus aliquam laudantium excepturi sequi nesciunt laborum sit quam sed facilis aperiam porro deserunt?
-                </li>
-              </ul>
-          </div>
-        </div>
-        <div class="d-lg-none border-bottom"></div>
-    </ul>
-    </div> 
       </div>
-    </section>-->
+  </section>
+  <section id="components-section">
+    <div class="section-title">
+        <h2>Components</h2>
+    </div>
+    <div class="container">
+      <div class="dModel">
+        <div class="spec-item" style="max-height: 400px;">
+          <div class="secTitle">
+              <a class="" data-bs-toggle="collapse" href="#Component1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  <i></i>
+                  <h4>Automatic Fuses</h4>
+              </a>
+              &#8226; Six robust automatic fuses safeguard your drone station from electrical overloads, ensuring continuous and safe operation
+          </div>
+      </div>
+
+      <div class="spec-item" style="max-height: 400px;">
+        <div class="secTitle">
+            <a class="" data-bs-toggle="collapse" href="#Component2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <i></i>
+                <h4>Surge Protector (330V)</h4>
+            </a>
+            &#8226; Provides superior protection against voltage spikes, maintaining the integrity of your electronic components
+        </div>
+    </div>
+    
+    <div class="spec-item" style="max-height: 400px;">
+      <div class="secTitle">
+          <a class="" data-bs-toggle="collapse" href="#Component3" role="button" aria-expanded="false" aria-controls="collapseExample">
+              <i></i>
+              <h4>Power Extension Cord & Large Distributor</h4>
+          </a>
+          &#8226; Facilitates the efficient distribution of power, enhancing operational flexibility
+      </div>
+  </div>
+  
+  <div class="spec-item" style="max-height: 400px;">
+    <div class="secTitle">
+        <a class="" data-bs-toggle="collapse" href="#Component4" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <i></i>
+            <h4>Electric Cables (10m) & Connectors</h4>
+        </a>
+        &#8226; High-quality cables and connectors ensure seamless electrical connectivity
+    </div>
+</div>
+<div class="spec-item" style="max-height: 400px;">
+  <div class="secTitle">
+      <a class="" data-bs-toggle="collapse" href="#Component5" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <i></i>
+          <h4>Arduino Uno & Arduino Cable Kit</h4>
+      </a>
+      &#8226; The powerful and versatile Arduino Uno forms the heart of our station, supported by a comprehensive cable kit for easy connectivity
+  </div>
+</div>
+<div class="spec-item" style="max-height: 400px;">
+  <div class="secTitle">
+      <a class="" data-bs-toggle="collapse" href="#Component6" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <i></i>
+          <h4>IR Sensor, Ultrasonic Sensor & Temperature Sensors (TMP36)</h4>
+      </a>
+      &#8226; Enhance the station’s monitoring capabilities with advanced sensors for infrared, ultrasonic, and temperature data collection
+  </div>
+</div>
+<div class="spec-item" style="max-height: 400px;">
+  <div class="secTitle">
+      <a class="" data-bs-toggle="collapse" href="#Component7" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <i></i>
+          <h4>LCD 16x2</h4>
+      </a>
+      &#8226; A clear and informative display screen for real-time data monitoring and feedback
+  </div>
+</div>
+          </div>
+      </div>
+  </div>                
+  </section>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-J7+iFq26YQyCVuBcN3CC8GyOHE2NqgHxm3QhpbBzpSCp9HrGhSVbmtI9/q/xIuJQ9dFVixrV+dSYcYuz3GmQaw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script>
+          document.querySelectorAll('.secTitle a').forEach(item => 
+          {
+            item.addEventListener('click', event => 
+            {
+            let target = event.target.parentElement.nextElementSibling;
+            target.classList.toggle('show');
+            })
+          });
+        </script>
     <section class="page-wrapper">
 		<div class="container mt-20" id="contact">
 			<div class="w-full mt-4 flex flex-col gap-1 items-center relative md:items-start justify-center">
@@ -268,4 +253,19 @@
 		</div>
 	</section>
 </main>
+<script>
+  function scrollToSection(sectionId) {
+    console.log('Scrolling to section:', sectionId);
+    var section = document.getElementById(sectionId);
+    console.log('Section element:', section);
+    if (section) {
+        var offsetTop = section.offsetTop;
+        console.log('Offset top:', offsetTop);
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+    }
+}
+</script>
 {% endblock %}
