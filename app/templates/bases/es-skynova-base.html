@@ -160,6 +160,10 @@
 						transform: rotate(360deg);
 					}
 				}
+				.nav-item{
+					padding-left: 100px;
+					font-size: large;
+				}
 		</style>
 		<!-- Theme mode -->
 		<script>
@@ -213,27 +217,37 @@
 		{% block header %}
 			<header class="bg-dark dark-mode header navbar navbar-expand-lg position-absolute {% block navbar_sticky_function %}navbar-sticky{% endblock %}"> <!-- navbar-sticky removido -->
 				<div class="container">
-							<div class="navbar-brand pe-3" itemprop="url" aria-label="Globodain">
-									{% block logo %}
-										<a href="{{url_for('public_{}.skynova'.format(session.lang))}}">
-											<img itemprop="logo" class="c-image" src="{{url_for('static',filename='svg/logos/logotipo-white.svg')}}"
-													role="presentation" aria-hidden="true" width="110" alt="Globodain" />
-										</a>
-									{% endblock %}
-								<div class="text-light text-middle fs-6">
-									<a href="{{url_for('public_{}.skynova'.format(session.lang))}}">
-										Skynova
-									</a>
-								</div>
-							</div>
-							<div id="navbarNav" class="offcanvas offcanvas-end">
+					<div class="navbar-brand pe-3" itemprop="url" aria-label="Globodain">
+						<a href='{{url_for("public_{}.index".format(session["lang"]))}}'>
+							<!-- logo navbar -->
+							<div>
+								{% block logo %}
+									{% if header_dark_mode %}
+									<img itemprop="logo" class="c-image" src="{{url_for('static',filename='svg/logos/logotipo-white.svg')}}"
+										role="presentation" aria-hidden="true" width="150" alt="Globodain" />
+									{% else %}
+									<img itemprop="logo" class="c-image" src="{{url_for('static',filename='svg/logos/logo-2024.svg')}}"
+										role="presentation" aria-hidden="true" width="160" alt="Globodain" />
+									{% endif %}
+								{% endblock %}
+							</div>	
+						</a>
+						<div class="text-light text-middle fs-6">
+							<span>
+								<a href="{{url_for('public_{}.skynova'.format(session.lang))}}">
+									/Skynova
+								</a>	
+							</span>
+						</div>
+					</div>
+							<div id="navbarNav" class="offcanvas offcanvas-end ">
 									<div class="offcanvas-header border-bottom">
 									<h5 class="offcanvas-title">Menu</h5>
 									<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 									</div>
 									<div class="offcanvas-body">
 									<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-										<li class="nav-item">
+										<li class="nav-item" sty>
 											<a href="{{url_for('public_{}.skynova_solution'.format(session.lang))}}" class="nav-link dark-mode" aria-current="page">Solution</a>
 										</li>
 
@@ -251,36 +265,7 @@
 										</li>
 									</ul>
 									</div>
-									<div class="offcanvas-header border-top">
-											<a href='{{url_for("public_{}.request_services".format(session["lang"]))}}' class="btn btn-primary btn-sm w-100" target="_blank" rel="noopener">
-												Contactar
-											</a>
-									</div>
 							</div>
-							<li class="flex mr-6 justify-center items-center">
-								<a href="#contact" class="nav-link hover:text-blue-600" aria-current="page">Contact</a>
-							</li>
-							<div class="ms-auto nav dropdown">
-								<button class="btn btn-md btn-outline-secondary border-0 px-3 me-3 dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown"><img
-									src="{{url_for('static',filename='svg/flags/{}.svg'.format(session['lang']))}}"
-									width="18" alt="{{session['lang'].upper()}}"><span class="ms-2 d-none d-lg-block fw-semibold me-1" style="font-size: 12px;">{{lang_data.common.selected}}</span></button>
-
-								<div class="dropdown-menu dropdown-menu-center my-1">
-									{% for lang in lang_data.common.navbar.languages %}
-									{% if lang.code != session.lang %}
-									<a class="dropdown-item pb-1"
-										href="{{ url_for('public.change_language', language=lang.code) }}">
-										<img class="me-2"
-											src="{{url_for('static',filename='svg/flags/{}.svg'.format(lang.code))}}" width="18"
-											alt="{{lang.name}}">{{lang.name}}
-									</a>
-									{% endif %}
-									{% endfor %}
-								</div>
-							</div>
-							<button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-									<span class="navbar-toggler-icon"></span>
-							</button>
 				</div>
 			</header>
 		{% endblock %}
@@ -305,6 +290,27 @@
 											<a class="fs-xs d-inline-block nav-link" href='{{url_for("public_{}.{}".format(session["lang"],item["url"]))}}' rel="noopener">{{item.title.capitalize()}}</a>
 										{% endfor %}
 									</p>
+									<div style="margin-top: -2px;">
+										<button class="btn btn-md btn-outline-secondary border-0 px-3 me-2 dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown"><img
+											src="{{url_for('static',filename='svg/flags/{}.svg'.format(session['lang']))}}"
+											width="18" alt="{{session['lang'].upper()}}"><span class="ms-2 d-none d-lg-block fw-semibold me-1" style="font-size: 12px;">{{lang_data.common.selected}}</span></button>
+		
+										<div class="dropdown-menu dropdown-menu-center my-1">
+											{% for lang in lang_data.common.navbar.languages %}
+											{% if lang.code != session.lang %}
+											<a class="dropdown-item pb-1"
+												href="{{ url_for('public.change_language', language=lang.code) }}">
+												<img class="me-2"
+													src="{{url_for('static',filename='svg/flags/{}.svg'.format(lang.code))}}" width="18"
+													alt="{{lang.name}}">{{lang.name}}
+											</a>
+											{% endif %}
+											{% endfor %}
+										</div>
+									</div>
+									<button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+											<span class="navbar-toggler-icon"></span>
+									</button>
 							</div>
 						</div>
 					</footer>
