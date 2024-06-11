@@ -12,6 +12,20 @@
         .card:hover {
             transform: scale(1.05);
         }
+        .card {
+            margin-right: 20px; /* add 20px margin between cards */
+        }
+        .card-title{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .card-text{
+            font-size: 15px;
+        }
+        .mat img {
+            height:100%; 
+            width: 100%;
+        }
  </style>
 </head>
 <main>
@@ -97,59 +111,58 @@
         </div>
     </section>
     <section id="materials-section">
-      <style>.mat img {height: 200px; width: 100%;}</style>
-      <div class="container">
-          <div class="section-title">
-              <h2>Materials</h2>
-          </div>
-          <div class="row">
-              <div class="col-md-6 col-lg-3 mb-4">
-                  <div class="card h-100">
-                      <div class="image-container mat">
-                          <img src="{{url_for('static',filename='img/models/aluminium.png')}}" class="img-fluid max-height-200" alt="Aluminum">
-                      </div>
-                      <div class="card-body">
-                          <h5 class="card-title">Steel & aluminum</h5>
-                          <p class="card-text">Structural support for the dome. It can be combined with other materials.</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-6 col-lg-3 mb-4">
-                  <div class="card h-100">
-                      <div class="image-container mat">
-                          <img src="{{url_for('static',filename='img/models/Fiberglass_or_polycarbonate.png')}}" class="img-fluid max-height-200" alt="Fiberglass">
-                      </div>
-                      <div class="card-body">
-                          <h5 class="card-title">Fiberglass or polycarbonate</h5>
-                          <p class="card-text">Can be used on the shell to provide further waterproofing and sustainability for the rain.</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-6 col-lg-3 mb-4">
-                  <div class="card h-100">
-                      <div class="image-container mat">
-                          <img src="{{url_for('static',filename='img/models/speed_controller.png')}}" class="img-fluid max-height-200" alt="Electrical speed controller">
-                      </div>
-                      <div class="card-body">
-                          <h5 class="card-title">Electrical speed controller</h5>
-                          <p class="card-text">This is going to lower the speed of the drone when it gets nearby the hangars.</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-6 col-lg-3 mb-4">
-                  <div class="card h-100">
-                      <div class="image-container mat">
-                          <img src="{{url_for('static',filename='img/models/Power_destribution_board.png')}}" class="img-fluid max-height-200" alt="Power destribution board">
-                      </div>
-                      <div class="card-body">
-                          <h5 class="card-title">Power destribution board</h5>
-                          <p class="card-text">Distributes power from the main power source to all components within the dome.</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Materials</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-9 col-lg-6 mb-16">  <!-- increased margin to 16 -->
+                    <div class="card h-100"> <!-- added margin bottom 4 -->
+                        <div class="image-container mat">
+                            <img src="{{url_for('static',filename='img/models/aluminium.png')}}" class="img-fluid" alt="Aluminum">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Steel & aluminum</h5>
+                            <p class="card-text">Structural support for the dome. It can be combined with other materials.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 col-lg-6 mb-16">  <!-- increased margin to 16 -->
+                    <div class="card h-100"> <!-- added margin bottom 4 -->
+                        <div class="image-container mat">
+                            <img src="{{url_for('static',filename='img/models/Fiberglass_or_polycarbonate.png')}}" class="img-fluid" alt="Fiberglass">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Fiberglass or polycarbonate</h5>
+                            <p class="card-text">Can be used on the shell to provide further waterproofing and sustainability for the rain.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 col-lg-6 mb-16">  <!-- increased margin to 16 -->
+                    <div class="card h-100"> <!-- added margin bottom 4 -->
+                        <div class="image-container mat">
+                            <img src="{{url_for('static',filename='img/models/speed_controller.png')}}" class="img-fluid" alt="Electrical speed controller">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Electrical speed controller</h5>
+                            <p class="card-text">This is going to lower the speed of the drone when it gets nearby the hangars.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 col-lg-6 mb-16"> <!-- increased margin to 16 -->
+                    <div class="card h-100"> <!-- added margin bottom 4 -->
+                        <div class="image-container mat">
+                            <img src="{{url_for('static',filename='img/models/Power_destribution_board.png')}}" class="img-fluid" alt="Power destribution board">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Power destribution board</h5>
+                            <p class="card-text">Distributes power from the main power source to all components within the dome.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
   <section id="components-section">
     <div class="section-title">
         <h2>Components</h2>
@@ -263,7 +276,7 @@
         console.log('Offset top:', offsetTop);
         window.scrollTo({
             top: offsetTop,
-            behavior: 'smooth'
+            behavior: 'smooth'  
         });
     }
 }
