@@ -2,7 +2,7 @@
 
 {% block content %}
 <main class="page-wrapper">
-  <section class="d-flex justify-content-center align-items-center text-center" style="background: url('{{url_for('static',filename='img/backgrounds/space.png')}}') no-repeat center center; background-size: cover; height: 23%; position: relative;">
+  <section class="d-flex justify-content-center align-items-center text-center" style="background-image: url('{{url_for('static',filename='img/backgrounds/space.png')}}'); background-size: cover; height: 23%; position: relative;">
     <div class="container pt-4">
       <h2 class="font-semibold text-center text-white text-6xl my-8">About Our Product</h2>
       <div class="flex-col">
@@ -10,15 +10,11 @@
           Skynova is an innovative company transforming the way police, firefighters, and other emergency services respond to crises. Our mission is to provide instant access to drone hangars, significantly enhancing the efficiency and speed of emergency responses.
         </p>
       </div>
-      </br>
-      </br>
-      <a href='modules' class="btn btn-dark btn-lg px-5">
-        More Info
-      </a>
+      <a href="#scroll-target" class="btn btn-dark btn-lg px-5">More Info</a>
       <model-viewer
         class="h-[25rem] w-full bg-transparent"
         alt="A 3D model of our product."
-        src={{url_for('static',filename='3D/drone_home.glb')}}
+        src="{{ url_for('static',filename='3D/drone_home.glb') }}"
         poster=""
         shadow-intensity="1"
         camera-controls
@@ -31,15 +27,14 @@
   <section class="py-5 bg-light" id="flytbase">
     <div class="container px-5 my-5">
       <div class="section-title">
-        <h2 class="mb-5">Partnership</h2>
+        <h2>Partnership</h2>
       </div>
       <div class="row gx-5 align-items-center mb-5">
         <div class="col-lg-6 order-first order-lg-last">
-          <img class="img-fluid w-75 mx-auto d-block" src="https://spaceanddefense.io/wp-content/uploads/2020/03/FlytBase-Logo835x396.png" alt="Partnership" border="0">
+          <img class="img-fluid w-75 mx-auto d-block" src="https://spaceanddefense.io/wp-content/uploads/2020/03/FlytBase-Logo835x396.png" alt="Partnership">
         </div>
         <div class="col-lg-6">
           <h2 class="fw-bolder fs-4">Our Partnership</h2>
-          <br>
           <p class="lead fw-normal text-muted mb-0" style="font-size: 1rem;">
             We integrate Flytbase's platform with our drone deployment infrastructure. We design, build, and maintain the hardware, while Flytbase manages the digital aspects.
           </p>
@@ -153,9 +148,9 @@
         <div class="card-1-b h-100 shadow hover:scale-105 transition-all duration-300" style="border-radius: 3%;">
           <img class="card-img-top-b img-fluid w-75 mx-auto mt-5" src="https://i.ibb.co/rcf1Bmb/Drone-Model1.png" />
           <div class="card-body p-4">
-            <a class="text-decoration-none link-dark stretched-link">
+            
               <h5 class="card-title text-gradient-primary mb-3 text-lg font-bold">Flight Management &amp; Power Supply</h5>
-            </a>
+           
             <p class="card-text mb-0" style="font-size: 1.1rem;">Operators assign drones to calls, which then receive
               coordinates, execute tasks, and return to the hangar.<br>
               The station uses the main power grid and has emergency batteries
@@ -168,9 +163,9 @@
         <div class="card-1-b h-100 shadow hover:scale-105 transition-all duration-300" style="border-radius: 3%;">
           <img class="card-img-top-b img-fluid w-75 mx-auto mt-5" src="https://i.ibb.co/dDgMpZB/Drone-Model2.png" alt="Agriculture" />
           <div class="card-body p-4">
-            <a class="text-decoration-none link-dark stretched-link">
+            
               <h5 class="card-title text-gradient-primary mb-3 text-lg font-bold">Safety &amp; Central Computer</h5>
-            </a>
+            
             <p class="card-text mb-0" style="font-size: 1.1rem;">
               Electrical safety features include surge protection and fire prevention
               mechanisms.<br>
@@ -192,9 +187,9 @@
         <div class="card-2-b h-100 shadow hover:scale-105 transition-all duration-300" style="border-radius: 3%;">
           <img class="card-img-top-b img-fluid w-75 mx-auto mt-5" src="https://i.ibb.co/fCsSpqv/Drone-Model3.png" alt="Police" />
           <div class="card-body p-4">
-            <a class="text-decoration-none link-dark stretched-link" href="#!">
+            
               <h5 class="card-title text-gradient-primary mb-3 text-lg font-bold">Gates &amp; Charging Modules</h5>
-            </a>
+            
             <p class="card-text mb-0" style="font-size: 1.1rem;">
               Aluminum roller gates are powered by electric motors, integrated with the central
               computer.<br>
@@ -207,9 +202,9 @@
         <div class="card-2-b h-100 shadow hover:scale-105 transition-all duration-300" style="border-radius: 3%;">
           <img class="card-img-top-b img-fluid mx-auto mt-5" style="border-top-left-radius: 3%; border-top-right-radius: 3%;" src="https://i.ibb.co/d0QBVWq/Project-Of-Skyline.png" />
           <div class="card-body p-4">
-            <a class="text-decoration-none link-dark stretched-link" href="#!">
+            
               <h5 class="card-title text-gradient-primary mb-3 text-lg font-bold">Space Organization &amp; Security</h5>
-            </a>
+            
             <p class="card-text mb-0" style="font-size: 1.1rem;">
               Data and power are managed via Ethernet cables.<br>
               Drones are equipped with cameras, motion detection, and biometric authentication
