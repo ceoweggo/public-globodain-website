@@ -160,10 +160,6 @@
 						transform: rotate(360deg);
 					}
 				}
-				.nav-item{
-					padding-left: 100px;
-					font-size: large;
-				}
 		</style>
 		<!-- Theme mode -->
 		<script>
@@ -235,7 +231,7 @@
 						<div class="text-light text-middle fs-6">
 							<span>
 								<a href="{{url_for('public_{}.skynova'.format(session.lang))}}">
-									/Skynova
+									Skynova
 								</a>	
 							</span>
 						</div>
@@ -264,6 +260,11 @@
 											<a href="{{url_for('public_{}.education'.format(session.lang))}}" class="nav-link dark-mode" aria-current="page">{{lang_data.common.navbar.education.name}}</a>
 										</li>
 									</ul>
+									</div>
+									<div class="offcanvas-header border-top">
+											<a href='{{url_for("public_{}.request_services".format(session["lang"]))}}' class="btn btn-primary btn-sm w-100" target="_blank" rel="noopener">
+												Contactar
+											</a>
 									</div>
 							</div>
 				</div>
