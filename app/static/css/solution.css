@@ -320,3 +320,7 @@ section {
   object-fit: fill;
   width: 100%;
 }
+
+html {
+  scroll-behavior: smooth;
+}
