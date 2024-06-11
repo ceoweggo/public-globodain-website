@@ -298,22 +298,25 @@ section {
   font-size: 15px; /* Adjust the font size as needed */
 }
 
-.card-img-top {
-  height: 300px; /* adjust the value to your desired height */
+.card-b {
+  margin-bottom: 40px; /* added more space between cards */
+}
+
+.card-img-top-b {
+  width: 75%; /* reduced image width */
+  height: auto; /* maintain aspect ratio */
+  margin: 20px auto 0; /* added more space above the image */
+}
+
+.card-1-b img {
+  height: 200px; /* or a fixed height, e.g. 200px */
+  
+  object-fit: fill;
   width: 100%;
 }
 
-.row {
-  flex-wrap: wrap; /* ensure the row can wrap to the next line */
-}
-
-.col-12 {
-  width: 100%; /* ensure columns take full width on small screens */
-  margin-bottom: 20px; /* add some margin between rows */
-}
-
-@media (min-width: 992px) {
-  .col-lg-6 {
-    width: 50%; /* make each column take up 50% of the width on large screens */
-  }
+.card-2-b img {
+  height: 250px; /* or a fixed height, e.g. 200px */
+  object-fit: fill;
+  width: 100%;
 }
