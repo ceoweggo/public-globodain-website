@@ -264,6 +264,7 @@
                 </div>
             </div>
        </div>
+<<<<<<< HEAD
        <section id="faq" class="faq faqdown bg-secondary">
         <div class="container flex flex-col ">
           <div class="section-title text-2xl font-semibold text-center">
@@ -313,6 +314,74 @@
               Installing a Skynova drone station requires minimal space and a power source. Our technical team provides full support during the installation process, ensuring a smooth and efficient setup tailored to your specific location.
             </p>
           </div><!--END F.A.Q. Item-->
+=======
+   </section>
+ 
+ 
+   <section id="faq" class="faq faqdown bg-secondary" >
+    <div class="container flex flex-col ">
+      <div class="section-title text-2xl font-semibold text-center">
+        <h2 class="text-4xl">Frequently Asked Questions</h2>
+      </div>
+ 
+      <div class="flex w-full flex-col border p-4 mb-3">
+        <i class="ri-question-line"></i>
+        <button class="flex tracking-wider" onclick="toggleText(5)">
+          <img src={{url_for('static',filename='svg/icons/arrow.svg')}} class="w-4 transform transition-all duration-300 mr-2" id="icon-5">
+          <span class="text-2xl ml-5">What are the main benefits of using Skynova's drone stations?</span>
+        </button>
+        <p id="text-5" class="text-lg text-left mt-3 text-black ml-5" style="display: none;">
+          Skynova's drone stations offer significant benefits such as optimizing resource use by ensuring drones are charged and ready 24/7, reducing response times, and providing detailed aerial assessments. Their autonomous operation also eliminates the need for pilots, enhancing efficiency.
+        </p>
+      </div><!--END F.A.Q. Item-->
+ 
+      <div class="flex w-full flex-col border p-4 mb-3">
+        <i class="ri-question-line"></i>
+        <button class="flex  tracking-wider" onclick="toggleText(6)">
+          <img src={{url_for('static',filename='svg/icons/arrow.svg')}} class="w-4 transform transition-all duration-300 mr-2" id="icon-6">
+          <span class="text-2xl ml-5">How does the drone charging system work in Skynova stations?</span>
+        </button>
+        <p id="text-6" class="text-lg text-left mt-3 text-black ml-5" style="display: none;">
+          Our drone stations feature advanced charging systems that automatically charge drones when they dock. This process is quick and safe, minimizing downtime and ensuring drones are always ready for their next mission without manual intervention.
+        </p>
+      </div><!--END F.A.Q. Item-->
+ 
+      <div class="flex w-full flex-col border p-4 mb-3">
+        <i class="ri-question-line"></i>
+        <button class="flex  tracking-wider" onclick="toggleText(7)">
+          <img src={{url_for('static',filename='svg/icons/arrow.svg')}} class="w-4 transform transition-all duration-300 mr-2" id="icon-7">
+          <span class="text-2xl ml-5">Are Skynova's drone stations weather-resistant?</span>
+        </button>
+        <p id="text-7" class="text-lg text-left mt-3 text-black ml-5" style="display: none;">
+          Yes, Skynova's drone stations are designed to operate in various weather conditions. They are built to withstand rain, wind, and other extreme weather, ensuring reliable operation in diverse environments.
+        </p>
+      </div><!--END F.A.Q. Item-->
+ 
+      <div class="flex w-full flex-col border p-4 mb-3">
+        <i class="ri-question-line"></i>
+        <button class="flex  items-center tracking-wider" onclick="toggleText(8)">
+          <img src={{url_for('static',filename='svg/icons/arrow.svg')}} class="w-4 transform transition-all duration-300 mr-2" id="icon-8">
+          <span class="text-2xl ml-5">What technical requirements are needed for installing a Skynova drone station?</span>
+        </button>
+        <p id="text-8" class="text-lg text-left mt-3 text-black ml-5" style="display: none;">
+          Installing a Skynova drone station requires minimal space and a power source. Our technical team provides full support during the installation process, ensuring a smooth and efficient setup tailored to your specific location.
+        </p>
+      </div><!--END F.A.Q. Item-->
+    </div>
+  </section><!--END F.A.Q. section-->
+  <section>
+    <div class="container mt-20" id="contact">
+        <div class="w-full mt-4 flex flex-col gap-1 items-center relative md:items-start justify-center">
+            <div class="flex md:w-1/2 md:absolute w-full flex-col gap-8 card md:right-16 border-light shadow-lg py-3 p-sm-4 p-md-5" style="text-align: center;">
+                <span class="text-2xl">Interested in our products?</span>
+                <span>Feel free to let us know! We are looking forward to cooperate with you.</span>
+                {# TODO: Change contact href #}
+                <div class="flex justify-center">
+                    <a href="/en/request" target="_blank" class="btn btn-lg btn-primary w-full md:w-1/2 border" style="border-radius: 10px">Contact</a>
+                </div>
+            </div>
+            <img class="hidden md:block w-1/2 ml-16" src="{{url_for('static',filename='img/backgrounds/drones-ilustration.jpg')}}" alt="Ilustration image">
+>>>>>>> c63454d00a28940b7f4c22ae299234e7960e3a10
         </div>
       </section><!--END F.A.Q. section-->
   </main>
