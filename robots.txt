@@ -4,7 +4,4 @@ disallow: /node_modules/
 user-agent: magicsearchbot
 disallow: /ts/
 
-user-agent: magicsearchbot
-disallow: /app/src/community/
-
 Sitemap: https://globodain.com/sitemap

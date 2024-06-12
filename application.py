@@ -15,7 +15,7 @@ deployment_mode = False
 
 if __name__ == "__main__":
   if not deployment_mode:
-    application.run()
+    application.run(port=4000, debug=True)
   else:
     # DEPLOYMENT SERVER (SIMILAR TO WSGI)
     from waitress import serve

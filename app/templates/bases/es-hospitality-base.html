@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="{{session['lang']}}" dir="ltr" data-theme=light>
+
+<head>
+    
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow" />
+    <meta name="template" content="gtcv1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-language" content="{{session['lang']}}" />
+    <title>
+      {% if title %}
+      {{title}}
+      {% else %}
+      Globodain Technology Corporation
+      {% endif %}
+    </title>
+    
+    {%- for breadcrumb in breadcrumbs -%}
+        {% if loop.last %}
+        <link rel="canonical" href="{{ breadcrumb.url }}" />
+        {% endif %}
+    {%- endfor -%}
+
+    {% block meta %}
+    <meta name="country" content="ES" />
+    <meta name="author" content="Ruben Ayuso">
+    <meta name="generator" content="Globodain Technology Corporation">
+
+    {% if meta_description %}
+    <meta name="description" content="{{meta_description}}">
+    {% else %}
+    <meta name="description" content="Globodain, a leading technology company, provides innovative software solutions and actively collaborates on European Union projects, including the Erasmus+ Mobility Program. Our commitment to excellence and global collaboration positions us as a trusted partner in the technology landscape">
+    {% endif %}
+
+    {% if meta_keywords %}
+    <meta name="keywords" content="{{meta_keywords}}">
+    {% else %}
+    <meta name="keywords" content="globodain, software solutions, tecnological enterprise, UE projects, Union Europe, Erasmus+ Mobility Programs, global collaboration, technological innovation, software services, python">
+    {% endif %}
+
+    {% if meta_url %}
+    <meta name="url" content="{{meta_url}}">
+    {% else %}
+    <meta name="url" content="https://www.globodain.com/">
+    {% endif %}
+
+    <meta name="twitter:url" content="https://www.globodain.com/{{session['lang']}}" />
+    <meta name="twitter:title" content="Globodain – Innovation, efficiency and quality to provice cutting-edge technological solutions." />
+    <meta name="twitter:description"
+        content="Globodain, a leading technology company, provides innovative software solutions and actively collaborates on European Union projects, including the Erasmus+ Mobility Program. Our commitment to excellence and global collaboration positions us as a trusted partner in the technology landscape." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="exp-visitor-anchor" content="" />
+    <meta name="exp-atjs-anchor" content="" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="theme-color" content="#ffffff">
+    {% endblock %}
+
+    <link rel="stylesheet" media="screen" href="{{url_for('static',filename='vendor/boxicons/css/boxicons.min.css')}}"/>
+    <link rel="stylesheet" media="screen" href="{{url_for('static',filename='vendor/swiper/swiper-bundle.min.css')}}"/>
+
+    <link rel='stylesheet' href="{{url_for('static',filename='css/theme.min.css')}}" type='text/css' />
+
+    {% block page_css %}
+    {% endblock %}
+
+    <style>
+      /* START MS STYLING */
+
+      .bg-primary {
+        background-color: #3438ed !important;
+      }
+
+      .btn-primary {
+        --gtc-btn-bg: #3438ed !important;
+        --gtc-btn-border-color: #3438ed !important;
+        --gtc-btn-hover-bg: rgb(29, 32, 197) !important;
+        --gtc-btn-hover-border-color: rgb(29, 32, 197) !important;
+        --gtc-btn-active-bg: rgb(29, 32, 197) !important;
+        --gtc-btn-active-border-color: rgb(29, 32, 197) !important;
+        --gtc-btn-disabled-bg: #3438ed !important;
+        --gtc-btn-disabled-border-color: #3438ed !important;
+      }
+
+      .btn-outline-primary {
+        --gtc-btn-color: #3438ed !important;
+        --gtc-btn-border-color: #3438ed !important;
+        --gtc-btn-hover-bg: #3438ed !important;
+        --gtc-btn-hover-border-color: #3438ed !important;
+        --gtc-btn-active-bg: #3438ed !important;
+        --gtc-btn-active-border-color: #3438ed !important;
+        --gtc-btn-active-shadow: unset;
+        --gtc-btn-disabled-color: #3438ed !important;
+        --gtc-btn-disabled-border-color: #3438ed !important;
+      }
+
+      .shadow-primary {
+        box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(29, 32, 197, 0.9) !important;
+      }
+
+      .border-primary {
+        border-color: rgba(29, 32, 197, 0.9) !important;
+      }
+
+      .nav-tabs {
+        --gtc-nav-tabs-link-active-color: #fff;
+        --gtc-nav-tabs-link-active-bg: #3438ed;
+      }
+
+      .nav {
+        --gtc-nav-link-hover-color: #3438ed !important;
+        --gtc-nav-link-disabled-color: #9397ad;
+      }
+      /* END MS STYLING */
+
+        .page-loading {
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          -webkit-transition: all .2s .1s ease-in-out;
+          transition: all .2s .1s ease-in-out;
+          background-color: #fff;
+          opacity: 0;
+          visibility: hidden;
+          z-index: 9999;
+        }
+        .dark-mode .page-loading {
+          background-color: #0b0f19;
+        }
+        .page-loading.active {
+          opacity: 1;
+          visibility: visible;
+        }
+        .page-loading-inner {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          -webkit-transition: opacity .2s ease-in-out;
+          transition: opacity .2s ease-in-out;
+          opacity: 0;
+        }
+        .page-loading.active > .page-loading-inner {
+          opacity: 1;
+        }
+        .page-loading-inner > span {
+          display: block;
+          font-size: 1rem;
+          font-weight: normal;
+          color: #9397ad;
+        }
+        .dark-mode .page-loading-inner > span {
+          color: #fff;
+          opacity: .6;
+        }
+        .page-spinner {
+          display: inline-block;
+          width: 2.75rem;
+          height: 2.75rem;
+          margin-bottom: .75rem;
+          vertical-align: text-bottom;
+          border: .15em solid #b4b7c9;
+          border-right-color: transparent;
+          border-radius: 50%;
+          -webkit-animation: spinner .75s linear infinite;
+          animation: spinner .75s linear infinite;
+        }
+        .dark-mode .page-spinner {
+          border-color: rgba(255,255,255,.4);
+          border-right-color: transparent;
+        }
+        @-webkit-keyframes spinner {
+          100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+        @keyframes spinner {
+          100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+        }
+    </style>
+  
+    <!-- Theme mode -->
+    <script>
+        let mode = window.localStorage.getItem('mode'),
+            root = document.getElementsByTagName('html')[0];
+            root.classList.add('light-mode');
+    </script>
+  
+    <!-- Page loading scripts -->
+    <script>
+        (function () {
+          window.onload = function () {
+            const preloader = document.querySelector('.page-loading');
+            preloader.classList.remove('active');
+            setTimeout(function () {
+              preloader.remove();
+            }, 1000);
+          };
+        })();
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YG0JVN6R4B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YG0JVN6R4B');
+    </script>
+
+    {% block subhead %}
+    {% endblock %}
+
+</head>
+{% block body %}
+<body>
+{% endblock %}
+
+    <div class="page-loading active">
+        <div class="page-loading-inner">
+          <div class="page-spinner"></div><span>Loading...</span>
+        </div>
+    </div>
+
+    <div id="cookie-banner"></div>
+    {% block header %}
+      <header class="header navbar bg-white navbar-expand-lg position-relative {% block navbar_sticky_function %}navbar-sticky{% endblock %}"> <!-- navbar-sticky removido -->
+        <div class="container">
+          <a class="navbar-brand pe-3" itemprop="url" href='{{url_for("public_{}.index".format(session["lang"]))}}' aria-label="Globodain">
+            <div>
+                {% block logo %}
+                    {% if header_dark_mode %}
+                    <img itemprop="logo" class="c-image" src="{{url_for('static',filename='svg/logos/logotipo-white.svg')}}"
+                        role="presentation" aria-hidden="true" width="110" alt="Globodain" />
+                    {% else %}
+                    <img itemprop="logo" class="c-image" src="{{url_for('static',filename='svg/logos/logo-2024.svg')}}"
+                        role="presentation" aria-hidden="true" width="160" alt="Globodain" />
+                    {% endif %}
+                {% endblock %}
+            </div>
+            <div class="ms-1 text-middle fs-6 text-softcamp">
+              MS
+            </div>
+          </a>
+              
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-current="page">{{lang_data.hospitality.navbar.operative.title|safe}}</a>
+                  <div class="dropdown-menu p-0">
+                    <div class="d-lg-flex">
+                    <div class="mega-dropdown-column align-items-center p-4 text-center" style="background-color: #3438ed;">
+                      <img class="mt-5 mb-3" src="{{url_for('static',filename='img/hospitality/menu.svg')}}" alt="Landings">
+                      
+                      <span class="h6 text-light">{{lang_data.hospitality.navbar.operative.a.title|safe}}</span>
+                      <span class="fs-7 text-light">{{lang_data.hospitality.navbar.operative.a.subtitle|safe}}</span>
+                      
+                    </div>
+                    <div>
+                      <div class="d-lg-flex">
+                        <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
+                          <ul class="list-unstyled mb-0">
+                            <li class="card border-0 mb-3">
+                              <a href="{{url_for('public_{}.hospitality_one_experience'.format(session.lang[0:2]))}}" class="nav-link w-100" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="left" title="{{lang_data.hospitality.navbar.operative.b.tooltip}}">
+                                <span class="d-flex flex-column">
+                                  <span class="fs-6 fw-bold">{{lang_data.hospitality.navbar.operative.b.title|safe}}</span>
+                                  <span class="fs-7 fw-semibold text-muted">{{lang_data.hospitality.navbar.operative.b.subtitle|safe}}</span>
+                                </span>
+                              </a>
+                            </li>
+                            <li class="card border-0 mb-3">
+                              <a href="{{url_for('public_{}.hospitality_softvision'.format(session.lang[0:2]))}}" class="nav-link w-100" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="left" title="{{lang_data.hospitality.navbar.operative.c.tooltip}}">
+                                <span class="d-flex flex-column">
+                                  <span class="fs-6 fw-bold">{{lang_data.hospitality.navbar.operative.c.title|safe}}</span>
+                                  <span class="fs-7 fw-semibold text-muted">{{lang_data.hospitality.navbar.operative.c.subtitle|safe}}</span>
+                                </span>
+                              </a>
+                            </li>
+                            <li class="card border-0 mb-3">
+                              <a href="{{url_for('public_{}.hospitality_campsys'.format(session.lang[0:2]))}}" class="nav-link w-100" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="left" title="{{lang_data.hospitality.navbar.operative.d.tooltip}}">
+                                <span class="d-flex flex-column">
+                                  <span class="fs-6 fw-bold">{{lang_data.hospitality.navbar.operative.d.title|safe}}</span>
+                                  <span class="fs-7 fw-semibold text-muted">{{lang_data.hospitality.navbar.operative.d.subtitle|safe}}</span>
+                                </span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="mega-dropdown-column pt-lg-3 pb-lg-4" style="--si-mega-dropdown-column-width: 16rem;">
+                          <ul class="list-unstyled mb-0">
+                          <li class="card border-0 mb-3">
+                            <a href="{{url_for('public_{}.hospitality_one_way'.format(session.lang[0:2]))}}" class="nav-link w-100" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="left" title="{{lang_data.hospitality.navbar.operative.e.tooltip}}">
+                              <span class="d-flex flex-column">
+                                <span class="fs-6 fw-bold">{{lang_data.hospitality.navbar.operative.e.title|safe}}</span>
+                                <span class="fs-7 fw-semibold text-muted">{{lang_data.hospitality.navbar.operative.e.subtitle|safe}}</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li class="card border-0 mb-3">
+                            <a href="{{url_for('public_{}.hospitality_bisys'.format(session.lang[0:2]))}}" class="nav-link w-100" data-bs-toggle="tooltip" data-bs-html="true" data-bs-placement="left" title="{{lang_data.hospitality.navbar.operative.f.tooltip}}">
+                              <span class="d-flex flex-column">
+                                <span class="fs-6 fw-bold">{{lang_data.hospitality.navbar.operative.f.title|safe}}</span>
+                                <span class="fs-7 fw-semibold text-muted">{{lang_data.hospitality.navbar.operative.f.subtitle|safe}}</span>
+                              </span>
+                            </a>
+                          </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <br>
+                      
+                      <!--<a href="" class="ms-3 mb-3 btn btn-sm btn-primary">{{lang_data.hospitality.navbar.operative.button|safe}}</a>-->
+                    </div>
+                    
+                    </div>
+                  </div>
+                </li>
+    
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-current="page">{{lang_data.hospitality.navbar.solutions.title}}</a>
+                  <div class="dropdown-menu">
+                    <div class="d-lg-flex pt-lg-3 overflow-auto px-5 mb-4" style="max-height: 300px;">
+                      <div class="mega-dropdown-column">
+                        <h6 class="px-3 mb-2">{{lang_data.hospitality.navbar.solutions.Operativa[0]}}</h6>
+                        <ul class="list-unstyled mb-3">
+                        <li><a href="{{url_for('public_{}.hospitality_front_office'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Operativa[1]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_check_ins_and_check_outs'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Operativa[2]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_housekeeping'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Operativa[3]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_nights_audit'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Operativa[4]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_pricing_automatization'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Operativa[5]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_digital_tpv'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Operativa[6]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_promotions'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Operativa[7]}}</a></li>
+                        </ul>
+                        <h6 class="px-3 mb-2">{{lang_data.hospitality.navbar.solutions.Software[0]}}</h6>
+                        <ul class="list-unstyled mb-3">
+                        <li><a href="{{url_for('public_{}.hospitality_back_office_reports'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Software[1]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_users_management'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Software[2]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_roles_management'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Software[3]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_offline'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Software[4]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_modules'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Software[5]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_integrations'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Software[6]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_users_logs'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Software[7]}}</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-dropdown-column">
+                        <h6 class="px-3 mb-2">{{lang_data.hospitality.navbar.solutions.Revenue_Management[0]}}</h6>
+                        <ul class="list-unstyled mb-3">
+                        <li><a href="{{url_for('public_{}.hospitality_training_courses'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Revenue_Management[1]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_price_analysis'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Revenue_Management[2]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_demand_forecast'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Revenue_Management[3]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_strategy_designer'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Revenue_Management[4]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_segmentation'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Revenue_Management[5]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_dynamic_pricing'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Revenue_Management[6]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_yield_management'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Revenue_Management[7]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_up_selling_cross_selling'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Revenue_Management[8]}}</a></li>
+                        </ul>
+                        <h6 class="px-3 mb-2">{{lang_data.hospitality.navbar.solutions.Distribución_online[0]}}</h6>
+                        <ul class="list-unstyled mb-3">
+                        <li><a href="{{url_for('public_{}.hospitality_channel_manager'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Distribución_online[1]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_bookings_motor'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Distribución_online[2]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_website_creator'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Distribución_online[3]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_reviews'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Distribución_online[4]}}</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-dropdown-column">
+                        <h6 class="px-3 mb-2">{{lang_data.hospitality.navbar.solutions.Experiencia_del_cliente[0]}}</h6>
+                        <ul class="list-unstyled mb-3">
+                        <li><a href="{{url_for('public_{}.hospitality_experiences_creator'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Experiencia_del_cliente[1]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_customer_panel'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Experiencia_del_cliente[2]}}</a></li>
+                        </ul>
+                        <h6 class="px-3 mb-2">{{lang_data.hospitality.navbar.solutions.Para_cadenas_hoteleras[0]}}</h6>
+                        <ul class="list-unstyled mb-3">
+                        <li><a href="{{url_for('public_{}.hospitality_multiproperty'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Para_cadenas_hoteleras[1]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_independent_accounting'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Para_cadenas_hoteleras[2]}}</a></li>
+                        </ul>
+                        <h6 class="px-3 mb-2">{{lang_data.hospitality.navbar.solutions.Seguridad[0]}}</h6>
+                        <ul class="list-unstyled">
+                        <li><a href="{{url_for('public_{}.hospitality_token_authentication'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Seguridad[1]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_doble_authentication'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Seguridad[2]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_access_restrinction'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Seguridad[3]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_videosurveillance'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Seguridad[4]}}</a></li>
+                        </ul>
+                        <h6 class="px-3 mb-2 mt-2">{{lang_data.hospitality.navbar.solutions.Servicios[0]}}</h6>
+                        <ul class="list-unstyled">
+                        <li><a href="{{url_for('public_{}.hospitality_whatsapp_support'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Servicios[1]}}</a></li>
+                        <li><a href="{{url_for('public_{}.hospitality_mailing'.format(session.lang[0:2]))}}" class="dropdown-item py-1">{{lang_data.hospitality.navbar.solutions.Servicios[2]}}</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+    
+                <li class="nav-item">
+                  <a href="{{url_for('public_{}.hospitality_prices'.format(session.lang[0:2]))}}" class="nav-link">{{lang_data.hospitality.navbar.prices}}</a>
+                </li>
+
+              </ul>
+            </div>
+            <div class="offcanvas-header border-top">
+
+              <div class="row">
+                <a href="{{url_for('public_{}.hospitality_demo'.format(session.lang[0:2]))}}" class="col-12 btn btn-sm btn-outline-primary mb-3" target="_blank" rel="noopener">
+                  {{lang_data.hospitality.navbar.button}}
+                </a>
+      
+                <a href="https://app.softcamp.eu/auth/login?lang={{session.lang[0:2]}}" class="col-12 btn btn-sm btn-outline-secondary" target="_blank" rel="noopener">
+                  {{lang_data.hospitality.navbar.button2}}
+                </a>
+              </div>
+            </div>      
+          </div>
+
+          <div class="ms-3 justify-content-between d-flex">
+            <a href="{{url_for('public_{}.hospitality_demo'.format(session.lang[0:2]))}}" class="d-none btn btn-outline-primary btn-sm d-lg-inline-flex " target="_blank" rel="noopener">
+              {{lang_data.hospitality.navbar.button}}
+            </a>
+          </div>
+  
+          <div class="ms-3 justify-content-between d-flex">
+            <a href="https://ms.globodain.com/auth/login?lang={{session.lang[0:2]}}" class="d-none btn btn-outline-secondary btn-sm d-lg-inline-flex " target="_blank" rel="noopener">
+              {{lang_data.hospitality.navbar.button2}}
+            </a>
+          </div>
+  
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </header>
+    {% endblock %}
+
+    {% block content %}
+        {% block landing_extra_header %}
+        {% endblock %}
+    {% endblock %}
+
+    {% block footer %}
+        {% if footer_page_modified %}
+        {% else %}
+        <footer class="footer bg-white pt-5 pb-4 pb-lg-5 mt-2 mt-md-0">
+            <div class="container pt-lg-4">
+              <div class="d-md-flex align-items-md-start">
+                <p class="nav d-block fs-xs text-center text-md-start pb-lg-0 mb-0">
+                  &copy;
+                  <a class="nav-link d-inline-block p-0" href="https://globodain.com/" target="_blank" rel="noopener">Globodain Technology Corporation</a><br> 
+                </p>
+                    
+                <p class="ms-auto nav d-block fs-xs text-center pb-lg-0 mb-0">
+                  {% for item in lang_data.common.footer.nav_items %}
+                  <a class="fs-xs d-inline-block nav-link" href='{{url_for("public_{}.{}".format(session["lang"],item["url"]))}}' rel="noopener">{{item.title.capitalize()}}</a>    
+                  {% endfor %}
+                </p>
+
+                <div class="nav dropdown">
+                  <button class="btn btn-md btn-outline-secondary border-0 px-md-3 me-md-3 dropdown-toggle" type="button" aria-expanded="false" data-bs-toggle="dropdown"><img
+                    src="{{url_for('static',filename='svg/flags/{}.svg'.format(session['lang']))}}"
+                    width="18" alt="{{session['lang'].upper()}}"><span class="ms-2 d-none d-lg-block fw-semibold me-1" style="font-size: 12px;">{{lang_data.common.selected}}</span></button>
+
+                  <div class="dropdown-menu dropdown-menu-center my-1">
+                    {% for lang in lang_data.common.navbar.languages %}
+                    {% if lang.code != session.lang %}
+                    <a class="dropdown-item pb-1"
+                      href="{{ url_for('public.change_language', language=lang.code) }}">
+                      <img class="me-2"
+                        src="{{url_for('static',filename='svg/flags/{}.svg'.format(lang.code))}}" width="18"
+                        alt="{{lang.name}}">{{lang.name}}
+                    </a>
+                    {% endif %}
+                    {% endfor %}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+        </footer>
+        {% endif %}
+    {% endblock %}
+
+    <a href="#top" class="btn-scroll-top" data-scroll>
+        <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+        <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <script src="{{url_for('static',filename='vendor/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/jarallax/dist/jarallax.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/@lottiefiles/lottie-player/dist/lottie-player.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/imagesloaded/imagesloaded.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/shufflejs/dist/shuffle.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/parallax-js/dist/parallax.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/rellax/rellax.min.js')}}"></script>
+
+    {% block scripts %}
+    {% endblock %}
+
+    <script src="{{url_for('static',filename='js/theme.min.js')}}"></script>
+
+
+    <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143654704.js"></script>
+  <!-- End of HubSpot Embed Code -->
+</body>
+

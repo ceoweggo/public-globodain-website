@@ -1,0 +1,43 @@
+{% extends 'bases/es-hospitality-base.html' %}
+
+{# <!-- SEO SECTION--> #}
+{% set title = lang_data.page.page_title %}
+{% set metadescription = lang_data.page.page_metadescription %}
+{% set keywords = lang_data.page.page_keywords %}
+
+{% block css %}
+{% endblock %}
+
+{% block content %}
+<main class="page-wrapper bg-white">
+  <section id="hero" class="mt-5 mt-md-0">
+    <div class="container pt-xxl-5 mt-md-0">
+      <div class="row">
+        <div class="col-12 col-md-6 col-xxl-5">
+          <div class="text-md-start text-center mt-md-5">
+            <h1 class="display-5 mb-lg-4 mb-3">Panel avanzado de <span class='text-softcamp'>control financiero</span></h1>
+            <p class="mb-4 mx-md-0 mx-auto pb-xl-3 pb-lg-2 fs-5" style="max-width: 30.5rem;">BiSys permite <strong>gestionar operaciones contables y financieras</strong> sobre el negocio, cumpliendo con los requisitos legales y facilitando las gestiones</p>
+            <button class="btn btn-softcamp">Descargar eBook <i class="ms-3 bx bx-cloud-download fs-5"></i></button>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xxl-7 d-flex mt-4">
+          <img src="https://cdn-static.globodain.com/ms/bisys-hero" class="ms-auto" width="90%" alt="Globodain MS Hero image">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="call-to-action" class="position-relative bg-light-primary py-5 mb-0 pb-0">
+    <span class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255, 255, 255, .05)"></span>
+    <div class="container position-relative zindex-5 text-center my-xl-3 py-1 py-md-4 py-lg-5">
+      <p class="lead text-light opacity-70 mb-3"></p>
+      <h2 class="h1 pb-3 pb-lg-0 mb-lg-5">{{lang_data.page.call_action.title}}</h2>
+      <a href="{{url_for('public_{}.hospitality_demo'.format(session.lang[0:2]))}}" class="btn btn-softcamp shadow-softcamp btn-lg me-md-3 mb-3 mb-md-0">{{lang_data.page.call_action.button1}}</a>
+      <a href="{{url_for('public_{}.request_services'.format(session.lang[0:2]))}}" class="btn btn-light shadow-secondary btn-lg">{{lang_data.page.call_action.button2}}</a>
+    </div>
+  </section>
+</main>
+{% endblock %}
+
+{% block copyright %}
+{% endblock %}

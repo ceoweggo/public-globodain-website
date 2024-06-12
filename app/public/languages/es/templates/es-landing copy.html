@@ -1,0 +1,1224 @@
+{% extends 'bases/es-base.html' %}
+
+{% set title = lang_data.page.page_title %}
+{% set meta_description = lang_data.page.page_metadescription %}
+{% set meta_keywords = lang_data.page.page_keywords %}
+
+{% block content %}
+<main class="page-wrapper">
+  
+  <!-- Hero section -->
+  <section id="hero" class="position-relative pt-lg-4 pt-xl-5 border-bottom" style="background-color: #f7fbfe !important;">
+    <div class="container position-relative zindex-5 py-md-5 my-md-4 mt-5 mb-0 pb-0">
+
+      <!-- Nav tabs -->
+      <ul class="row nav nav-tabs mb-4" role="tablist">
+        <li class="col-12 col-md-3">
+          <a href="#cx" class="btn btn-primary btn-lg px-3 py-2 w-100 h-100 active" data-bs-toggle="tab" role="tab">
+            <img src="{{url_for('static',filename='svg/logos/CX.svg')}}" class="light-mode-img me-3" width="80" alt="CX image">
+            Experiences
+          </a> 
+        </li>
+        <li class="col-12 col-md-3 ">
+          <a href="#pms" class="btn btn-primary btn-lg px-3 py-2 w-100 h-100" data-bs-toggle="tab" role="tab">
+            <img src="{{url_for('static',filename='svg/logos/pms.svg')}}" class="light-mode-img me-3" width="80" alt="PMS image">
+            Management
+          </a>
+        </li>
+        <li class="col-12 col-md-3">
+          <a href="#ds" class="btn btn-primary btn-lg px-3 py-2 w-100 h-100" data-bs-toggle="tab" role="tab">
+            <img src="{{url_for('static',filename='svg/logos/ds.svg')}}" class="light-mode-img me-3" width="80" alt="DS image">
+            Government
+          </a>
+        </li>
+        <li class="col-12 col-md-3">
+          <a href="#ed" class="btn btn-primary btn-lg px-3 py-2 w-100 h-100" data-bs-toggle="tab" role="tab">
+            <img src="{{url_for('static',filename='svg/logos/ed.svg')}}" class="light-mode-img me-3" width="80" alt="ED image">
+            Education
+          </a>
+        </li>
+      </ul>
+
+      <!-- Tabs content -->
+      <div class="tab-content pt-4">
+        <div class="tab-pane fade show active" id="cx" role="tabpanel">
+          <div class="row justify-content-md-start justify-content-center py-5 my-4">
+            <div class="col-md-7 col-sm-8 order-md-1 order-1 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
+              <div class="mb-md-5 pb-xl-5 mb-4 pt-5 mt-4 mt-n2">
+                <span class="text-gradient-primary fs-2 fw-semibold">Tecnología para tus clientes</span>
+    
+                <!-- Text -->
+                <h1 class="display-6">Potencia tu negocio con <span class="fw-bold text-primary">Globodain</span> <span class="fw-bold text-secondary">Experiences</span></h1>
+                <p class="lead d-lg-block d-none mb-0 mb-md-5 mb-3 pb-3">Redefine tu estrategia de valor y <span class="fw-semibold">obtén 5 estrellas en calidad</span> gracias a nuestra solución para mejorar la experiencia de cliente a través de la <strong>tecnología de vanguardia</strong></p>
+              </div>
+            </div>
+            <div class="col-md-5 col-sm-4 order-md-2 order-2">
+              <img src="{{url_for('static', filename='svg/misc/landing/hero2.svg')}}" />
+            </div>
+          </div>
+
+          <div class=" py-5 my-4 mt-0 pt-0">
+            <h2>Beneficios de utilizar Globodain Experiences</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-lg-3 g-xl-4 pb-md-3 pb-lg-5">
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-bootstrap fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Built with Bootstrap 5</h3>
+                    <p class="fs-sm mb-0">Silicon is the powerful front-end solution based on Bootstrap 5 — the world’s most popular responsive, mobile-first front-end component library.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bx-file fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Detailed Documentation</h3>
+                    <p class="fs-sm mb-0">Download package includes the documentation that covers all crucial information about how to get started, customize template and components usage.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bx-mobile fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Mobile Freindly Interface</h3>
+                    <p class="fs-sm mb-0">It's not a surprise that nowadays over 80% of users surf the inernet using their mobile devices. Silicon is 100% responsive and optimized for small touch screens.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none"><g clip-path="url(#D)"><path d="M6.706 11.335c0-4.925 4.007-8.932 8.932-8.932s8.932 4.007 8.932 8.932a9 9 0 0 1-.169 1.73l2.358.463c.142-.723.214-1.461.214-2.193A11.35 11.35 0 0 0 15.638 0 11.35 11.35 0 0 0 4.303 11.335c0 2.566.883 5.081 2.486 7.082l1.875-1.503a8.83 8.83 0 0 1-1.958-5.579z" fill="url(#A)"/><path d="M15.638 6.407c2.716 0 4.927 2.21 4.927 4.927h2.403a7.34 7.34 0 0 0-7.33-7.33 7.34 7.34 0 0 0-7.33 7.33 7.33 7.33 0 0 0 .959 3.623l2.088-1.19c-.421-.739-.643-1.581-.643-2.433 0-2.716 2.21-4.927 4.926-4.927z" fill="url(#B)"/><path d="M28.375 17.3a3.31 3.31 0 0 0-1.06.173 3.33 3.33 0 0 0-3.186-2.374c-.392 0-.767.069-1.116.193a3.33 3.33 0 0 0-3.129-2.203c-.32 0-.628.046-.921.131v-1.884a3.33 3.33 0 0 0-3.324-3.324 3.33 3.33 0 0 0-3.324 3.324v6.998c-.293-.084-.602-.131-.921-.131a3.33 3.33 0 0 0-3.324 3.324v6.236a8.25 8.25 0 0 0 8.237 8.237h7.157a8.25 8.25 0 0 0 8.237-8.237v-7.14a3.33 3.33 0 0 0-3.324-3.324zm.921 10.464c0 3.217-2.617 5.834-5.834 5.834h-7.157c-3.217 0-5.834-2.617-5.834-5.834v-6.236c0-.508.413-.921.921-.921s.921.413.921.921v4.852h2.403V11.336c0-.508.413-.921.921-.921s.921.413.921.921v5.077 3.526.684h2.403v-.684-3.526c0-.508.413-.921.921-.921s.921.413.921.921v4.211h2.403v-2.201c0-.508.413-.921.921-.921s.921.413.921.921v2.201h2.403c0-.508.413-.921.921-.921s.921.413.921.921v7.14z" fill="url(#C)"/></g><defs><linearGradient id="A" x1="4.303" y1="9.252" x2="26.973" y2="9.252" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="B" x1="8.309" y1="9.506" x2="22.968" y2="9.506" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="C" x1="8.068" y1="22.073" x2="31.7" y2="22.073" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><clipPath id="D"><path fill="#fff" d="M0 0h36v36H0z"/></clipPath></defs></svg>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Touch-Enabled Sliders</h3>
+                    <p class="fs-sm mb-0">In the era of touch screens it's important to ensure great user experience on mobile, especially when it comes to such frequently used interface component as slider.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-html5 text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">W3C Valid HTML Code</h3>
+                    <p class="fs-sm mb-0">All HTML files are checked via W3C validator to ensure 100% valid code. As you probably know invalid HTML limits innovation, but Silicon is innovative at its core.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-nodejs text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Kick-Start Your Development</h3>
+                    <p class="fs-sm mb-0">Start your development process fast and easy with Node.js and Gulp setup. Configuration files are included in download package. Full tasks automation.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-sass text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Easy to Customize with Sass</h3>
+                    <p class="fs-sm mb-0">Silicon is built using Sass. Easily change colors, typography and much more. It is the most mature, stable, and powerful CSS extension language in the world.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-javascript text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Future Proof Java-Script</h3>
+                    <p class="fs-sm mb-0">Silicon core scripts as well as all dependencies are written in vanilla JS. And now with Bootstrap 5 we finally drop jQuery and use ES6 modules.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="mt-4 pt-4 mt-md-0 pt-md-0 d-md-flex align-items-md-start">
+              <a href='https://globodain-my.sharepoint.com/:b:/p/ruben/EVptosidBM1BlePno9E3gkgBofnfMDxfNWzT7twRrj5WeA' class="btn btn-lg btn-secondary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3" target="_blank">Descargar dossier <i class="ms-2 bx bx-download"></i></a>
+              <a href='{{url_for("public_{}.experiences".format(session["lang"].replace("-","_")))}}' class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Conocer más <i class="bx bx-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="pms" role="tabpanel">
+          <div class="row justify-content-md-start justify-content-center py-5 my-4">
+            <div class="col-md-7 col-sm-8 order-md-1 order-1 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
+              <div class="mb-md-5 pb-xl-5 mb-4 pt-5 mt-4 mt-n2">
+                <span class="text-gradient-primary fs-2 fw-semibold">Optimización del negocio</span>
+    
+                <!-- Text -->
+                <h1 class="display-6">Potencia tu negocio con <span class="fw-bold text-primary">Globodain</span> <span class="fw-bold text-secondary">PMS</span></h1>
+                <p class="lead d-lg-block d-none mb-0 mb-md-5 mb-3 pb-3">Redefine tu estrategia de valor y <span class="fw-semibold">obtén 5 estrellas en calidad</span> gracias a nuestra solución para mejorar la experiencia de cliente a través de la <strong>tecnología de vanguardia</strong></p>
+              </div>
+            </div>
+            <div class="col-md-5 col-sm-4 order-md-2 order-2">
+              <img src="{{url_for('static', filename='svg/misc/landing/hero2.svg')}}" />
+            </div>
+          </div>
+
+          <div class=" py-5 my-4 mt-0 pt-0">
+            <h2>Beneficios de utilizar Globodain PMS</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-lg-3 g-xl-4 pb-md-3 pb-lg-5">
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-bootstrap fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Built with Bootstrap 5</h3>
+                    <p class="fs-sm mb-0">Silicon is the powerful front-end solution based on Bootstrap 5 — the world’s most popular responsive, mobile-first front-end component library.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bx-file fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Detailed Documentation</h3>
+                    <p class="fs-sm mb-0">Download package includes the documentation that covers all crucial information about how to get started, customize template and components usage.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bx-mobile fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Mobile Freindly Interface</h3>
+                    <p class="fs-sm mb-0">It's not a surprise that nowadays over 80% of users surf the inernet using their mobile devices. Silicon is 100% responsive and optimized for small touch screens.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none"><g clip-path="url(#D)"><path d="M6.706 11.335c0-4.925 4.007-8.932 8.932-8.932s8.932 4.007 8.932 8.932a9 9 0 0 1-.169 1.73l2.358.463c.142-.723.214-1.461.214-2.193A11.35 11.35 0 0 0 15.638 0 11.35 11.35 0 0 0 4.303 11.335c0 2.566.883 5.081 2.486 7.082l1.875-1.503a8.83 8.83 0 0 1-1.958-5.579z" fill="url(#A)"/><path d="M15.638 6.407c2.716 0 4.927 2.21 4.927 4.927h2.403a7.34 7.34 0 0 0-7.33-7.33 7.34 7.34 0 0 0-7.33 7.33 7.33 7.33 0 0 0 .959 3.623l2.088-1.19c-.421-.739-.643-1.581-.643-2.433 0-2.716 2.21-4.927 4.926-4.927z" fill="url(#B)"/><path d="M28.375 17.3a3.31 3.31 0 0 0-1.06.173 3.33 3.33 0 0 0-3.186-2.374c-.392 0-.767.069-1.116.193a3.33 3.33 0 0 0-3.129-2.203c-.32 0-.628.046-.921.131v-1.884a3.33 3.33 0 0 0-3.324-3.324 3.33 3.33 0 0 0-3.324 3.324v6.998c-.293-.084-.602-.131-.921-.131a3.33 3.33 0 0 0-3.324 3.324v6.236a8.25 8.25 0 0 0 8.237 8.237h7.157a8.25 8.25 0 0 0 8.237-8.237v-7.14a3.33 3.33 0 0 0-3.324-3.324zm.921 10.464c0 3.217-2.617 5.834-5.834 5.834h-7.157c-3.217 0-5.834-2.617-5.834-5.834v-6.236c0-.508.413-.921.921-.921s.921.413.921.921v4.852h2.403V11.336c0-.508.413-.921.921-.921s.921.413.921.921v5.077 3.526.684h2.403v-.684-3.526c0-.508.413-.921.921-.921s.921.413.921.921v4.211h2.403v-2.201c0-.508.413-.921.921-.921s.921.413.921.921v2.201h2.403c0-.508.413-.921.921-.921s.921.413.921.921v7.14z" fill="url(#C)"/></g><defs><linearGradient id="A" x1="4.303" y1="9.252" x2="26.973" y2="9.252" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="B" x1="8.309" y1="9.506" x2="22.968" y2="9.506" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="C" x1="8.068" y1="22.073" x2="31.7" y2="22.073" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><clipPath id="D"><path fill="#fff" d="M0 0h36v36H0z"/></clipPath></defs></svg>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Touch-Enabled Sliders</h3>
+                    <p class="fs-sm mb-0">In the era of touch screens it's important to ensure great user experience on mobile, especially when it comes to such frequently used interface component as slider.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-html5 text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">W3C Valid HTML Code</h3>
+                    <p class="fs-sm mb-0">All HTML files are checked via W3C validator to ensure 100% valid code. As you probably know invalid HTML limits innovation, but Silicon is innovative at its core.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-nodejs text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Kick-Start Your Development</h3>
+                    <p class="fs-sm mb-0">Start your development process fast and easy with Node.js and Gulp setup. Configuration files are included in download package. Full tasks automation.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-sass text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Easy to Customize with Sass</h3>
+                    <p class="fs-sm mb-0">Silicon is built using Sass. Easily change colors, typography and much more. It is the most mature, stable, and powerful CSS extension language in the world.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-javascript text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Future Proof Java-Script</h3>
+                    <p class="fs-sm mb-0">Silicon core scripts as well as all dependencies are written in vanilla JS. And now with Bootstrap 5 we finally drop jQuery and use ES6 modules.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="mt-4 pt-4 mt-md-0 pt-md-0 d-md-flex align-items-md-start">
+              <a href='https://globodain-my.sharepoint.com/:b:/p/ruben/EVptosidBM1BlePno9E3gkgBofnfMDxfNWzT7twRrj5WeA' class="btn btn-lg btn-secondary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3" target="_blank">Descargar dossier <i class="ms-2 bx bx-download"></i></a>
+              <a href='{{url_for("public_{}.experiences".format(session["lang"].replace("-","_")))}}' class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Conocer más <i class="bx bx-chevron-right"></i></a>
+            </div>
+          </div>        
+        </div>
+
+        <div class="tab-pane fade" id="ds" role="tabpanel">
+          <div class="row justify-content-md-start justify-content-center py-5 my-4">
+            <div class="col-md-7 col-sm-8 order-md-1 order-1 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
+              <div class="mb-md-5 pb-xl-5 mb-4 pt-5 mt-4 mt-n2">
+                <span class="text-gradient-primary fs-2 fw-semibold">Tecnología para tus clientes</span>
+    
+                <!-- Text -->
+                <h1 class="display-6">Potencia tu negocio con <span class="fw-bold text-primary">Globodain</span> <span class="fw-bold text-secondary">Dron Station</span></h1>
+                <p class="lead d-lg-block d-none mb-0 mb-md-5 mb-3 pb-3">Redefine tu estrategia de valor y <span class="fw-semibold">obtén 5 estrellas en calidad</span> gracias a nuestra solución para mejorar la experiencia de cliente a través de la <strong>tecnología de vanguardia</strong></p>
+              </div>
+            </div>
+            <div class="col-md-5 col-sm-4 order-md-2 order-2">
+              <img src="{{url_for('static', filename='svg/misc/landing/hero2.svg')}}" />
+            </div>
+          </div>
+
+          <div class=" py-5 my-4 mt-0 pt-0">
+            <h2>Beneficios de utilizar Globodain DS</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-lg-3 g-xl-4 pb-md-3 pb-lg-5">
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-bootstrap fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Built with Bootstrap 5</h3>
+                    <p class="fs-sm mb-0">Silicon is the powerful front-end solution based on Bootstrap 5 — the world’s most popular responsive, mobile-first front-end component library.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bx-file fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Detailed Documentation</h3>
+                    <p class="fs-sm mb-0">Download package includes the documentation that covers all crucial information about how to get started, customize template and components usage.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bx-mobile fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Mobile Freindly Interface</h3>
+                    <p class="fs-sm mb-0">It's not a surprise that nowadays over 80% of users surf the inernet using their mobile devices. Silicon is 100% responsive and optimized for small touch screens.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none"><g clip-path="url(#D)"><path d="M6.706 11.335c0-4.925 4.007-8.932 8.932-8.932s8.932 4.007 8.932 8.932a9 9 0 0 1-.169 1.73l2.358.463c.142-.723.214-1.461.214-2.193A11.35 11.35 0 0 0 15.638 0 11.35 11.35 0 0 0 4.303 11.335c0 2.566.883 5.081 2.486 7.082l1.875-1.503a8.83 8.83 0 0 1-1.958-5.579z" fill="url(#A)"/><path d="M15.638 6.407c2.716 0 4.927 2.21 4.927 4.927h2.403a7.34 7.34 0 0 0-7.33-7.33 7.34 7.34 0 0 0-7.33 7.33 7.33 7.33 0 0 0 .959 3.623l2.088-1.19c-.421-.739-.643-1.581-.643-2.433 0-2.716 2.21-4.927 4.926-4.927z" fill="url(#B)"/><path d="M28.375 17.3a3.31 3.31 0 0 0-1.06.173 3.33 3.33 0 0 0-3.186-2.374c-.392 0-.767.069-1.116.193a3.33 3.33 0 0 0-3.129-2.203c-.32 0-.628.046-.921.131v-1.884a3.33 3.33 0 0 0-3.324-3.324 3.33 3.33 0 0 0-3.324 3.324v6.998c-.293-.084-.602-.131-.921-.131a3.33 3.33 0 0 0-3.324 3.324v6.236a8.25 8.25 0 0 0 8.237 8.237h7.157a8.25 8.25 0 0 0 8.237-8.237v-7.14a3.33 3.33 0 0 0-3.324-3.324zm.921 10.464c0 3.217-2.617 5.834-5.834 5.834h-7.157c-3.217 0-5.834-2.617-5.834-5.834v-6.236c0-.508.413-.921.921-.921s.921.413.921.921v4.852h2.403V11.336c0-.508.413-.921.921-.921s.921.413.921.921v5.077 3.526.684h2.403v-.684-3.526c0-.508.413-.921.921-.921s.921.413.921.921v4.211h2.403v-2.201c0-.508.413-.921.921-.921s.921.413.921.921v2.201h2.403c0-.508.413-.921.921-.921s.921.413.921.921v7.14z" fill="url(#C)"/></g><defs><linearGradient id="A" x1="4.303" y1="9.252" x2="26.973" y2="9.252" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="B" x1="8.309" y1="9.506" x2="22.968" y2="9.506" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="C" x1="8.068" y1="22.073" x2="31.7" y2="22.073" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><clipPath id="D"><path fill="#fff" d="M0 0h36v36H0z"/></clipPath></defs></svg>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Touch-Enabled Sliders</h3>
+                    <p class="fs-sm mb-0">In the era of touch screens it's important to ensure great user experience on mobile, especially when it comes to such frequently used interface component as slider.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-html5 text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">W3C Valid HTML Code</h3>
+                    <p class="fs-sm mb-0">All HTML files are checked via W3C validator to ensure 100% valid code. As you probably know invalid HTML limits innovation, but Silicon is innovative at its core.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-nodejs text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Kick-Start Your Development</h3>
+                    <p class="fs-sm mb-0">Start your development process fast and easy with Node.js and Gulp setup. Configuration files are included in download package. Full tasks automation.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-sass text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Easy to Customize with Sass</h3>
+                    <p class="fs-sm mb-0">Silicon is built using Sass. Easily change colors, typography and much more. It is the most mature, stable, and powerful CSS extension language in the world.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-javascript text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Future Proof Java-Script</h3>
+                    <p class="fs-sm mb-0">Silicon core scripts as well as all dependencies are written in vanilla JS. And now with Bootstrap 5 we finally drop jQuery and use ES6 modules.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="mt-4 pt-4 mt-md-0 pt-md-0 d-md-flex align-items-md-start">
+              <a href='https://globodain-my.sharepoint.com/:b:/p/ruben/EVptosidBM1BlePno9E3gkgBofnfMDxfNWzT7twRrj5WeA' class="btn btn-lg btn-secondary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3" target="_blank">Descargar dossier <i class="ms-2 bx bx-download"></i></a>
+              <a href='{{url_for("public_{}.experiences".format(session["lang"].replace("-","_")))}}' class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Conocer más <i class="bx bx-chevron-right"></i></a>
+            </div>
+          </div>        
+        </div>
+
+        <div class="tab-pane fade" id="ed" role="tabpanel">
+          <div class="row justify-content-md-start justify-content-center py-5 my-4">
+            <div class="col-md-7 col-sm-8 order-md-1 order-1 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
+              <div class="mb-md-5 pb-xl-5 mb-4 pt-5 mt-4 mt-n2">
+                <span class="text-gradient-primary fs-2 fw-semibold">Tecnología para tus clientes</span>
+    
+                <!-- Text -->
+                <h1 class="display-6">Potencia tu negocio con <span class="fw-bold text-primary">Globodain</span> <span class="fw-bold text-secondary">Experiences</span></h1>
+                <p class="lead d-lg-block d-none mb-0 mb-md-5 mb-3 pb-3">Redefine tu estrategia de valor y <span class="fw-semibold">obtén 5 estrellas en calidad</span> gracias a nuestra solución para mejorar la experiencia de cliente a través de la <strong>tecnología de vanguardia</strong></p>
+              </div>
+            </div>
+            <div class="col-md-5 col-sm-4 order-md-2 order-2">
+              <img src="{{url_for('static', filename='svg/misc/landing/hero2.svg')}}" />
+            </div>
+          </div>
+
+          <div class=" py-5 my-4 mt-0 pt-0">
+            <h2>Beneficios de utilizar Globodain Experiences</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-lg-3 g-xl-4 pb-md-3 pb-lg-5">
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-bootstrap fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Built with Bootstrap 5</h3>
+                    <p class="fs-sm mb-0">Silicon is the powerful front-end solution based on Bootstrap 5 — the world’s most popular responsive, mobile-first front-end component library.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bx-file fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Detailed Documentation</h3>
+                    <p class="fs-sm mb-0">Download package includes the documentation that covers all crucial information about how to get started, customize template and components usage.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bx-mobile fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Mobile Freindly Interface</h3>
+                    <p class="fs-sm mb-0">It's not a surprise that nowadays over 80% of users surf the inernet using their mobile devices. Silicon is 100% responsive and optimized for small touch screens.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none"><g clip-path="url(#D)"><path d="M6.706 11.335c0-4.925 4.007-8.932 8.932-8.932s8.932 4.007 8.932 8.932a9 9 0 0 1-.169 1.73l2.358.463c.142-.723.214-1.461.214-2.193A11.35 11.35 0 0 0 15.638 0 11.35 11.35 0 0 0 4.303 11.335c0 2.566.883 5.081 2.486 7.082l1.875-1.503a8.83 8.83 0 0 1-1.958-5.579z" fill="url(#A)"/><path d="M15.638 6.407c2.716 0 4.927 2.21 4.927 4.927h2.403a7.34 7.34 0 0 0-7.33-7.33 7.34 7.34 0 0 0-7.33 7.33 7.33 7.33 0 0 0 .959 3.623l2.088-1.19c-.421-.739-.643-1.581-.643-2.433 0-2.716 2.21-4.927 4.926-4.927z" fill="url(#B)"/><path d="M28.375 17.3a3.31 3.31 0 0 0-1.06.173 3.33 3.33 0 0 0-3.186-2.374c-.392 0-.767.069-1.116.193a3.33 3.33 0 0 0-3.129-2.203c-.32 0-.628.046-.921.131v-1.884a3.33 3.33 0 0 0-3.324-3.324 3.33 3.33 0 0 0-3.324 3.324v6.998c-.293-.084-.602-.131-.921-.131a3.33 3.33 0 0 0-3.324 3.324v6.236a8.25 8.25 0 0 0 8.237 8.237h7.157a8.25 8.25 0 0 0 8.237-8.237v-7.14a3.33 3.33 0 0 0-3.324-3.324zm.921 10.464c0 3.217-2.617 5.834-5.834 5.834h-7.157c-3.217 0-5.834-2.617-5.834-5.834v-6.236c0-.508.413-.921.921-.921s.921.413.921.921v4.852h2.403V11.336c0-.508.413-.921.921-.921s.921.413.921.921v5.077 3.526.684h2.403v-.684-3.526c0-.508.413-.921.921-.921s.921.413.921.921v4.211h2.403v-2.201c0-.508.413-.921.921-.921s.921.413.921.921v2.201h2.403c0-.508.413-.921.921-.921s.921.413.921.921v7.14z" fill="url(#C)"/></g><defs><linearGradient id="A" x1="4.303" y1="9.252" x2="26.973" y2="9.252" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="B" x1="8.309" y1="9.506" x2="22.968" y2="9.506" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="C" x1="8.068" y1="22.073" x2="31.7" y2="22.073" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><clipPath id="D"><path fill="#fff" d="M0 0h36v36H0z"/></clipPath></defs></svg>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Touch-Enabled Sliders</h3>
+                    <p class="fs-sm mb-0">In the era of touch screens it's important to ensure great user experience on mobile, especially when it comes to such frequently used interface component as slider.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-html5 text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">W3C Valid HTML Code</h3>
+                    <p class="fs-sm mb-0">All HTML files are checked via W3C validator to ensure 100% valid code. As you probably know invalid HTML limits innovation, but Silicon is innovative at its core.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-nodejs text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Kick-Start Your Development</h3>
+                    <p class="fs-sm mb-0">Start your development process fast and easy with Node.js and Gulp setup. Configuration files are included in download package. Full tasks automation.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-sass text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Easy to Customize with Sass</h3>
+                    <p class="fs-sm mb-0">Silicon is built using Sass. Easily change colors, typography and much more. It is the most mature, stable, and powerful CSS extension language in the world.</p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Item -->
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                    <i class="bx bxl-javascript text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="h6">Future Proof Java-Script</h3>
+                    <p class="fs-sm mb-0">Silicon core scripts as well as all dependencies are written in vanilla JS. And now with Bootstrap 5 we finally drop jQuery and use ES6 modules.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="mt-4 pt-4 mt-md-0 pt-md-0 d-md-flex align-items-md-start">
+              <a href='https://globodain-my.sharepoint.com/:b:/p/ruben/EVptosidBM1BlePno9E3gkgBofnfMDxfNWzT7twRrj5WeA' class="btn btn-lg btn-secondary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3" target="_blank">Descargar dossier <i class="ms-2 bx bx-download"></i></a>
+              <a href='{{url_for("public_{}.experiences".format(session["lang"].replace("-","_")))}}' class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Conocer más <i class="bx bx-chevron-right"></i></a>
+            </div>
+          </div>        
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {#
+  <!-- Hero section -->
+  <section id="hero" class="position-relative pt-lg-4 pt-xl-5 border-bottom" style="background-color: #f7fbfe !important;">
+    <div class="jarallax position-absolute top-0 start-0 w-100 h-100" data-jarallax data-speed="0.4">
+      <div class="jarallax-img" style="background-image: url({{url_for('static',filename='img/landing/hero/bg-2.png')}});"></div>
+    </div>
+    <div class="container position-relative zindex-5 py-md-5 my-md-4 mt-5 mb-0 pb-0">
+      <div class="row justify-content-md-start justify-content-center py-5 my-4">
+        <div class="col-md-7 col-sm-8 order-md-1 order-1 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
+          <div class="mb-md-5 pb-xl-5 mb-4 pt-5 mt-4 mt-n2">
+            <span class="text-gradient-primary fs-2 fw-semibold">Tecnología para tus clientes</span>
+
+            <!-- Text -->
+            <h1 class="display-6">Potencia tu negocio con <span class="fw-bold text-primary">Globodain</span> <span class="fw-bold text-secondary">Experiences</span></h1>
+            <p class="lead d-lg-block d-none mb-0 mb-md-5 mb-3 pb-3">Redefine tu estrategia de valor y <span class="fw-semibold">obtén 5 estrellas en calidad</span> gracias a nuestra solución para mejorar la experiencia de cliente a través de la <strong>tecnología de vanguardia</strong></p>
+          </div>
+        </div>
+        <div class="col-md-5 col-sm-4 order-md-2 order-2">
+          <img src="{{url_for('static', filename='svg/misc/landing/hero2.svg')}}" />
+        </div>
+      </div>
+    </div>
+
+    <div class="container position-relative zindex-5 py-5 my-4 mt-0 pt-0">
+      <h2>Beneficios de utilizar Globodain Experiences</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-lg-3 g-xl-4 pb-md-3 pb-lg-5">
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <i class="bx bxl-bootstrap fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">Built with Bootstrap 5</h3>
+              <p class="fs-sm mb-0">Silicon is the powerful front-end solution based on Bootstrap 5 — the world’s most popular responsive, mobile-first front-end component library.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <i class="bx bx-file fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">Detailed Documentation</h3>
+              <p class="fs-sm mb-0">Download package includes the documentation that covers all crucial information about how to get started, customize template and components usage.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <i class="bx bx-mobile fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">Mobile Freindly Interface</h3>
+              <p class="fs-sm mb-0">It's not a surprise that nowadays over 80% of users surf the inernet using their mobile devices. Silicon is 100% responsive and optimized for small touch screens.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none"><g clip-path="url(#D)"><path d="M6.706 11.335c0-4.925 4.007-8.932 8.932-8.932s8.932 4.007 8.932 8.932a9 9 0 0 1-.169 1.73l2.358.463c.142-.723.214-1.461.214-2.193A11.35 11.35 0 0 0 15.638 0 11.35 11.35 0 0 0 4.303 11.335c0 2.566.883 5.081 2.486 7.082l1.875-1.503a8.83 8.83 0 0 1-1.958-5.579z" fill="url(#A)"/><path d="M15.638 6.407c2.716 0 4.927 2.21 4.927 4.927h2.403a7.34 7.34 0 0 0-7.33-7.33 7.34 7.34 0 0 0-7.33 7.33 7.33 7.33 0 0 0 .959 3.623l2.088-1.19c-.421-.739-.643-1.581-.643-2.433 0-2.716 2.21-4.927 4.926-4.927z" fill="url(#B)"/><path d="M28.375 17.3a3.31 3.31 0 0 0-1.06.173 3.33 3.33 0 0 0-3.186-2.374c-.392 0-.767.069-1.116.193a3.33 3.33 0 0 0-3.129-2.203c-.32 0-.628.046-.921.131v-1.884a3.33 3.33 0 0 0-3.324-3.324 3.33 3.33 0 0 0-3.324 3.324v6.998c-.293-.084-.602-.131-.921-.131a3.33 3.33 0 0 0-3.324 3.324v6.236a8.25 8.25 0 0 0 8.237 8.237h7.157a8.25 8.25 0 0 0 8.237-8.237v-7.14a3.33 3.33 0 0 0-3.324-3.324zm.921 10.464c0 3.217-2.617 5.834-5.834 5.834h-7.157c-3.217 0-5.834-2.617-5.834-5.834v-6.236c0-.508.413-.921.921-.921s.921.413.921.921v4.852h2.403V11.336c0-.508.413-.921.921-.921s.921.413.921.921v5.077 3.526.684h2.403v-.684-3.526c0-.508.413-.921.921-.921s.921.413.921.921v4.211h2.403v-2.201c0-.508.413-.921.921-.921s.921.413.921.921v2.201h2.403c0-.508.413-.921.921-.921s.921.413.921.921v7.14z" fill="url(#C)"/></g><defs><linearGradient id="A" x1="4.303" y1="9.252" x2="26.973" y2="9.252" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="B" x1="8.309" y1="9.506" x2="22.968" y2="9.506" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="C" x1="8.068" y1="22.073" x2="31.7" y2="22.073" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><clipPath id="D"><path fill="#fff" d="M0 0h36v36H0z"/></clipPath></defs></svg>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">Touch-Enabled Sliders</h3>
+              <p class="fs-sm mb-0">In the era of touch screens it's important to ensure great user experience on mobile, especially when it comes to such frequently used interface component as slider.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <i class="bx bxl-html5 text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">W3C Valid HTML Code</h3>
+              <p class="fs-sm mb-0">All HTML files are checked via W3C validator to ensure 100% valid code. As you probably know invalid HTML limits innovation, but Silicon is innovative at its core.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <i class="bx bxl-nodejs text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">Kick-Start Your Development</h3>
+              <p class="fs-sm mb-0">Start your development process fast and easy with Node.js and Gulp setup. Configuration files are included in download package. Full tasks automation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <i class="bx bxl-sass text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">Easy to Customize with Sass</h3>
+              <p class="fs-sm mb-0">Silicon is built using Sass. Easily change colors, typography and much more. It is the most mature, stable, and powerful CSS extension language in the world.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <i class="bx bxl-javascript text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">Future Proof Java-Script</h3>
+              <p class="fs-sm mb-0">Silicon core scripts as well as all dependencies are written in vanilla JS. And now with Bootstrap 5 we finally drop jQuery and use ES6 modules.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 pt-4 mt-md-0 pt-md-0 d-md-flex align-items-md-start">
+        <a href='https://globodain-my.sharepoint.com/:b:/p/ruben/EVptosidBM1BlePno9E3gkgBofnfMDxfNWzT7twRrj5WeA' class="btn btn-lg btn-secondary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3" target="_blank">Descargar dossier <i class="ms-2 bx bx-download"></i></a>
+        <a href='{{url_for("public_{}.experiences".format(session["lang"].replace("-","_")))}}' class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Conocer más <i class="bx bx-chevron-right"></i></a>
+      </div>
+    </div>
+  </section>
+  #}
+
+  <section id="technology" class="dark-mode position-relative pt-lg-4 pt-xl-5" style="background-color: #0b0f19">
+    <div class="jarallax position-absolute top-0 start-0 w-100 h-100" data-jarallax data-speed="0.4">
+      <div class="jarallax-img"></div>
+    </div>
+    <div class="container position-relative zindex-2 pt-2 pt-sm-4 pt-md-5">
+      <div class="row justify-content-center pt-5">
+        <div class="text-right pt-5 mt-1">
+          <h2 class="display-5 pt-3 mt-3 mb-4">Comprometidos con la tecnología</h2>
+          <p class="fs-xl"><strong>Investigamos nuevas aplicaciones tecnológicas</strong> en las áreas de educación, agricultura, urbanismo o software, con especial mención al sector viajes, colaborando con instituciones públicas en el marco de la agenda 2030</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="d-none d-lg-block" style="height: 480px;"></div>
+      <div class="d-lg-none" style="height: 400px;"></div>
+      <div class="d-flex position-absolute bottom-0 start-0 w-100 overflow-hidden mb-n1" style="color: var(--gtc-body-bg);">
+        <div class="position-relative start-50 translate-middle-x flex-shrink-0" style="width: 3774px;">
+          <svg width="3774" height="201" viewBox="0 0 3774 201" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 200.003C0 200.003 1137.52 0.188224 1873.5 0.000134392C2614.84 -0.189325 3774 200.003 3774 200.003H0Z" fill="currentColor"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Categories (Slider) -->
+    <div id="categories" class="container position-relative zindex-3 mt-0 pt-2 py-5 my-5">
+      <div class="d-none d-lg-block" style="margin-top: -428px;"></div>
+      <div class=" d-lg-none" style="margin-top: -370px;"></div>
+      <div class="swiper" data-swiper-options='{
+        "slidesPerView": 1,
+        "spaceBetween": 24,
+        "pagination": {
+          "el": ".swiper-pagination",
+          "clickable": true
+        },
+        "breakpoints": {
+          "560": {
+            "slidesPerView": 2
+          },
+          "960": {
+            "slidesPerView": 3
+          }
+        }
+      }'>
+        <div class="swiper-wrapper">
+          {% for item in lang_data.page.categories %}
+          <!-- Item -->
+          <div class="swiper-slide">
+            <a href="{{item.href}}" class="card-portfolio position-relative d-block rounded-3 overflow-hidden">
+              <span class="position-absolute top-0 start-0 w-100 h-100 zindex-1" style="background: linear-gradient(180deg, rgba(17, 24, 39, 0.00) 35.56%, #111827 95.3%);"></span>
+              <div class="position-absolute bottom-0 w-100 zindex-2 p-4">
+                <div class="px-md-3">
+                  <h3 class="h4 text-white mb-0">{{item.title}}</h3>
+                  <div class="card-portfolio-meta d-flex align-items-center justify-content-between">
+                    <span class="text-white fs-xs text-truncate opacity-70 pe-3">{{item.subtitle}}</span>
+                    <i class="bx bx-right-arrow-circle fs-3 text-gradient-primary"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="card-img">
+                <img src="{{url_for('static',filename='img/landing/categories/{}'.format(item.img))}}" alt="Ecommerce">
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+
+        <!-- Pagination (bullets) -->
+        <div class="swiper-pagination position-relative bottom-0 pt-2 pt-md-3 mt-4"></div>
+      </div>
+
+      <div class="row pt-3">
+        {% for item in lang_data.page.benefits %}
+        <div class="col-lg-4 px-2">
+          <div class="text-center">
+            <h4 class="mb-2 pb-1">{{item.title}}</h4>
+            <p class="mx-auto fs-6" style="max-width: 336px;">{{item.subtitle}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="container position-relative py-5 my-4 mt-0">
+      <div class="d-md-flex mb-2">
+        <h2>Aplicaciones tecnológicas de Globodain</h2>
+        <a href='{{url_for("public_{}.applications".format(session["lang"].replace("-","_")))}}' class="ms-auto btn btn-sm btn-secondary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Todas las aplicaciones <i class="bx bx-chevron-right"></i></a>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-lg-3 g-xl-4 pb-md-3 pb-lg-5">
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <i class="bx bxl-bootstrap fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">Built with Bootstrap 5</h3>
+              <p class="fs-sm mb-0">Silicon is the powerful front-end solution based on Bootstrap 5 — the world’s most popular responsive, mobile-first front-end component library.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <i class="bx bx-file fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">Detailed Documentation</h3>
+              <p class="fs-sm mb-0">Download package includes the documentation that covers all crucial information about how to get started, customize template and components usage.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <i class="bx bx-mobile fs-2 text-gradient-primary" style="padding: .375rem;"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">Mobile Freindly Interface</h3>
+              <p class="fs-sm mb-0">It's not a surprise that nowadays over 80% of users surf the inernet using their mobile devices. Silicon is 100% responsive and optimized for small touch screens.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none"><g clip-path="url(#D)"><path d="M6.706 11.335c0-4.925 4.007-8.932 8.932-8.932s8.932 4.007 8.932 8.932a9 9 0 0 1-.169 1.73l2.358.463c.142-.723.214-1.461.214-2.193A11.35 11.35 0 0 0 15.638 0 11.35 11.35 0 0 0 4.303 11.335c0 2.566.883 5.081 2.486 7.082l1.875-1.503a8.83 8.83 0 0 1-1.958-5.579z" fill="url(#A)"/><path d="M15.638 6.407c2.716 0 4.927 2.21 4.927 4.927h2.403a7.34 7.34 0 0 0-7.33-7.33 7.34 7.34 0 0 0-7.33 7.33 7.33 7.33 0 0 0 .959 3.623l2.088-1.19c-.421-.739-.643-1.581-.643-2.433 0-2.716 2.21-4.927 4.926-4.927z" fill="url(#B)"/><path d="M28.375 17.3a3.31 3.31 0 0 0-1.06.173 3.33 3.33 0 0 0-3.186-2.374c-.392 0-.767.069-1.116.193a3.33 3.33 0 0 0-3.129-2.203c-.32 0-.628.046-.921.131v-1.884a3.33 3.33 0 0 0-3.324-3.324 3.33 3.33 0 0 0-3.324 3.324v6.998c-.293-.084-.602-.131-.921-.131a3.33 3.33 0 0 0-3.324 3.324v6.236a8.25 8.25 0 0 0 8.237 8.237h7.157a8.25 8.25 0 0 0 8.237-8.237v-7.14a3.33 3.33 0 0 0-3.324-3.324zm.921 10.464c0 3.217-2.617 5.834-5.834 5.834h-7.157c-3.217 0-5.834-2.617-5.834-5.834v-6.236c0-.508.413-.921.921-.921s.921.413.921.921v4.852h2.403V11.336c0-.508.413-.921.921-.921s.921.413.921.921v5.077 3.526.684h2.403v-.684-3.526c0-.508.413-.921.921-.921s.921.413.921.921v4.211h2.403v-2.201c0-.508.413-.921.921-.921s.921.413.921.921v2.201h2.403c0-.508.413-.921.921-.921s.921.413.921.921v7.14z" fill="url(#C)"/></g><defs><linearGradient id="A" x1="4.303" y1="9.252" x2="26.973" y2="9.252" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="B" x1="8.309" y1="9.506" x2="22.968" y2="9.506" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="C" x1="8.068" y1="22.073" x2="31.7" y2="22.073" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><clipPath id="D"><path fill="#fff" d="M0 0h36v36H0z"/></clipPath></defs></svg>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">Touch-Enabled Sliders</h3>
+              <p class="fs-sm mb-0">In the era of touch screens it's important to ensure great user experience on mobile, especially when it comes to such frequently used interface component as slider.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <i class="bx bxl-html5 text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">W3C Valid HTML Code</h3>
+              <p class="fs-sm mb-0">All HTML files are checked via W3C validator to ensure 100% valid code. As you probably know invalid HTML limits innovation, but Silicon is innovative at its core.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <i class="bx bxl-nodejs text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">Kick-Start Your Development</h3>
+              <p class="fs-sm mb-0">Start your development process fast and easy with Node.js and Gulp setup. Configuration files are included in download package. Full tasks automation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <i class="bx bxl-sass text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">Easy to Customize with Sass</h3>
+              <p class="fs-sm mb-0">Silicon is built using Sass. Easily change colors, typography and much more. It is the most mature, stable, and powerful CSS extension language in the world.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="col">
+          <div class="card h-100 bg-transparent border-0">
+            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+              <i class="bx bxl-javascript text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="h6">Future Proof Java-Script</h3>
+              <p class="fs-sm mb-0">Silicon core scripts as well as all dependencies are written in vanilla JS. And now with Bootstrap 5 we finally drop jQuery and use ES6 modules.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <h2>Consultoría tecnológica</h2>
+        <p class="mb-0 fs-6">Disponemos de una amplia red de <strong>partners de confianza</strong> en más de 20 países con los que trabajamos para el desarrollo técnico, ocupándonos de la gestión de proyecto y la cesión de licencias de uso de tecnología propia</p>
+        <div class="row align-items-center py-4">
+          <div class="col-md-6 pb-4 pb-md-0 mb-2 mb-md-0">
+  
+            <!-- Swiper tabs -->
+            <div class="position-relative px-5">
+              <div class="swiper-tabs zindex-2 mx-auto" style="max-width: 384px;">
+                <div id="screen-1" class="swiper-tab active">
+                  <img src="assets/img/landing/app-showcase-2/screens/01.png" alt="App screen">
+                </div>
+                <div id="screen-2" class="swiper-tab">
+                  <img src="assets/img/landing/app-showcase-2/screens/02.png" alt="App screen">
+                </div>
+                <div id="screen-3" class="swiper-tab">
+                  <img src="assets/img/landing/app-showcase-2/screens/03.png" alt="App screen">
+                </div>
+              </div>
+              <div class="bg-gradient-primary position-absolute start-0 bottom-0 w-100 opacity-15 rounded-3" style="height: 86.5%;"></div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 offset-lg-1">
+            <div class="ps-md-4 ps-lg-0">
+  
+              <!-- Swiper slider -->
+              <div class="swiper text-center text-md-start mt-auto" data-swiper-options='{
+                "spaceBetween": 30,
+                "loop": true,
+                "tabs": true,
+                "navigation": {
+                  "prevEl": "#prev-screen",
+                  "nextEl": "#next-screen"
+                }
+              }'>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide" data-swiper-tab="#screen-1">
+                    <div class="fs-xl text-muted mb-3 mb-lg-4">step 1</div>
+                    <h3 class="mb-lg-4">Create your account</h3>
+                    <p>Tellus est ullamcorper diam phasellus. Commodo acine pharetra quam lacinia fames quam nibh in elementum pulvinar consectetur adipiscing. Et viverra maecenas quis cras sed gravida volutpat, cursus enim enim ut nulla netus porta lacus.</p>
+                  </div>
+                  <div class="swiper-slide" data-swiper-tab="#screen-2">
+                    <div class="fs-xl text-muted mb-3 mb-lg-4">step 2</div>
+                    <h3 class="mb-lg-4">Set up payment details</h3>
+                    <p>Ac condimentum a nisl sagittis, interdum. Et viverra maecenas quis cras sed gravida volutpat, cursus enim. Enim ut nulla netus porta lacus diam. Risus massa fames metus lectus diam maecenas dui. Nibh morbi id purus eget tellus diam.</p>
+                  </div>
+                  <div class="swiper-slide" data-swiper-tab="#screen-3">
+                    <div class="fs-xl text-muted mb-3 mb-lg-4">step 3</div>
+                    <h3 class="mb-lg-4">Start trading</h3>
+                    <p>Risus massa fames metus lectus diam maecenas dui. Nibh morbi id purus eget tellus diam, integer blandit. Ac condimentum a nisl sagittis, interdum. Et viverra maecenas quis cras sed gravida volutpat, cursus enim. Enim ut nulla netus porta.</p>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Slider controls (Prev / next) -->
+              <div class="d-flex justify-content-center justify-content-md-start pt-2 pt-lg-3">
+                <button type="button" id="prev-screen" class="btn btn-prev btn-icon btn-sm me-2" aria-label="Previous">
+                  <i class="bx bx-chevron-left"></i>
+                </button>
+                <button type="button" id="next-screen" class="btn btn-next btn-icon btn-sm ms-2" aria-label="Next">
+                  <i class="bx bx-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 pt-4 mt-md-0 pt-md-0 mb-5 d-md-flex align-items-md-start">
+        <a href='https://globodain-my.sharepoint.com/:b:/p/ruben/EVptosidBM1BlePno9E3gkgBofnfMDxfNWzT7twRrj5WeA' class="ms-auto btn btn-lg btn-secondary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Descargar dossier <i class="ms-2 bx bx-download"></i></a>
+        <a href='{{url_for("public_{}.applications".format(session["lang"].replace("-","_")))}}' class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Conocer más <i class="bx bx-chevron-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skynova" class="position-relative py-lg-5"> 
+    <div class="container position-relative zindex-2 pt-2 pt-sm-4 pt-md-5">
+      <div class="justify-content-center pt-5">
+        <div class="mb-5 pb-4">
+          <h2 class="display-5 mb-4 text-primary">Despliega y automatiza con <strong class="text-gradient-primary">Skynova</strong></h2>
+          <p class="fs-xl">Impulsa la automatización de procesos hídricos, análisis, soporte o vigilancia con la implementación de nuestras <strong>estaciones de drones</strong> conectadas vía satélite con los servidores centrales para su completo control.</p>
+        </div>
+        <video autoplay muted loop id="myVideo" class="rounded-1" style="position: relative; top: 0; left: 0; width: 100%; height: 100%;">
+          <source src="../../../../static/video/landing/skynova.mp4" type="video/mp4">
+        </video>
+        <div class="mt-4 py-2 pb-sm-3 pb-md-4 pb-lg-5 mx-auto text-center" style="max-width: 46.625rem;">
+          <h2 class="h1 mb-4">Un proyecto innovador</h2>
+          <p class="mb-4 fs-6">Diseñado para automatizar procesos en los diferentes campos de aplicación y dar <strong>respuesta rápida a los servicios de emergencia</strong></p>
+        </div>
+
+        <!-- Steps -->
+        <div class="steps steps-center steps-sm steps-horizontal-lg" style="--si-steps-number-size-sm: 1.5rem; --si-steps-number-inner-size-sm: 1rem; --si-steps-number-bg: rgba(99,102,241,.2); --si-steps-number-inner-bg: #6366f1;">
+
+          <!-- Step -->
+          <div class="step w-100 mx-auto" style="max-width: 26rem;">
+            <div class="step-number"><div class="step-number-inner"></div></div>
+            <div class="step-body">
+              <h3 class="mb-3">2023</h3>
+              <p class="mb-0">Desarrollo de concepto. Validación de mercado y potenciales clientes. Investigación de mercado</p>
+            </div>
+          </div>
+
+          <!-- Step -->
+          <div class="step w-100 mx-auto" style="max-width: 26rem;">
+            <div class="step-number"><div class="step-number-inner"></div></div>
+            <div class="step-body">
+              <h3 class="mb-3">2024</h3>
+              <p class="mb-0">Diseño del primer prototipo funcional no comercializable.</p>
+            </div>
+          </div>
+
+          <!-- Step -->
+          <div class="step w-100 mx-auto" style="max-width: 26rem;">
+            <div class="step-number"><div class="step-number-inner"></div></div>
+            <div class="step-body">
+              <h3 class="mb-3">2025</h3>
+              <p class="mb-0">Diseño y desarrollo del primer prototipo comercializable a pequeña escala. </p>
+            </div>
+          </div>
+
+          <!-- Step -->
+          <div class="step w-100 mx-auto" style="max-width: 26rem;">
+            <div class="step-number"><div class="step-number-inner"></div></div>
+            <div class="step-body">
+              <h3 class="mb-3">2026</h3>
+              <p class="mb-0">Mejora del prototipo. Desarrollo y comercialización del modelo Skynova Station KT102 </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="container mt-5 pt-5 mb-md-3 mb-lg-5 pb-5">
+          <div class="row">
+            <div class="col-md-6 pb-2 pb-md-0 mb-4 mb-md-0">
+              <div class="pe-lg-5">
+                <img src="assets/img/services/service01.jpg" class="rounded-3" alt="Image">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h2 class="h3 mb-sm-4">Para organismos públicos</h2>
+              <p class="d-md-none d-xl-block pb-2 pb-md-3 mb-3"></p>
+              <div class="border rounded-3 mb-4 mb-lg-5">
+                <div class="row row-cols-1 row-cols-sm-2 g-0">
+                  <div class="col d-flex align-items-center border-end-sm border-bottom p-3">
+                    <img src="assets/img/services/icons/digital.svg" width="48" alt="Icon">
+                    <div class="ps-2 ms-1">
+                      <h3 class="h6 mb-0">Digital transformation</h3>
+                      <p class="fs-xs mb-0">Aliquam quis odio senectus.</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-center border-bottom p-3">
+                    <img src="assets/img/services/icons/chart.svg" width="48" alt="Icon">
+                    <div class="ps-2 ms-1">
+                      <h3 class="h6 mb-0">Analytics services</h3>
+                      <p class="fs-xs mb-0">Curabitur neque ut morbi sapien.</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-center border-end-sm p-3">
+                    <img src="assets/img/services/icons/marketing.svg" width="48" alt="Icon">
+                    <div class="ps-2 ms-1">
+                      <h3 class="h6 mb-0">Marketing &amp; sales</h3>
+                      <p class="fs-xs mb-0">At faucibus molestie egestas sed.</p>
+                    </div>
+                  </div>
+                  <hr class="d-sm-none">
+                  <div class="col d-flex align-items-center p-3">
+                    <img src="assets/img/services/icons/cybersecurity.svg" width="48" alt="Icon">
+                    <div class="ps-2 ms-1">
+                      <h3 class="h6 mb-0">Cybersecurity &amp; strategy</h3>
+                      <p class="fs-xs mb-0">Orci bibendum ullamcorper lorem.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-column flex-sm-row">
+                <a href="#" class="btn btn-primary mb-3 mb-sm-0 me-sm-3">Solicitar reunión</a>
+                <a href="#" class="btn btn-outline-primary">
+                  Descargar dossier
+                  <i class="bx bx-download fs-xl ms-2 me-n1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container pt-5 pt-lg-3 mb-md-3 mb-lg-5 pb-5">
+          <div class="row">
+            <div class="col-md-6 order-md-2 pb-2 pb-md-0 mb-4 mb-md-0">
+              <div class="ps-lg-5">
+                <img src="assets/img/services/service02.jpg" class="rounded-3" alt="Image">
+              </div>
+            </div>
+            <div class="col-md-6 ordr-md-1">
+              <h2 class="h3 mb-sm-4">Para organismos privados</h2>
+              <ul class="list-unstyled d-md-none d-xl-block pb-2 pb-md-3 mb-3">
+                <li class="d-flex align-items-center mb-2">
+                  <i class="bx bx-check lead text-primary me-2"></i>
+                  Sagittis quam egestas sit sit convallis turpis sit augue interdum morbi.
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <i class="bx bx-check lead text-primary me-2"></i>
+                  Sollicitudin cursus habitasse adipiscing est sed aenean sapien.
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="bx bx-check lead text-primary me-2"></i>
+                  At arcu arcu morbi scelerisque nibh. Quam velit fermentum porta facilisi massa.
+                </li>
+              </ul>
+              <div class="border rounded-3 mb-4 mb-lg-5">
+                <div class="row row-cols-1 row-cols-sm-2 g-0">
+                  <div class="col d-flex align-items-center border-end-sm border-bottom p-3">
+                    <img src="assets/img/services/icons/insurance.svg" width="48" alt="Icon">
+                    <div class="ps-2 ms-1">
+                      <h3 class="h6 mb-0">Insurance</h3>
+                      <p class="fs-xs mb-0">Nunc dui aliquam volutpat augue.</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-center border-bottom p-3">
+                    <img src="assets/img/services/icons/banking.svg" width="48" alt="Icon">
+                    <div class="ps-2 ms-1">
+                      <h3 class="h6 mb-0">Banking risk</h3>
+                      <p class="fs-xs mb-0">Habitasse adipiscing aenean sapien.</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-center border-end-sm p-3">
+                    <img src="assets/img/services/icons/payments.svg" width="48" alt="Icon">
+                    <div class="ps-2 ms-1">
+                      <h3 class="h6 mb-0">Payments</h3>
+                      <p class="fs-xs mb-0">At faucibus molestie egestas sed.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-column flex-sm-row">
+                <a href="#" class="btn btn-primary mb-3 mb-sm-0 me-sm-3">Send request</a>
+                <a href="#" class="btn btn-outline-primary">
+                  Learn more
+                  <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="position-relative py-lg-5" style="background-color: #f7fbfe !important;">
+
+    <div class="container position-relative zindex-2 pt-2 pt-sm-4 pt-md-5">
+      <div class="justify-content-center pt-5">
+        <a href='{{url_for("public_{}.education_partnership".format(session["lang"].replace("-","_")))}}' class="d-inline-flex align-items-center fs-sm fw-semibold text-decoration-none border border-primary border-opacity-50 rounded-pill py-1 px-3">
+          <span class="text-primary lh-lg" data-bs-toggle="tooltip" title="{{lang_data.page.hero.action}}">Mobility Project Partnership 2024</span>
+          <i class="bx bx-right-arrow-alt text-primary fs-lg ms-2 me-n1"></i>
+        </a>
+
+        <h2 class="display-5 mb-4 text-primary">Globodain <span style="color: #529CFF;">Education</span></h2>
+        <p class="fs-xl">Impulsamos proyectos sociales-educativos para <strong>fomentar el uso correcto de las nuevas tecnologías y la adquisición de competencias profesionales</strong> que permitan formar a los líderes del mañana</p>
+      </div>
+
+      <div class="d-md-flex">
+        <a href='{{url_for("public_{}.education_students".format(session["lang"].replace("-","_")))}}' class="btn btn-primary">
+          Programas para alumnos
+        </a>
+        <a href='{{url_for("public_{}.education_teachers".format(session["lang"].replace("-","_")))}}' class="ms-3 btn btn-secondary">
+          Programas para profesores
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Gallery with thumbnails -->
+    <div class="gallery row g-4 mt-5 pt-3" data-thumbnails="true">
+
+      <!-- Item -->
+      <div class="col-md-5">
+        <a href="{{url_for('static',filename='img/landing/education/1.jpg')}}" class="gallery-item rounded-3" data-sub-html='<h6 class="fs-sm text-light">Gallery image caption 1</h6>'>
+          <img src="{{url_for('static',filename='img/landing/education/1.jpg')}}" alt="Gallery thumbnail">
+          <div class="gallery-item-caption fs-sm fw-medium">Gallery image caption 1</div>
+        </a>
+
+                <!-- Item -->
+                <a href="{{url_for('static',filename='img/landing/education/5.png')}}" class="gallery-item rounded-3" data-sub-html='<h6 class="fs-sm text-light">Gallery image caption 5</h6>'>
+                  <img src="{{url_for('static',filename='img/landing/education/5.png')}}" alt="Gallery thumbnail">
+                  <div class="gallery-item-caption fs-sm fw-medium">Gallery image caption 5</div>
+                </a>
+      </div>
+
+      <div class="col-md-3 col-sm-5">
+
+        <!-- Item -->
+        <a href="{{url_for('static',filename='img/landing/education/2.jpg')}}" class="gallery-item rounded-3 mb-4" data-sub-html='<h6 class="fs-sm text-light">Gallery image caption 2</h6>'>
+          <img src="{{url_for('static',filename='img/landing/education/2.jpg')}}" alt="Gallery thumbnail">
+          <div class="gallery-item-caption fs-sm fw-medium">Gallery image caption 2</div>
+        </a>
+
+        <!-- Item -->
+        <a href="{{url_for('static',filename='img/landing/education/3.png')}}" class="gallery-item rounded-3" data-sub-html='<h6 class="fs-sm text-light">Gallery image caption 3</h6>'>
+          <img src="{{url_for('static',filename='img/landing/education/3.png')}}" alt="Gallery thumbnail">
+          <div class="gallery-item-caption fs-sm fw-medium">Gallery image caption 3</div>
+        </a>
+      </div>
+
+      <div class="col-md-4 col-sm-7">
+
+        <!-- Item -->
+        <a href="{{url_for('static',filename='img/landing/education/4.jpg')}}" class="gallery-item rounded-3 mb-4" data-sub-html='<h6 class="fs-sm text-light">Gallery image caption 4</h6>'>
+          <img src="{{url_for('static',filename='img/landing/education/4.jpg')}}" alt="Gallery thumbnail">
+          <div class="gallery-item-caption fs-sm fw-medium">Gallery image caption 4</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+{% endblock %}

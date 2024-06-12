@@ -4,9 +4,168 @@
 {% set meta_description = lang_data.page.page_metadescription %}
 {% set meta_keywords = lang_data.page.page_keywords %}
 
+{% block page_css %}
+<link rel="stylesheet" href="{{url_for('static',filename='vendor/boxicons/css/boxicons.min.css')}}"/>
+<link rel="stylesheet" href="{{url_for('static',filename='vendor/swiper/swiper-bundle.min.css')}}"/>
+
+{% endblock %}
+
 {% block content %}
 <main class="page-wrapper">
+  <section id="navigation" class="container position-relative pt-5 mt-2">
+    <ul class="row nav nav-tabs mb-4" role="tablist">
+      <li class="col-12 col-md-4">
+        <a href='{{url_for("public_{}.experiences".format(session["lang"].replace("-","_")))}}' class="btn btn-primary btn-lg px-3 w-100">
+          <img src="https://cdn-static.globodain.com/landing-cx-logo" class="light-mode-img me-3" width="40" height="40" alt="CX image">
+          Experiences
+        </a> 
+      </li>
+      <li class="col-12 col-md-4 ">
+        <a href='{{url_for("public_{}.hospitality".format(session["lang"].replace("-","_")))}}' class="btn btn-primary btn-lg px-3 w-100">
+          <img src="https://cdn-static.globodain.com/landing-ms-logo" class="light-mode-img me-3" width="40" height="40" alt="MS image">
+          Hospitality
+        </a>
+      </li>
+      {# <!-- Por terminar aún -->
+      <li class="col-12 col-md-3">
+        <a href='{{url_for("public_{}.skynova".format(session["lang"].replace("-","_")))}}' class="btn btn-primary btn-lg px-3 w-100">
+          <img src="{{url_for('static',filename='svg/logos/ds.svg')}}" class="light-mode-img me-3" width="40" height="40" alt="DS image">
+          Government & <br>Agriculture
+        </a>
+      </li>
+      #}
+      <li class="col-12 col-md-4">
+        <a href='{{url_for("public_{}.education".format(session["lang"].replace("-","_")))}}' class="btn btn-primary btn-lg px-3 w-100">
+          <img src="https://cdn-static.globodain.com/landing-ed-logo" class="light-mode-img me-3" width="40" height="40" alt="ED image">
+          Education
+        </a>
+      </li>
+    </ul> 
+  </section>
+
+
+  <!-- Hero section -->
+  <section id="hero" class="position-relative border-bottom" style="background-color: #f7fbfe !important;">
+    <div class="container position-relative zindex-5 py-md-2 my-md-2 mb-0 pb-0">
+      <div id="cx" class="row justify-content-md-start justify-content-center py-5 my-4">
+        <div class="col-md-6">
+          <!-- Swiper slider -->
+          <div class="swiper text-center text-md-start mt-auto" data-swiper-options='{
+            "spaceBetween": 30,
+            "loop": true,
+            "tabs": true,
+            "navigation": {
+              "prevEl": "#prev-screen",
+              "nextEl": "#next-screen"
+            }
+          }'>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" data-swiper-tab="#globodain-ms">
+
+                <h1 class="display-6">Software para campings <br> <span class="fw-bold text-primary">Globodain</span> <span class="fw-bold text-softcamp">MS</span></h1>
+                <p class="lead d-lg-block d-none mb-0 mb-md-5 mb-3 pb-3">Gestiona las reservas de forma colaborativa con nuestro potente <span class="fw-semibold">software de gestión especializado en Campings</span>. Housekeeping, mapa interactivo, automatización de check-in, control de accesos, multipropiedad..</p>
+              </div>
+              <div class="swiper-slide" data-swiper-tab="#globodain-cx">
+                <h1 class="text-gradient-primary fs-2 fw-semibold">Tecnología para mis clientes</h1>
+                <h2 class="display-6">Añade valor a tu servicio <br> con <span class="fw-bold text-primary">Globodain</span> <span class="fw-bold text-secondary">CX</span></h2>
+                <p class="lead d-lg-block d-none mb-0 mb-md-5 mb-3 pb-3">Redefine tu estrategia de valor y <span class="fw-semibold">obtén 5 estrellas en calidad</span> gracias a nuestra solución para mejorar la experiencia de cliente a través de la <strong>tecnología de vanguardia</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider controls (Prev / next) -->
+          <div class="d-flex justify-content-center justify-content-md-start pt-lg-3">
+            <div class=" d-md-flex text-center align-items-center">
+              <button type="button" id="prev-screen" class="btn btn-prev btn-icon btn-sm me-4" aria-label="Previous">
+                <i class="bx bx-chevron-left"></i>
+              </button>
+
+              <a href='https://globodain.sharepoint.com/:b:/g/EQkRYzevzBBHqN-G3SvOjJABJTzIga30f8bRfc7i0Qx_Yw?e=svFu7e' class="d-none d-md-block btn btn-lg btn-secondary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3" target="_blank">Descargar dossier <i class="ms-2 bx bx-download"></i></a>
+              <a href='{{url_for("public_{}.hospitality".format(session["lang"].replace("-","_")))}}' class="btn btn-lg btn-primary flex-shrink-0 mb-md-0 mb-sm-4 mb-3">Conocer más <i class="bx bx-chevron-right"></i></a>
+            
+              <button type="button" id="next-screen" class="btn btn-next btn-icon btn-sm ms-4" aria-label="Next">
+                <i class="bx bx-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 pb-4 pb-md-0 mb-2 mb-md-0">
+
+          <!-- Swiper tabs -->
+          <div class="position-relative px-5">
+            <div class="swiper-tabs zindex-2 mx-auto" >
+              <div id="globodain-cx" class="swiper-tab">
+                <img src="https://cdn-static.globodain.com/landing-globodain-cx" width="570" height="340" alt="Globodain CX image" />
+              </div>
+              <div id="globodain-ms" class="swiper-tab active">
+                <img src="https://cdn-static.globodain.com/ms/front-office-hero" width="570" height="340" alt="Globodain MS image" />
+              </div>
+            </div>
+            <div class="bg-gradient-primary position-absolute start-0 bottom-0 w-100 opacity-15 rounded-3" style="height: 86.5%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container position-relative zindex-5 py-md-5 my-4">
+        <h2>4 claves de por qué debes utilizar Globodain</h2>
+        <div class="row mt-4 g-2 g-lg-3 g-xl-4 pb-md-3 pb-lg-5">
+          <!-- Item -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 bg-transparent border-0">
+              <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                <i class="bx bxl-bootstrap fs-2 text-primary" style="padding: .375rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="h6">Calidad del servicio</h3>
+                <p class="fs-sm mb-0">Nuestro equipo siempre estará a la disposición del cliente, evitando esperas y/o buzones automáticos</p>
+              </div>
+            </div>
+          </div>
   
+          <!-- Item -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 bg-transparent border-0">
+              <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                <i class="bx bx-file fs-2 text-primary" style="padding: .375rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="h6">Adaptación</h3>
+                <p class="fs-sm mb-0">Nuestros servicios están diseñados para solucionar los problemas de un nicho de mercado muy específico</p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Item -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 bg-transparent border-0">
+              <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                <i class="bx bx-mobile fs-2 text-primary" style="padding: .375rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="h6">Interconectividad</h3>
+                <p class="fs-sm mb-0">Las plataformas de gestión pueden ser conectadas, integrado un servicio en otro y automatizando tareas entre sí</p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Item -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card h-100 bg-transparent border-0">
+              <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
+                <i class="bx bx-server fs-2 text-primary" style="padding: .375rem;"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="h6">Flexibilidad</h3>
+                <p class="fs-sm mb-0">Software adaptable mediante módulos o mediante código de desarrollo propio bajo demanda del cliente.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {#
   <!-- Hero section -->
   <section id="hero" class="position-relative pt-lg-4 pt-xl-5 border-bottom" style="background-color: #f7fbfe !important;">
     <div class="jarallax position-absolute top-0 start-0 w-100 h-100" data-jarallax data-speed="0.4">
@@ -24,127 +183,13 @@
           </div>
         </div>
         <div class="col-md-5 col-sm-4 order-md-2 order-2">
-          <img src="{{url_for('static', filename='svg/misc/landing/hero.svg')}}" />
+          <img src="{{url_for('static', filename='svg/misc/landing/hero2.svg')}}" />
         </div>
-      </div>
-    </div>
-
-    <div class="container position-relative zindex-5 py-5 my-4 mt-0 pt-0">
-      <h2>Beneficios de utilizar Globodain Experiences</h2>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-lg-3 g-xl-4 pb-md-3 pb-lg-5">
-
-        <!-- Item -->
-        <div class="col">
-          <div class="card h-100 bg-transparent border-0">
-            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
-              <i class="bx bxl-bootstrap fs-2 text-gradient-primary" style="padding: .375rem;"></i>
-            </div>
-            <div class="card-body">
-              <h3 class="h6">Built with Bootstrap 5</h3>
-              <p class="fs-sm mb-0">Silicon is the powerful front-end solution based on Bootstrap 5 — the world’s most popular responsive, mobile-first front-end component library.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item -->
-        <div class="col">
-          <div class="card h-100 bg-transparent border-0">
-            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
-              <i class="bx bx-file fs-2 text-gradient-primary" style="padding: .375rem;"></i>
-            </div>
-            <div class="card-body">
-              <h3 class="h6">Detailed Documentation</h3>
-              <p class="fs-sm mb-0">Download package includes the documentation that covers all crucial information about how to get started, customize template and components usage.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item -->
-        <div class="col">
-          <div class="card h-100 bg-transparent border-0">
-            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
-              <i class="bx bx-mobile fs-2 text-gradient-primary" style="padding: .375rem;"></i>
-            </div>
-            <div class="card-body">
-              <h3 class="h6">Mobile Freindly Interface</h3>
-              <p class="fs-sm mb-0">It's not a surprise that nowadays over 80% of users surf the inernet using their mobile devices. Silicon is 100% responsive and optimized for small touch screens.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item -->
-        <div class="col">
-          <div class="card h-100 bg-transparent border-0">
-            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
-              <svg class="m-1" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none"><g clip-path="url(#D)"><path d="M6.706 11.335c0-4.925 4.007-8.932 8.932-8.932s8.932 4.007 8.932 8.932a9 9 0 0 1-.169 1.73l2.358.463c.142-.723.214-1.461.214-2.193A11.35 11.35 0 0 0 15.638 0 11.35 11.35 0 0 0 4.303 11.335c0 2.566.883 5.081 2.486 7.082l1.875-1.503a8.83 8.83 0 0 1-1.958-5.579z" fill="url(#A)"/><path d="M15.638 6.407c2.716 0 4.927 2.21 4.927 4.927h2.403a7.34 7.34 0 0 0-7.33-7.33 7.34 7.34 0 0 0-7.33 7.33 7.33 7.33 0 0 0 .959 3.623l2.088-1.19c-.421-.739-.643-1.581-.643-2.433 0-2.716 2.21-4.927 4.926-4.927z" fill="url(#B)"/><path d="M28.375 17.3a3.31 3.31 0 0 0-1.06.173 3.33 3.33 0 0 0-3.186-2.374c-.392 0-.767.069-1.116.193a3.33 3.33 0 0 0-3.129-2.203c-.32 0-.628.046-.921.131v-1.884a3.33 3.33 0 0 0-3.324-3.324 3.33 3.33 0 0 0-3.324 3.324v6.998c-.293-.084-.602-.131-.921-.131a3.33 3.33 0 0 0-3.324 3.324v6.236a8.25 8.25 0 0 0 8.237 8.237h7.157a8.25 8.25 0 0 0 8.237-8.237v-7.14a3.33 3.33 0 0 0-3.324-3.324zm.921 10.464c0 3.217-2.617 5.834-5.834 5.834h-7.157c-3.217 0-5.834-2.617-5.834-5.834v-6.236c0-.508.413-.921.921-.921s.921.413.921.921v4.852h2.403V11.336c0-.508.413-.921.921-.921s.921.413.921.921v5.077 3.526.684h2.403v-.684-3.526c0-.508.413-.921.921-.921s.921.413.921.921v4.211h2.403v-2.201c0-.508.413-.921.921-.921s.921.413.921.921v2.201h2.403c0-.508.413-.921.921-.921s.921.413.921.921v7.14z" fill="url(#C)"/></g><defs><linearGradient id="A" x1="4.303" y1="9.252" x2="26.973" y2="9.252" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="B" x1="8.309" y1="9.506" x2="22.968" y2="9.506" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><linearGradient id="C" x1="8.068" y1="22.073" x2="31.7" y2="22.073" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/></linearGradient><clipPath id="D"><path fill="#fff" d="M0 0h36v36H0z"/></clipPath></defs></svg>
-            </div>
-            <div class="card-body">
-              <h3 class="h6">Touch-Enabled Sliders</h3>
-              <p class="fs-sm mb-0">In the era of touch screens it's important to ensure great user experience on mobile, especially when it comes to such frequently used interface component as slider.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item -->
-        <div class="col">
-          <div class="card h-100 bg-transparent border-0">
-            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
-              <i class="bx bxl-html5 text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
-            </div>
-            <div class="card-body">
-              <h3 class="h6">W3C Valid HTML Code</h3>
-              <p class="fs-sm mb-0">All HTML files are checked via W3C validator to ensure 100% valid code. As you probably know invalid HTML limits innovation, but Silicon is innovative at its core.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item -->
-        <div class="col">
-          <div class="card h-100 bg-transparent border-0">
-            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
-              <i class="bx bxl-nodejs text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
-            </div>
-            <div class="card-body">
-              <h3 class="h6">Kick-Start Your Development</h3>
-              <p class="fs-sm mb-0">Start your development process fast and easy with Node.js and Gulp setup. Configuration files are included in download package. Full tasks automation.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item -->
-        <div class="col">
-          <div class="card h-100 bg-transparent border-0">
-            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
-              <i class="bx bxl-sass text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
-            </div>
-            <div class="card-body">
-              <h3 class="h6">Easy to Customize with Sass</h3>
-              <p class="fs-sm mb-0">Silicon is built using Sass. Easily change colors, typography and much more. It is the most mature, stable, and powerful CSS extension language in the world.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item -->
-        <div class="col">
-          <div class="card h-100 bg-transparent border-0">
-            <div class="bg-secondary rounded-3 w-auto lh-1 p-2 mt-4 ms-4 me-auto">
-              <i class="bx bxl-javascript text-gradient-primary m-1" style="font-size: 2.25rem;"></i>
-            </div>
-            <div class="card-body">
-              <h3 class="h6">Future Proof Java-Script</h3>
-              <p class="fs-sm mb-0">Silicon core scripts as well as all dependencies are written in vanilla JS. And now with Bootstrap 5 we finally drop jQuery and use ES6 modules.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-4 pt-4 mt-md-0 pt-md-0 d-md-flex align-items-md-start">
-        <a href='https://globodain-my.sharepoint.com/:b:/p/ruben/EVptosidBM1BlePno9E3gkgBofnfMDxfNWzT7twRrj5WeA' class="btn btn-lg btn-secondary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3" target="_blank">Descargar dossier <i class="ms-2 bx bx-download"></i></a>
-        <a href='{{url_for("public_{}.experiences".format(session["lang"].replace("-","_")))}}' class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Conocer más <i class="bx bx-chevron-right"></i></a>
       </div>
     </div>
   </section>
 
+  <!-- Cambiar la sección a "Servicios tecnológicos"-->
   <section id="technology" class="dark-mode position-relative pt-lg-4 pt-xl-5" style="background-color: #0b0f19">
     <div class="jarallax position-absolute top-0 start-0 w-100 h-100" data-jarallax data-speed="0.4">
       <div class="jarallax-img"></div>
@@ -153,7 +198,7 @@
       <div class="row justify-content-center pt-5">
         <div class="text-right pt-5 mt-1">
           <h2 class="display-5 pt-3 mt-3 mb-4">Comprometidos con la tecnología</h2>
-          <p class="fs-xl"><strong>Investigamos nuevas aplicaciones tecnológicas</strong> en las áreas de educación, agricultura, urbanismo o software, con especial mención al sector viajes, colaborando con instituciones públicas en el marco de la agenda 2030</p>
+          <p class="fs-xl"><strong>Impulsamos el desarrollo tecnológico</strong> de las empresas y autónomos para optimizar los procesos de trabajo cómo reuniones, gestión de archivos en la nube, tareas, planificación de proyectos..</p>
         </div>
       </div>
     </div>
@@ -191,7 +236,7 @@
           {% for item in lang_data.page.categories %}
           <!-- Item -->
           <div class="swiper-slide">
-            <a href="{{item.href}}" class="card-portfolio position-relative d-block rounded-3 overflow-hidden">
+            <a href='{{url_for("public_{}.{}".format(session["lang"].replace("-","_"), item.url))}}' class="card-portfolio position-relative d-block rounded-3 overflow-hidden">
               <span class="position-absolute top-0 start-0 w-100 h-100 zindex-1" style="background: linear-gradient(180deg, rgba(17, 24, 39, 0.00) 35.56%, #111827 95.3%);"></span>
               <div class="position-absolute bottom-0 w-100 zindex-2 p-4">
                 <div class="px-md-3">
@@ -203,7 +248,7 @@
                 </div>
               </div>
               <div class="card-img">
-                <img src="{{url_for('static',filename='img/landing/categories/{}'.format(item.img))}}" alt="Ecommerce">
+                <img src="{{item.img}}" alt="Globodain">
               </div>
             </a>
           </div>
@@ -226,6 +271,8 @@
       </div>
     </div>
 
+    
+    <!-- Applications -->
     <div class="container position-relative py-5 my-4 mt-0">
       <div class="d-md-flex mb-2">
         <h2>Aplicaciones tecnológicas de Globodain</h2>
@@ -348,13 +395,13 @@
             <div class="position-relative px-5">
               <div class="swiper-tabs zindex-2 mx-auto" style="max-width: 384px;">
                 <div id="screen-1" class="swiper-tab active">
-                  <img src="assets/img/landing/app-showcase-2/screens/01.png" alt="App screen">
+                  <img src="" alt="App screen">
                 </div>
                 <div id="screen-2" class="swiper-tab">
-                  <img src="assets/img/landing/app-showcase-2/screens/02.png" alt="App screen">
+                  <img src="" alt="App screen">
                 </div>
                 <div id="screen-3" class="swiper-tab">
-                  <img src="assets/img/landing/app-showcase-2/screens/03.png" alt="App screen">
+                  <img src="" alt="App screen">
                 </div>
               </div>
               <div class="bg-gradient-primary position-absolute start-0 bottom-0 w-100 opacity-15 rounded-3" style="height: 86.5%;"></div>
@@ -411,9 +458,310 @@
         <a href='{{url_for("public_{}.applications".format(session["lang"].replace("-","_")))}}' class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Conocer más <i class="bx bx-chevron-right"></i></a>
       </div>
     </div>
+    
+  </section>
+  #}
+
+  <section id="ed" class="position-relative py-lg-5" style="background-color: #f7fbfe !important;">
+
+    <div class="container position-relative zindex-2 pt-2 pt-sm-4 pt-md-5">
+      <div class="justify-content-center pt-5">
+        <a href='{{url_for("public_{}.education_partnership".format(session["lang"].replace("-","_")))}}' class="d-inline-flex align-items-center fs-sm fw-semibold text-decoration-none border border-primary border-opacity-50 rounded-pill py-1 px-3">
+          <span class="text-primary lh-lg" data-bs-toggle="tooltip" title="{{lang_data.page.hero.action}}">Mobility Project Partnership 2024</span>
+          <i class="bx bx-right-arrow-alt text-primary fs-lg ms-2 me-n1"></i>
+        </a>
+
+        <h2 class="display-5 mb-4 text-primary">Globodain <span style="color: #529CFF;">Education</span></h2>
+        
+        <div class="row">
+          <div class="col-md-6 gallery" data-thumbnails="true">
+            <a href="https://cdn-static.globodain.com/education/group-1" class="gallery-item rounded-3" data-sub-html='<h6 class="fs-sm text-light">Grupo de estudiantes con capacidades reducidas de Finlandia</h6>'>
+              <img src="https://cdn-static.globodain.com/education/group-1" width="670" height="500" alt="Globodain Education" style="max-width:670px;">
+              <div class="gallery-item-caption fs-sm fw-medium">Grupo de estudiantes con capacidades reducidas de Finlandia</div>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <!-- Item -->
+            <a href="https://cdn-static.globodain.com/education/group-2" class="gallery-item rounded-3" data-sub-html='<h6 class="fs-sm text-light">Grupo de estudiantes internacional en colaboración con una escuela de Hungría a través del programa Erasmus+</h6>'>
+              <img src="https://cdn-static.globodain.com/education/group-2" width="670" height="500" alt="Globodain Education">
+              <div class="gallery-item-caption fs-sm fw-medium">Grupo de estudiantes internacional en colaboración con una escuela de Hungría a través del programa Erasmus+</div>
+            </a>
+          </div>
+        </div>
+
+        <p class="fs-xl mt-5">Conoce cómo Globodain puede <span class="fw-semibold">impulsar la educación</span> en tu institución a través de la tecnología y fomentar el desarrollo de habilidades blandas que permita a los estudiantes alcanzar sus objetivos</p>
+        <div class="d-flex flex-column flex-md-row">
+          <a href='{{url_for("public_{}.education_students".format(session["lang"].replace("-","_")))}}' class="btn btn-primary mb-3 mb-md-0">
+            Programas para alumnos
+          </a>          
+          <a href='{{url_for("public_{}.education_schools".format(session["lang"].replace("-","_")))}}' class="ms-md-3 btn btn-outline-primary">
+            Programas para profesores
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container position-relative zindex-2 pt-2 pt-sm-4 pt-md-5">
+      <div class="justify-content-center pt-5">
+        <h3 class="display-5 mb-4 text-primary">Comprometidos con la educación</h3>
+        <p class="fs-xl">Impulsamos proyectos sociales-educativos para <strong>fomentar el uso correcto de las nuevas tecnologías y la adquisición de competencias profesionales</strong> que permitan formar a los líderes del mañana</p>
+      </div>
+
+      <!-- Stats -->
+      <div class="pb-5 pt-2 pt-sm-3 pt-lg-4 pt-xl-5">
+        <div class="swiper pb-sm-2 pb-md-4 pb-lg-5 mb-xxl-3 mx-n2" data-swiper-options='{
+          "slidesPerView": 1,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          },
+          "breakpoints": {
+            "500": {
+              "slidesPerView": 2,
+              "spaceBetween": 8
+            },
+            "650": {
+              "slidesPerView": 2,
+              "spaceBetween": 8
+            },
+            "900": {
+              "slidesPerView": 3,
+              "spaceBetween": 8
+            },
+            "1100": {
+              "slidesPerView": 4,
+              "spaceBetween": 8
+            }
+          }
+        }'>
+          <div class="swiper-wrapper">
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto py-3">
+              <div class="card border-0 shadow h-100 text-center text-sm-start p-3 mx-2">
+                <div class="card-body">
+                  <h3 class="h1 pt-4 mb-1">+3 <span class="h4">años</span></h3>
+                  <p class="fs-lg mb-0">Apostando por la educación tecnológica</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto py-3">
+              <div class="card border-0 shadow h-100 text-center text-sm-start p-3 mx-2">
+                <div class="card-body">
+                  <h3 class="h1 pt-4 mb-1">+20 <span class="h4">países</span></h3>
+                  <p class="fs-lg mb-0">Colaborando con Globodain Education</p>                    
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto py-3">
+              <div class="card border-0 shadow h-100 text-center text-sm-start p-3 mx-2">
+                <div class="card-body">
+                  <h3 class="h1 pt-4 mb-1">+800 <span class="h4">estudiantes</span></h3>
+                  <p class="fs-lg mb-0">Inmersos en nuestros proyectos</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto py-3">
+              <div class="card border-0 shadow h-100 text-center text-sm-start p-3 mx-2">
+                <div class="card-body">
+                  <h3 class="h1 pt-4 mb-1">+50 <span class="h4">proyectos</span></h3>
+                  <p class="fs-lg mb-0">Desarrollados por estudiantes</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination (bullets) -->
+          <div class="swiper-pagination position-relative pt-2 mt-4"></div>
+        </div>
+      </div>
+
+      <div class="container mt-5 pt-5 mb-md-3 mb-lg-5 pb-5">
+        <div class="row">
+          <div class="col-lg-6 pb-2 pb-md-0 mb-5 mb-lg-0">
+            <div class="pe-lg-5">
+              <img src="https://cdn-static.globodain.com/education/for-schools" width="670" height="500" alt="Globodain Education" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h2 class="h3 mb-sm-4">Para escuelas</h2>
+            <p class="fs-lg">A través del programa Erasmus+ las escuelas pueden participar para ofrecer <strong>prácticas internacionales</strong> o coloquios tecnológicos en sus centros educativos teniendo a Globodain cómo socio</p>
+            <ul class="fs-lg list-unstyled d-md-none d-xl-block pb-2 pb-md-3 mb-3">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-check lead text-primary me-2"></i>
+                Desarrolla las capacidades de los alumnos
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-check lead text-primary me-2"></i>
+                Brinda una experiencia de trabajo real
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bx bx-check lead text-primary me-2"></i>
+                Inmersivo en una cultura internacional
+              </li>
+            </ul>
+            <div class="fs-lg border rounded-3 mb-4 mb-lg-5">
+              <div class="row row-cols-1 row-cols-sm-2 g-0">
+                <div class="col d-flex align-items-center border-end-sm border-bottom p-3">
+                  <div class="ps-2 ms-1">
+                    <h3 class="h6 mb-0">1. Reunión</h3>
+                    <p class="fs-xs mb-0">Identificamos las necesidades de vuestra escuela y recomendamos el servicio más apropiado</p>
+                  </div>
+                </div>
+                <div class="col d-flex align-items-center border-bottom p-3">
+                  <div class="ps-2 ms-1">
+                    <h3 class="h6 mb-0">2. Planificación</h3>
+                    <p class="fs-xs mb-0">Preparamos el proyecto y lo compartimos para su análisis</p>
+                  </div>
+                </div>
+                <div class="col d-flex align-items-center border-end-sm p-3">
+                  <div class="ps-2 ms-1">
+                    <h3 class="h6 mb-0">3. Presentación</h3>
+                    <p class="fs-xs mb-0">Presentamos el proyecto ante nuestros socios colaboradores</p>
+                  </div>
+                </div>
+                <hr class="d-sm-none">
+                <div class="col d-flex align-items-center p-3">
+                  <div class="ps-2 ms-1">
+                    <h3 class="h6 mb-0">4. Ejecución</h3>
+                    <p class="fs-xs mb-0">Llevamos a la práctica en tiempo y forma la realización del proyecto.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row">
+              <a href='{{url_for("public_{}.request_services".format(session["lang"]))}}' class="btn btn-primary mb-3 mb-sm-0 me-sm-3">Solicitar reunión</a>
+              <a href='{{url_for("public_{}.education_schools".format(session["lang"]))}}' class="btn btn-outline-primary">
+                Saber más
+                <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
+              </a>
+              {#
+              <a href="#" class="btn btn-outline-primary">
+                Descargar dossier
+                <i class="bx bx-download fs-xl ms-2 me-n1"></i>
+              </a>
+              #}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {#
+      <div class="container pt-5 pt-lg-3 mb-md-3 mb-lg-5 pb-5">
+        <div class="row">
+          <div class="col-md-6 order-md-2 pb-2 pb-md-0 mb-4 mb-md-0">
+            <div class="ps-lg-5">
+              <img src="" class="rounded-3" alt="Image">
+            </div>
+          </div>
+          <div class="col-md-6 ordr-md-1">
+            <h2 class="h3 mb-sm-4">Para otras instituciones</h2>
+            <ul class="list-unstyled d-md-none d-xl-block pb-2 pb-md-3 mb-3">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-check lead text-primary me-2"></i>
+                Sagittis quam egestas sit sit convallis turpis sit augue interdum morbi.
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-check lead text-primary me-2"></i>
+                Sollicitudin cursus habitasse adipiscing est sed aenean sapien.
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bx bx-check lead text-primary me-2"></i>
+                At arcu arcu morbi scelerisque nibh. Quam velit fermentum porta facilisi massa.
+              </li>
+            </ul>
+            <div class="border rounded-3 mb-4 mb-lg-5">
+              <div class="row row-cols-1 row-cols-sm-2 g-0">
+                <div class="col d-flex align-items-center border-end-sm border-bottom p-3">
+                  <img src="" width="48" height="48" alt="Icon">
+                  <div class="ps-2 ms-1">
+                    <h3 class="h6 mb-0">Insurance</h3>
+                    <p class="fs-xs mb-0">Nunc dui aliquam volutpat augue.</p>
+                  </div>
+                </div>
+                <div class="col d-flex align-items-center border-bottom p-3">
+                  <img src="" width="48" height="48" alt="Icon">
+                  <div class="ps-2 ms-1">
+                    <h3 class="h6 mb-0">Banking risk</h3>
+                    <p class="fs-xs mb-0">Habitasse adipiscing aenean sapien.</p>
+                  </div>
+                </div>
+                <div class="col d-flex align-items-center border-end-sm p-3">
+                  <img src="" width="48" height="48" alt="Icon">
+                  <div class="ps-2 ms-1">
+                    <h3 class="h6 mb-0">Payments</h3>
+                    <p class="fs-xs mb-0">At faucibus molestie egestas sed.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row">
+              <a href='{{url_for("public_{}.request_services".format(session["lang"]))}}' class="btn btn-primary mb-3 mb-sm-0 me-sm-3">Solicitar reunión</a>
+              <a href='{{url_for("public_{}.education".format(session["lang"]))}}' class="btn btn-outline-primary">
+                Saber más
+                <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      #}
+    </div>
+
   </section>
 
-  <section id="skynova" class="position-relative py-lg-5"> 
+  <!-- CTA -->
+  <section class="container">
+    <div class="bg-primary bg-size-cover bg-position-center bg-repeat-0 position-relative overflow-hidden rounded-3 py-lg-3 py-xl-5 px-4 px-lg-5 px-xl-0" data-bs-theme="dark">
+      <div class="row position-relative zindex-2 py-5 my-1 my-md-3">
+        <div class="col-md-6">
+          <div class="mx-auto" style="max-width: 440px;">
+            <h2 class="h1 text-white pb-1 pb-md-3 pb-lg-4">¿Quieres participar con Globodain en proyectos internacionales?</h2>
+            <ul class="list-unstyled fs-lg d-md-none pb-3">
+              <li class="d-flex mb-2 text-white">
+                <i class="bx bx-check lead text-white me-2" style="margin-top: .125rem;"></i>
+                Colabora con nosotros en proyectos educativos
+              </li>
+              <li class="d-flex mb-2 text-white">
+                <i class="bx bx-check lead text-white me-2" style="margin-top: .125rem;"></i>
+                Colabora con nosotros en proyectos tecnológicos
+              </li>
+              <li class="d-flex text-white">
+                <i class="bx bx-check lead text-white me-2" style="margin-top: .125rem;"></i>
+                Colabora con nosotros en proyectos sociales
+              </li>
+            </ul>
+            <a href='{{url_for("public_{}.request_services".format(session["lang"]))}}' class="btn btn-lg btn-light shadow-light w-100 w-sm-auto">Habla con nosotros</a>
+          </div>
+        </div>
+        <div class="col-md-6 pt-lg-3 pt-xl-4">
+          <ul class="list-unstyled fs-lg d-none d-md-block">
+            <li class="d-flex mb-2 text-white">
+              <i class="bx bx-check lead text-white me-2" style="margin-top: .125rem;"></i>
+              Colabora con nosotros en proyectos educativos
+            </li>
+            <li class="d-flex mb-2 text-white">
+              <i class="bx bx-check lead text-white me-2" style="margin-top: .125rem;"></i>
+              Colabora con nosotros en proyectos tecnológicos
+            </li>
+            <li class="d-flex text-white">
+              <i class="bx bx-check lead text-white me-2" style="margin-top: .125rem;"></i>
+              Colabora con nosotros en proyectos sociales
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {#
+  <section id="ds" class="position-relative py-lg-5"> 
     <div class="container position-relative zindex-2 pt-2 pt-sm-4 pt-md-5">
       <div class="justify-content-center pt-5">
         <div class="mb-5 pb-4">
@@ -467,190 +815,14 @@
             </div>
           </div>
         </div>
-        
-        <div class="container mt-5 pt-5 mb-md-3 mb-lg-5 pb-5">
-          <div class="row">
-            <div class="col-md-6 pb-2 pb-md-0 mb-4 mb-md-0">
-              <div class="pe-lg-5">
-                <img src="assets/img/services/service01.jpg" class="rounded-3" alt="Image">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <h2 class="h3 mb-sm-4">Para organismos públicos</h2>
-              <p class="d-md-none d-xl-block pb-2 pb-md-3 mb-3"></p>
-              <div class="border rounded-3 mb-4 mb-lg-5">
-                <div class="row row-cols-1 row-cols-sm-2 g-0">
-                  <div class="col d-flex align-items-center border-end-sm border-bottom p-3">
-                    <img src="assets/img/services/icons/digital.svg" width="48" alt="Icon">
-                    <div class="ps-2 ms-1">
-                      <h3 class="h6 mb-0">Digital transformation</h3>
-                      <p class="fs-xs mb-0">Aliquam quis odio senectus.</p>
-                    </div>
-                  </div>
-                  <div class="col d-flex align-items-center border-bottom p-3">
-                    <img src="assets/img/services/icons/chart.svg" width="48" alt="Icon">
-                    <div class="ps-2 ms-1">
-                      <h3 class="h6 mb-0">Analytics services</h3>
-                      <p class="fs-xs mb-0">Curabitur neque ut morbi sapien.</p>
-                    </div>
-                  </div>
-                  <div class="col d-flex align-items-center border-end-sm p-3">
-                    <img src="assets/img/services/icons/marketing.svg" width="48" alt="Icon">
-                    <div class="ps-2 ms-1">
-                      <h3 class="h6 mb-0">Marketing &amp; sales</h3>
-                      <p class="fs-xs mb-0">At faucibus molestie egestas sed.</p>
-                    </div>
-                  </div>
-                  <hr class="d-sm-none">
-                  <div class="col d-flex align-items-center p-3">
-                    <img src="assets/img/services/icons/cybersecurity.svg" width="48" alt="Icon">
-                    <div class="ps-2 ms-1">
-                      <h3 class="h6 mb-0">Cybersecurity &amp; strategy</h3>
-                      <p class="fs-xs mb-0">Orci bibendum ullamcorper lorem.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="d-flex flex-column flex-sm-row">
-                <a href="#" class="btn btn-primary mb-3 mb-sm-0 me-sm-3">Solicitar reunión</a>
-                <a href="#" class="btn btn-outline-primary">
-                  Descargar dossier
-                  <i class="bx bx-download fs-xl ms-2 me-n1"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="container pt-5 pt-lg-3 mb-md-3 mb-lg-5 pb-5">
-          <div class="row">
-            <div class="col-md-6 order-md-2 pb-2 pb-md-0 mb-4 mb-md-0">
-              <div class="ps-lg-5">
-                <img src="assets/img/services/service02.jpg" class="rounded-3" alt="Image">
-              </div>
-            </div>
-            <div class="col-md-6 ordr-md-1">
-              <h2 class="h3 mb-sm-4">Para organismos privados</h2>
-              <ul class="list-unstyled d-md-none d-xl-block pb-2 pb-md-3 mb-3">
-                <li class="d-flex align-items-center mb-2">
-                  <i class="bx bx-check lead text-primary me-2"></i>
-                  Sagittis quam egestas sit sit convallis turpis sit augue interdum morbi.
-                </li>
-                <li class="d-flex align-items-center mb-2">
-                  <i class="bx bx-check lead text-primary me-2"></i>
-                  Sollicitudin cursus habitasse adipiscing est sed aenean sapien.
-                </li>
-                <li class="d-flex align-items-center">
-                  <i class="bx bx-check lead text-primary me-2"></i>
-                  At arcu arcu morbi scelerisque nibh. Quam velit fermentum porta facilisi massa.
-                </li>
-              </ul>
-              <div class="border rounded-3 mb-4 mb-lg-5">
-                <div class="row row-cols-1 row-cols-sm-2 g-0">
-                  <div class="col d-flex align-items-center border-end-sm border-bottom p-3">
-                    <img src="assets/img/services/icons/insurance.svg" width="48" alt="Icon">
-                    <div class="ps-2 ms-1">
-                      <h3 class="h6 mb-0">Insurance</h3>
-                      <p class="fs-xs mb-0">Nunc dui aliquam volutpat augue.</p>
-                    </div>
-                  </div>
-                  <div class="col d-flex align-items-center border-bottom p-3">
-                    <img src="assets/img/services/icons/banking.svg" width="48" alt="Icon">
-                    <div class="ps-2 ms-1">
-                      <h3 class="h6 mb-0">Banking risk</h3>
-                      <p class="fs-xs mb-0">Habitasse adipiscing aenean sapien.</p>
-                    </div>
-                  </div>
-                  <div class="col d-flex align-items-center border-end-sm p-3">
-                    <img src="assets/img/services/icons/payments.svg" width="48" alt="Icon">
-                    <div class="ps-2 ms-1">
-                      <h3 class="h6 mb-0">Payments</h3>
-                      <p class="fs-xs mb-0">At faucibus molestie egestas sed.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="d-flex flex-column flex-sm-row">
-                <a href="#" class="btn btn-primary mb-3 mb-sm-0 me-sm-3">Send request</a>
-                <a href="#" class="btn btn-outline-primary">
-                  Learn more
-                  <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        
       </div>
     </div>
   </section>
-
-  <section id="education" class="position-relative py-lg-5" style="background-color: #f7fbfe !important;">
-
-    <div class="container position-relative zindex-2 pt-2 pt-sm-4 pt-md-5">
-      <div class="justify-content-center pt-5">
-        <a href='{{url_for("public_{}.education_partnership".format(session["lang"].replace("-","_")))}}' class="d-inline-flex align-items-center fs-sm fw-semibold text-decoration-none border border-primary border-opacity-50 rounded-pill py-1 px-3">
-          <span class="text-primary lh-lg" data-bs-toggle="tooltip" title="{{lang_data.page.hero.action}}">Mobility Project Partnership 2024</span>
-          <i class="bx bx-right-arrow-alt text-primary fs-lg ms-2 me-n1"></i>
-        </a>
-
-        <h2 class="display-5 mb-4 text-primary">Globodain <span style="color: #529CFF;">Education</span></h2>
-        <p class="fs-xl">Impulsamos proyectos sociales-educativos para <strong>fomentar el uso correcto de las nuevas tecnologías y la adquisición de competencias profesionales</strong> que permitan formar a los líderes del mañana</p>
-      </div>
-
-      <div class="d-md-flex">
-        <a href='{{url_for("public_{}.education_students".format(session["lang"].replace("-","_")))}}' class="btn btn-primary">
-          Programas para alumnos
-        </a>
-        <a href='{{url_for("public_{}.education_teachers".format(session["lang"].replace("-","_")))}}' class="ms-3 btn btn-secondary">
-          Programas para profesores
-        </a>
-      </div>
-
-    </div>
-
-    <!-- Gallery with thumbnails -->
-    <div class="gallery row g-4 mt-5 pt-3" data-thumbnails="true">
-
-      <!-- Item -->
-      <div class="col-md-5">
-        <a href="{{url_for('static',filename='img/landing/education/1.jpg')}}" class="gallery-item rounded-3" data-sub-html='<h6 class="fs-sm text-light">Gallery image caption 1</h6>'>
-          <img src="{{url_for('static',filename='img/landing/education/1.jpg')}}" alt="Gallery thumbnail">
-          <div class="gallery-item-caption fs-sm fw-medium">Gallery image caption 1</div>
-        </a>
-
-                <!-- Item -->
-                <a href="{{url_for('static',filename='img/landing/education/5.png')}}" class="gallery-item rounded-3" data-sub-html='<h6 class="fs-sm text-light">Gallery image caption 5</h6>'>
-                  <img src="{{url_for('static',filename='img/landing/education/5.png')}}" alt="Gallery thumbnail">
-                  <div class="gallery-item-caption fs-sm fw-medium">Gallery image caption 5</div>
-                </a>
-      </div>
-
-      <div class="col-md-3 col-sm-5">
-
-        <!-- Item -->
-        <a href="{{url_for('static',filename='img/landing/education/2.jpg')}}" class="gallery-item rounded-3 mb-4" data-sub-html='<h6 class="fs-sm text-light">Gallery image caption 2</h6>'>
-          <img src="{{url_for('static',filename='img/landing/education/2.jpg')}}" alt="Gallery thumbnail">
-          <div class="gallery-item-caption fs-sm fw-medium">Gallery image caption 2</div>
-        </a>
-
-        <!-- Item -->
-        <a href="{{url_for('static',filename='img/landing/education/3.png')}}" class="gallery-item rounded-3" data-sub-html='<h6 class="fs-sm text-light">Gallery image caption 3</h6>'>
-          <img src="{{url_for('static',filename='img/landing/education/3.png')}}" alt="Gallery thumbnail">
-          <div class="gallery-item-caption fs-sm fw-medium">Gallery image caption 3</div>
-        </a>
-      </div>
-
-      <div class="col-md-4 col-sm-7">
-
-        <!-- Item -->
-        <a href="{{url_for('static',filename='img/landing/education/4.jpg')}}" class="gallery-item rounded-3 mb-4" data-sub-html='<h6 class="fs-sm text-light">Gallery image caption 4</h6>'>
-          <img src="{{url_for('static',filename='img/landing/education/4.jpg')}}" alt="Gallery thumbnail">
-          <div class="gallery-item-caption fs-sm fw-medium">Gallery image caption 4</div>
-        </a>
-      </div>
-    </div>
-  </section>
-
+  #}
 </main>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{url_for('static',filename='vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js')}}"></script>
 {% endblock %}

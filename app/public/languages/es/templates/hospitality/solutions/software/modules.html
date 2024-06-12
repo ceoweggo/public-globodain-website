@@ -1,0 +1,303 @@
+{% extends 'bases/es-hospitality-base.html' %}
+
+{# <!-- SEO SECTION--> #}
+{% set title = 'Módulos de Globodain MS' %}
+{% set metadescription = "Amplía las funcionalidades de tu panel de control con nuestros módulo. Nuestras subaplicaciones instalables te permiten personalizar tu plataforma para mejorar la gestión de tu camping. ¡Descubre más!" %}
+{% set keywords = "globodain,módulos,subaplicaciones,instalables,funcionalidades,panel de control,plataforma,gestión de camping,personalizar,software escalable, software personalizable" %}
+
+{#
+{% set title = lang_data.page.page_title %}
+{% set metadescription = lang_data.page.page_metadescription %}
+{% set keywords = lang_data.page.page_keywords %}
+#}
+
+{% block css %}
+{% endblock %}
+
+{% block content %}
+<main class="page-wrapper bg-white">
+  <section id="hero" class="overflow-hidden" style="background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);">
+    <div class="position-relative overflow-hidden">
+  
+      <!-- Image -->
+      <div class="container-fluid position-relative position-lg-absolute top-0 start-0 h-100">
+        <div class="row h-100 me-n4 me-n2">
+          <div class="col-lg-7 position-relative">
+            <div class="d-none d-sm-block d-lg-none" style="height: 400px;"></div>
+            <div class="d-sm-none" style="height: 300px;"></div>
+            <div class="jarallax position-absolute top-0 start-0 w-100 h-100 rounded-3 rounded-start-0 overflow-hidden" data-jarallax data-speed="0.3">
+              <div class="jarallax-img" style="background-image: url(https://cdn-static.globodain.com/ms/modules-hero);"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container position-relative zindex-5 pt-lg-5 px-0 px-lg-3">
+        <div class="row pt-lg-5 mx-n4 mx-lg-n3">
+          <div class="col-xl-6 col-lg-7 offset-lg-5 offset-xl-6 pb-5">
+            <div class="card bg-light-primary border-light overflow-hidden py-4 px-2 p-sm-4">
+              <span class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255,255,255,.05);"></span>
+              <div class="card-body position-relative zindex-5">
+                <p class="fs-xl fw-bold text-primary text-uppercase mb-3">Gestión de funcionalidades</p>
+                <h1 class="display-5 pb-3 mb-3">Módulos</h1>
+                <p class="fs-lg opacity-70 mb-5"><strong>Amplifica las funcionalidades de la plataforma<sup class="fs-xs">1</sup></strong> contratando nuevos módulos que permitan a tu equipo optimizar la gestión de los clientes y los procesos operativos del negocio</p>
+                <figcaption class="fs-xs text-muted"><sup>1</sup> El coste de contratación está determinado por el módulo</figcaption>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-3 col-lg-4 offset-lg-8 offset-xxl-9 pt-lg-5 mt-xxl-5">
+            <div class="mb-3 position-relative d-inline-flex align-items-center justify-content-center justify-content-md-start mt-auto pt-3 pt-md-4 pb-xl-2">
+              <a href="#call-to-action" class="btn btn-icon btn-light bg-white stretched-link rounded-circle me-3" data-scroll data-scroll-offset="120">
+                <i class="bx bx-chevron-down"></i>
+              </a>
+              <span class="fs-sm">Seguir viendo</span>
+            </div>   
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="success-case" class="d-flex min-vh-100 position-relative overflow-hidden py-5">
+    <div class="container d-flex flex-column justify-content-center position-relative zindex-2 pt-sm-3 pt-md-4 pt-xl-5 pb-1 pb-sm-3 pb-lg-4 pb-xl-5">
+      <div class="row flex-lg-nowrap align-items-center pb-5 pt-2 pt-lg-4 pt-xl-0 mt-lg-4 mt-xl-0">
+        <div class="col-lg-7 order-lg-2 ms-lg-4 mb-2 mb-lg-0">
+          <div class="parallax order-lg-2 mx-auto bg-secondary rounded-3" style="max-width: 740px;">
+            <div class="parallax-layer" data-depth="0.05"><img src="{{url_for('static', filename='img/hospitality/software/modules/success-case/01.svg')}}" width="750" height="425" alt="Hero image 01"></div>
+            <div class="parallax-layer zindex-2" data-depth="0.3"><img src="{{url_for('static', filename='img/hospitality/software/modules/success-case/02.svg')}}" width="750" height="425" alt="Hero image 02"></div>
+            <div class="parallax-layer zindex-2" data-depth="0.15"><img src="{{url_for('static', filename='img/hospitality/software/modules/success-case/03.svg')}}" width="750" height="425" alt="Hero image 03"></div>
+            <div class="parallax-layer zindex-2" data-depth="0.4"><img src="{{url_for('static', filename='img/hospitality/software/modules/success-case/04.svg')}}" width="750" height="425" alt="Hero image 04"></div>
+          </div>
+        </div>
+        <div class="col-lg-5 order-lg-1 text-center text-lg-start me-xl-5">
+            <span class="badge bg-faded-success text-success fs-sm">Caso de éxito
+            </span>
+          <h1 class="display-4 py-3 my-2 mb-xl-3">Cleanapp, tu app de limpieza</h1>
+          <span>Cleanapp es una potente aplicación que <strong>permite optimizar la gestión de la limpieza del equipo</strong>, asignando un planificador de limpieza independiente al usuario con el rol corresponiente.</span>
+          <ul class="mt-4 list-unstyled d-table text-start mx-auto mx-lg-0 mb-0">
+            <li class="d-flex pb-2 mb-1"><i class="bx bx-check text-primary lead me-2"></i>Aumenta la productividad de tus empleados</li>
+            <li class="d-flex pb-2 mb-1"><i class="bx bx-check text-primary lead me-2"></i>Optimiza la organización y el tiempo de gestión</li>
+            <li class="d-flex pb-2 mb-1"><i class="bx bx-check text-primary lead me-2"></i>Visibiliza el planificador de limpieza por usuario</li>
+          </ul>
+          <div class="d-flex justify-content-center justify-content-lg-start pt-4 pt-xl-5">
+            <div class="text-center">
+              <p class="fs-sm pt-2 mt-sm-1 mb-0">100% integrado en la plataforma</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="dark-mode bg-secondary py-5">
+    <div class="container overflow-hidden py-4 mt-2 mt-sm-3 my-2 my-lg-4 my-xl-5">
+      <div class="row align-items-center">
+  
+          <h2 class="display-3 mb-4 text-primary">¿Cómo funciona?</h2>
+          <p class="mb-0 fs-4 text-dark opacity-80" style="max-width: 880px;">Instalar módulos te dará <strong>acceso a nuevas funcionalidades</strong> dentro de la plataforma. El sistema de módulos está constantemente actualizándose, por lo que podrás acceder a las funcionalidades más demandadas.</p>
+  
+      </div>
+  
+      <!-- Features-->
+      <div class="d-none d-xxl-block" style="height: 220px;"></div>
+      <div class="d-none d-lg-block d-xxl-none" style="height: 160px;"></div>
+      <div class="d-none d-md-block d-lg-none" style="height: 100px;"></div>
+      <div class="d-md-none" style="height: 50px;"></div>
+      <div class="steps steps-horizontal-md steps-center steps-hoverable">
+        <div class="step">
+          <div class="step-number">
+            <div class="step-number-inner text-primary">01</div>
+          </div>
+          <div class="step-body">
+            <h3 class="h5 pb-1 mb-2"><a href="#searchModule" class="text-primary">Búsqueda e instalación</a></h3>
+          </div>
+        </div>
+    
+        <div class="step">
+          <div class="step-number">
+            <div class="step-number-inner text-primary">02</div>
+          </div>
+          <div class="step-body">
+            <h3 class="h5 pb-1 mb-2"><a href="#settingsModule" class="text-primary">Personalización</a></h3>
+          </div>
+        </div>
+    
+        <div class="step">
+          <div class="step-number">
+            <div class="step-number-inner text-primary">03</div>
+          </div>
+          <div class="step-body">
+            <h3 class="h5 pb-1 mb-2"><a href="#activateModule" class="text-primary">Activación</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services-->
+  <section class="container py-4 py-sm-5 my-md-2 my-lg-3 my-xl-4 my-xxl-5">
+  
+  
+  
+    <div class="row align-items-center py-4 py-xl-5 my-2">
+      <div class="col-md-6 offset-xl-1 order-md-2 pb-2 mb-4 mb-md-0">
+        <img class="d-none" src="#change-this-image" alt="#change-this-alt">
+      </div>
+      <div class="col-md-6 col-xl-5 order-md-1">
+        <div class="pe-md-4 pe-xl-0">
+          <h2 class="h1 pb-2 pb-lg-3">Clasificación de módulos</h2>
+          <p class="fs-5 pb-2 pb-lg-0 mb-4 mb-lg-5">Los módulos están clasificados por <strong>tipología de gestión</strong>. Dentro del panel, se muestran con una etiqueta que define su clasificación.</p>
+          <div class="row row-cols-2">
+            <div class="col">
+              <div class="d-table bg-secondary rounded-1 p-2 mb-3"><i class="bx bx-server fs-3"></i></div>
+              <h3 class="h5 mb-2">Gestión interna</h3>
+              <p class="fs-6 mb-3">Afecta a la <strong>gestión del negocio</strong> sin que ésta tenga relación directa con el cliente u otro agente externo.</p>
+              <span class="text-muted fs-7">Por ejemplo: procesos de gestión para trabajadores</span>
+            </div>
+            <div class="col">
+              <div class="d-table bg-secondary rounded-1 p-2 mb-3"><i class="bx bx-link-external fs-3"></i></div>
+              <h3 class="h5 mb-2">Gestión externa</h3>
+              <p class="fs-6 mb-3">Afecta a la <strong>gestión de clientes y terceros asociados</strong>.</p>
+              <span class="text-muted fs-7">Por ejemplo: ejecución de campañas de email marketing para clientes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row align-items-center py-4 py-xl-5 my-2">
+      <div class="col-md-6 pb-2 mb-4 mb-md-0">
+        <img class="d-none" src="#change-this-image" alt="#change-this-alt">
+      </div>
+      <div class="col-md-6 col-xl-5 offset-xl-1">
+        <div class="ps-md-4 pe-xl-0">
+          <h2 class="h1 pb-2 pb-lg-3">Instalación del módulo</h2>
+          <p class="fs-5 pb-2 pb-lg-0 mb-4 mb-lg-5">Al seleccionar e instalar el módulo se reiniciará tu sesión para cargar todas las funcionalidades disponibles para tu panel. <strong>Esta acción activará nuevas opciones disponibles</strong> dentro del panel.</p>
+          <div class="row row-cols-2">
+            <div class="col">
+              <div class="d-table bg-secondary rounded-1 p-2 mb-3"><i class="bx bx-refresh fs-3"></i></div>
+              <h3 class="h5 mb-2">Por subscripción</h3>
+              <p class="fs-6 mb-0">Sumará la cuantía mensual al cobro mensual de tu subscripción.</p>
+            </div>
+            <div class="col">
+              <div class="d-table bg-secondary rounded-1 p-2 mb-3"><i class="bx bx-redo fs-3"></i></div>
+              <h3 class="h5 mb-2">Por limitación</h3>
+              <p class="fs-6 mb-0">Sumará la cuantía final (variable) al cobro mensual de tu subscripción.</p>
+            </div>
+          </div>
+          <figcaption class="mt-4 fs-xs text-muted"><sup class="me-1">IMPORTANTE</sup> Si el pago de la subscripción ha sido abonado anualmente, entonces el pago mensual corresponderá al coste extra (módulos instalados)</figcaption>
+        </div>
+      </div>
+    </div>
+  
+    <div id="settingsModule" class="py-3"></div>
+  
+    <div class="row align-items-center py-4 py-xl-5 my-2">
+      <div class="col-md-6 offset-xl-1 order-md-2 pb-2 mb-4 mb-md-0">
+        <img class="d-none" src="#change-this-image" alt="#change-this-alt">
+      </div>
+      <div class="col-md-6 col-xl-5 order-md-1">
+        <div class="pe-md-4 pe-xl-0">
+          <h2 class="h1 pb-2 pb-lg-3">Configuración del módulo</h2>
+          <p class="fs-5 pb-2 pb-lg-0 mb-4 mb-lg-5">Algunos módulos activan funcionalidades que <strong>requieren ser configuradas previamente</strong> para adaptarse al negocio y ofrecer un rendimiento óptimo. Éstas configuraciones pueden ser gestionadas desde la página de módulos activados, en la pestaña correspondiente al módulo</p>
+          <div class="row row-cols-2">
+            <div class="col">
+              <div class="d-table bg-secondary rounded-1 p-2 mb-3"><i class="bx bx-cross fs-3"></i></div>
+              <h3 class="h5 mb-2">Configuración restringida</h3>
+              <p class="fs-6 mb-0">El módulo no tiene configuración o ésta requiere ser <strong>implantada desde soporte</strong></p>
+            </div>
+            <div class="col">
+              <div class="d-table bg-secondary rounded-1 p-2 mb-3"><i class="bx bx-check fs-3"></i></div>
+              <h3 class="h5 mb-2">Configuración abierta</h3>
+              <p class="fs-6 mb-0">El módulo puede ser <strong>configurado directamente desde la plataforma</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row align-items-center py-4 py-xl-5 my-2">
+      <div class="col-md-6 pb-2 mb-4 mb-md-0">
+        <img class="d-none" src="#change-this-image" alt="#change-this-alt">
+      </div>
+      <div class="col-md-6 col-xl-5 offset-xl-1">
+        <div class="ps-md-4 pe-xl-0">
+          <h2 class="h1 pb-2 pb-lg-3">Prueba de funcionamiento</h2>
+          <p class="fs-5 pb-2 pb-lg-0 mb-4 mb-lg-5">De manera interna conforme a las configuraciones establecidas, el módulo pasa una serie de tests para <strong>comprobar que todo funcionará</strong> a la perfección.</p>
+          <div class="row row-cols-2">
+            <div class="col">
+              <div class="d-table bg-secondary rounded-1 p-2 mb-3"><i class="bx bxs-copy fs-3"></i></div>
+              <h3 class="h5 mb-2">Tests automatizados</h3>
+              <p class="fs-6 mb-0">Pruebas <strong>ejecutadas automáticamente</strong> por la IA de la plataforma</p>
+            </div>
+            <div class="col">
+              <div class="d-table bg-secondary rounded-1 p-2 mb-3"><i class="bx bxs-dashboard fs-3"></i></div>
+              <h3 class="h5 mb-2">Test manual</h3>
+              <p class="fs-6 mb-0">Pruebas <strong>ejecutadas por el equipo de soporte</strong> técnico en colaboración con el cliente</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="activateModule" class="py-3"></div>
+  
+    <div class="row align-items-center py-4 py-xl-5 my-2">
+      <div class="col-md-6 offset-xl-1 order-md-2 pb-2 mb-4 mb-md-0">
+        <img class="d-none" src="#change-this-image" alt="#change-this-alt">
+      </div>
+      <div class="col-md-6 col-xl-5 order-md-1">
+        <div class="pe-md-4 pe-xl-0">
+          <h2 class="h1 pb-2 pb-lg-3">Activación del módulo</h2>
+          <p class="fs-5 pb-2 pb-lg-0 mb-4 mb-lg-5">El módulo ha sido instalado y configurado correctamente. <strong>Las funcionalidades aparecerán activadas y visible para su inmediata utilización</strong> en el apartado correspondiente que las instrucciones del módulo indique.</p>
+          <div class="row row-cols-2">
+            <div class="col">
+              <div class="d-table bg-secondary rounded-1 p-2 mb-3"><i class="bx bx-crosshair fs-3"></i></div>
+              <h3 class="h5 mb-2">Activación por comprobación</h3>
+              <p class="fs-6 mb-0"><strong>Requiere pasar los tests</strong> debido a que el módulo está asociado a una serie de configuraciones</p>
+            </div>
+            <div class="col">
+              <div class="d-table bg-secondary rounded-1 p-2 mb-3"><i class="bx bx-check-circle fs-3"></i></div>
+              <h3 class="h5 mb-2">Activación directa</h3>
+              <p class="fs-6 mb-0"><strong>El módulo no requiere configuración añadida</strong>, por lo que es activado tras su instalación</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  {#
+  <section class="container-fluid mt-5">
+      <div class="position-relative pt-lg-3 pt-xl-4 pt-xxl-5">
+        <div class="bg-primary position-absolute top-0 start-0 w-100 h-100 rounded-5 d-md-none" data-aos="zoom-in" data-aos-duration="700" data-aos-offset="300"></div>
+        <div class="bg-primary position-absolute top-0 start-0 w-100 h-100 d-none d-md-block" style="border-radius: 5rem 5rem 0 0;" data-aos="zoom-in" data-aos-duration="700" data-aos-offset="300"></div>
+        <div class="container dark-mode px-4 px-sm-5 px-md-0 position-relative zindex-2 pt-md-4 pt-lg-5 pb-sm-2 pb-md-3 pb-xl-4 pb-xxl-5">
+          <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="500" data-aos-offset="300">
+            <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-7 text-center py-5">
+              <h2 class="display-1 mb-4">¿Eres desarrollador de aplicaciones?</h2>
+              <p class="fs-xl pb-3 mb-3 mb-lg-4">Únete a nuestro programa para desarrolladores y comienza a ganar dinero por el uso de tus módulos desarrollados. Tú eliges tu modelo de ingresos</p>
+              <div class="d-sm-flex justify-content-center">
+                  <a class="btn btn-lg btn-success rounded-pill w-100 w-sm-auto me-sm-4 mb-3 mb-sm-0" href="{{url_for('public.program_scdevelopers')}}">Quiero saber más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  #}
+  
+  <section id="call-to-action" class="position-relative bg-light-primary py-5 mb-0 pb-0">
+    <span class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255, 255, 255, .05)"></span>
+    <div class="container position-relative zindex-5 text-center my-xl-3 py-1 py-md-4 py-lg-5">
+        <p class="lead text-light opacity-70 mb-3"></p>
+        <h2 class="h3 pb-3 pb-lg-0 mb-lg-5">¡Pruébalo si quieres conocer más detalles sobre esta sección!</h2>
+        <a href="{{url_for('public_{}.hospitality_demo'.format(session.lang_code))}}" class="btn btn-softcamp shadow-softcamp btn-lg me-md-3 mb-3 mb-md-0">Solicitar una demo</a>
+        <a href="{{url_for('public_{}.request_services'.format(session.lang_code))}}" class="btn btn-secondary shadow-secondary btn-lg">Contactar con ventas</a>
+    </div>
+  </section>
+</main>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

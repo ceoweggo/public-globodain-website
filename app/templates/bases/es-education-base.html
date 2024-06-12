@@ -66,7 +66,7 @@
     <link rel="stylesheet" media="screen" href="{{url_for('static',filename='vendor/boxicons/css/boxicons.min.css')}}"/>
     <link rel="stylesheet" media="screen" href="{{url_for('static',filename='vendor/swiper/swiper-bundle.min.css')}}"/>
 
-    <link rel='stylesheet' href="{{url_for('static',filename='css/theme.css')}}" type='text/css' />
+    <link rel='stylesheet' href="{{url_for('static',filename='css/theme.min.css')}}" type='text/css' />
 
     {% block page_css %}
     {% endblock %}
@@ -225,7 +225,20 @@
                     </div>
                     <div class="offcanvas-body">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  
+
+                      <li class="nav-item">
+                        <a href='{{url_for("public_{}.education_students".format(session["lang"].replace("-","_")))}}' class="nav-link {{'active' if page == 'students'}}">Estudiantes</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a href='{{url_for("public_{}.education_schools".format(session["lang"].replace("-","_")))}}' class="nav-link {{'active' if page == 'schools'}}">Escuelas</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a href='{{url_for("public_{}.education_programs".format(session["lang"].replace("-","_")))}}' class="nav-link {{'active' if page == 'programs'}}">Programas</a>
+                      </li>
+
+                      {#
                       <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Programas</a>
                         <div class="dropdown-menu">
@@ -258,6 +271,7 @@
                           </div>
                         </div>
                       </li>
+                      #}
                     </ul>
                     </div>
                     <div class="offcanvas-header border-top">

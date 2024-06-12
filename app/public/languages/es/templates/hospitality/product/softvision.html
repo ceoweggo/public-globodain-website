@@ -1,0 +1,140 @@
+{% extends 'bases/es-hospitality-base.html' %}
+
+{# <!-- SEO SECTION--> #}
+
+{% set title = lang_data.page.page_title %}
+{% set metadescription = lang_data.page.page_metadescription %}
+{% set keywords = lang_data.page.page_keywords %}
+
+
+{% block css %}
+<style>
+    section {
+      margin-bottom: 10rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<main class="page-wrapper bg-white">
+  <section id="hero" class="mt-5 mt-md-0" style="margin-bottom: 15rem;">
+    <div class="container pt-xxl-5 mt-md-0">
+      <div class="row">
+        <div class="col-12 col-md-6 col-xxl-5">
+          <div class="text-md-start text-center mt-md-5">
+            <h1 class="display-5 mb-lg-4 mb-3">Plataforma cloud para gestionar una <span class='text-softcamp'>seguridad integral</span></h1>
+            <p class="mb-4 mx-md-0 mx-auto pb-xl-3 pb-lg-2 fs-5" style="max-width: 30.5rem;">Conecta todos tus <strong>sistemas de seguridad</strong> y ofrece al servicio de seguridad una gestión eficiente de control sobre el recinto</p>
+            <button class="btn btn-softcamp">Descargar eBook <i class="ms-3 bx bx-cloud-download fs-5"></i></button>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xxl-7 d-flex d-none d-md-block mt-5 pt-5">
+            <img src="https://cdn-static.globodain.com/ms/softvision-hero" class="ps-5 ms-5" width="85%" alt="Globodain MS Hero image">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="videocameras" class="container pb-sm-1 pb-md-3">
+    <!-- Row 1 -->
+    <div class="row align-items-lg-center pb-5 mb-2 mb-lg-4 mb-xl-5">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="https://cdn-static.globodain.com/ms/softvision-video-{{session.lang_code}}" class="rounded-3" alt="Globodain MS image">
+      </div>
+      <div class="col-md-6">
+        <div class="ps-xl-5 ms-md-2 ms-lg-4">
+          <h2 class="h1 mb-3 mb-sm-4">Videovigilancia</h2>
+          <p class="mb-3 mb-sm-4">El innovador sistema de videovigilancia basado en suscripción (VSaaS) permite <strong>disponer de todo un sistema de seguridad sin asumir los altos costes iniciales</strong>, con soporte y mantenimiento de todos los dispositivos y programas incluidos en el plan de pago.</p>
+          <ul class="list-unstyled mb-0">
+            <li class="d-flex mb-2">
+              <i class="bx bx-check text-softcamp lead me-2"></i>
+              Grabación en local o en la nube
+            </li>
+            <li class="d-flex mb-2">
+              <i class="bx bx-check text-softcamp lead me-2"></i>
+              VMS en la nube
+            </li>
+            <li class="d-flex">
+              <i class="bx bx-check text-softcamp lead me-2"></i>
+              Formación y soporte
+            </li>
+          </ul>         
+          <a href="{{url_for('public_{}.hospitality_videosurveillance'.format(session.lang_code))}}" class="mt-4 btn btn-lg btn-outline-softcamp shadow-secondary">Saber más</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="entry-barrier" class="container pb-sm-1 pb-md-3">
+    <!-- Row 2 -->
+      <div class="row align-items-lg-center pt-md-3 pb-5 mb-2 mb-lg-4 mb-xl-5">
+        <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+          <img src="https://cdn-static.globodain.com/ms/softvision-entry-barrier" class="rounded-3" alt="Globodain MS image">
+        </div>
+        <div class="col-md-6 order-md-1">
+          <div class="pe-xl-5 me-md-2 me-lg-4">
+            <h2 class="h1 mb-3 mb-sm-4">Barrera para vehículos</h2>
+            <p class="mb-3 mb-sm-4"><strong>Controla el acceso de vehículos al recinto</strong> según la política de acceso establecida por tu negocio de forma automática o manual desde el panel de control de SoftVision </p>
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex mb-2">
+                <i class="bx bx-check text-softcamp lead me-2"></i>
+                Cámara de seguimiento
+              </li>
+              <li class="d-flex mb-2">
+                <i class="bx bx-check text-softcamp lead me-2"></i>
+                Identificador de matrículas
+              </li>
+              <li class="d-flex">
+                <i class="bx bx-check text-softcamp lead me-2"></i>
+                Hoja de registros
+              </li>
+            </ul>
+            <a href="{{url_for('public_{}.hospitality_access_restrinction'.format(session.lang_code))}}" class="mt-4 btn btn-lg btn-outline-softcamp shadow-secondary">Saber más</a>
+          </div>
+        </div>
+      </div>
+  </section>
+  
+  <section id="safety-lathe" class="container pb-sm-1 pb-md-3">
+    <!-- Row 1 -->
+    <div class="row align-items-lg-center pb-5 mb-2 mb-lg-4 mb-xl-5">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="https://cdn-static.globodain.com/ms/softvision-safety-lathe" class="rounded-3" alt="Globodain MS image">
+      </div>
+      <div class="col-md-6">
+        <div class="ps-xl-5 ms-md-2 ms-lg-4">
+          <h2 class="h1 mb-3 mb-sm-4">Acceso de clientes y personal autorizado</h2>
+          <p class="mb-3 mb-sm-4"><strong>Controla el acceso de clientes a las diferentes zonas de tu negocio</strong> en función de los criterios establecidos, cómo tipo de cliente, o restringe la zona a personal autorizado.</p>
+          <ul class="list-unstyled mb-0">
+            <li class="d-flex mb-2">
+              <i class="bx bx-check text-softcamp lead me-2"></i>
+              Control por códigos de apertura, tarjeta o huella
+            </li>
+            <li class="d-flex mb-2">
+              <i class="bx bx-check text-softcamp lead me-2"></i>
+              Acceso asociado al perfil de la plataforma
+            </li>
+            <li class="d-flex">
+              <i class="bx bx-check text-softcamp lead me-2"></i>
+              Hoja de registros
+            </li>
+          </ul>         
+          <a href="{{url_for('public_{}.hospitality_access_restrinction'.format(session.lang_code))}}" class="mt-4 btn btn-lg btn-outline-softcamp shadow-secondary">Saber más</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="call-to-action" class="position-relative bg-light-primary py-5 mb-0 pb-0">
+    <span class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255, 255, 255, .05)"></span>
+    <div class="container position-relative zindex-5 text-center my-xl-3 py-1 py-md-4 py-lg-5">
+      <p class="lead text-light opacity-70 mb-3"></p>
+      <h2 class="h1 pb-3 pb-lg-0 mb-lg-5">{{lang_data.page.call_action.title}}</h2>
+      <a href="{{url_for('public_{}.hospitality_demo'.format(session.lang[0:2]))}}" class="btn btn-softcamp shadow-softcamp btn-lg me-md-3 mb-3 mb-md-0">{{lang_data.page.call_action.button1}}</a>
+      <a href="{{url_for('public_{}.request_services'.format(session.lang[0:2]))}}" class="btn btn-light shadow-secondary btn-lg">{{lang_data.page.call_action.button2}}</a>
+    </div>
+  </section>
+</main>
+{% endblock %}
+
+{% block copyright %}
+{% endblock %}

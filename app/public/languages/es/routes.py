@@ -34,7 +34,13 @@ def find_data(function):
 
         if i['page'] == 'data_lang_common':
             data['common'] = i
-
+        
+        if i['page'] == 'data_lang_common_hospitality':
+            data['hospitality'] = i
+        
+        if i['page'] == 'data_lang_common_experiences':
+            data['experiences'] = i
+        
     return data
 
 # Breadcrumbs load
@@ -179,13 +185,13 @@ class sections:
     """
 
     # ! - SERVICES - ! #
-
+    """
     @public_language.route("/services")
     @register_breadcrumb(public_language, '.es_services', 'Servicios')
     def services():
         return render_template("sections/services/es-services.html",
                                lang_data=find_data('services'))
-    
+    """
     # ! - EDUCATION - ! #
 
     # EDUCATION - STUDENTS
@@ -193,9 +199,10 @@ class sections:
     @public_language.route("/education/for-students", methods=["GET", "POST"])
     @register_breadcrumb(public_language, '.es_education.es_students', 'Para estudiantes')
     def education_students():
-        function_to_list_images = None
-        gallery = random.sample(function_to_list_images, 10)
-
+        gallery = ["https://cdn-static.globodain.com/education/erasmus/students/img_1","https://cdn-static.globodain.com/education/erasmus/students/img_2","https://cdn-static.globodain.com/education/erasmus/students/img_3","https://cdn-static.globodain.com/education/erasmus/students/img_4","https://cdn-static.globodain.com/education/erasmus/students/img_5",
+                   "https://cdn-static.globodain.com/education/erasmus/students/img_6","https://cdn-static.globodain.com/education/erasmus/students/img_7","https://cdn-static.globodain.com/education/erasmus/students/img_8","https://cdn-static.globodain.com/education/erasmus/students/img_9","https://cdn-static.globodain.com/education/erasmus/students/img_10",
+                   "https://cdn-static.globodain.com/education/erasmus/students/img_11"]
+        
         if request.method == 'POST':
             form = request.form.get
             
@@ -226,16 +233,19 @@ class sections:
 
         return render_template("sections/education/es-students.html",
                                 lang_data=find_data('for-students'),
+                                page='students',
                                 gallery=gallery)
 
     # Courses for teachers
     
+    """
     @public_language.route("/education/for-teachers", methods=["GET", "POST"])
     @register_breadcrumb(public_language, '.es_education.es_teachers', 'Para profesores')
     def education_teachers():
         return render_template("sections/education/es-teachers.html",
                                 lang_data=find_data('for-students'))
-
+    """
+    
     # EDUCATION - SCHOOLS
 
     @public_language.route("/education/for-schools", methods=["GET", "POST"])
@@ -270,7 +280,8 @@ class sections:
                     flash('Ya has enviado una petición. Mantente a la espera', 'danger')
 
         return render_template("sections/education/es-schools.html",
-                               lang_data=find_data('for-schools'))
+                               lang_data=find_data('for-schools'),
+                               page='schools')
 
     # EDUCATION - PROGRAMS
 
@@ -278,19 +289,17 @@ class sections:
     @register_breadcrumb(public_language, '.es_education.es_programs', 'Programas educativos')
     def education_programs():
         return render_template("sections/education/es-programs.html",
-                               lang_data=find_data('education_programs'))
+                               lang_data=find_data('education_programs'),
+                               page='programs')
     
     ## EDUCATION - PROGRAMS - MOBILITY 
 
     @public_language.route("/education/programs/mobility")
     @register_breadcrumb(public_language, '.es_education.es_programs.es_mobility', 'Movilidad internacional')
     def education_programs_mobility():
-        function_to_list_images = None
-        images = random.sample(function_to_list_images, 2)
         return render_template("sections/education/programs/es-mobility.html",
                                lang_data=find_data('education_programs_mobility'),
-                               images=images,
-        title="Erasmus+ Mobility Program")
+                                title="Erasmus+ Mobility Program")
     
     @public_language.route("/education/programs/mobility/erasmus")
     @register_breadcrumb(public_language, '.es_education.es_programs.es_mobility.es_erasmus', 'Erasmus+')
@@ -370,7 +379,7 @@ class sections:
     """
 
      ## EDUCATION - PROGRAMS - General education 
-
+    """
     @public_language.route("/education/programs/general")
     @register_breadcrumb(public_language, '.es_education.es_programs.es_general', 'General education')
     def education_programs_general():
@@ -384,6 +393,8 @@ class sections:
         return render_template("sections/education/programs/mobility/es-erasmus.html",
                                lang_data=find_data('education_programs_mobility_erasmus'),
         title="Erasmus+ Mobility Program")
+    
+    """
 
     # EDUCATION - PARTNERSHIP
 
@@ -450,16 +461,271 @@ class Experiences:
                                lang_data=find_data('experiences'))
 
 
+class Hospitality:
+
+    # ! -- FALTA TRADUCIR  -- ! #
+
+    @public_language.route("/camping-software")
+    @register_breadcrumb(public_language, '.es_hospitality', 'Hospitality')
+    def hospitality():
+        return render_template("hospitality/es-index.html",
+                               lang_data=find_data('hospitality'))
+
+    @public_language.route("/camping-software/demo")
+    @register_breadcrumb(public_language, '.es_hospitality_demo', 'Demo')
+    def hospitality_demo():
+        return render_template("hospitality/demo.html",
+                               lang_data=find_data('hospitality_demo'))
+
+    @public_language.route("/camping-software/prices")
+    @register_breadcrumb(public_language, '.es_hospitality_prices', 'Precios')
+    def hospitality_prices():
+        return render_template("hospitality/prices.html",
+                               lang_data=find_data('hospitality_prices'))
+        
+    class Product:
+        
+        @public_language.route('/camping-software/one-experience', methods=['GET'])
+        def hospitality_one_experience():
+            return render_template('hospitality/product/one-experience.html',
+                    lang_data=find_data('hospitality_one_experience'))
+
+        @public_language.route('/camping-software/one-way', methods=['GET'])
+        def hospitality_one_way():
+            return render_template('hospitality/product/one-way.html',
+                    lang_data=find_data('hospitality_oneway'))
+
+        @public_language.route('/camping-software/softvision', methods=['GET'])
+        def hospitality_softvision():
+            return render_template('hospitality/product/softvision.html',
+                    lang_data=find_data('hospitality_softvision'))
+
+        """
+        @public_language.route('/camping-software/softbox', methods=['GET'])
+        def hospitality_softbox():
+            return render_template('hospitality/product/softbox.html',
+                    lang_data=find_data('hospitality_how_works'))
+        """
+        
+        @public_language.route('/camping-software/campsys', methods=['GET'])
+        def hospitality_campsys():
+            return render_template('hospitality/product/campsys.html',
+                    lang_data=find_data('hospitality_campsys'))
+        
+        @public_language.route('/camping-software/bisys', methods=['GET'])
+        def hospitality_bisys():
+            return render_template('hospitality/product/bisys.html',
+                    lang_data=find_data('hospitality_bisys'))
+
+    class Solutions:
+
+        class Operative:
+
+            @public_language.route('/camping-software/front-office', methods=['GET'])
+            def hospitality_front_office():
+                return render_template('hospitality/solutions/operative/front-office.html',
+                    lang_data=find_data('how_works'))
+
+            @public_language.route('/camping-software/check-ins-and-check-outs', methods=['GET'])
+            def hospitality_check_ins_and_check_outs():
+                return render_template('hospitality/solutions/operative/check-ins-and-check-outs.html',
+                    lang_data=find_data('how_works'))
+
+            @public_language.route('/camping-software/housekeeping', methods=['GET'])
+            def hospitality_housekeeping():
+                return render_template('hospitality/solutions/operative/housekeeping.html',
+                    lang_data=find_data('how_works'))
+            
+            @public_language.route('/camping-software/nights-audit', methods=['GET'])
+            def hospitality_nights_audit():
+                return render_template('hospitality/solutions/operative/nights-audit.html',
+                    lang_data=find_data('how_works'))
+
+            @public_language.route('/camping-software/pricing-automatization', methods=['GET'])
+            def hospitality_pricing_automatization():
+                return render_template('hospitality/solutions/operative/pricing-automatization.html',
+                    lang_data=find_data('how_works'))
+            
+            @public_language.route('/camping-software/digital-tpv', methods=['GET'])
+            def hospitality_digital_tpv():
+                return render_template('hospitality/solutions/operative/digital-tpv.html',
+                    lang_data=find_data('how_works'))
+            
+            @public_language.route('/camping-software/promotions', methods=['GET'])
+            def hospitality_promotions():
+                return render_template('hospitality/solutions/operative/promotions.html',
+                    lang_data=find_data('how_works'))
+        
+        class Software:
+
+            @public_language.route('/camping-software/back-office-reports', methods=['GET'])
+            def hospitality_back_office_reports():
+                return render_template('hospitality/solutions/software/back-office-reports.html',
+                    lang_data=find_data('how_works'))
+            
+            @public_language.route('/camping-software/users-management', methods=['GET'])
+            def hospitality_users_management():
+                return render_template('hospitality/solutions/software/users-management.html',
+                    lang_data=find_data('how_works'))
+            
+            @public_language.route('/camping-software/roles-management', methods=['GET'])
+            def hospitality_roles_management():
+                return render_template('hospitality/solutions/software/roles-management.html',
+                    lang_data=find_data('how_works'))
+                        
+            @public_language.route('/camping-software/offline', methods=['GET'])
+            def hospitality_offline():
+                return render_template('hospitality/solutions/software/offline.html',
+                    lang_data=find_data('how_works'))
+                        
+            @public_language.route('/camping-software/modules', methods=['GET'])
+            def hospitality_modules():
+                return render_template('hospitality/solutions/software/modules.html',
+                    lang_data=find_data('how_works'))
+                        
+            @public_language.route('/camping-software/integrations', methods=['GET'])
+            def hospitality_integrations():
+                return render_template('hospitality/solutions/software/integrations.html',
+                    lang_data=find_data('how_works'))
+            
+            @public_language.route('/camping-software/users-logs', methods=['GET'])
+            def hospitality_users_logs():
+                return render_template('hospitality/solutions/software/users-logs.html',
+                    lang_data=find_data('how_works'))
+
+        class Revenue:
+
+            @public_language.route('/camping-software/training-courses', methods=['GET'])
+            def hospitality_training_courses():
+                return render_template('hospitality/solutions/revenue/training-courses.html',
+                    lang_data=find_data('how_works'))
+            
+            @public_language.route('/camping-software/price-analysis', methods=['GET'])
+            def hospitality_price_analysis():
+                return render_template('hospitality/solutions/revenue/price-analysis.html',
+                    lang_data=find_data('how_works'))
+            
+            @public_language.route('/camping-software/demand-forecast', methods=['GET'])
+            def hospitality_demand_forecast():
+                return render_template('hospitality/solutions/revenue/demand-forecast.html',
+                    lang_data=find_data('how_works'))
+            
+            @public_language.route('/camping-software/strategy-designer', methods=['GET'])
+            def hospitality_strategy_designer():
+                return render_template('hospitality/solutions/revenue/strategy-designer.html',
+                    lang_data=find_data('how_works'))
+            
+            @public_language.route('/camping-software/segmentation', methods=['GET'])
+            def hospitality_segmentation():
+                return render_template('hospitality/solutions/revenue/segmentation.html',
+                    lang_data=find_data('how_works'))
+            
+            @public_language.route('/camping-software/dynamic-pricing', methods=['GET'])
+            def hospitality_dynamic_pricing():
+                return render_template('hospitality/solutions/revenue/dynamic-pricing.html',
+                    lang_data=find_data('how_works'))
+
+            @public_language.route('/camping-software/yield-management', methods=['GET'])
+            def hospitality_yield_management():
+                return render_template('hospitality/solutions/revenue/yield-management.html',
+                    lang_data=find_data('how_works'))
+            
+            @public_language.route('/camping-software/up-selling-cross-selling', methods=['GET'])
+            def hospitality_up_selling_cross_selling():
+                return render_template('hospitality/solutions/revenue/up-selling-cross-selling.html',
+                    lang_data=find_data('how_works'))
+            
+        class Online:
+
+            @public_language.route('/camping-software/channel-manager', methods=['GET'])
+            def hospitality_channel_manager():
+                return render_template('hospitality/solutions/online/channel-manager.html',
+                    lang_data=find_data('how_works')) 
+            
+            @public_language.route('/camping-software/bookings-motor', methods=['GET'])
+            def hospitality_bookings_motor():
+                return render_template('hospitality/solutions/online/bookings-motor.html',
+                    lang_data=find_data('how_works')) 
+            
+            @public_language.route('/camping-software/website-creator', methods=['GET'])
+            def hospitality_website_creator():
+                return render_template('hospitality/solutions/online/website-creator.html',
+                    lang_data=find_data('how_works')) 
+            
+            @public_language.route('/camping-software/reviews', methods=['GET'])
+            def hospitality_reviews():
+                return render_template('hospitality/solutions/online/reviews.html',
+                    lang_data=find_data('how_works')) 
+            
+        class Experiences:
+
+            @public_language.route('/camping-software/experiences-creator', methods=['GET'])
+            def hospitality_experiences_creator():
+                return render_template('hospitality/solutions/experiences/creator.html',
+                    lang_data=find_data('how_works')) 
+            
+            @public_language.route('/camping-software/customer-panel', methods=['GET'])
+            def hospitality_customer_panel():
+                return render_template('hospitality/solutions/experiences/customer-panel.html',
+                    lang_data=find_data('how_works')) 
+        
+        class Multigestion:
+
+            @public_language.route('/camping-software/multiproperty-management', methods=['GET'])
+            def hospitality_multiproperty():
+                return render_template('hospitality/solutions/multigestion/multiproperty.html',
+                    lang_data=find_data('how_works')) 
+
+            @public_language.route('/camping-software/independent-accounting', methods=['GET'])
+            def hospitality_independent_accounting():
+                return render_template('hospitality/solutions/multigestion/independent-accounting.html',
+                    lang_data=find_data('how_works')) 
+        
+        class Security:
+
+            @public_language.route('/camping-software/token-authentication', methods=['GET'])
+            def hospitality_token_authentication():
+                return render_template('hospitality/solutions/security/token-authentication.html',
+                    lang_data=find_data('how_works')) 
+            
+            @public_language.route('/camping-software/doble-authentication', methods=['GET'])
+            def hospitality_doble_authentication():
+                return render_template('hospitality/solutions/security/doble-authentication.html',
+                    lang_data=find_data('how_works')) 
+
+            @public_language.route('/camping-software/access-restrinction', methods=['GET'])
+            def hospitality_access_restrinction():
+                return render_template('hospitality/solutions/security/access-restrinction.html',
+                    lang_data=find_data('how_works')) 
+            
+            @public_language.route('/camping-software/videosurveillance', methods=['GET'])
+            def hospitality_videosurveillance():
+                return render_template('hospitality/solutions/security/videosurveillance.html',
+                    lang_data=find_data('how_works')) 
+        class Services:
+
+            @public_language.route('/whatsapp-support', methods=['GET'])
+            def hospitality_whatsapp_support():
+                return render_template('hospitality/solutions/services/whatsapp-support.html',
+                    lang_data=find_data('how_works')) 
+
+            @public_language.route('/mailing', methods=['GET'])
+            def hospitality_mailing():
+                return render_template('hospitality/solutions/services/mailing.html',
+                    lang_data=find_data('how_works')) 
+
+"""
 class Skynova:
 
     # ! -- FALTA TRADUCIR  -- ! #
 
-    @public_language.route("/skynova")
+    @public_language.route("/ds")
     @register_breadcrumb(public_language, '.es_skynova', 'Skynova')
     def skynova():
         return render_template("skynova/es-index.html",
                                lang_data=find_data('skynova_index'))
 
+"""
 
 class pages:
     @public_language.route("/privacy")
@@ -576,10 +842,11 @@ class pages:
                             if area not in sitemap_structure:
                                 sitemap_structure[area] = []
                             
-                            sitemap_structure[area].append({
-                                "name": label,
-                                "route": str(rule)
-                            })
+                            if not str(rule).startswith("/es-es"):
+                                sitemap_structure[area].append({
+                                    "name": label,
+                                    "route": str(rule)
+                                })
                                 
         return render_template("sitemap.html", sitemap_structure=sitemap_structure,
                                 lang_data=find_data('index'))

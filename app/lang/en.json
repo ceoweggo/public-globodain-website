@@ -114,22 +114,6 @@
                  {
                     "code": "en",
                     "name": "English"
-                },
-                 {
-                    "code": "fr",
-                    "name": "French"
-                },
-                 {
-                    "code": "it",
-                    "name": "Italian"
-                },
-                 {
-                    "code": "de",
-                    "name": "German"
-                },
-                 {
-                    "code": "pl",
-                    "name": "Polish"
                 }
             ]
         },
@@ -138,21 +122,75 @@
             "copyright": "<p class='mb-0'>Registered trademark of <a href='https://globodain.com' class='btn-link'>Globodain</a><span class='d-none d-sm -inline-block ms-2'>|</span><br class='d-sm-none' /> 2023 © Technological Solutions</p>",
             "nav_items": [
                 {
-                    "title": "policies",
+                    "title": "Policies",
                     "url": "terms"
-                },
-                {
-                    "title": "education",
-                    "url": "education"
-                }
+                  },
+                  {
+                    "title": "Sales contact",
+                    "url": "request_services"
+                  }
             ]
         }
     },
     {
+        "page": "data_lang_common_hospitality",
+        "selected": "English",
+        "navbar": {
+          "logo_title": "Globodain MS",
+          "prices": "Prices",
+          "operative": {
+            "title": "Operational",
+            "a": {
+                "title": "More than a software",
+                "subtitle": "Connect with your customers"
+            },
+            "b": {
+                "title": "One Experience",
+                "subtitle": "User experiences",
+                "tooltip": "Create, manage, execute and automate value strategies for your customers"
+            },
+            "c": {
+                "title": "SoftVision",
+                "subtitle": "Multichannel security",
+                "tooltip": "Provides a panoramic view of access control and management by VSaaS"
+            },
+            "d": {
+                "title": "CampSys",
+                "subtitle": "Statistical analysis",
+                "tooltip": "Collects and analyzes useful information with KPIs assigned to the key variables of your business"
+            },
+            "e": {
+                "title": "OneWay",
+                "subtitle": "Multichannel reservations",
+                "tooltip": "Connects and deploys your offers on digital channels"
+            },
+            "f": {
+                "title": "BiSys",
+                "subtitle": "Billing, control and analysis",
+                "tooltip": "Unifies financial management in an intelligent panel"
+            },
+            "button": "See all systems"
+          },
+          "solutions": {
+            "title": "Solutions",
+            "Operativa": ["Operational","Front-office","Entries and exits","Housekeeping","Night audits","Price automation","Digital POS by platform","Promotions"],
+            "Software": ["Software","Back-office reports","User management","Role administration","Synchronized offline connection","Module distribution","Integration management","User logs"],
+            "Revenue_Management": ["Revenue Management","Training courses","Price analysis","Demand forecast","Strategy designer","Segmentation","Dynamic prices","Yield Management","Up-selling & Cross-selling"],
+            "Distribución_online": ["Online Distribution","Multichannel connections","Reservation engine","Website creator","Review system"],
+            "Experiencia_del_cliente": ["Customer Experience","Experience creator","Customer panel"],
+            "Para_cadenas_hoteleras": ["For hotel chains","Multi-property management", "Business accounting"], 
+            "Seguridad": ["Security","Token authentication","Double factor","Access restriction","Video surveillance"],
+            "Servicios": ["Services","Whatsapp support","Mailing"]
+          },
+          "button": "Try it for free",
+          "button2": "Log in"
+        }
+    },
+    {
         "page": "index",
-        "page_title": "Globodain: technology & education",
-        "page_metadescription": "Innovation, efficiency and quality in cutting-edge technological solutions. We transform companies and individuals in Europe with custom software development in AI, IoT and Business Intelligence.",
-        "page_keywords": "innovation, deep tech, technological solutions, software development, artificial intelligence, digital transformation in Europe, internet of things, business intelligence, software services",
+        "page_title": "Globodain: software, data and education",
+        "page_metadescription": "Use the management software of <strong>Globodain</strong> for campings, hotels and resorts. Participate in the social-educational projects of <strong>Globodain</strong> in international or national mobility, schools, universities and other institutions.",
+        "page_keywords": "software, campings, hotel, resort, development, technology, European Union, Erasmus+, deep learning, big data, data science",
         "hero": {
             "title": "<span class='text-gradient-primary'>Technological solutions</span>",
             "subtitle": "On-demand software development, technology consulting and logistical support for infrastructure deployments.",
@@ -324,20 +362,8 @@
                 "short": "ES"
             },
              {
-                "name": "France",
-                "short": "FR"
-            },
-             {
                 "name": "United Kingdom",
                 "short": "UK"
-            },
-             {
-                "name": "Italy",
-                "short": "IT"
-            },
-             {
-                "name": "Germany",
-                "short": "DE"
             }
         ]
     },
@@ -479,20 +505,8 @@
                 "short": "ES"
             },
              {
-                "name": "France",
-                "short": "FR"
-            },
-             {
                 "name": "United Kingdom",
                 "short": "UK"
-            },
-             {
-                "name": "Italy",
-                "short": "IT"
-            },
-             {
-                "name": "Germany",
-                "short": "DE"
             }
         ]
     },
@@ -608,6 +622,591 @@
             "action": "Contact sales"
         }
     },
+    {
+        
+        "page": "hospitality",
+        "page_title": "Globodain MS Hospitality",
+        "page_metadescription": "Globodain MS is a fully customizable and versatile cloud management software for campgrounds for comprehensive business management and multi-property administration.",
+        "page_keywords": "hospitality,campground software,management software,interactive map,revenue management,septeo,unixdata,mastercamping,cloudbeds,globodain",
+        "message": {
+            "text": "Discover how Globodain CX Platform integrates with hospitality to create unique experiences.",
+            "link": {
+            "text": "Click here to learn more",
+            "tooltip": ""
+            }
+        },
+        "hero": {
+            "title": "Management software for <span class='text-softcamp'>Campgrounds</span> with multiproperty",
+            "subtitle": "<span class='fw-semibold'>Fast, clean and efficient.</span> <br>Adaptable to Resorts, Glamping, Hotels, Bungalows, RV Parks, Residences, Airbnbs ..",
+            "button1": "Start now",
+            "button2": "How it works",
+            "subsections": [{
+            "title": "Connect with <span class='text-primary'>customers</span>",
+            "subtitle": "Connect with customers through the POS System that allows them to <u>manage the expenses of their reservation</u> and perform operations through a sub-application",
+            "features": ["Expense control","Service request","Connection with other services","Payment by application"]
+            }, {
+            "title": "Collaborate with the <span class='text-primary'>team</span>",
+            "subtitle": "Create <u>collaborative teams</u> and perform advanced tasks unifying the reservation and billing processes in a scalable way",
+            "features": ["Manage and assign roles","Configure permissions","Record actions","Assign tasks"]
+            }, {
+            "title": "Unify your <span class='text-primary'>channels</span>",
+            "subtitle": "Use the OneWay system to unify <u>sales channels</u> or SoftVision to connect the <u>camera system with VSaaS</u>",
+            "features": ["Create manual reservations","Integrate with Booking, Airbnb, ..","Configure channels","Visualize everything in one"]
+            }, {
+            "title": "Participate in the <span class='text-primary'>community</span>",
+            "subtitle": "Connect with other campgrounds and <u>create synergies</u> that favor collaborations",
+            "features": ["Guaranteed connectivity and updated information","Only available for registered users"]
+            }, {
+            "title": "Analyze the <span class='text-primary'>records</span>",
+            "subtitle": "CampSys or BiSyS allows to perform <u>advanced statistical and financial analysis</u> that improve decision making optimizing the business",
+            "features": ["Export reports","Historical records by year","Role assignment","KPI analysis"]
+            }, {
+            "title": "Automate your <span class='text-primary'>actions</span>",
+            "subtitle": "Install integrations or modules that allow you to automate certain actions such as the <u>sending of the police file of the customers</u>",
+            "features": ["Manage and assign roles","Configure permissions","Record actions","Assign tasks"]
+            }]
+        },
+        "sections": {
+            "first": {
+                "title": "Optimize all processes. We provide the means",
+                "subtitle": "We make it easy for you to acquire the necessary resources to <strong>meet the demand</strong> for services in an increasingly technological world.",
+                "cols": [{
+                "h3": "+5",
+                "p": "<strong>Languages</strong> available"
+                }, {
+                "h3": "+50",
+                "p": "<strong>Features</strong>"
+                }, {
+                "h3": "+100",
+                "p": "<strong>Modules</strong> and integrations"
+                }],
+                "features": [{
+                "title": "Teamwork",
+                "subtitle": "Organize and assign tasks to your company's workers based on their responsibilities.",
+                "img_src": "https://cdn-static.globodain.com/ms/landing-icon-1",
+                "img_alt": "Team work"
+                }, {
+                "title": "Management and control",
+                "subtitle": "Optimize daily operations visually through integrated tools, reducing the likelihood of making mistakes.",
+                "img_src": "https://cdn-static.globodain.com/ms/landing-icon-2",
+                "img_alt": "Management and control"
+                }, {
+                "title": "Scalability",
+                "subtitle": "Hire modules and integrations to complete the functionalities you need",
+                "img_src": "https://cdn-static.globodain.com/ms/landing-icon-3",
+                "img_alt": "Functional Scalability"
+                }, {
+                "title": "Advanced analysis",
+                "subtitle": "Collect and analyze your company's data using key performance indicators and generated reports.",
+                "img_src": "https://cdn-static.globodain.com/ms/landing-icon-4",
+                "img_alt": "Advanced analytics"
+                }]
+            },
+            "second": {
+              "title": "Unified services on a single platform",
+              "subtitle": "Offering the possibility to use everything necessary for business management from the same platform, <br> optimizing the use of resources and minimizing costs and time.",
+              "tabs": [{
+                "id": "pms",
+                "img": "https://cdn-static.globodain.com/ms/landing-pms",
+                "additional_class": "show active",
+                "title": "Reservation management",
+                "subtitle": "The <strong>PEM-1 management system</strong> allows daily management tasks of clients and reservations to be carried out interactively and collaboratively.",
+                "features": ["Reduces the likelihood of error","Distributes tasks among the team", "Optimizes the reservation process", "Interacts with the client in the operation"]
+              }, {
+                "id": "cm",
+                "img": "https://cdn-static.globodain.com/ms/landing-cm",
+                "additional_class": "",
+                "title": "Unification of digital channels",
+                "subtitle": "If you are a campground that makes <strong>advanced reservations</strong>, the OneWay system will be your most used tool. Control all reservations from the same channel.",
+                "features": ["Connectivity with Booking, Airbnb, Pitchup..","Integrated reservation engine", "Creation of customized iFrame", "PE-G tool to handle prices according to demand"]
+              }, {
+                "id": "cloud",
+                "img": "https://cdn-static.globodain.com/ms/landing-cloud",
+                "additional_class": "",
+                "title": "Availability in the cloud",
+                "subtitle": "The management of files and reservations of the camping are stored in the cloud, so it is <strong>accessible from any device</strong> with permissions.",
+                "features": ["24/7 connectivity, without installation","Accessibility according to permissions", "Image and video repository", "Real-time synchronization"]
+              }, {
+                "id": "vsaas",
+                "img": "https://cdn-static.globodain.com/ms/landing-vsaas",
+                "additional_class": "",
+                "title": "Integrated security control system",
+                "subtitle": "Connect video camera devices in one place through the cloud. <strong>You can complement this system</strong> with barrier control, license plate recognition and access management.",
+                "features": ["Real-time access control","Occupancy control", "Registration of license plates and travelers", "Unification of security channel", "Whitelist / Deniedlist "]
+              }]
+            },
+            "third": {
+              "title": "A perfect solution <span class='fw-semibold'>for all sizes</span>",
+              "subtitle": "Use everything necessary for business management from the same platform, optimizing the use of resources and minimizing costs and time spent",
+              "sections": [{
+                "title": "Small businesses",
+                "desc": "Use the necessary functionalities for a management focused on the daily operation in a basic way, minimizing the cost per use and temporality."
+              }, {
+                "title": "Medium and large",
+                "desc": "Provides versatility, control capacity and collaborative work or autonomy with task automation. Perfect for companies looking for process optimization"
+              }],
+              "button": "Request a trial now"
+            },          
+            "fourth": {
+                "title": "Work collaboratively",
+                "subtitle": "The collaborative work dynamic <strong>allows the assigned team to participate in the responsibilities</strong> defined by the supervisor.",
+                "features": [{
+                "title": "Process registration and action tracking",
+                "desc": "<strong>Apply agile methodologies</strong> with the new role-based task system. It allows to know the status of reservations, customers to be checked out or the assigned cleaning (with the Cleanapp module)."
+                }, {
+                "title": "Control of objective compliance",
+                "desc": "Assign a supervisor in charge of the correct execution of the operation."
+                }]
+            },
+            "fifth": {
+                "statistics": [{
+                "icon": "https://cdn-static.globodain.com/ms/landing-icon-3",
+                "bg": "bg-success-subtle",
+                "title": "+25",
+                "desc": "<strong>Modules and integrations</strong> available in the marketplace"
+                }, {
+                "icon": "https://cdn-static.globodain.com/ms/landing-icon-1",
+                "bg": "bg-danger-subtle",
+                "title": "Unlimited",
+                "desc": "No limits of <strong>collaborators</strong> in the business panel"
+                }, {
+                "icon": "https://cdn-static.globodain.com/ms/landing-icon-2",
+                "bg": "bg-info-subtle",
+                "title": "100+",
+                "desc": "Hundred of <strong>functionalities</strong> available"
+                }, {
+                "icon": "https://cdn-static.globodain.com/ms/landing-icon-4",
+                "bg": "bg-warning-subtle",
+                "title": "50+",
+                "desc": "Thousands of <strong>analytical variables</strong> <br> for hospitality"
+                }]
+            },
+            "sixth": {
+            },
+            "seventh": {
+                "title": "Adaptable to different types of businesses",
+                "subtitle": "Versatile, customizable and intuitive. System adaptable to the way the business operates.",
+                "sectors": [{
+                "title": "Glamping",
+                "img": "https://cdn-static.globodain.com/ms/landing-glamping",
+                "desc": "Immerse yourself in nature without giving up luxury with our glamping management software. Optimize reservations and manage unique accommodations with ease. Transform your glamping business into an unforgettable experience!",
+                "status": "active"
+                }, {
+                "title": "Resorts",
+                "img": "https://cdn-static.globodain.com/ms/landing-resort",
+                "desc": "Elevate your resort to the next level with our management software. Improve the efficiency of daily operations and enrich the guest experience. Make every stay a five-star experience!"
+                }, {
+                "title": "Hotels",
+                "img": "https://cdn-static.globodain.com/ms/landing-hotel",
+                "desc": "Boost your hotel with our comprehensive management software. From reservation to check-out, ensure a perfect stay for your guests. Make your hotel the first choice for every traveler!"
+                }, {
+                "title": "Residences",
+                "img": "https://cdn-static.globodain.com/ms/landing-residence",
+                "desc": "Manage your residence like a professional with our software. From reservation to maintenance, everything is handled with ease. Make your residence a home away from home for every tenant!"
+                }, {
+                "title": "RV Parks",
+                "img": "https://cdn-static.globodain.com/ms/landing-rvpark",
+                "desc": "Make your RV Park the preferred destination for adventurers with our management software. Facilitate space reservations and improve communication with guests. Make every visit a memorable adventure!"
+                }, {
+                "title": "Airbnbs",
+                "img": "https://cdn-static.globodain.com/ms/landing-airbnb",
+                "desc": "Transform your Airbnb into a dream accommodation with our management software. Automate tasks and improve communication with guests. Make your Airbnb the perfect choice for every trip!"
+                }, {
+                "title": "Bungalows",
+                "img": "https://cdn-static.globodain.com/ms/landing-bungalow",
+                "desc": "Optimize your bungalow business with our management software. From reservation to check-out, everything is handled with ease. Make every bungalow a cozy refuge for every guest!"
+                }]
+            }
+        }
+    },
+    {
+        "page": "hospitality_prices",
+        "page_title": "Subscription plans of Globodain MS",
+        "page_metadescription": "Select the subscription that best suits the needs of your business. Our subscription plans are designed to apply a price based on the business’s ability to generate sales and its size.",
+        "page_keywords": "campings, globodain, globodain ms, software, management, management program, octorate, camping care, unixdata, mastercamping, lodgify, sirvoy, smoobu, septeo",
+        "body": {
+            "title": "Offer a unique experience to your customers",
+            "subtitle": "Take control and management of your business to the next level with Globodain",
+            "switch": ["Monthly","Annual"],
+            "discount": "Up to -20%",
+            "subscriptions": [{
+                "promotion": "Promotion applied until 15/09/24",
+                "title": "Silver",
+                "price": "19.95 €",
+                "previous_price": "39.95 €",
+                "max_spots": "Up to 80 spots",
+                "extra_spot": "Extra spot for 2.95€/month.",
+                "button": "Request demo"
+            }, {
+                "promotion": "Promotion applied until 15/09/24",
+                "title": "Gold",
+                "msg": "Most chosen",
+                "price": "59.95 €",
+                "previous_price": "129.95 €",
+                "max_spots": "Up to 200 spots",
+                "extra_spot": "Extra spot for 2.45€/month.",
+                "yearly_extra_spot": "Extra spot for 2.08€/month.",
+                "button": "Request demo"
+            }, {
+                "promotion": "Promotion applied until 15/09/24",
+                "title": "Platinum",
+                "price": "89.95 €",
+                "previous_price": "279.95 €",
+                "max_spots": "Up to 500 spots",
+                "extra_spot": "Extra spot for 1.25€/month.",
+                "yearly_extra_spot": "Extra spot for 1€/month.",
+                "button": "Request demo"
+            }],
+            "features_1": [{
+              "title": "Platform costs",
+              "details": ["33 cts/day/reservation","23 cts/day/reservation","12 cts/day/reservation"]
+            },{
+              "title": "Payment gateway",
+              "tooltip": "Cost associated with the integrated payment system. All percentages are applied on digital sales",
+              "details": ["8 %","7.35 %","6.5 %"]
+            }],
+            "features_2": {
+              "title": "Limitations",
+              "object": [{
+                "title": "Simultaneous access",
+                "tooltip": "Number of accounts connected at the same time on the platform",
+                "details": ["1","5","10"]
+              },{
+                "title": "Services",
+                "tooltip": "Each different type of service. For example: XL Rooms and XXL Rooms (2 different services, with X spots each)",
+                "details": ["10","30","60"]
+              },{
+                "title": "Spots",
+                "tooltip": "Units reservable simultaneously. For example: number of pitches",
+                "details": ["80","200","500"]
+              },{
+                "title": "Team",
+                "tooltip": "User accounts of the business",
+                "details": ["1","5","15"]
+              },{
+                "title": "Storage",
+                "tooltip": "Amount of file storage (gigabytes)",
+                "details": ["0.5 gb","2.5 gb","50 gb"]
+              },{
+                "title": "Roles",
+                "tooltip": "Each role is associated with a user and limits the actions that they can perform in the application",
+                "details": ["5","10","20"]
+              },{
+                "title": "Modules",
+                "tooltip": "Add or expand the functionalities of the platform. They can only be hired by an administrator or someone with explicit permissions",
+                "details": ["5","20","50"]
+              },{
+                "title": "Integrations",
+                "tooltip": "External services integrated in add or expand certain functionalities to the platform",
+                "details": ["5","20","50"]
+              },{
+                "title": "Website templates",
+                "details": ["5","Unlimited","Unlimited"]
+              },{
+                "title": "Digital channels",
+                "tooltip": "Websites where offers appear as bookable. For example: Booking",
+                "details": ["3","20","50"]
+              }]
+            },
+            "features_3": {
+              "title": "Interface",
+              "object": [{
+                "title": "Multi-management",
+                "details": ["False","False","True"]
+              },{
+                "title": "Price simulator",
+                "details": ["False","False","True"]
+              },{
+                "title": "Shortcuts",
+                "details": ["False","False","True"]
+              },{
+                "title": "Access to resources",
+                "details": ["False","False","True"]
+              },{
+                "title": "Multi-columns",
+                "details": ["False","False","True"]
+              },{
+                "title": "Extensions",
+                "details": ["False","False","True"]
+              },{
+                "title": "Modifiable menus",
+                "details": ["False","False","True"]
+              },{
+                "title": "Reservation channel",
+                "tooltip": "Indicates the origin of the reservation. Very useful if you use OneWay and deploy on several channels.",
+                "details": ["False","True","True"]
+              },{
+                "title": "Planning",
+                "details": ["False","True","True"]
+              },{
+                "title": "24/7 Support",
+                "details": ["Email and calls","Email, chat and calls","All channels"]
+              }]
+            },
+            "features_4": {
+              "title": "Operations",
+              "object": [{
+                "title": "Campground occupancy",
+                "details": ["Basic","Complete","Advanced"]
+              },{
+                "title": "Price automation",
+                "details": ["False","False","True"]
+              },{
+                "title": "Multi-property management",
+                "details": ["False","False","True"]
+              },{
+                "title": "Front-office",
+                "details": ["False","True","True"]
+              },{
+                "title": "Arrivals and departures",
+                "details": ["False","True","True"]
+              },{
+                "title": "Housekeeping",
+                "details": ["False","True","True"]
+              },{
+                "title": "Interactive map",
+                "details": ["True","True","True"]
+              },{
+                "title": "Night audits",
+                "details": ["True","True","True"]
+              },{
+                "title": "Digital POS",
+                "details": ["True","True","True"]
+              },{
+                "title": "Promotion management",
+                "details": ["True","True","True"]
+              }]
+            },
+            "features_5": {
+              "title": "Software",
+              "object": [{
+                "title": "Back-office reports",
+                "details": ["False","False","True"]
+              },{
+                "title": "Separated accounting",
+                "details": ["False","False","True"]
+              },{
+                "title": "Role administration",
+                "details": ["False","False","True"]
+              },{
+                "title": "Synchronized offline connection",
+                "details": ["False","False","True"]
+              },{
+                "title": "User management",
+                "details": ["False","True","True"]
+              },{
+                "title": "Action log",
+                "details": ["False","True","True"]
+              },{
+                "title": "Module distribution",
+                "details": ["True","True","True"]
+              },{
+                "title": "Integration management",
+                "details": ["True","True","True"]
+              }]
+            },
+            "features_6": {
+              "title": "Revenue Management",
+              "object": [{
+                "title": "Training courses",
+                "details": ["False","False","On demand"]
+              },{
+                "title": "Price analysis",
+                "details": ["False","False","True"]
+              },{
+                "title": "Demand forecast",
+                "details": ["False","False","True"]
+              },{
+                "title": "Strategy designer",
+                "details": ["False","False","True"]
+              },{
+                "title": "Segmentation",
+                "details": ["False","False","True"]
+              },{
+                "title": "Dynamic prices",
+                "details": ["False","False","True"]
+              },{
+                "title": "Yield management",
+                "details": ["False","False","True"]
+              },{
+                "title": "Up-selling & cross-selling",
+                "details": ["False","False","True"]
+              }]
+            },
+            "features_7": {
+              "title": "Online Distribution",
+              "object": [{
+                "title": "Website creator",
+                "details": ["False","True","True"]
+              },{
+                "title": "Review system",
+                "details": ["False","True","True"]
+              },{
+                "title": "iFrame",
+                "details": ["False","True","True"]
+              },{
+                "title": "Reservation engine",
+                "details": ["True","True","True"]
+              },{
+                "title": "Multichannel connections",
+                "details": ["True","True","True"]
+              }]
+            },
+                    
+            "features_8": {
+                "title": "Customer Experience",
+                "object": [{
+                "title": "Experience Creator",
+                "details": ["False","False","True"]
+                },{
+                "title": "Customer Panel",
+                "details": ["False","False","True"]
+                }]
+            },
+            "features_9": {
+                "title": "Security and Accessibility",
+                "object": [{
+                "title": "Access Restriction",
+                "details": ["False","False","True"]
+                },{
+                "title": "Double Factor",
+                "details": ["False","True","True"]
+                },{
+                "title": "Token Authentication",
+                "details": ["True","True","True"]
+                }]
+            },
+            "features_10": {
+                "title": "Services",
+                "object": [{
+                "title": "Support via Whatsapp",
+                "details": ["False","False","True"]
+                },{
+                "title": "Mailing",
+                "details": ["False","True","True"]
+                }]
+            },
+            "faq": {
+                "title": "Some of the most frequently asked questions",
+                "subtitle": "If this does not answer your questions, you can always use the chat in the lower left corner of the window",
+                "questions": [{
+                "title": "What is Globodain MS?",
+                "text": "Globodain MS is a multiproperty management software, for campgrounds and the hospitality sector in general, based in the cloud that allows the business to adapt the platform to its own operation, either through the available modules and integrations, or through the development of its own code.<br><br>Another strong point to consider in Globodain MS is the connectivity of the business with its customers as they can create, connect, execute and automate strategies with guests, allowing to create a unique experience for their customers and obtain greater user satisfaction."
+                }, {
+                "title": "How does Globodain MS work?",
+                "text": "Globodain MS divides accounts by business. A business can have multiple users and they can connect to their associated accounts. Every business has to have a minimum of 1 user (superadministrator) who will be in charge of managing their account and that of the business.<br><br>There are functionalities for the management of user roles, being able to transfer the superadministrator permission (or another created) to another user. Keep in mind that the limitation of roles depends on the <u>subscription plan</u> selected."
+                }, {
+                "title": "What advantages does it have over other management software?",
+                "text": "Our customers choose us because Globodain MS allows to optimize customer service and teamwork meeting a minimum in back-office management. With Globodain MS, you can improve the processes that the customer goes through to <span class='fw-semibold'>create a totally unique experience and differentiated from the competition</span>, because what it offers here is the imagination of the business. We have an Experience Creator connected with Globodain CX that will help you create your own journey so that your customers have a 100% satisfaction.<br><br>Create a journey that takes them beyond the expected and immerses them in something extraordinary."
+                }, {
+                "title": "Do I have to pay to try the service?",
+                "text": "<span class='fw-semibold'>No</span>. You can request a demo by clicking on the corresponding button in the navigation menu.<br><br>If you finally decide to implement it, then register and configure your panel or request support from our support team."
+                }, {
+                "title": "What will my billing cycle be?",
+                "text": "The billing cycle will depend on the selected payment options, currently two being available: monthly and annual."
+                }]
+            } 
+        }
+    },
+    {
+        "page": "hospitality_demo",
+        "page_title": "Solicita tu demo",
+        "page_metadescription": "¡Pruéba Globodain MS sin compromiso! Nuestro equipo te atenderá y personalizará una demo para que puedas conocer de primera mano cómo funciona",
+        "page_keywords": "campings,globodain,software,management,programa de gestión,octorate,camping care,unixdata,mastercamping,lodgify,sirvoy,smoobu,septeo",
+        "body": {
+          "title": "Solicitar acceso a la demo",
+          "subtitle": "Rellena el formulario y un miembro del equipo te contactará",
+          "form": {
+            "email": "Email",
+            "name": "Nombre completo",
+            "business": "Empresa",
+            "cif": {
+              "text": "CIF",
+              "example": "B06854736"
+            },
+            "job_title": {
+              "text": "Cargo",
+              "example": "Director comercial"
+            },
+            "phone": {
+              "text": "Teléfono",
+              "example": "+34612345678"
+            },
+            "submit_button": "Enviar formulario"
+          }
+        }
+      },{
+        "page": "hospitality_one_experience",
+        "page_title": "Discover how Globodain MS optimizes your business",
+        "page_metadescription": "Learn how the process of creating experiences can be an added value for your Hospitality sector business and create a unique experience for your customers",
+        "page_keywords": "campings, septeo, grupo septeo, globodain, software, management, management program, octorate, camping care, unixdata, mastercamping, lodgify, sirvoy, smoobu",
+        "hero": {
+          "title": "Provide your customers with a unique experience",
+          "subtitle": "Create, manage and adapt your customer's experience through our experience creator and analyze each satisfaction process",
+          "text1": "Define key parameters to differentiate one type of customer from another",
+          "text2": "Personalize their experience by interacting with QRs",
+          "button1": "Know more about Globodain MS",
+          "button2": "Download eBook"
+        },
+        "sections": [{
+          "title": "This is how you can improve your business",
+          "steps": [{
+            "number": "1",
+            "title": "Define the services",
+            "desc": "Indicate what services you offer, what type of services they are and what features they have.",
+            "example": "For example: Bungalow Pro XXL, located in sector B and with 12 spots (availability). Category: Luxury"
+          }, {
+            "number": "2",
+            "title": "Connect with the systems",
+            "desc": "Install the necessary modules for a complete experience: automation of messages, check-in, cleaning ...",
+            "example": ""
+          }, {
+            "number": "3",
+            "title": "Configure and create your experiences",
+            "desc": "Define for each service a process according to your criteria.",
+            "example": "For example: For the Luxury category, you define the automation of the production, printing and sending of the welcome card to the customer's home; Add to the sending of reminders, printing of QR to access their portal, etc."
+          }, {
+            "number": "4",
+            "title": "Automate the processes",
+            "desc": "Make the defined process repeat when a series of criteria are met.",
+            "example": "For example: Every time the base cost of the reservation exceeds 500 euros in Luxury category, apply experience 1. If it exceeds 1500 euros, apply experience 2"
+          }]
+        }, {
+          "title": "A tool that ensures a happy customer",
+          "desc": "The experience creator allows you to add value to your business, highlighting the ability to automate your imagination.",
+          "button": "Start for free"
+        }, {
+          "title": "Capable of analyzing the entire process",
+          "desc": "Your customer's information throughout the experience will be recorded and will be available for analysis with the advanced analysis system CampSys",
+          "list": ["Evaluate and score each process", "Perform performance reports", "Set improvement goals and KPIs"]
+        }, {
+          "title": "We invite you to try it at zero cost",
+          "subtitle": "It has never been so easy to improve results",
+          "button": "Request demo"
+        }],
+        "call_action": {
+            "title": "You can start improving your results right now",
+            "button1": "Request demo",
+            "button2": "Contact with Sales's team"
+        }
+      },
+      {
+        "page": "hospitality_oneway",
+        "page_title": "Gestión de ventas digitales con OneWay",
+        "page_metadescription": "",
+        "page_keywords": "campings,septeo,grupo septeo,softcamp,software,management,programa de gestión,octorate,camping care,unixdata,mastercamping,lodgify,sirvoy,smoobu",
+        "hero": {
+        "title": "Gestiona todas tus <span class='text-softcamp'>ventas digitales</span>",
+        "subtitle": "<strong>OneWay</strong> es un sistema integrado para gestionar de forma eficiente tus reservas en internet y aumentar la visibilidad de tu negocio. Descubre cómo funciona",
+        "button1": "Download eBook"
+        },
+        "call_action": {
+        "title": "You can start improving your results right now",
+        "button1": "Request demo",
+        "button2": "Contact with Sales's team"
+    }
+        
+      },
     {
         "page": "education",
         "page_title": "Globodain Education: Empowering young people through technology",
@@ -1207,6 +1806,159 @@
                  "Sat - Sun",
                  "Closed"
             ]
+        }
+    },
+    {
+        "page": "experiences",
+        "page_title": "Globodain CX - Create unique experiences",
+        "page_metadescription": "Globodain CX is a solution for creating unique experiences through training and, mainly, customer segmentation and orchestration through Globodain CX Platform.",
+        "page_keywords": "hospitality, user experience, customer experience, customer experiences, orchestration",
+        "message": {
+          "text": "¿Tienes un PMS instalado? integra Globodain CX con tu software o mígrate a",
+          "link": {
+            "text": "Haz clic aquí para saber más",
+            "tooltip": ""
+          }
+        },
+        "hero": {
+          "title": "<span class='text-primary fs-2'>Mejora la experiencia de tus clientes</span> con nuestro software de Customer Experiences. Diferénciate en calidad",
+          "subtitle": "Segmenta tus clientes y utiliza nuestra herramienta para <span class='fw-semibold'>ofrecer una experiencia totalmente personalizada</span>. Obtén +5 estrellas de tus clientes y genera más ventas",
+          "button1": "Comenzar ahora",
+          "button2": "Cómo funciona"
+        }, 
+        "market": {
+          "title": "Ideal para negocios que necesitan gestionar la experiencia de clientes",
+          "subsections": [{
+            "title": "Agencias de viajes",
+            "subtitle": "Permitimos que las agencias gestionen los clientes de sus clientes negocio, llevando el control del proceso desde la reserva hasta la finalización"
+          }, {
+            "title": "Hoteles",
+            "subtitle": "Ofrecemos herramientas sencillas para que el propio equipo pueda participar en la asignación y gestión de la experiencia de cada cliente"
+          }, {
+            "title": "Resorts",
+            "subtitle": "Conectamos los diferentes tipo de servicios dentro del recinto para ofrecer una experiencia inmersiva que el propio usuario puede gestionar"
+          }, {
+            "title": "Cruceros",
+            "subtitle": "Integramos tecnología punta con pulseras electrónicas para facilitar el control de accesos y la asignación especial del cliente identificado"
+          }]
+        },
+        "sections": {
+          "first": {
+            "title": "¿Cómo funciona?",
+            "subtitle": "Importa los datos de los clientes y servicios para segmentarlos y orquestar los diferentes tipos de experiencia según las variables determinadas. <br><br>Posteriormente, <strong>importa los datos de las reservas</strong> para asociar un tipo de experiencia u otro.",
+            "features": [{
+              "title": "Trabajo en equipo",
+              "subtitle": "Asigna tareas a tu equipo y crea cargas distribuidas en el desarrollo de las experiencias, ejecución y/o seguimiento"
+            }, {
+              "title": "Automatización",
+              "subtitle": "Conéctate con tu software de gestión (o de tu cliente) y automatiza la importación de datos de clientes y reservas"
+            }, {
+              "title": "Personalización",
+              "subtitle": "Crea experiencias únicas adaptadas al tipo de cliente identificado en la segmentación"
+            }, {
+              "title": "Análisis avanzado",
+              "subtitle": "Exporta los informes sobre el desempeño de las tareas, stock, calidad del servicio por valoración.."
+            }]
+          },
+          "third": {
+            "title": "Una solución perfecta para todos los tamaños",
+            "subtitle": "Utiliza todo lo necesario para la gestión del negocio desde la misma plataforma, optimizando el uso de recursos y minimizando los costes y tiempo empleado",
+            "sections": [{
+              "title": "Pequeños negocios",
+              "desc": "Utiliza las funcionalidades necesarias para una gestión enfocada en la operativa diaria de forma básica, minimizando el coste por uso y temporalidad."
+            }, {
+              "title": "Medianos y grandes",
+              "desc": "Brinda versatilidad, capacidad de control y trabajo colaborativo o autonomía con la automatización de tareas. Perfecto para compañías que buscan la optimización de procesos"
+            }],
+            "button": "Solicitar una prueba ahora"
+          },
+          "fourth": {
+            "title": "Software Cloud",
+            "subtitle": "Accesible desde cualquier dispositivo y parte del mundo <strong>gracias a la última tecnología</strong> digital.",
+            "features": [{
+              "title": "Distribución de carga",
+              "desc": "Uso de la dockerización y distribución de contenidos mediante CDN."
+            }, {
+              "title": "Trabajo offline",
+              "desc": "Sincronización de datos en la computadora o VPN con la nube"
+            }]
+          },
+          "seventh": {
+            "title": "Adaptable a diferentes tipos de negocios",
+            "subtitle": "Versátil, intuitivo y personalizable. Pensado para moldearse y adaptarse a la forma de gestión de tu negocio gracias al innovador diseño del sistema",
+            "sectors": [{
+              "title": "Glamping",
+              "img": "glamping",
+              "desc": "Sumérgete en la naturaleza sin renunciar al lujo con nuestro software de gestión para glamping. Optimiza las reservas y gestiona alojamientos únicos con facilidad. ¡Transforma tu negocio de glamping en una experiencia inolvidable!",
+              "status": "active"
+            }, {
+              "title": "Resorts",
+              "img": "resort",
+              "desc": "Eleva tu resort al siguiente nivel con nuestro software de gestión. Mejora la eficiencia de las operaciones diarias y enriquece la experiencia del huésped. ¡Haz que cada estancia sea una experiencia de cinco estrellas!"
+            }, {
+              "title": "Hoteles",
+              "img": "hotel",
+              "desc": "Impulsa tu hotel con nuestro software de gestión integral. Desde la reserva hasta el check-out, garantiza una estancia perfecta para tus huéspedes. ¡Haz que tu hotel sea la primera opción para cada viajero!"
+            }, {
+              "title": "Residencias",
+              "img": "residence",
+              "desc": "Gestiona tu residencia como un profesional con nuestro software. Desde la reserva hasta el mantenimiento, todo se maneja con facilidad. ¡Haz que tu residencia sea el hogar lejos del hogar para cada inquilino!"
+            }, {
+              "title": "RV Parks",
+              "img": "rvpark",
+              "desc": "Haz que tu RV Park sea el destino preferido para los aventureros con nuestro software de gestión. Facilita la reserva de espacios y mejora la comunicación con los huéspedes. ¡Haz que cada visita sea una aventura memorable!"
+            }, {
+              "title": "Airbnbs",
+              "img": "airbnb",
+              "desc": "Transforma tu Airbnb en un alojamiento de ensueño con nuestro software de gestión. Automatiza las tareas y mejora la comunicación con los huéspedes. ¡Haz que tu Airbnb sea la elección perfecta para cada viaje!"
+            }, {
+              "title": "Bungalows",
+              "img": "bungalow",
+              "desc": "Optimiza tu negocio de bungalows con nuestro software de gestión. Desde la reserva hasta la salida, todo se maneja con facilidad. ¡Haz que cada bungalow sea un refugio acogedor para cada huésped!"
+            }]
+          }
+        },
+        "pricing": {
+          "title": "Acceso al software",
+          "column": ["Onboarding","Importación de datos", "Asignaciones automáticas","Trabajo colaborativo","Plantillas de orquestación"],
+          "free_plan": {
+            "title": "Plan gratuito",
+            "button": "Comenzar con este plan",
+            "features": [{
+              "title": "Soporte del equipo"
+            }, {
+              "title": "Manual",
+              "subtitle": "Formatos en Excel, CSV, JSON"
+            }, {
+              "title": "Manual",
+              "subtitle": "Asigna a cada cliente el tipo de experiencia"
+            }, {
+              "title": "Sólo 1 usuario",
+              "subtitle": "No permite añadir más usuarios a la plataforma"
+            }, {
+              "title": "Plantillas gratuitas"
+            }]
+          },
+          "premium_plan": {
+            "title": "Subscripción",
+            "subtitle": "Comienza desde 12,95 €/usuario",
+            "features": [{
+              "title": "Incluido",
+              "subtitle": "Nuestro equipo configura tu panel con los servicios"
+            }, {
+              "title": "Incluido",
+              "subtitle": "Conexión mediante API PMS"
+            }, {
+              "title": "Incluidas",
+              "subtitle": "Automático si el cliente cumple condición"
+            }, {
+              "title": "Sin límites",
+              "subtitle": "Añade tantos usuarios colaboradores cómo necesites"
+            }, {
+              "title": "Premium",
+              "subtitle": "Utiliza plantillas de pago además de las gratuitas"
+            }]
+          }
         }
     }
 ]

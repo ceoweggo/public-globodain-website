@@ -45,6 +45,8 @@ def gd_app(instance):
     # Main Blueprint
     from .public import public_
     app.register_blueprint(public_)
+    from .auth import auth_
+    app.register_blueprint(auth_)
     ## Global
     from .public.languages import public_global
     app.register_blueprint(public_global)
@@ -55,18 +57,6 @@ def gd_app(instance):
     ### EN
     from .public.languages.en import public_language
     app.register_blueprint(public_language, url_prefix="/en/")
-    ### IT
-    from .public.languages.it import public_language
-    app.register_blueprint(public_language, url_prefix="/it/")   
-    ### DE
-    from .public.languages.de import public_language
-    app.register_blueprint(public_language, url_prefix="/de/")   
-    ### FR
-    from .public.languages.fr import public_language
-    app.register_blueprint(public_language, url_prefix="/fr/")   
-    ### PL
-    from .public.languages.pl import public_language
-    app.register_blueprint(public_language, url_prefix="/pl/")  
 
     from .libraries import libraries_gtc
     app.register_blueprint(libraries_gtc)

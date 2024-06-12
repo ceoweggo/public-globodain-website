@@ -1,0 +1,147 @@
+{% extends 'bases/es-hospitality-base.html' %}
+
+{# <!-- SEO SECTION--> #}
+{% set title = lang_data.page.page_title %}
+{% set meta_description = lang_data.page.page_metadescription %}
+{% set meta_keywords = lang_data.page.page_keywords %}
+
+{% block css %}
+<div class="d-none d-xl-block">
+  <style>
+    section {
+      margin-bottom: 10rem;
+    }
+</style>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<main class="page-wrapper bg-white">
+  <section id="hero" class="mt-5 mt-md-0">
+    <div class="container pt-xxl-5 mt-md-0">
+      <div class="row">
+        <div class="col-12 pt-5 col-md-6 mb-md-5 mb-md-4 mb-3 pb-xl-5">
+          <div class="text-md-start text-center mt-md-3">
+            <h1 class="display-5 mb-lg-4 mb-3">{{lang_data.page.hero.title|safe}}</h1>
+            <p class="mb-4 mx-md-0 mx-auto pb-xl-3 pb-lg-2 fs-5" style="max-width: 30.5rem;">{{lang_data.page.hero.subtitle|safe}}</p>
+            
+            <a href="{{url_for('public_{}.experiences'.format(session.lang[0:2]))}}" class="btn btn-softcamp mt-4">{{lang_data.page.hero.button1}} <i class="ms-3 bx bx-right-arrow-alt fs-5"></i></a>
+            <a class="ms-3 btn btn-outline-softcamp mt-4">{{lang_data.page.hero.button2}} <i class="ms-3 bx bx-cloud-download fs-5"></i></a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 mt-0 mt-xxl-4 mb-4">
+          <div class="align-self-end ms-xl-0 ms-md-4 p-xxl-4 p-2 rounded-4 overflow-hidden">
+            <div class="tilt-3d" data-tilt data-tilt-full-page-listening data-tilt-max="12" data-tilt-perspective="1200">
+              <div class="rounded mt-4 mt-xxl-0">
+                <img src="https://cdn-static.globodain.com/ms/one-experience-hero-1" alt="Globodain MS image">
+              </div>
+              
+              <div class="tilt-3d-inner position-absolute bottom-0 start-20 w-100 h-100">
+                <img src="https://cdn-static.globodain.com/ms/one-experience-hero-2" alt="Globodain MS image">
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="steps" class="container pb-5 mb-md-2 mb-lg-4 mb-xl-5">
+    <h2 class="h1 pb-2 pb-md-0 mb-4 mb-md-5">{{lang_data.page.sections.0.title|safe}}</h2>
+    <div class="steps steps-sm steps-horizontal-md pb-2 pb-sm-3">
+      {% for step in lang_data.page.sections.0.steps %}
+      <div class="step">
+        <div class="step-number">
+          <div class="step-number-inner">{{step.number}}</div>
+        </div>
+        <div class="step-body">
+          <h3 class="h4 mb-3">{{step.title}}</h3>
+          <p>{{step.desc}}</p>
+          {% if step.example %}
+          <span class="fs-xs mt-1">{{step.example}}</span>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="container pb-sm-1 pb-md-3">
+  <div class="row align-items-lg-center pb-5 mb-2 mb-lg-4 mb-xl-5">
+      <div class="col-md-6 mb-4 mb-md-0">
+      <img src="https://cdn-static.globodain.com/ms/one-experience-section-1" class="rounded-3" alt="Globodain MS image">
+      </div>
+      <div class="col-md-6">
+      <div class="ps-xl-5 ms-md-2 ms-lg-4">
+          <h2 class="h1 mb-3 mb-sm-4">{{lang_data.page.sections.1.title|safe}}</h2>
+          <p class="mb-4 mb-lg-5">{{lang_data.page.sections.1.desc|safe}}</p>
+          <a href="https://ms.globodain.com/auth/register" class="btn btn-lg btn-softcamp shadow-softcamp">{{lang_data.page.sections.1.button}}</a>
+      </div>
+      </div>
+  </div>
+
+  <div class="row align-items-lg-center pt-md-3 pb-5 mb-2 mb-lg-4 mb-xl-5">
+      <div class="col-md-6 col-xl-5 text-center text-md-start mb-5 mb-md-0">
+          <div class="pe-xl-5 me-md-2 me-lg-4">
+              <h2 class="h1 mb-3 mb-sm-4">{{lang_data.page.sections.2.title|safe}}</h2>
+              <p class="mb-3 mb-sm-4">{{lang_data.page.sections.2.desc|safe}}</p>
+              <ul class="list-unstyled mb-0">
+              <li class="d-flex mb-2">
+                  <i class="bx bx-check text-softcamp lead me-2"></i>
+                  {{lang_data.page.sections.2.list.0}}
+              </li>
+              <li class="d-flex mb-2">
+                  <i class="bx bx-check text-softcamp lead me-2"></i>
+                  {{lang_data.page.sections.2.list.1}}
+              </li>
+              <li class="d-flex">
+                  <i class="bx bx-check text-softcamp lead me-2"></i>
+                  {{lang_data.page.sections.2.list.2}}
+              </li>
+              </ul>
+          </div>
+      </div>
+      <div class="col-md-6 offset-xl-1">
+          <div class="parallax ratio ratio-1x1 mx-auto">
+              <div class="parallax-layer position-absolute zindex-2" data-depth="-0.15">
+                <img src="https://cdn-static.globodain.com/ms/one-experience-section-2" width="100%" alt="Avatar">
+              </div>
+              <div class="parallax-layer d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" data-depth="0.1">
+                <div class="rounded-circle bg-success" style="width: 70%; height: 70%; opacity: .06;"></div>
+              </div>
+              <div class="parallax-layer d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" data-depth="0.2">
+                <div class="rounded-circle bg-success" style="width: 55%; height: 55%; opacity: .06;"></div>
+              </div>
+              <div class="parallax-layer d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 zindex-3" data-depth="0.4">
+                <div class="d-flex justify-content-center align-items-center rounded-circle bg-success" style="width: 93px; height: 93px; box-shadow: 0 .1875rem 1.875rem -.125rem rgba(123, 241, 99, 0.95); ">
+                  <span class="h5 text-light mb-0">91</span>
+                </div>
+              </div>
+              <div class="parallax-layer d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" data-depth="0.3">
+                <div class="rounded-circle bg-success" style="width: 40%; height: 40%; opacity: .06;"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </section>
+
+  <section id="call-to-action" class="position-relative bg-light-primary py-5 mb-0 pb-0">
+    <span class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255, 255, 255, .05)"></span>
+    <div class="container position-relative zindex-5 text-center my-xl-3 py-1 py-md-4 py-lg-5">
+      <p class="lead text-light opacity-70 mb-3"></p>
+      <h2 class="h1 pb-3 pb-lg-0 mb-lg-5">{{lang_data.page.call_action.title}}</h2>
+      <a href="{{url_for('public_{}.hospitality_demo'.format(session.lang[0:2]))}}" class="btn btn-softcamp shadow-softcamp btn-lg me-md-3 mb-3 mb-md-0">{{lang_data.page.call_action.button1}}</a>
+      <a href="{{url_for('public_{}.request_services'.format(session.lang[0:2]))}}" class="btn btn-light shadow-secondary btn-lg">{{lang_data.page.call_action.button2}}</a>
+    </div>
+  </section>
+</main> 
+{% endblock %}
+
+{% block scripts %}
+<script src="{{url_for('static', filename='v2/vendor/parallax-js/dist/parallax.min.js')}}"></script>
+{% endblock %}
+
+{% block copyright %}
+{% endblock %}

@@ -6,7 +6,7 @@ from app import app
 @public_.before_request
 def language():
     if not 'lang' in session:
-        session['lang'] = 'en'
+        session['lang'] = 'es'
     session['lang_code'] = session['lang']
 
 @public_.route("/", methods=['GET', 'POST'])

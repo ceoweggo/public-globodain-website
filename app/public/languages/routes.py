@@ -4,7 +4,7 @@ from app import app
 
 @public_global.url_defaults
 def add_language_code(endpoint, values):
-    values['lang_code'] = str(session['lang'] if 'lang' in session else 'en')[0:2]
+    values['lang_code'] = str(session['lang'] if 'lang' in session else 'es')[0:2]
     if 'lang_code' in values or not g.lang_code:
         return
     if app.url_map.is_endpoint_expecting(endpoint, 'lang_code'):
@@ -29,15 +29,6 @@ def index():
 def error():
     # Redirijo al idioma deseado
     return render_template("errors/404.html")
-
-@public_global.route("/softcamp", methods=['GET'], strict_slashes=False)
-@register_breadcrumb(public_global, '.softcamp', 'SoftCamp')
-def softcamp():
-    lang = request.args.get('lang')
-    if lang not in ["es", "en", "it", "de", "fr"]:
-        lang = "en"
-    url = "https://softcamp.eu/{}/".format(lang)
-    return redirect(url)
 
 @app.route("/<lang_code>/sitemap")
 @app.route("/<lang_code>/sitemap.xml")
