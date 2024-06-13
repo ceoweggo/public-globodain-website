@@ -3,31 +3,38 @@
 
 {% block content %}
 <main class="page-wrapper">
-  <section class="d-flex justify-content-center align-items-center text-center" style="background: url('{{url_for('static',filename='img/backgrounds/space.png')}}') no-repeat center center; background-size: cover; height: 23%; position: relative;">
-    <div class="container pt-4">
-      <h2 class="font-semibold text-center text-white text-6xl my-8">About Our Product</h2>
-      <div class="flex-col">
-        <p class="text-lg mt-3 text-white text-center"> 
-          Skynova is an innovative company transforming the way police, firefighters, and other emergency services respond to crises. Our mission is to provide instant access to drone hangars, significantly enhancing the efficiency and speed of emergency responses.
-        </p>
-      </div>
-      </br>
-      </br>
-      <a href='#scroll-target' class="btn btn-dark btn-lg px-5">
-        More Info
-      </a>
-      <model-viewer
-        class="h-[25rem] w-full bg-transparent"
-        alt="A 3D model of our product."
-        src={{url_for('static',filename='3D/drone_home.glb')}}
-        poster=""
-        shadow-intensity="1"
-        camera-controls
-        touch-action="pan-y"
-        disable-zoom
-      ></model-viewer>  
+  <section id="hero" class="d-flex align-items-center" style="position: relative; background-image: url({{url_for('static', filename='img/backgrounds/space.png')}}); background-size: cover; background-position: center; background-repeat: no-repeat; color: white; height: 100vh;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+        <div class="row justify-content-center">
+          <div class="container pt-4">
+            <h2 class="font-semibold text-center text-white text-6xl my-8">About Our Product</h2>
+            <div class="flex-col">
+              <p class="text-lg mt-3 text-white text-center"> 
+                Skynova is an innovative company transforming the way police, firefighters, and other emergency services respond to crises. Our mission is to provide instant access to drone hangars, significantly enhancing the efficiency and speed of emergency responses.
+              </p>
+            </br>
+            </br>
+            <a href='#scroll-target' class="btn btn-dark d-flex justify-content-center">
+              More Info
+            </a>
+          </div>
+            
+            <model-viewer
+              class="h-[25rem] w-full bg-transparent"
+              alt="A 3D model of our product."
+              src={{url_for('static',filename='3D/drone_home.glb')}}
+              poster=""
+              shadow-intensity="1"
+              camera-controls
+              touch-action="pan-y"
+              disable-zoom
+            ></model-viewer>  
+          </div>
+        </div>
     </div>
-  </section>
+</section>
+
 
   <section class="py-5 bg-light" id="flytbase">
     <div class="container px-5 my-5">
