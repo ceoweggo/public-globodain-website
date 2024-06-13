@@ -1,0 +1,746 @@
+{% extends 'bases/es-hospitality-base.html' %}
+
+{# <!-- SEO SECTION--> #}
+{% set title = lang_data.page.page_title %}
+{% set meta_description = lang_data.page.page_metadescription %}
+{% set meta_keywords = lang_data.page.page_keywords %}
+
+{% block css %}
+{% endblock %}
+
+{% block content %}
+<main class="page-wrapper bg-white">
+	<section class="container py-5 mt-5 mb-lg-3 mb-xl-4 mb-xxl-5">
+
+		<!-- Page title-->
+		<div class="text-center pb-3 pt-lg-2 pt-xl-4 my-1 my-sm-3 my-lg-4">
+			<h1 class="display-5">{{lang_data.page.body.title}}</h1>
+			<p class="fs-lg mb-0">{{lang_data.page.body.subtitle}}</p>
+		</div>
+	
+		<div class="price-switch-wrapper">
+			<div class="form-check form-switch price-switch justify-content-center mt-2 mb-4" data-bs-toggle="price">
+				<input type="checkbox" class="form-check-input" id="pricing">
+				<label class="form-check-label" for="pricing">{{lang_data.page.body.switch.0}}</label>
+				<label class="form-check-label d-flex align-items-start" for="pricing">{{lang_data.page.body.switch.1}} <span class="text-danger fs-xs fw-semibold mt-n2 ms-2">{{lang_data.page.body.discount}}</span></label>
+			  </div>    
+	
+			<div class="row row-cols-3 flex-nowrap pb-4 overflow-auto">
+			<div class="col" style="min-width: 19rem;">
+				<div class="card h-100 py-lg-4">
+				<div class="card-body w-100 mx-auto text-center" style="max-width: 23rem;">
+					<span class="btn btn-success mb-4">
+						{{lang_data.page.body.subscriptions.0.promotion}}
+					</span>
+	
+					<h3>{{lang_data.page.body.subscriptions.0.title}}</h3>
+					<p class="display-5 text-softcamp mb-0 fw-semibold" data-monthly-price>19,95 €</p>
+					<span class="display-5 text-softcamp" data-monthly-price><del class="display-6 fw-semibold text-muted">39,95 €</del><div class="fs-sm">{{lang_data.page.body.subscriptions.0.max_spots}} <br><lead class="text-dark m-4">{{lang_data.page.body.subscriptions.0.extra_spot}}</lead></div></span>
+					<p class="display-5 text-softcamp mb-0 d-none" data-annual-price>215,46 €</p>
+					<span class="display-5 text-softcamp d-none fw-semibold" data-annual-price><del class="display-6 text-muted">431,46 €</del> <div class="fs-sm">{{lang_data.page.body.subscriptions.0.max_spots}} <span class="ms-2 badge text-softcamp border border-primary fs-sm">-10%</span> <br><br> <lead class="text-dark m-4">{{lang_data.page.body.subscriptions.0.spot_extra}}.</lead></div></span>
+					<a href='{{url_for("public_{}.hospitality_demo".format(session["lang"].replace("-","_")), plan="silver")}}' class="btn btn-secondary w-100">{{lang_data.page.body.subscriptions.0.button}}</a>
+				</div>
+				</div>
+			</div>
+	
+			<div class="col" style="min-width: 19rem;">
+				<div class="card border-warning bg-faded-warning h-100 py-lg-4">
+				<div class="card-body w-100 mx-auto text-center" style="max-width: 23rem;">
+					<span class="btn btn-success mb-4">
+						{{lang_data.page.body.subscriptions.1.promotion}}
+					</span>
+					<h3 class="text-dark">{{lang_data.page.body.subscriptions.1.title}} <span class="ms-2 fs-6 badge bg-info shadow-info">{{lang_data.page.body.subscriptions.1.msg}}</span></h3>
+					<p class="display-5 text-softcamp mb-0" data-monthly-price>59,95 €</p>
+					<div class="display-5 text-softcamp" data-monthly-price><del class="display-6 text-muted">129,95 €</del> <div class="fs-sm text-softcamp">{{lang_data.page.body.subscriptions.1.max_spots}} <br><lead class="text-dark m-4">{{lang_data.page.body.subscriptions.1.extra_spot}}</lead></div></div>
+					<p class="display-5 text-softcamp mb-0 d-none" data-annual-price>611,49 €</p>
+					<div class="display-5 text-softcamp d-none" data-annual-price><del class="display-6 text-muted">1.325,49 €</del> <div class="fs-sm">{{lang_data.page.body.subscriptions.1.max_spots}} <span class="ms-2 badge text-softcamp border border-primary fs-sm">-15%</span> <br><br><lead class="text-dark m-4">{{lang_data.page.body.subscriptions.1.yearly_extra_spot}}</lead></div></div>
+					<a href='{{url_for("public_{}.hospitality_demo".format(session["lang"].replace("-","_")), plan="gold")}}' class="btn btn-warning w-100 mt-4">{{lang_data.page.body.subscriptions.1.button}}</a>
+				</div>
+				</div>
+			</div>
+	
+			<div class="col" style="min-width: 19rem;">
+				<div class="card h-100 py-lg-4">
+				<div class="card-body w-100 mx-auto text-center" style="max-width: 23rem;">
+					<span class="btn btn-success mb-4">
+						{{lang_data.page.body.subscriptions.2.promotion}}
+					</span>
+					<h3>{{lang_data.page.body.subscriptions.2.title}}</h3>
+					<p class="display-5 text-softcamp mb-0 fw-semibold" data-monthly-price>89,95 €</p>
+					<span class="display-5 text-softcamp" data-monthly-price><del class="display-6 fw-semibold text-muted">279,95 €</del> <div class="fs-sm">{{lang_data.page.body.subscriptions.2.max_spots}} <br><lead class="text-dark m-4">{{lang_data.page.body.subscriptions.2.extra_spot}}</lead></div></span>
+					<p class="display-5 text-softcamp mb-0 d-none" data-annual-price>863,52 €</p>
+					<span class="display-5 text-softcamp d-none fw-semibold" data-annual-price><del class="display-6 text-muted">2.687,52 €</del> <div class="fs-sm">{{lang_data.page.body.subscriptions.2.max_spots}} <span class="ms-2 badge border border-primary text-softcamp fs-sm">-20%</span><br><br><lead class="text-dark">{{lang_data.page.body.subscriptions.2.yearly_extra_spot}}</lead></div></span>
+					<a href='{{url_for("public_{}.hospitality_demo".format(session["lang"].replace("-","_")), plan="platinum")}}' class="btn btn-dark w-100">{{lang_data.page.body.subscriptions.2.button}}</a>
+				</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		
+	
+	<!-- Comparison table-->
+	<div class="text-center pt-md-1 pt-lg-2">
+		<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#collapsePlans" aria-expanded="false" aria-controls="collapsePlans">Comparar planes</div>
+		<div class="collapse show active" id="collapsePlans">
+			{#
+			<div class="m-3 text-left d-none d-lg-block">
+				<span class="bg-faded-primary p-2 rounded ps-3 pe-3"><i class="ai-circle-slash text-danger fs-lg me-2"></i> Funcionalidad en desarrollo o pendiente de integrar</span>
+			</div>
+			<div class="m-3 text-left d-none d-lg-block">
+				<span class="bg-faded-primary p-2 rounded ps-3 pe-3"><i class="ai-circle-slash text-warning fs-lg me-2"></i> Funcionalidad asociada y dependiente de una integración</span>
+			</div>
+			<div class="m-3 text-left d-none d-lg-block">
+				<span class="bg-faded-primary p-2 rounded ps-3 pe-3"><i class="ai-circle-slash text-softcamp fs-lg me-2"></i> Sección en modificación y pendiente de finalizar</span>
+			</div>
+			#}
+			<div class="table-responsive pt-sm-2 pt-lg-3">
+			<table class="table table-hover text-center text-nowrap">
+				<thead>
+					<tr>
+						<th class="border-0 py-3">&nbsp;</th>
+						<th class="border-0 py-3"><span class="h5 mb-0">{{lang_data.page.body.subscriptions.0.title}}</span></th>
+						<th class="border-0 py-3"><span class="h5 mb-0">{{lang_data.page.body.subscriptions.1.title}}</span></th>
+						<th class="border-0 py-3"><span class="h5 mb-0">{{lang_data.page.body.subscriptions.2.title}}</span></th>
+					</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th class="border-0 bg-secondary text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_1.0.title}}</span></th>
+					<td class="border-0 py-3 text-center bg-secondary"><span class="text-dark">{{lang_data.page.body.features_1.0.details.0}}</span></td>
+					<td class="border-0 py-3 text-center bg-secondary"><span class="text-dark">{{lang_data.page.body.features_1.0.details.1}}</span></td>
+					<td class="border-0 py-3 text-center bg-secondary"><span class="text-dark">{{lang_data.page.body.features_1.0.details.2}}</span></td>
+				</tr>
+				<tr>
+					<th class="border-0 bg-secondary text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_1.1.title}}<i class="bx bx-info-circle fs-lg ms-2" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" data-bs-html="true" data-bs-content="{{lang_data.page.body.features_1.1.tooltip}}"></i></span></th>
+					<td class="border-0 py-3 text-center bg-secondary"><span class="text-dark">{{lang_data.page.body.features_1.1.details.0}}</span></td>
+					<td class="border-0 py-3 text-center bg-secondary"><span class="text-dark">{{lang_data.page.body.features_1.1.details.1}}</span></td>
+					<td class="border-0 py-3 text-center bg-secondary"><span class="text-dark">{{lang_data.page.body.features_1.1.details.2}}</span></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start pt-4 pb-3 ps-4">
+					<div class="h5 pt-1 mb-0 fw-semibold">{{lang_data.page.body.features_2.title}}</div>
+					</th>
+					<th class="border-0 py-3">&nbsp;</th>
+					<th class="border-0 py-3">&nbsp;</th>
+					<th class="border-0 py-3">&nbsp;</th>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_2.object.0.title}}<i class="bx bx-info-circle fs-lg ms-2" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" data-bs-html="true" data-bs-content="{{lang_data.page.body.features_2.object.0.tooltip}}"></i></span></th>
+					<td class="border-0 py-3"><span class="text-dark">{{lang_data.page.body.features_2.object.0.details.0}}</span></td>
+					<td class="border-0 py-3"><span class="text-dark">{{lang_data.page.body.features_2.object.0.details.1}}</span></td>
+					<td class="border-0 py-3"><span class="text-dark">{{lang_data.page.body.features_2.object.0.details.2}}</span></td>
+				</tr>
+				<tr>
+					<th class="border-0 rounded-3 rounded-end-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_2.object.1.title}}  <i class="bx bx-info-circle fs-lg ms-2" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" data-bs-html="true" data-bs-content="{{lang_data.page.body.features_2.object.1.tooltip}}"></i></span></th>
+					<td class="border-0 py-3"><span class="text-dark">{{lang_data.page.body.features_2.object.1.details.0}}</span></td>
+					<td class="border-0 py-3"><span class="text-dark">{{lang_data.page.body.features_2.object.1.details.1}}</span></td>
+					<td class="border-0 rounded-3 rounded-start-0 py-3"><span class="text-dark">{{lang_data.page.body.features_2.object.1.details.2}}</span></td>
+				</tr>
+				<tr>
+					<th class="border-0 bg-secondary rounded-3 rounded-end-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_2.object.2.title}}  <i class="bx bx-info-circle fs-lg ms-2" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" data-bs-html="true" data-bs-content="{{lang_data.page.body.features_2.object.2.tooltip}}"></i></span></th>
+					<td class="border-0 bg-secondary py-3"><span class="text-dark">{{lang_data.page.body.features_2.object.2.details.0}}</span></td>
+					<td class="border-0 bg-secondary py-3"><span class="text-dark">{{lang_data.page.body.features_2.object.2.details.1}}</span></td>
+					<td class="border-0 rounded-3 rounded-start-0 bg-secondary py-3"><span class="text-dark">{{lang_data.page.body.features_2.object.2.details.2}}</span></td>
+				</tr>
+				<tr>
+					<th class="border-0 rounded-3 rounded-end-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_2.object.3.title}} <i class="bx bx-info-circle fs-lg ms-2" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" data-bs-html="true" data-bs-content="{{lang_data.page.body.features_2.object.3.tooltip}}"></i></span></th>
+					<td class="border-0 py-3"><span class="text-dark">{{lang_data.page.body.features_2.object.3.details.0}}</span></td>
+					<td class="border-0 py-3"><span class="text-dark">{{lang_data.page.body.features_2.object.3.details.1}}</span></td>
+					<td class="border-0 rounded-3 rounded-start-0 py-3"><span class="text-dark">{{lang_data.page.body.features_2.object.3.details.2}}</span></td>
+				</tr>
+				<tr>
+					<th class="border-0 rounded-3 rounded-end-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_2.object.4.title}} <i class="bx bx-info-circle fs-lg ms-2" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" data-bs-html="true" data-bs-content="{{lang_data.page.body.features_2.object.4.tooltip}}"></i></span></th>
+					<td class="border-0 py-3"><span class="text-dark">{{lang_data.page.body.features_2.object.4.details.0}}</span></td>
+					<td class="border-0 py-3"><span class="text-dark">{{lang_data.page.body.features_2.object.4.details.1}}</span></td>
+					<td class="border-0 rounded-3 rounded-start-0 py-3"><span class="text-dark">{{lang_data.page.body.features_2.object.4.details.1}}</span></td>
+				</tr>
+				<tr>
+					<th class="border-0 rounded-3 rounded-end-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_2.object.5.title}}  <i class="bx bx-info-circle fs-lg ms-2" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" data-bs-html="true" data-bs-content="{{lang_data.page.body.features_2.object.5.tooltip}}"></i></span></th>
+					<td class="border-0 py-3"><span class="text-dark">5</span></td>
+					<td class="border-0 py-3"><span class="text-dark">10</span></td>
+					<td class="border-0 rounded-3 rounded-start-0 py-3"><span class="text-dark">20</span></td>
+				</tr>
+				<tr>
+					<th class="border-0 rounded-3 rounded-end-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_2.object.6.title}}  <i class="bx bx-info-circle fs-lg ms-2" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" data-bs-html="true" data-bs-content="{{lang_data.page.body.features_2.object.6.tooltip}}"></i></span></th>
+					<td class="border-0 py-3"><span class="text-dark">5</span></td>
+					<td class="border-0 py-3"><span class="text-dark">20</span></td>
+					<td class="border-0 rounded-3 rounded-start-0 py-3"><span class="text-dark">50</span></td>
+				</tr>
+				<tr>
+					<th class="border-0 rounded-3 rounded-end-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_2.object.7.title}}  <i class="bx bx-info-circle fs-lg ms-2" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" data-bs-html="true" data-bs-content="{{lang_data.page.body.features_2.object.7.tooltip}}"></i></span></th>
+					<td class="border-0 py-3"><span class="text-dark">5</span></td>
+					<td class="border-0 py-3"><span class="text-dark">20</span></td>
+					<td class="border-0 rounded-3 rounded-start-0 py-3"><span class="text-dark">50</span></td>
+				</tr>
+				<tr>
+					<th class="border-0 rounded-3 rounded-end-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_2.object.8.title}} <span class="ms-2 badge bg-primary">OneWay</span></span></th>
+					<td class="border-0 py-3"><span class="text-dark">5</span></td>
+					<td class="border-0 py-3"><span class="text-dark">{{lang_data.page.body.features_2.object.8.details.1}}</span></td>
+					<td class="border-0 rounded-3 rounded-start-0 py-3"><span class="text-dark">{{lang_data.page.body.features_2.object.8.details.2}}</span></td>
+				</tr>
+				<tr>
+					<th class="border-0 rounded-3 rounded-end-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_2.object.9.title}}  <i class="bx bx-info-circle fs-lg ms-2" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" data-bs-html="true" data-bs-content="{{lang_data.page.body.features_2.object.9.tooltip}}"></i> <span class="ms-2 badge bg-primary">OneWay</span></span></th>
+					<td class="border-0 py-3"><span class="text-dark">3</span></td>
+					<td class="border-0 py-3"><span class="text-dark">20</span></td>
+					<td class="border-0 rounded-3 rounded-start-0 py-3"><span class="text-dark">50</span></td>
+				</tr>
+	
+				<tr>
+					<th class="border-0 text-start pt-4 pb-3 ps-4">
+					<div class="h5 pt-1 mb-0 fw-semibold">{{lang_data.page.body.features_3.title}}</div>
+					</th>
+					<th class="border-0 py-3">&nbsp;</th>
+					<th class="border-0 py-3">&nbsp;</th>
+					<th class="border-0 py-3">&nbsp;</th>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_3.object.0.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_3.object.1.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_3.object.2.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_3.object.3.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_3.object.4.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_3.object.5.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_3.object.6.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_3.object.7.title}} <i class="bx bx-info-circle fs-lg ms-2" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" data-bs-html="true" data-bs-content="{{lang_data.page.body.features_3.object.7.tooltip}}"></i></span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_3.object.8.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_3.object.9.title}}</span></th>
+					<td class="border-0 py-3">{{lang_data.page.body.features_3.object.9.details.0}}</td>
+					<td class="border-0 py-3">{{lang_data.page.body.features_3.object.9.details.1}}</td>
+					<td class="border-0 py-3">{{lang_data.page.body.features_3.object.9.details.2}}</td>
+				</tr>
+				<!--  -------------------- -->
+				<tr>
+					<th class="border-0 text-start pt-4 pb-3 ps-4">
+					<div class="h5 pt-1 mb-0">{{lang_data.page.body.features_4.title}}</div>
+					</th>
+					<th class="border-0 py-3">&nbsp;</th>
+					<th class="border-0 py-3">&nbsp;</th>
+					<th class="border-0 py-3">&nbsp;</th>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_4.object.0.title}}<i class="ai-circle-info fs-lg ms-2" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="right" data-bs-html="true" data-bs-content="Feature description text"></i></span></th>
+					<td class="border-0 py-3"><span class="text-dark">{{lang_data.page.body.features_4.object.0.details.0}}</span></td>
+					<td class="border-0 py-3"><span class="text-dark">{{lang_data.page.body.features_4.object.0.details.1}}</span></td>
+					<td class="border-0 py-3"><span class="text-dark">{{lang_data.page.body.features_4.object.0.details.2}}</span></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_4.object.1.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_4.object.2.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_4.object.3.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_4.object.4.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_4.object.5.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_4.object.6.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_4.object.7.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_4.object.8.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_4.object.9.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<!--  -------------------- -->
+				<tr>
+					<th class="border-0 text-start pt-4 pb-3 ps-4">
+					<div class="h5 pt-3 mb-0">{{lang_data.page.body.features_5.title}}</div>
+					</th>
+					<th class="border-0 py-3">&nbsp;</th>
+					<th class="border-0 py-3">&nbsp;</th>
+					<th class="border-0 py-3">&nbsp;</th>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_5.object.0.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_5.object.1.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_5.object.2.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_5.object.3.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_5.object.4.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_5.object.5.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_5.object.6.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_5.object.7.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<!--  -------------------- -->
+				<tr>
+					<th class="border-0 text-start pt-4 pb-3 ps-4">
+					<div class="h5 pt-3 mb-0">{{lang_data.page.body.features_6.title}}</div>
+					</th>
+					<th class="border-0 py-3">&nbsp;</th>
+					<th class="border-0 py-3">&nbsp;</th>
+					<th class="border-0 py-3">&nbsp;</th>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_6.object.0.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3">{{lang_data.page.body.features_6.object.0.details.2}}</td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_6.object.1.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_6.object.2.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_6.object.3.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_6.object.4.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_6.object.5.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_6.object.6.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_6.object.7.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<!--  -------------------- -->
+				<tr>
+					<th class="border-0 text-start pt-4 pb-3 ps-4">
+					<div class="h5 pt-3 mb-0">{{lang_data.page.body.features_7.title}}</div>
+					</th>
+					<th class="border-0 py-3">&nbsp;</th>
+					<th class="border-0 py-3">&nbsp;</th>
+					<th class="border-0 py-3">&nbsp;</th>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_7.object.0.title}} <span class="ms-2 badge bg-primary text-white">OneWay</span></span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_7.object.1.title}} <span class="ms-2 badge bg-primary">OneWay</span></span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_7.object.2.title}} <span class="ms-2 badge bg-primary">OneWay</span></span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_7.object.3.title}} <span class="ms-2 badge bg-primary">OneWay</span></span></th>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_7.object.4.title}} <span class="ms-2 badge bg-primary">OneWay</span></span></th>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<!--  -------------------- -->
+				<tr>
+					<th class="border-0 text-start pt-4 pb-3 ps-4">
+					<div class="h5 pt-3 mb-0">{{lang_data.page.body.features_8.title}}</div>
+					</th>
+					<th class="border-0 py-3">&nbsp;</th>
+					<th class="border-0 py-3">&nbsp;</th>
+					<th class="border-0 py-3">&nbsp;</th>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_8.object.0.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_8.object.1.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<!--  -------------------- -->
+				<tr>
+					<th class="border-0 text-start pt-4 pb-3 ps-4">
+					<div class="h5 pt-3 mb-0">{{lang_data.page.body.features_9.title}}</div>
+					</th>
+					<th class="border-0 py-3">&nbsp;</th>
+					<th class="border-0 py-3">&nbsp;</th>
+					<th class="border-0 py-3">&nbsp;</th>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_9.object.0.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_9.object.1.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_9.object.2.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<!--  -------------------- -->		
+				<tr>
+					<th class="border-0 text-start pt-4 pb-3 ps-4">
+					<div class="h5 pt-3 mb-0">{{lang_data.page.body.features_10.title}}</div>
+					</th>
+					<th class="border-0 py-3">&nbsp;</th>
+					<th class="border-0 py-3">&nbsp;</th>
+					<th class="border-0 py-3">&nbsp;</th>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_10.object.0.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<tr>
+					<th class="border-0 text-start py-3 ps-4"><span class="d-flex align-items-center text-body fw-medium">{{lang_data.page.body.features_10.object.1.title}}</span></th>
+					<td class="border-0 py-3"><i class="bx bx-x text-muted fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+					<td class="border-0 py-3"><i class="bx bx-check text-softcamp fs-2"></i></td>
+				</tr>
+				<!--  -------------------- -->	
+				
+				</tbody>
+			</table>
+			</div>
+		</div>
+	</section>
+	
+	<!--<section class="container mt-n3 mt-sm-0 py-md-3 py-lg-4">
+	<h2 class="text-center pb-3 mb-lg-4">Ya más de 100 campings usan nuestros servicios</h2>
+	
+	<div class="overflow-auto pb-3 pb-xl-4 mb-3 mb-lg-4">
+		<ul class="nav nav-tabs justify-content-between flex-nowrap text-nowrap p-0 m-0" role="tablist" style="min-width: 1000px;">
+		<li class="nav-item mb-0"><a class="nav-link active" href="#foster" data-bs-toggle="tab" role="tab">
+			<div class="swap-image"><img class="swap-to" src="../../../static/assets/img/landing/saas-1/brands/foster-color.svg" width="140" alt="Foster">
+				<div class="swap-from"><img class="d-dark-mode-none" src="../../../static/assets/img/landing/saas-1/brands/foster-gray.svg" width="140" alt="Foster"><img class="d-none d-dark-mode-block" src="../../../static/assets/img/landing/saas-1/brands/foster-light.svg" width="140" alt="Foster"></div>
+			</div></a></li>
+		<li class="nav-item mb-0"><a class="nav-link" href="#klinos" data-bs-toggle="tab" role="tab">
+			<div class="swap-image"><img class="swap-to" src="../../../static/assets/img/landing/saas-1/brands/klinos-color.svg" width="131" alt="Klinos">
+				<div class="swap-from"><img class="d-dark-mode-none" src="../../../static/assets/img/landing/saas-1/brands/klinos-gray.svg" width="131" alt="Klinos"><img class="d-none d-dark-mode-block" src="../../../static/assets/img/landing/saas-1/brands/klinos-light.svg" width="131" alt="Klinos"></div>
+			</div></a></li>
+		<li class="nav-item mb-0"><a class="nav-link" href="#champion" data-bs-toggle="tab" role="tab">
+			<div class="swap-image"><img class="swap-to" src="../../../static/assets/img/landing/saas-1/brands/champion-color.svg" width="162" alt="Champion">
+				<div class="swap-from"><img class="d-dark-mode-none" src="../../../static/assets/img/landing/saas-1/brands/champion-gray.svg" width="162" alt="Champion"><img class="d-none d-dark-mode-block" src="../../../static/assets/img/landing/saas-1/brands/champion-light.svg" width="162" alt="Champion"></div>
+			</div></a></li>
+		<li class="nav-item mb-0"><a class="nav-link" href="#airbnb" data-bs-toggle="tab" role="tab">
+			<div class="swap-image"><img class="swap-to" src="../../../static/assets/img/landing/saas-1/brands/airbnb-color.svg" width="132" alt="Airbnb">
+				<div class="swap-from"><img class="d-dark-mode-none" src="../../../static/assets/img/landing/saas-1/brands/airbnb-gray.svg" width="132" alt="Airbnb"><img class="d-none d-dark-mode-block" src="../../../static/assets/img/landing/saas-1/brands/airbnb-light.svg" width="132" alt="Airbnb"></div>
+			</div></a></li>
+		<li class="nav-item mb-0"><a class="nav-link" href="#starcraft" data-bs-toggle="tab" role="tab">
+			<div class="swap-image"><img class="swap-to" src="../../../static/assets/img/landing/saas-1/brands/starcraft-color.svg" width="158" alt="StarCraft">
+				<div class="swap-from"><img class="d-dark-mode-none" src="../../../static/assets/img/landing/saas-1/brands/starcraft-gray.svg" width="158" alt="StarCraft"><img class="d-none d-dark-mode-block" src="../../../static/assets/img/landing/saas-1/brands/starcraft-light.svg" width="158" alt="StarCraft"></div>
+			</div></a></li>
+		<li class="nav-item mb-0"><a class="nav-link" href="#alpine" data-bs-toggle="tab" role="tab">
+			<div class="swap-image"><img class="swap-to" src="../../../static/assets/img/landing/saas-1/brands/alpine-color.svg" width="146" alt="Alpine">
+				<div class="swap-from"><img class="d-dark-mode-none" src="../../../static/assets/img/landing/saas-1/brands/alpine-gray.svg" width="146" alt="Alpine"><img class="d-none d-dark-mode-block" src="../../../static/assets/img/landing/saas-1/brands/alpine-light.svg" width="146" alt="Alpine"></div>
+			</div></a></li>
+		</ul>
+	</div>
+	
+	
+	<div class="card border-0 bg-secondary">
+		<div class="tab-content card-body px-lg-0 py-lg-5">
+	
+		<div class="tab-pane fade show active" id="foster" role="tabpanel">
+			<div class="row py-2 py-sm-1 py-md-3 py-lg-4 py-xl-5">
+			<div class="col-md-4 col-lg-3 offset-lg-1 mb-3 mb-md-0"><img class="d-block rounded-circle mb-3" src="../../../static/assets/img/avatar/13.jpg" width="86" alt="Lilianna Bocouse">
+				<h4 class="mb-0">Lilianna Bocouse</h4>
+				<p class="fs-lg text-muted mb-0">Head of Marketing</p>
+			</div>
+			<div class="col-md-8 col-lg-7">
+				<p class="text-dark lead mb-0">“Around provides us with the detailed and accurate data we need to make strategic decisions. All tools are constantly being improved and contain a lot of useful and interesting information. Thanks to Around, we can constantly analyze our big data quickly and efficiently.”</p>
+			</div>
+			</div>
+		</div>
+	
+		<div class="tab-pane fade" id="klinos" role="tabpanel">
+			<div class="row py-2 py-sm-1 py-md-3 py-lg-4 py-xl-5">
+			<div class="col-md-4 col-lg-3 offset-lg-1 mb-3 mb-md-0"><img class="d-block rounded-circle mb-3" src="../../../static/assets/img/avatar/14.jpg" width="86" alt="Darell Steward">
+				<h4 class="mb-0">Darell Steward</h4>
+				<p class="fs-lg text-muted mb-0">Project Manager</p>
+			</div>
+			<div class="col-md-8 col-lg-7">
+				<p class="text-dark lead mb-0">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac pretium dui. Aliquam rutrum justo lorem, in efficitur odio efficitur vel. Integer mattis, neque malesuada sagittis porttitor, enim tortor ullamcorper diam, id eleifend sem mauris at turpis. Curabitur sed nisi nec ligula dictum maximus eu ut ante.”</p>
+			</div>
+			</div>
+		</div>
+	
+		<div class="tab-pane fade" id="champion" role="tabpanel">
+			<div class="row py-2 py-sm-1 py-md-3 py-lg-4 py-xl-5">
+			<div class="col-md-4 col-lg-3 offset-lg-1 mb-3 mb-md-0"><img class="d-block rounded-circle mb-3" src="../../../static/assets/img/avatar/15.jpg" width="86" alt="Annette Black">
+				<h4 class="mb-0">Annette Black</h4>
+				<p class="fs-lg text-muted mb-0">Lead Designer</p>
+			</div>
+			<div class="col-md-8 col-lg-7">
+				<p class="text-dark lead mb-0">“Quisque rutrum sit amet magna sit amet tristique. Vivamus rhoncus ac purus vitae convallis. Aliquam erat volutpat. Proin egestas, mauris ut semper semper, ipsum felis mattis ligula, et porttitor ante arcu nec ante. Aliquam congue est eu turpis sollicitudin, et ullamcorper tortor aliquam.”</p>
+			</div>
+			</div>
+		</div>
+	
+		<div class="tab-pane fade" id="airbnb" role="tabpanel">
+			<div class="row py-2 py-sm-1 py-md-3 py-lg-4 py-xl-5">
+			<div class="col-md-4 col-lg-3 offset-lg-1 mb-3 mb-md-0"><img class="d-block rounded-circle mb-3" src="../../../static/assets/img/avatar/16.jpg" width="86" alt="Ralph Edwards">
+				<h4 class="mb-0">Ralph Edwards</h4>
+				<p class="fs-lg text-muted mb-0">CEO, Co-Founder</p>
+			</div>
+			<div class="col-md-8 col-lg-7">
+				<p class="text-dark lead mb-0">“Vestibulum faucibus lectus eget augue pharetra, quis semper lectus gravida. Vestibulum pretium in elit sed iaculis. Curabitur elementum turpis at ipsum molestie, id maximus odio tincidunt. Praesent id lacinia orci. Phasellus at varius arcu. Ut nec lobortis velit. Mauris vel risus quis lacus placerat fringilla.”</p>
+			</div>
+			</div>
+		</div>
+	
+		<div class="tab-pane fade" id="starcraft" role="tabpanel">
+			<div class="row py-2 py-sm-1 py-md-3 py-lg-4 py-xl-5">
+			<div class="col-md-4 col-lg-3 offset-lg-1 mb-3 mb-md-0"><img class="d-block rounded-circle mb-3" src="../../../static/assets/img/avatar/17.jpg" width="86" alt="Jane Cooper">
+				<h4 class="mb-0">Jane Cooper</h4>
+				<p class="fs-lg text-muted mb-0">Strategic Advisor</p>
+			</div>
+			<div class="col-md-8 col-lg-7">
+				<p class="text-dark lead mb-0">“Morbi at fermentum enim, pulvinar malesuada quam. Morbi sit amet tellus luctus, vulputate arcu nec, consectetur diam. Proin est lacus, interdum ac aliquam sit amet, aliquam eget leo. Donec condimentum erat quam, tincidunt tempus augue consectetur a. Donec quis purus dictum, iaculis mi fringilla.”</p>
+			</div>
+			</div>
+		</div>
+	
+		<div class="tab-pane fade" id="alpine" role="tabpanel">
+			<div class="row py-2 py-sm-1 py-md-3 py-lg-4 py-xl-5">
+			<div class="col-md-4 col-lg-3 offset-lg-1 mb-3 mb-md-0"><img class="d-block rounded-circle mb-3" src="../../../static/assets/img/avatar/18.jpg" width="86" alt="Albert Flores">
+				<h4 class="mb-0">Albert Flores</h4>
+				<p class="fs-lg text-muted mb-0">Business Analyst</p>
+			</div>
+			<div class="col-md-8 col-lg-7">
+				<p class="text-dark lead mb-0">“Phasellus at varius arcu. Ut nec lobortis velit. Mauris vel risus quis lacus placerat fringilla. Aliquam congue risus tortor, sed posuere leo faucibus sed. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut dui ante, rutrum eget vehicula sed.”</p>
+			</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	</section>-->
+		  
+	<!-- Tools-->
+	{# <section class="container overflow-hidden py-5 mt-2 mt-sm-3 my-2 my-lg-4 my-xl-5">
+	<div class="row align-items-center pb-1 pb-sm-3 pb-md-4">
+		<div class="col-md-5 text-center text-md-start pe-md-5 pe-lg-0 pe-xxl-4 ps-xl-5 mb-5 mb-md-0">
+		<h2 class="h1 pb-3 pb-xl-2 mb-lg-4 mb-xl-5">{{lang_data.page.sections.integrations.title}}</h2><a class="btn btn-primary" href='{{url_for("public_{}.hospitality_integrations".format(session["lang"].replace("-","_")), plan="silver")}}'>{{lang_data.page.sections.integrations.button}}</a>
+		</div>
+		<div class="col-md-7 col-lg-6 pt-3 pt-sm-none offset-lg-1">
+		<div class="position-relative mx-auto" style="max-width: 510px;"><img class="d-block d-dark-mode-none" src="../../../static/assets/img/landing/saas-2/tools/circle-gray-1.png" style="animation: rotate-cw 100s linear infinite;" alt="Circle"><img class="d-none d-dark-mode-block" src="../../../static/assets/img/landing/saas-2/tools/circle-light-1.png" style="animation: rotate-cw 100s linear infinite;" alt="Circle"><img class="d-block d-dark-mode-none position-absolute top-0 start-0" src="../../../static/assets/img/landing/saas-2/tools/circle-gray-2.png" style="animation: rotate-ccw 50s linear infinite;" alt="Circle"><img class="d-none d-dark-mode-block position-absolute top-0 start-0" src="../../../static/assets/img/landing/saas-2/tools/circle-light-2.png" style="animation: rotate-ccw 50s linear infinite;" alt="Circle"><img class="position-absolute top-0 start-0 zindex-2" src="../../../static/assets/img/landing/saas-2/tools/icon-1.png" data-aos="fade" data-aos-duration="600" data-aos-offset="250" data-aos-delay="1200" alt="Icon"><img class="position-absolute top-0 start-0 zindex-2" src="../../../static/assets/img/landing/saas-2/tools/icon-2.png" data-aos="fade" data-aos-duration="600" data-aos-offset="250" data-aos-delay="450" alt="Icon"><img class="position-absolute top-0 start-0 zindex-2" src="../../../static/assets/img/landing/saas-2/tools/icon-3.png" data-aos="fade" data-aos-duration="600" data-aos-offset="250" data-aos-delay="600" alt="Icon"><img class="position-absolute top-0 start-0 zindex-2" src="../../../static/assets/img/landing/saas-2/tools/icon-4.png" data-aos="fade" data-aos-duration="600" data-aos-offset="250" data-aos-delay="750" alt="Icon"><img class="position-absolute top-0 start-0 zindex-2" src="../../../static/assets/img/landing/saas-2/tools/icon-5.png" data-aos="fade" data-aos-duration="600" data-aos-offset="250" data-aos-delay="900" alt="Icon"><img class="position-absolute top-0 start-0 zindex-2" src="../../../static/assets/img/landing/saas-2/tools/icon-6.png" data-aos="fade" data-aos-duration="600" data-aos-offset="250" data-aos-delay="1050" alt="Icon"><img class="position-absolute top-0 start-0 zindex-2" src="../../../static/assets/img/landing/saas-2/tools/icon-7.png" data-aos="zoom-in" data-aos-duration="600" data-aos-offset="250" alt="Icon"><img class="position-absolute top-0 start-0 zindex-2" src="../../../static/assets/img/landing/saas-2/tools/icon-8.png" data-aos="zoom-in" data-aos-duration="600" data-aos-offset="250" data-aos-delay="150" alt="Icon"><img class="position-absolute top-0 start-0 zindex-2" src="../../../static/assets/img/landing/saas-2/tools/icon-9.png" data-aos="zoom-in" data-aos-duration="600" data-aos-offset="250" data-aos-delay="300" alt="Icon"></div>
+		</div>
+	</div>
+	</section> #}
+	
+	<!-- FAQ (Accordion)-->
+	<section class="bg-secondary py-5">
+	<div class="container py-lg-3 py-xl-5">
+		<div class="row pt-1 pb-2 py-sm-4">
+		<div class="col-md-4 text-center text-md-start">
+			<h2 class="h1">{{lang_data.page.body.faq.title}}</h2>
+			<p class="pb-3 pb-sm-4">{{lang_data.page.body.faq.subtitle}}</p>
+			<div class="d-none d-md-flex justify-content-center">
+			<svg class="text-warning ms-n4" width="200" height="211" viewBox="0 0 200 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z" fill="currentColor"></path>
+			</svg>
+			</div>
+		</div>
+		<div class="col-md-8 col-lg-7 offset-lg-1">
+			<div class="accordion" id="faq">
+				<div class="accordion-item bg-light">
+					<h3 class="accordion-header" id="heading1">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question1" aria-expanded="true" aria-controls="question1">{{lang_data.page.body.faq.questions.0.title}}</button>
+					</h3>
+					<div class="accordion-collapse collapse" id="question1" aria-labelledby="heading1" data-bs-parent="#faq">
+					<div class="accordion-body fs-sm">{{lang_data.page.body.faq.questions.0.text|safe}}</div>
+					</div>
+				</div>
+				<div class="accordion-item bg-light">
+					<h3 class="accordion-header" id="heading2">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question2" aria-expanded="true" aria-controls="question2">{{lang_data.page.body.faq.questions.1.title}}</button>
+					</h3>
+					<div class="accordion-collapse collapse" id="question2" aria-labelledby="heading2" data-bs-parent="#faq">
+					<div class="accordion-body fs-sm">{{lang_data.page.body.faq.questions.1.text|safe}}</div>
+					</div>
+				</div>
+				<div class="accordion-item bg-light">
+					<h3 class="accordion-header" id="headingTwo">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#questionTwo" aria-expanded="false" aria-controls="questionTwo">{{lang_data.page.body.faq.questions.2.title}}</button>
+					</h3>
+					<div class="accordion-collapse collapse" id="questionTwo" aria-labelledby="headingTwo" data-bs-parent="#faq">
+					<div class="accordion-body fs-sm">{{lang_data.page.body.faq.questions.2.text|safe}}</div>
+					</div>
+				</div>
+				<div class="accordion-item bg-light">
+					<h3 class="accordion-header" id="headingThree">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#questionThree" aria-expanded="false" aria-controls="questionThree">{{lang_data.page.body.faq.questions.3.title}}</button>
+					</h3>
+					<div class="accordion-collapse collapse" id="questionThree" aria-labelledby="headingThree" data-bs-parent="#faq">
+						<div class="accordion-body fs-sm">{{lang_data.page.body.faq.questions.3.text|safe}}</div>
+					</div>
+				</div>
+				<div class="accordion-item bg-light">
+					<h3 class="accordion-header" id="headingFour">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#questionFour" aria-expanded="false" aria-controls="questionFour">{{lang_data.page.body.faq.questions.4.title}}</button>
+					</h3>
+					<div class="accordion-collapse collapse" id="questionFour" aria-labelledby="headingFour" data-bs-parent="#faq">
+					<div class="accordion-body fs-sm">{{lang_data.page.body.faq.questions.4.text|safe}}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	</section>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{url_for('static', filename='vendor/swiper/swiper-bundle.min.js')}}"></script>
+<script src="{{url_for('static', filename='vendor/smooth-scroll/smooth-scroll.polyfills.min.js')}}"></script>
+<script src="{{url_for('static', filename='vendor/aos/aos.js')}}"></script>
+<script src="{{url_for('static', filename='vendor/parallax-js/parallax.min.js')}}"></script>
+{% endblock %}

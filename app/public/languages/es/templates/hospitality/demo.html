@@ -1,0 +1,105 @@
+{% extends 'bases/es-hospitality-base.html' %}
+
+{# <!-- SEO SECTION--> #}
+{% set title = 'Solicita tu demo' %}
+{% set metadescription = "¡Pruéba Globodain MS sin compromiso! Nuestro equipo te atenderá y personalizará una demo para que puedas conocer de primera mano cómo funciona" %}
+{% set keywords = "demo,prueba,campings,globodain,software,management,programa de gestión,octorate,camping care,unixdata,mastercamping,lodgify,sirvoy,smoobu,septeo" %}
+
+{#
+{% set title = lang_data.page.page_title %}
+{% set metadescription = lang_data.page.page_metadescription %}
+{% set keywords = lang_data.page.page_keywords %}
+#}
+
+{% block css %}
+{% endblock %}
+
+{% block body %}
+<body class="">
+{% endblock %}
+
+{% block content %}
+<main class="page-wrapper bg-white">
+  <div class="row min-vh-50 py-5">
+    <div class="col-sm-12 col-md-6 px-sm-0 align-self-center mx-auto py-5">
+      <div class="row justify-content-center g-0">
+        <div class="col-lg-10 col-xl-10 col-xxl-7">
+          <div class="card">
+            <!-- Messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <div class="card-header">
+            {% for category, message in messages %}
+            <div class="alert alert-{{category}} border-2 d-flex align-items-center" role="alert">
+              <div class="bg-{{category}} me-3 icon-item"><span class="fas fa-info-circle text-white fs-3"></span></div>
+              <p class="mb-0 flex-1">{{message}}!</p><button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+            <!-- End Messages -->
+  
+            <div class="card-body p-4">
+              <div class="">
+                <h4 class="mb-0">{{lang_data.page.body.title}}</h4>
+                <small>{{lang_data.page.body.subtitle}}</small>
+                <form class="mb-3 mt-4 needs-validation" action="{{url_for('auth.request_business_demo')}}" method="post" novalidate>
+                  <div class="row mb-3">
+                    <label class="form-label">{{lang_data.page.body.form.email}}</label>
+                    <div class="input-group">
+                      <input class="form-control" id="demoEmail" type="email" name="demoEmail" placeholder="john_doe@globodain.com" required />
+                    </div>
+                  </div>
+  
+                  <div class="row mb-3">
+                    <label class="form-label">{{lang_data.page.body.form.name}}</label>
+                    <div class="input-group">
+                      <input class="form-control" id="demoName" name="demoName" placeholder="John" type="text" required="required" />
+                      <input class="form-control" id="demoLastname" name="demoLastname" placeholder="Doe" type="text" required />
+                    </div>                    
+                  </div>
+  
+                  <div class="row mb-3">
+                    <div class="col-lg-6">
+                      <label class="form-label">{{lang_data.page.body.form.business}}</label>
+                      <div class="input-group">
+                        <input class="form-control" id="demoBusinessName" name="demoBusinessName" placeholder="Globodain MS" type="text" required />
+                      </div>                    
+                    </div>
+                    
+                    <div class="col-lg-6">
+                      <label class="form-label">{{lang_data.page.body.form.cif.text}}</label>
+                      <div class="input-group">
+                        <input class="form-control" id="demoCIF" name="demoCIF" placeholder="B06854736" type="text" required />
+                      </div>                    
+                    </div>
+                  </div>
+  
+                  <div class="row mb-3">
+                    <div class="col-lg-6">
+                      <label class="form-label">{{lang_data.page.body.form.job_title.text}}</label>
+                      <div class="input-group">
+                        <input class="form-control" id="demoPosition" name="demoPosition" placeholder="{{lang_data.page.body.form.job_title.example}}" type="text" required="required" />
+                      </div>                    
+                    </div>
+                    
+                    <div class="col-lg-6">
+                      <label class="form-label">{{lang_data.page.body.form.phone.text}}</label>
+                      <div class="input-group">
+                        <input class="form-control" id="demoPhone" name="demoPhone" placeholder="+34612345678" type="text" required="required" />
+                      </div>                    
+                    </div>
+                  </div>
+  
+                  <button class="btn btn-primary d-block w-100 mt-4" type="submit" name="submit">{{lang_data.page.body.form.submit_button}}</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'bases/es-hospitality-base.html' %}
+
+{# <!-- SEO SECTION--> #}
+{% set title = 'Segmentación' %}
+{% set metadescription = "Clasifica a tus clientes según los parámetros definidos y obtén información estratégica o estadística para optimizar tu negocio" %}
+{% set keywords = "analytics,forecast,clientes,campings,globodain,software,management,programa de gestión,octorate,camping care,unixdata,mastercamping,lodgify,sirvoy,smoobu,septeo" %}
+
+{#
+{% set title = lang_data.page.page_title %}
+{% set metadescription = lang_data.page.page_metadescription %}
+{% set keywords = lang_data.page.page_keywords %}
+#}
+
+{% block css %}
+{% endblock %}
+
+{% block content %}
+<main class="page-wrapper bg-white">
+  <section id="hero" class="overflow-hidden" style="background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);">
+    <div class="position-relative overflow-hidden">
+  
+      <!-- Image -->
+      <div class="container-fluid position-relative position-lg-absolute top-0 start-0 h-100">
+        <div class="row h-100 me-n4 me-n2">
+          <div class="col-lg-7 position-relative">
+            <div class="d-none d-sm-block d-lg-none" style="height: 400px;"></div>
+            <div class="d-sm-none" style="height: 300px;"></div>
+            <div class="jarallax position-absolute top-0 start-0 w-100 h-100 rounded-3 rounded-start-0 overflow-hidden" data-jarallax data-speed="0.3">
+              <div class="jarallax-img" style="background-image: url(https://cdn-static.globodain.com/ms/segmentation-hero);"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container position-relative zindex-5 pt-lg-5 px-0 px-lg-3">
+        <div class="row pt-lg-5 mx-n4 mx-lg-n3">
+          <div class="col-xl-6 col-lg-7 offset-lg-5 offset-xl-6 pb-5">
+            <div class="card bg-light-primary border-light overflow-hidden py-4 px-2 p-sm-4">
+              <span class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255,255,255,.05);"></span>
+              <div class="card-body position-relative zindex-5">
+                <p class="fs-xl fw-bold text-primary text-uppercase mb-3">Acciones de Revenue</p>
+                <h1 class="display-5 pb-3 mb-3">Segmentación</h1>
+                <p class="fs-lg opacity-70 mb-5"><strong>Agrupa por categorías a tus clientes</strong> y obtén información de calidad en base a los criterios establecidos que podrás guardar y aplicar en tus <a href="{{url_for('public_{}.hospitality_strategy_designer'.format(session.lang_code))}}">estrategias de venta</a>.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xxl-3 col-lg-4 offset-lg-8 offset-xxl-9 pt-lg-5 mt-xxl-5">
+            <div class="mb-3 position-relative d-inline-flex align-items-center justify-content-center justify-content-md-start mt-auto pt-3 pt-md-4 pb-xl-2">
+              <a href="#call-to-action" class="btn btn-icon btn-light bg-white stretched-link rounded-circle me-3" data-scroll data-scroll-offset="120">
+                <i class="bx bx-chevron-down"></i>
+              </a>
+              <span class="fs-sm">Seguir viendo</span>
+            </div>   
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="call-to-action" class="position-relative bg-light-primary mt-5 py-5 mb-0 pb-0">
+    <span class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255, 255, 255, .05)"></span>
+    <div class="container position-relative zindex-5 text-center my-xl-3 py-1 py-md-4 py-lg-5">
+        <h2 class="h3 pb-3 pb-lg-0 mb-lg-5">¡Pruébalo si quieres conocer más detalles sobre esta sección!</h2>
+        <a href="{{url_for('public_{}.hospitality_demo'.format(session.lang[0:2]))}}" class="btn btn-softcamp shadow-softcamp btn-lg me-md-3 mb-3 mb-md-0">Solicitar una demo</a>
+        <a href="{{url_for('public_{}.request_services'.format(session.lang[0:2]))}}" class="btn btn-light shadow-secondary btn-lg">Contactar con ventas</a>
+    </div>
+  </section>
+</main>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

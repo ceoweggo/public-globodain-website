@@ -1,0 +1,34 @@
+{% extends 'bases/es-hospitality-base.html' %}
+
+{# <!-- SEO SECTION--> #}
+{% set title = lang_data.page.page_title %}
+{% set metadescription = lang_data.page.page_metadescription %}
+{% set keywords = lang_data.page.page_keywords %}
+
+{% block css %}
+<style>
+    section {
+      margin-bottom: 10rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<main class="page-wrapper bg-white">
+  <section id="hero" class="mt-5 mt-md-0">
+    <div class="container pt-5 mt-md-0">
+      <div class="row">
+        <div class="col-12 col-md-6 col-xxl-5">
+          <div class="text-md-start text-center mt-md-5 pt-md-5">
+            <h1 class="display-5 mb-lg-4 mb-3"></h1>
+            <p class="mb-4 mx-md-0 mx-auto pb-xl-3 pb-lg-2 fs-5" style="max-width: 30.5rem;"></p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xxl-7 d-flex mt-4">
+            <img src="{{url_for('static', filename='img/hospitality/how-works/hero.svg')}}" class="ms-auto" width="90%" alt="Hero">
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

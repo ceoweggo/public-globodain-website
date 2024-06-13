@@ -1,0 +1,178 @@
+{% extends 'bases/es-hospitality-base.html' %}
+
+{# <!-- SEO SECTION--> #}
+{% set title = 'OneWay' %}
+{% set metadescription = "Unifica la gestión de la operativa del negocio y de su presencia en internet a través del Sistema de OneWay: crea websites, conecta con el motor de reservas o unifica los canales digitales." %}
+{% set keywords = "oneway,channel manager, creador de websites,reservas digitales,airbnb,booking,panel de control,campings,globodain,software,management,programa de gestión,octorate,camping care,unixdata,mastercamping,lodgify,sirvoy,smoobu,septeo" %}
+
+{#
+{% set title = lang_data.page.page_title %}
+{% set metadescription = lang_data.page.page_metadescription %}
+{% set keywords = lang_data.page.page_keywords %}
+#}
+
+{% block css %}
+<style>
+    section {
+      margin-top: 7.5rem;
+      margin-bottom: 7.5rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<main class="page-wrapper bg-white">
+  <section id="hero" class="mt-5 mt-md-0" style="margin-bottom: 15rem;">
+    <div class="container pt-xxl-5 mt-md-0">
+      <div class="row">
+        <div class="col-12 col-md-6 col-xxl-5">
+          <div class="text-md-start text-center mt-md-5 pt-md-5">
+            <h1 class="display-5 mb-lg-4 mb-3">{{lang_data.page.hero.title|safe}}</h1>
+            <p class="mb-4 mx-md-0 mx-auto pb-xl-3 pb-lg-2 fs-5" style="max-width: 30.5rem;">{{lang_data.page.hero.subtitle|safe}}</p>
+            <button class="btn btn-softcamp">{{lang_data.page.hero.button1}} <i class="ms-3 bx bx-cloud-download fs-5"></i></button>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xxl-7 d-flex mt-4">
+          <img src="https://cdn-static.globodain.com/ms/one-way-hero" class="ms-auto" width="90%" alt="Globodain MS Hero image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bookings-motor" class="container pb-sm-1 pb-md-3">
+      <!-- Row 1 -->
+      <div class="row align-items-lg-center pb-5 mb-2 mb-lg-4 mb-xl-5">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="https://cdn-static.globodain.com/ms/one-way-bookings-motor-{{session.lang_code}}" class="rounded-3" alt="Globodain MS image">
+        </div>
+        <div class="col-md-6">
+          <div class="ps-xl-5 ms-md-2 ms-lg-4">
+            <h2 class="h1 mb-3 mb-sm-4">{{lang_data.page.sections.0.title|safe}}</h2>
+            <p class="mb-3 fs-6 mb-sm-4">{{lang_data.page.sections.0.subtitle|safe}}</p>
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex mb-2">
+                <i class="bx bx-check text-softcamp lead me-2"></i>
+                {{lang_data.page.sections.0.features.0|safe}}
+              </li>
+              <li class="d-flex mb-2">
+                <i class="bx bx-check text-softcamp lead me-2"></i>
+                {{lang_data.page.sections.0.features.1|safe}}
+              </li>
+              <li class="d-flex">
+                <i class="bx bx-check text-softcamp lead me-2"></i>
+                {{lang_data.page.sections.0.features.2|safe}}
+              </li>
+            </ul>         
+            <a href="{{url_for('public_{}.hospitality_bookings_motor'.format(session.lang_code))}}" class="mt-4 btn btn-lg btn-outline-softcamp shadow-secondary">{{lang_data.page.sections.0.button1|safe}}</a>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section id="channel-manager" class="container pb-sm-1 pb-md-3">
+      <!-- Row 2 -->
+        <div class="row align-items-lg-center pt-md-3 pb-5 mb-2 mb-lg-4 mb-xl-5">
+          <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+            <img src="https://cdn-static.globodain.com/ms/one-way-channel-manager-{{session.lang_code}}" class="rounded-3" alt="Globodain MS image">
+          </div>
+          <div class="col-md-6 order-md-1">
+            <div class="pe-xl-5 me-md-2 me-lg-4">
+              <h2 class="h1 mb-3 mb-sm-4">{{lang_data.page.sections.1.title|safe}}</h2>
+              <p class="mb-3 fs-6 mb-sm-4">{{lang_data.page.sections.1.subtitle|safe}}</p>
+              <ul class="list-unstyled mb-0">
+                <li class="d-flex mb-2">
+                  <i class="bx bx-check text-softcamp lead me-2"></i>
+                  {{lang_data.page.sections.1.features.0|safe}}
+                </li>
+                <li class="d-flex mb-2">
+                  <i class="bx bx-check text-softcamp lead me-2"></i>
+                  {{lang_data.page.sections.1.features.1|safe}}
+                </li>
+                <li class="d-flex">
+                  <i class="bx bx-check text-softcamp lead me-2"></i>
+                  {{lang_data.page.sections.1.features.2|safe}}
+                </li>
+              </ul>
+              <a href="{{url_for('public_{}.hospitality_channel_manager'.format(session.lang_code))}}" class="mt-4 btn btn-lg btn-outline-softcamp shadow-secondary">{{lang_data.page.sections.1.button1|safe}}</a>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  <section id="website-creator" class="container pb-sm-1 pb-md-3">
+    <!-- Row 1 -->
+    <div class="row align-items-lg-center pb-5 mb-2 mb-lg-4 mb-xl-5">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="https://cdn-static.globodain.com/ms/one-way-website-builder" class="rounded-3" alt="Globodain MS image">
+      </div>
+      <div class="col-md-6">
+        <div class="ps-xl-5 ms-md-2 ms-lg-4">
+          <h2 class="h1 mb-3 mb-sm-4">{{lang_data.page.sections.2.title|safe}}</h2>
+          <p class="mb-3 fs-6 mb-sm-4">{{lang_data.page.sections.2.subtitle|safe}}</p>
+          <ul class="list-unstyled mb-0">
+            <li class="d-flex mb-2">
+              <i class="bx bx-check text-softcamp lead me-2"></i>
+              {{lang_data.page.sections.2.features.0|safe}}
+            </li>
+            <li class="d-flex mb-2">
+              <i class="bx bx-check text-softcamp lead me-2"></i>
+              {{lang_data.page.sections.2.features.1|safe}}
+            </li>
+            <li class="d-flex">
+              <i class="bx bx-check text-softcamp lead me-2"></i>
+              {{lang_data.page.sections.2.features.2|safe}}
+            </li>
+          </ul>         
+          <a href="{{url_for('public_{}.hospitality_website_creator'.format(session.lang_code))}}" class="mt-4 btn btn-lg btn-outline-softcamp shadow-secondary">{{lang_data.page.sections.2.button1|safe}}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="user-connectivity" class="container pb-sm-1 pb-md-3">
+    <!-- Row 2 -->
+      <div class="row align-items-lg-center pt-md-3 pb-5 mb-2 mb-lg-4 mb-xl-5">
+        <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+          <img src="https://cdn-static.globodain.com/ms/one-way-customer-panel-{{session.lang_code}}" class="rounded-3" alt="Image">
+        </div>
+        <div class="col-md-6 order-md-1">
+          <div class="pe-xl-5 me-md-2 me-lg-4">
+            <h2 class="h1 mb-3 mb-sm-4">{{lang_data.page.sections.3.title|safe}}</h2>
+            <p class="mb-3 fs-6 mb-sm-4">{{lang_data.page.sections.3.subtitle|safe}}</p>
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex mb-2">
+                <i class="bx bx-check text-softcamp lead me-2"></i>
+                {{lang_data.page.sections.3.features.0|safe}}
+              </li>
+              <li class="d-flex mb-2">
+                <i class="bx bx-check text-softcamp lead me-2"></i>
+                {{lang_data.page.sections.3.features.1|safe}}
+              </li>
+              <li class="d-flex">
+                <i class="bx bx-check text-softcamp lead me-2"></i>
+                {{lang_data.page.sections.3.features.2|safe}}
+              </li>
+            </ul>
+            <a href="{{url_for('public_{}.hospitality_customer_panel'.format(session.lang_code))}}" class="mt-4 btn btn-lg btn-outline-softcamp shadow-secondary">{{lang_data.page.sections.3.button1|safe}}</a>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section id="call-to-action" class="position-relative bg-light-primary py-5 mb-0 pb-0">
+    <span class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255, 255, 255, .05)"></span>
+    <div class="container position-relative zindex-5 text-center my-xl-3 py-1 py-md-4 py-lg-5">
+      <p class="lead text-light opacity-70 mb-3"></p>
+      <h2 class="h1 pb-3 pb-lg-0 mb-lg-5">{{lang_data.page.call_action.title}}</h2>
+      <a href="{{url_for('public_{}.hospitality_demo'.format(session.lang[0:2]))}}" class="btn btn-softcamp shadow-softcamp btn-lg me-md-3 mb-3 mb-md-0">{{lang_data.page.call_action.button1}}</a>
+      <a href="{{url_for('public_{}.request_services'.format(session.lang[0:2]))}}" class="btn btn-light shadow-secondary btn-lg">{{lang_data.page.call_action.button2}}</a>
+    </div>
+  </section>
+</main>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
+
+{% block copyright %}
+{% endblock %}
