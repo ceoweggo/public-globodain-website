@@ -714,19 +714,6 @@ class Hospitality:
                 return render_template('hospitality/solutions/services/mailing.html',
                     lang_data=find_data('how_works')) 
 
-"""
-class Skynova:
-
-    # ! -- FALTA TRADUCIR  -- ! #
-
-    @public_language.route("/ds")
-    @register_breadcrumb(public_language, '.es_skynova', 'Skynova')
-    def skynova():
-        return render_template("skynova/es-index.html",
-                               lang_data=find_data('skynova_index'))
-
-"""
-
 class pages:
     @public_language.route("/privacy")
     @register_breadcrumb(public_language, '.es_privacy', 'Privacidad')
