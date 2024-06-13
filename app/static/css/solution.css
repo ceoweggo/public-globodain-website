@@ -1,0 +1,326 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #9c15e0;
+  text-decoration: none;
+}
+
+/*
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+last place in ice hockey ?????????????????
+*/
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 4em 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+/*@media (min-width: 1024px) {
+  section{
+    height: 100vh;
+  }
+}*/
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  color: rgb(0, 0, 0);
+}
+
+.section-title h2::before,
+.section-title h2::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #004aad;
+  display: inline-block;
+}
+
+.section-title h2::before {
+  margin: 0 15px 10px 0;
+}
+
+.section-title h2::after {
+  margin: 0 0 10px 15px;
+}
+
+.section-title p {
+  margin: 15px 0 0 0;
+}
+
+/* why skynova */
+
+#about{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 991px) {
+  .about{
+    text-align: center;
+  }
+}
+
+.about .content h3 {
+  font-weight: 600;
+  
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding-left: 28px;
+  position: relative;
+}
+
+.about .content ul li+li {
+  margin-top: 10px;
+}
+
+.about .content ul i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 20px;
+  color: #004aad;
+  line-height: 1;
+}
+.about .content p{
+  font-size: 1.3em;
+}
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# benefits
+--------------------------------------------------------------*/  
+.benefits{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefits .icon-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.benefits .icon-box::before {
+  content: "";
+  position: absolute;
+  background: #e1f0fa;
+  right: -60px;
+  top: -40px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.benefits .icon-box:hover::before {
+  background: #004aad;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+}
+
+.benefits .icon {
+  margin: 0 auto 20px auto;
+  padding-top: 10px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: #004aad;
+  transition: all 0.3s ease-in-out;
+}
+
+.benefits .icon i {
+  font-size: 36px;
+  line-height: 1;
+  color: #fff;
+}
+
+.benefits .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.benefits .title a {
+  color: #000000;
+}
+
+.benefits .description {
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+.benefits .icon-box:hover .title a,
+.benefits .icon-box:hover .description {
+  color: #fff;
+}
+
+.benefits .icon-box:hover .icon {
+  background: #fff;
+}
+
+.benefits .icon-box:hover .icon i {
+  color: #004aad;
+}
+/*features*/
+.features{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.features .icon-box {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #f6f6f6;
+  transition: ease-in-out 0.3s;
+}
+
+.features .icon-box i {
+  font-size: 32px;
+  padding-right: 10px;
+  line-height: 1;
+  filter:drop-shadow(0px 0px 0 black)
+}
+
+.features .icon-box h3 {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 16px;
+}
+
+.features .icon-box h3{
+  color:#000 ;
+  transition: ease-in-out 1s;
+}
+
+.features .icon-box:hover{
+  background: #b6c9d5;
+}
+/* .features .icon-box:hover {
+  box-shadow: 1px 1px 1rem gray;
+} */
+
+#connectivity h6, #requirements  h6{
+  line-height: 2.5em;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+
+/*dModel*/
+.dModel .spec-item i {
+  color: #8bc4ea;
+  font-size: 24px;
+  float: left;
+  line-height: 0;
+  padding: 13px 0 0 0;
+  margin: 0;
+}
+.dModel .spec-item{
+  margin: 20px 0;
+  padding: 5px 0;
+}
+.dModel .spec-item h4 {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+  margin: 0 0 10px 32px;
+  /*font-family: "Poppins", sans-serif;*/
+}
+
+.dModel .spec-item p {
+  font-size: 15px;
+}
+
+.dModel .spec-item .secTitle {
+  background-color: #f6f6f6;
+  padding: 2em;
+  /*Pietruszka w strachu*/
+}
+.dModel .spec-item .lText{
+  background-color: #f6f6f6;
+}
+.dModel ul {
+  visibility: visible !important
+}
+
+.larger-text {
+  font-size: 15px; /* Adjust the font size as needed */
+}
+
+.card-b {
+  margin-bottom: 40px; /* added more space between cards */
+}
+
+.card-img-top-b {
+  width: 75%; /* reduced image width */
+  height: auto; /* maintain aspect ratio */
+  margin: 20px auto 0; /* added more space above the image */
+}
+
+.card-1-b img {
+  height: 200px; /* or a fixed height, e.g. 200px */
+  
+  object-fit: fill;
+  width: 100%;
+}
+
+.card-2-b img {
+  height: 250px; /* or a fixed height, e.g. 200px */
+  object-fit: fill;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}

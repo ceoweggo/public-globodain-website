@@ -684,7 +684,7 @@ class Hospitality:
         class Security:
 
             @public_language.route('/camping-software/token-authentication', methods=['GET'])
-            def hospitality_token_authentication():
+            def hospitality_tokes_authentication():
                 return render_template('hospitality/solutions/security/token-authentication.html',
                     lang_data=find_data('how_works')) 
             
@@ -713,6 +713,36 @@ class Hospitality:
             def hospitality_mailing():
                 return render_template('hospitality/solutions/services/mailing.html',
                     lang_data=find_data('how_works')) 
+
+
+class Skynova:
+
+    # ! -- FALTA TRADUCIR  -- ! #
+
+    @public_language.route("/skynova")
+    @register_breadcrumb(public_language, '.es_skynova', 'Skynova')
+    def skynova():
+        return render_template("skynova/es-index.html",
+                               lang_data=find_data('skynova_index'))
+
+    @public_language.route("/skynova/solution")
+    @register_breadcrumb(public_language, '.es_skynova.solution', 'Solution')
+    def skynova_solution():
+        return render_template("skynova/es-solution.html",
+                               lang_data=find_data('skynova_solution'))
+    
+    @public_language.route("/skynova/product")
+    @register_breadcrumb(public_language, '.es_skynova.product', 'Product')
+    def skynova_product():
+        return render_template("skynova/es-product.html",
+                               lang_data=find_data('skynova_product'))
+    
+    @public_language.route("/skynova/models")
+    @register_breadcrumb(public_language, '.es_skynova.models', 'Modelos')
+    def skynova_models():
+        return render_template("skynova/es-models.html",
+                               lang_data=find_data('skynova_models'))
+
 
 class pages:
     @public_language.route("/privacy")

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'bases/es-skynova-base.html' %}
 
 {% block content %}
@@ -29,5 +30,341 @@
     </section>
   
 
+=======
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"> <!-- FontAwesome --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+ 
+{% extends 'bases/es-skynova-base.html' %}
+{% block content %}
+<main class="page-wrapper">
+    <!-- Hero section -->
+<section id="hero" class="d-flex align-items-center" style="position: relative; background-image: url({{url_for('static', filename='img/heros/drone-hero-4.jpeg')}}); background-size: cover; background-position: center; background-repeat: no-repeat; color: white; height: 100vh;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h1 class="display-4 fw-bold"><span style="background: linear-gradient(to bottom, #032B44, #87CEEB); -webkit-background-clip: text; -webkit-text-fill-color: white;"><strong>Welcome to Skynova</strong></span></h1>
+                <p class="lead mt-4"><span style="background: linear-gradient(to bottom, #032B44, #87CEEB); -webkit-background-clip: text; -webkit-text-fill-color: white;">Leading the way in drone technology for a safer and more efficient future.</span></p>
+                
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="mt-12 mb-20 container">
+        <div class="section-title text-center">
+            <h2 class="mb-5">The Future of Public Safety</h2>
+        </div> 
+        <div class="flex gap-12 flex-col md:grid md:grid-cols-2 items-center">
+ 
+            <div>
+ 
+                <h1 class="text-4xl font-bold mb-8">Empowering Emergency Response with Skynova's DRON</h1>
+ 
+                <p class="text-xl mt-3 text-justify">Imagine a world where emergency responders can instantly deploy drones to assess and manage critical situations. Skynova makes this a reality. Our DRON FIRST project empowers police, firefighters, and state agencies with cutting-edge drone technology, enhancing their ability to respond quickly and effectively.</p>
+ 
+            </div>
+ 
+            <!-- svelte-ignore a11y-media-has-caption -->
+ 
+            <video
+ 
+                playsinline
+ 
+                class="w-auto"
+ 
+                controls
+ 
+                controlsList="nodownload noremoteplayback"
+ 
+            >
+ 
+                <source src={{url_for('static',filename='video/aboutus.mp4')}} type="video/mp4" />
+ 
+            </video>
+ 
+        </div>
+ 
+    </section>
+ 
+<section class="hero bg-white py-20">
+ 
+    <div class="container mx-auto p-4 pt-6 md:p-6 lg:p-12 flex flex-wrap">
+ 
+      <div class="w-full lg:w-1/2 mb-6 lg:mb-0">
+ 
+        <img src="{{ url_for('static', filename='img/mountain.jpg') }}" alt="Mountainous terrain" class="w-full h-auto rounded-md shadow-md">
+ 
+      </div>
+ 
+      <div class="w-full lg:w-1/2 lg:pl-20">
+ 
+        <h1 class="text-4xl font-bold mb-8">The Challenges of Hard-to-Get-To Areas</h1>
+ 
+        <p class="text-lg mb-8">Emergency responders face significant obstacles in remote and hard-to-reach locations. Limited access, harsh weather conditions, and treacherous terrain make it difficult to respond quickly and effectively.</p>
+ 
+        <p class="text-lg mb-8">Delays in response times can have devastating consequences. It's time to rethink emergency response in hard-to-get-to areas.</p>
+ 
+      </div>
+ 
+    </div>
+ 
+  </section>
+   
+ 
+  <section class="to-white bg-[#06191d] pb-10 mb-0">
+    <div class="container px-5 pt-10 text-white">
+        <div class="row gx-5 justify-content-center">
+            <div class="section-title text-center">
+                <h2 class="mb-5 text-white">SKYNOVA: Tailored for Your Industry</h2>
+            </div>
+            <div class="col-lg-8">
+                <div class="row gx-5 row-cols-1 row-cols-md-2 justify-content-center g-4">
+                    <div class="col mb-5 h-100 text-center">
+                        <i class="bi bi-cone-striped" style="font-size: 3rem;"></i>
+                        <h2 class="h5 text-white mt-3">Public Safety</h2>
+                        <p class="mb-0 text-gray-300">Maximize efficiency in using personnel and equipment. Skynova's drones provide real-time data and aerial views, enhancing situational awareness and response times.</p>
+                    </div>
+                    <div class="col mb-5 h-100 text-center">
+                        <i class="fas fa-tractor" style="font-size: 3rem;"></i>
+                        <h2 class="h5 text-white mt-3">Agriculture</h2>
+                        <p class="mb-0 text-gray-300">Advanced systems decrease the delay between notifications and responder arrival. Our drones help in precision farming, crop monitoring, and resource management.</p>
+                    </div>
+                    <div class="col mb-5 mb-md-0 h-100 text-center">
+                        <i class="fas fa-fire" style="font-size: 3rem;"></i>
+                        <h2 class="h5 text-white mt-3">Firefighting</h2>
+                        <p class="mb-0 text-gray-300">Real-time assessments improve decision-making and resource allocation. Skynova drones assist in identifying hotspots, assessing fire spread, and ensuring firefighter safety.</p>
+                    </div>
+                    <div class="col h-100 text-center">
+                        <i class="bi bi-three-dots" style="font-size: 3rem;"></i>
+                        <h2 class="h5 text-white mt-3">And More</h2>
+                        <p class="mb-0 text-gray-300">Operates 24/7, ensuring constant readiness. From industrial inspections to wildlife conservation, Skynova adapts to various sectors, providing innovative solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto px-4 py-10">
+        <div class="gap-2 my-5 md:!mt-12 items-center text-center text-lg flex flex-col py-5">
+            <span class="font-semibold text-xl md:w-2/3 text-white">Ready to Transform Your Operations?</span>
+            <div class="flex flex-col md:w-2/3">
+                <span class="text-gray-300 text-base">Explore how Skynova can revolutionize your industry. Contact us today to learn more about our versatile drone solutions.</span>
+            </div>
+        </div>
+    </div>
+</section>  
+ 
+    <section id="benefits" class="benefits bg-[#06191d]">
+ 
+        <div class="container">
+ 
+            <div class="section-title">
+ 
+                <h2 class="text-white">Why choose Skynova?</h2>
+ 
+            </div>
+ 
+            <div class="row">
+ 
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" >
+ 
+                    <div class="icon-box" style="background-color: #06191d; color: white;">
+ 
+                        <div class="icon"><i class='bx bxs-ambulance'></i></div>
+ 
+                        <h4 class="title"><a class="font-semibold" style="color: white;">Efficiency Boost</a></h4>
+ 
+                        <p class="description">Maximize the efficiency of public service resources, ensuring they're always ready when needed.</p>
+ 
+                    </div>
+ 
+                </div>
+ 
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+ 
+                    <div class="icon-box" style="background-color: #06191d;  color: white;">
+ 
+                        <div class="icon"><i class='bx bxs-timer'></i></div>
+ 
+                        <h4 class="title"><a  class="font-semibold" style="color: white;">Rapid Response</a></h4>
+ 
+                        <p class="description">Reduce the time from emergency notification to the arrival of first responders, potentially saving lives.</p>
+ 
+                    </div>
+ 
+                </div>
+ 
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+ 
+                    <div class="icon-box" style="background-color: #06191d; color: white;">
+ 
+                        <div class="icon"><i class="bx bxs-binoculars"></i></div>
+ 
+                        <h4 class="title"><a class="font-semibold" style="color: white;">Detailed Insights</a></h4>
+ 
+                        <p class="description">Get close-up views of emergencies, helping to assess the situation quickly and accurately.</p>
+ 
+                    </div>
+ 
+                </div>
+ 
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+ 
+                    <div class="icon-box" style="background-color: #06191d; color: white;">
+ 
+                        <div class="icon"><i class='bx bx-time-five'></i></div>
+ 
+                        <h4 class="title"><a class="font-semibold" style="color: white;">24/7 Availability</a></h4>
+ 
+                        <p class="description">Our drones are ready to assist around the clock, no pilot required.</p>
+ 
+                    </div>
+ 
+                </div>
+ 
+            </div>
+ 
+        </div>
+ 
+    </section>
+ 
+    <section class="to-white bg-gradient-to-b from-[#06191d] via-[#657e90] pb-20">
+        <div class="container pt-20 w-full">
+            <div class="section-title text-2xl font-semibold text-center">
+                <h2 class="text-4xl text-light">Partnering with Flytbase</h2>
+              </div>
+            <div class="justify-center flex">
+                <p class="text-lg w-[85%] text-white mt-3 text-black text-center">To enhance our capabilities, we collaborate with Flytbase, a leader in digital drone solutions. This partnership allows us to combine our physical infrastructure expertise with their digital platform, ensuring a comprehensive and robust drone deployment system.</p>
+            </div>
+        </div>
+        <div class="flex mt-3 justify-center w-full">
+            <a href="{{url_for('public_{}.skynova_product'.format(session.lang))}}#flytbase" class="bg-white hover:!bg-[#33354d] hover:!text-white transition-all duration-300 border font-bold text-xs rounded-md px-4 py-3">Show more</a>
+        </div>
+    </section>
+ 
+    <section>
+        <div class="container px-5 my-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6">
+                    <div class="section-title text-2xl font-semibold text-center">
+                        <h2 class="text-4xl">Applications</h2>
+                      </div>
+                </div>
+            </div>
+            <div class="row gx-5">
+                <div class="col-lg-4 mb-5">
+                    <div class="card h-100 shadow border-0 hover:scale-105 transition-all duration-300">
+                        <img class="card-img-top" src="https://media.istockphoto.com/id/1497304331/es/foto/los-bomberos-combaten-un-incendio-forestal-porque-los-eventos-de-el-ni%C3%B1o-el-cambio-clim%C3%A1tico-y.jpg?s=612x612&w=0&k=20&c=7Xhtd0olZqFeEdROzC59Q8m48U9bwbezrMIRtTPviN0=" alt="Firefighters" />
+                        <div class="card-body p-4">
+                            <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3 text-lg font-bold">Firefighters</h5></a>
+                            <p class="card-text mb-0">Drone stations provide critical support for firefighters, offering rapid deployment of aerial resources to monitor and combat wildfires, assess structural damage, and locate trapped individuals.</p>
+                        </div>
+                        <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                            <div class="d-flex align-items-end justify-content-between">
+                                <div class="d-flex align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="card h-100 shadow border-0 hover:scale-105 transition-all duration-300">
+                        <img class="card-img-top" src="https://cdn.pixabay.com/photo/2019/10/23/20/14/plantation-4572756_1280.jpg" alt="Agriculture" />
+                        <div class="card-body p-4">
+                            <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3 text-lg font-bold">Agriculture</h5></a>
+                            <p class="card-text mb-0">In agriculture, drone stations enhance crop management by providing detailed aerial imagery for precision farming, monitoring crop health, and optimizing irrigation systems to increase yield and efficiency.</p>
+                        </div>
+                        <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                            <div class="d-flex align-items-end justify-content-between">
+                                <div class="d-flex align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="card h-100 shadow border-0 hover:scale-105 transition-all duration-300  ">
+                        <img class="card-img-top" src="https://cdn.pixabay.com/photo/2020/05/03/00/33/police-5123429_1280.jpg" alt="Police" />
+                        <div class="card-body p-4">
+                            <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3 text-lg font-bold">Police departments</h5></a>
+                            <p class="card-text mb-0">Police departments utilize drone stations to enhance public safety by conducting aerial surveillance, monitoring traffic, gathering crucial evidence, and supporting search and rescue operations.</p>
+                        </div>
+                        <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                            <div class="d-flex align-items-end justify-content-between">
+                                <div class="d-flex align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+   </section>
+ 
+ 
+   <section id="faq" class="faq faqdown bg-secondary" >
+    <div class="container flex flex-col ">
+      <div class="section-title text-2xl font-semibold text-center">
+        <h2 class="text-4xl">Frequently Asked Questions</h2>
+      </div>
+ 
+      <div class="flex w-full flex-col border p-4 mb-3">
+        <i class="ri-question-line"></i>
+        <button class="flex tracking-wider" onclick="toggleText(5)">
+          <img src={{url_for('static',filename='svg/icons/arrow.svg')}} class="w-4 transform transition-all duration-300 mr-2" id="icon-5">
+          <span class="text-2xl ml-5">What are the main benefits of using Skynova's drone stations?</span>
+        </button>
+        <p id="text-5" class="text-lg text-left mt-3 text-black ml-5" style="display: none;">
+          Skynova's drone stations offer significant benefits such as optimizing resource use by ensuring drones are charged and ready 24/7, reducing response times, and providing detailed aerial assessments. Their autonomous operation also eliminates the need for pilots, enhancing efficiency.
+        </p>
+      </div><!--END F.A.Q. Item-->
+ 
+      <div class="flex w-full flex-col border p-4 mb-3">
+        <i class="ri-question-line"></i>
+        <button class="flex  tracking-wider" onclick="toggleText(6)">
+          <img src={{url_for('static',filename='svg/icons/arrow.svg')}} class="w-4 transform transition-all duration-300 mr-2" id="icon-6">
+          <span class="text-2xl ml-5">How does the drone charging system work in Skynova stations?</span>
+        </button>
+        <p id="text-6" class="text-lg text-left mt-3 text-black ml-5" style="display: none;">
+          Our drone stations feature advanced charging systems that automatically charge drones when they dock. This process is quick and safe, minimizing downtime and ensuring drones are always ready for their next mission without manual intervention.
+        </p>
+      </div><!--END F.A.Q. Item-->
+ 
+      <div class="flex w-full flex-col border p-4 mb-3">
+        <i class="ri-question-line"></i>
+        <button class="flex  tracking-wider" onclick="toggleText(7)">
+          <img src={{url_for('static',filename='svg/icons/arrow.svg')}} class="w-4 transform transition-all duration-300 mr-2" id="icon-7">
+          <span class="text-2xl ml-5">Are Skynova's drone stations weather-resistant?</span>
+        </button>
+        <p id="text-7" class="text-lg text-left mt-3 text-black ml-5" style="display: none;">
+          Yes, Skynova's drone stations are designed to operate in various weather conditions. They are built to withstand rain, wind, and other extreme weather, ensuring reliable operation in diverse environments.
+        </p>
+      </div><!--END F.A.Q. Item-->
+ 
+      <div class="flex w-full flex-col border p-4 mb-3">
+        <i class="ri-question-line"></i>
+        <button class="flex  items-center tracking-wider" onclick="toggleText(8)">
+          <img src={{url_for('static',filename='svg/icons/arrow.svg')}} class="w-4 transform transition-all duration-300 mr-2" id="icon-8">
+          <span class="text-2xl ml-5">What technical requirements are needed for installing a Skynova drone station?</span>
+        </button>
+        <p id="text-8" class="text-lg text-left mt-3 text-black ml-5" style="display: none;">
+          Installing a Skynova drone station requires minimal space and a power source. Our technical team provides full support during the installation process, ensuring a smooth and efficient setup tailored to your specific location.
+        </p>
+      </div><!--END F.A.Q. Item-->
+    </div>
+  </section><!--END F.A.Q. section-->
+  <section>
+    <div class="container mt-20" id="contact">
+        <div class="w-full mt-4 flex flex-col gap-1 items-center relative md:items-start justify-center">
+            <div class="flex md:w-1/2 md:absolute w-full flex-col gap-8 card md:right-16 border-light shadow-lg py-3 p-sm-4 p-md-5" style="text-align: center;">
+                <span class="text-2xl">Interested in our products?</span>
+                <span>Feel free to let us know! We are looking forward to cooperate with you.</span>
+                {# TODO: Change contact href #}
+                <div class="flex justify-center">
+                    <a href="/en/request" target="_blank" class="btn btn-lg btn-primary w-full md:w-1/2 border" style="border-radius: 10px">Contact</a>
+                </div>
+            </div>
+            <img class="hidden md:block w-1/2 ml-16" src="{{url_for('static',filename='img/backgrounds/drones-ilustration.jpg')}}" alt="Ilustration image">
+        </div>
+      </section><!--END F.A.Q. section-->
+>>>>>>> 353c311599c35e239451c55a2f3251d1f6eb64f8
   </main>
 {% endblock %}

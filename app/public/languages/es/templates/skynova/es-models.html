@@ -1,0 +1,272 @@
+{% extends 'bases/es-skynova-base.html' %}
+
+{% block content %}
+<head>
+ <!-- <link rel='stylesheet' href="{{url_for('static',filename='css/solution.css')}}" type='text/css' />-->
+ <style>
+    .card {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card {
+            margin-right: 20px; /* add 20px margin between cards */
+        }
+        .card-title{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .card-text{
+            font-size: 15px;
+        }
+        .mat img {
+            height:100%; 
+            width: 100%;
+        }
+ </style>
+</head>
+<main>
+    <div class="bg-[#cedcf2] page-wrapper">
+        <section class="w-full container py-10 lg:mt-[3.169375rem] mt-[2.815625rem] ">
+            <div class="md:grid md:grid-cols-3 gap-12">
+                <div class="flex card border-light shadow-lg py-3 p-sm-4 p-md-5 mt-3 md:mt-0 hover:scale-105 duration-300 items-center justify-between">
+                    <p class="text-center text-black text-xl font-semibold">Models</p>
+                    <a href="{{url_for('public_{}.skynova_product'.format(session.lang))}}">
+                        <img src="{{url_for('static',filename='img/models/DroneModel1.png')}}">
+                    </a>
+                    <p class="text-center text-lg">Click on this card for more information</p>
+                </div>
+                <div class="flex card border-light shadow-lg py-3 p-sm-4 p-md-5 mt-3 md:mt-0 hover:scale-105 duration-300 items-center justify-between" onclick="scrollToSection('materials-section')">
+                  <p class="text-center text-black text-xl font-semibold">Materials</p>
+                  <img src="{{url_for('static',filename='img/models/Materials.jpg')}}">
+                  <p class="text-center text-lg">Click on this card for more information</p>
+              </div>
+              <div class="flex card border-light shadow-lg py-3 p-sm-4 p-md-5 mt-3 md:mt-0 hover:scale-105 duration-300 items-center justify-between" onclick="scrollToSection('components-section')">
+                  <p class="text-center text-black text-xl font-semibold">Components</p>
+                  <img src="{{url_for('static',filename='img/models/Components.png')}}" class="w-[60%]">
+                  <p class="text-center text-lg">Click on this card for more information</p>
+              </div>
+            </div>
+        </section>
+    </div>
+    <section>
+        <div class="section-title mt-5" >
+            <h2>first model</h2>
+          </div>
+        <div class="container">
+        <div class="dModel">
+        <ul style="list-style-type: none;">
+          
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="row spec-item d-flex align-items-stretch" >
+                <div class="secTitle">
+                  <a class="" data-bs-toggle="collapse" href="#Capacity" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  <i class='bx bxs-component'></i>
+                  <h4>Capacity</h4>
+                  </a>
+                </div>
+                  <ul class="lText mb-1 collapse" id="Capacity">
+                    <li>
+                        <b>Power Supply System</b><br>
+                        The batteries in the station will primarily receive power from solar panels installed on the station's roof. In the event that the solar panels do not generate sufficient power, the system will automatically switch to the main power grid to ensure uninterrupted energy supply.<br>
+                        <br>
+                        <b>Battery Backup</b><br>
+                        In case of a power outage or adverse weather conditions that affect solar panel efficiency, the batteries are designed to provide backup power for 6 to 8 hours. This ensures that the station remains operational even during emergencies or unfavorable conditions.<br>
+                        <br>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="row spec-item d-flex align-items-stretch" >
+                <div class="secTitle">
+                  <a class="" data-bs-toggle="collapse" href="#Feat" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  <i class='bx bxs-component'></i>
+                  <h4>Main Features</h4>
+                  </a>
+                </div>
+                  <ul class="lText mb-1 collapse" id="Feat">
+                    <li>
+                        <b>Receiving the Call and Assigning Drones</b><br>
+                        An operator gets a call to his station and after which he assigns the closest drone/drones to a call. Drones will receive the gps coordinates through a computer.<br>
+                        <br>
+                        <b>Starting and Departing of Drones</b><br>
+                        Those that are assigned to a call turn on while the doors are being opened and carefully fly out of the hangar.<br>
+                        <br>
+                        <b>Returning to the Hangar</b><br>
+                        After the call has been completed, they return to the hangar. Once in the designated are, the doors will open via either gps, RF control or proximity sensors<br>
+                        <br>
+                        <b>Charging the Drones</b><br>
+                        The drone/drones carefully land on the charging pad where they will charge until they receive another call.<br>
+                        <br>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+        </ul>
+        </div>
+    </div>
+</section>
+    <section id="materials-section" class="bg-secondary">
+        <div class="container">
+            <div class="section-title">
+                <h2>Materials</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-9 col-lg-6 mb-16">  <!-- increased margin to 16 -->
+                    <div class="card h-100"> <!-- added margin bottom 4 -->
+                        <div class="image-container mat">
+                            <img src="{{url_for('static',filename='img/models/aluminium.png')}}" class="img-fluid" alt="Aluminum">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Steel & aluminum</h5>
+                            <p class="card-text">Structural support for the dome. It can be combined with other materials.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 col-lg-6 mb-16">  <!-- increased margin to 16 -->
+                    <div class="card h-100"> <!-- added margin bottom 4 -->
+                        <div class="image-container mat">
+                            <img src="{{url_for('static',filename='img/models/Fiberglass_or_polycarbonate.png')}}" class="img-fluid" alt="Fiberglass">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Fiberglass or polycarbonate</h5>
+                            <p class="card-text">Can be used on the shell to provide further waterproofing and sustainability for the rain.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 col-lg-6 mb-16">  <!-- increased margin to 16 -->
+                    <div class="card h-100"> <!-- added margin bottom 4 -->
+                        <div class="image-container mat">
+                            <img src="{{url_for('static',filename='img/models/speed_controller.png')}}" class="img-fluid" alt="Electrical speed controller">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Electrical speed controller</h5>
+                            <p class="card-text">This is going to lower the speed of the drone when it gets nearby the hangars.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 col-lg-6 mb-16"> <!-- increased margin to 16 -->
+                    <div class="card h-100"> <!-- added margin bottom 4 -->
+                        <div class="image-container mat">
+                            <img src="{{url_for('static',filename='img/models/Power_destribution_board.png')}}" class="img-fluid" alt="Power distribution board">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Power distribution board</h5>
+                            <p class="card-text">Distributes power from the main power source to all components within the dome.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+  <section id="components-section">
+    <div class="section-title">
+        <h2>Components</h2>
+    </div>
+    <div class="container">
+      <div class="dModel">
+        <div class="spec-item" style="max-height: 400px;">
+          <div class="secTitle">
+                  <i></i>
+                  <h4>Automatic Fuses</h4>
+              &#8226; Six robust automatic fuses safeguard your drone station from electrical overloads, ensuring continuous and safe operation
+          </div>
+      </div>
+
+      <div class="spec-item" style="max-height: 400px;">
+        <div class="secTitle">
+                <i></i>
+                <h4>Surge Protector (330V)</h4>
+            &#8226; Provides superior protection against voltage spikes, maintaining the integrity of your electronic components
+        </div>
+    </div>
+    
+    <div class="spec-item" style="max-height: 400px;">
+      <div class="secTitle">
+              <i></i>
+              <h4>Power Extension Cord & Large Distributor</h4>
+          &#8226; Facilitates the efficient distribution of power, enhancing operational flexibility
+      </div>
+  </div>
+  
+  <div class="spec-item" style="max-height: 400px;">
+    <div class="secTitle">
+            <i></i>
+            <h4>Electric Cables (10m) & Connectors</h4>
+        &#8226; High-quality cables and connectors ensure seamless electrical connectivity
+    </div>
+</div>
+<div class="spec-item" style="max-height: 400px;">
+  <div class="secTitle">
+          <i></i>
+          <h4>Arduino Uno & Arduino Cable Kit</h4>
+
+      &#8226; The powerful and versatile Arduino Uno forms the heart of our station, supported by a comprehensive cable kit for easy connectivity
+  </div>
+</div>
+<div class="spec-item" style="max-height: 400px;">
+  <div class="secTitle">
+          <i></i>
+          <h4>IR Sensor, Ultrasonic Sensor & Temperature Sensors (TMP36)</h4>
+      &#8226; Enhance the station’s monitoring capabilities with advanced sensors for infrared, ultrasonic, and temperature data collection
+  </div>
+</div>
+<div class="spec-item" style="max-height: 400px;">
+  <div class="secTitle">
+          <i></i>
+          <h4>LCD 16x2</h4>
+      &#8226; A clear and informative display screen for real-time data monitoring and feedback
+  </div>
+</div>
+          </div>
+      </div>
+  </div>                
+  </section>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-J7+iFq26YQyCVuBcN3CC8GyOHE2NqgHxm3QhpbBzpSCp9HrGhSVbmtI9/q/xIuJQ9dFVixrV+dSYcYuz3GmQaw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script>
+          document.querySelectorAll('.secTitle a').forEach(item => 
+          {
+            item.addEventListener('click', event => 
+            {
+            let target = event.target.parentElement.nextElementSibling;
+            target.classList.toggle('show');
+            })
+          });
+        </script>
+    <section class="page-wrapper bg-secondary">
+		<div class="container mt-20" id="contact">
+			<div class="w-full mt-4 flex flex-col gap-1 items-center relative md:items-start justify-center">
+				<div class="flex md:w-1/2 md:absolute w-full flex-col gap-8 card md:right-16 border-light shadow-lg py-3 p-sm-4 p-md-5">
+					<span class="text-2xl">Interested in our products?</span>
+					<span>Feel free to let us know! We are looking forward to cooperate with you.</span>
+					{# TODO: Change contact href #}
+					<div class="flex justify-center">
+						<a href="/en/request" target="_blank" class="btn btn-lg btn-primary w-full md:w-1/2">Contact</a>
+					</div>
+				</div>
+				<img class="hidden md:block w-1/2 ml-16" src="{{url_for('static',filename='img/backgrounds/drones-ilustration.jpg')}}" alt="Ilustration image">
+			</div>
+		</div>
+	</section>
+</main>
+<script>
+  function scrollToSection(sectionId) {
+    console.log('Scrolling to section:', sectionId);
+    var section = document.getElementById(sectionId);
+    console.log('Section element:', section);
+    if (section) {
+        var offsetTop = section.offsetTop;
+        console.log('Offset top:', offsetTop);
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'  
+        });
+    }
+}
+</script>
+{% endblock %}
