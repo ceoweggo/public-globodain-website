@@ -17,9 +17,9 @@
     </div>
 </section>
     <section class="mt-12 mb-20 container">
- 
-        <h1 class="font-semibold text-4xl text-center mb-10">The Future of Public Safety</h1>
- 
+        <div class="section-title text-center">
+            <h2 class="mb-5">The Future of Public Safety</h2>
+        </div> 
         <div class="flex gap-12 flex-col md:grid md:grid-cols-2 items-center">
  
             <div>
@@ -195,9 +195,9 @@
  
     <section class="to-white bg-gradient-to-b from-[#06191d] via-[#657e90] pb-20">
         <div class="container pt-20 w-full">
-            <div class="flex w-full justify-center">
-                <h2 class="font-semibold text-center text-white text-4xl mb-2">Partnering with Flytbase</h2>
-            </div>
+            <div class="section-title text-2xl font-semibold text-center">
+                <h2 class="text-4xl text-light">Partnering with Flytbase</h2>
+              </div>
             <div class="justify-center flex">
                 <p class="text-lg w-[85%] text-white mt-3 text-black text-center">To enhance our capabilities, we collaborate with Flytbase, a leader in digital drone solutions. This partnership allows us to combine our physical infrastructure expertise with their digital platform, ensuring a comprehensive and robust drone deployment system.</p>
             </div>
@@ -211,10 +211,9 @@
         <div class="container px-5 my-5">
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-8 col-xl-6">
-                    <div class="text-center">
-                        <h2 class="font-semibold text-4xl">Applications</h2>
-                         <p class="lead fw-normal text-muted mb-5"></p>
-                    </div>
+                    <div class="section-title text-2xl font-semibold text-center">
+                        <h2 class="text-4xl">Applications</h2>
+                      </div>
                 </div>
             </div>
             <div class="row gx-5">
@@ -268,7 +267,7 @@
    </section>
  
  
-   <section id="faq" class="faq faqdown " >
+   <section id="faq" class="faq faqdown bg-secondary" >
     <div class="container flex flex-col ">
       <div class="section-title text-2xl font-semibold text-center">
         <h2 class="text-4xl">Frequently Asked Questions</h2>
@@ -332,7 +331,6 @@
             </div>
             <img class="hidden md:block w-1/2 ml-16" src="{{url_for('static',filename='img/backgrounds/drones-ilustration.jpg')}}" alt="Ilustration image">
         </div>
-    </div>
-</section>
+      </section><!--END F.A.Q. section-->
   </main>
 {% endblock %}
