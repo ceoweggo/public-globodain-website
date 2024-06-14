@@ -684,7 +684,7 @@ class Hospitality:
         class Security:
 
             @public_language.route('/camping-software/token-authentication', methods=['GET'])
-            def hospitality_tokes_authentication():
+            def hospitality_token_authentication():
                 return render_template('hospitality/solutions/security/token-authentication.html',
                     lang_data=find_data('how_works')) 
             
@@ -714,7 +714,7 @@ class Hospitality:
                 return render_template('hospitality/solutions/services/mailing.html',
                     lang_data=find_data('how_works')) 
 
-
+"""
 class Skynova:
 
     # ! -- FALTA TRADUCIR  -- ! #
@@ -742,7 +742,7 @@ class Skynova:
     def skynova_models():
         return render_template("skynova/es-models.html",
                                lang_data=find_data('skynova_models'))
-
+"""
 
 class pages:
     @public_language.route("/privacy")

@@ -213,29 +213,22 @@
 		{% block header %}
 			<header class="bg-white header navbar navbar-expand-lg position-absolute {% block navbar_sticky_function %}navbar-sticky{% endblock %}"> <!-- navbar-sticky removido -->
 				<div class="container">
-					<div class="navbar-brand pe-3" itemprop="url" aria-label="Globodain">
-						<a href='{{url_for("public_{}.index".format(session["lang"]))}}'>
-							<!-- logo navbar -->
-							<div>
-								{% block logo %}
-									{% if header_dark_mode %}
-									<img itemprop="logo" class="c-image" src="{{url_for('static',filename='svg/logos/logotipo-white.svg')}}"
-										role="presentation" aria-hidden="true" width="150" alt="Globodain" />
-									{% else %}
-									<img itemprop="logo" class="c-image" src="{{url_for('static',filename='svg/logos/logo-2024.svg')}}"
-										role="presentation" aria-hidden="true" width="160" alt="Globodain" />
-									{% endif %}
-								{% endblock %}
-							</div>	
-						</a>
-						<div class="text-dark text-middle fs-6">
-							<span>
-								<a href="{{url_for('public_{}.skynova'.format(session.lang))}}">
-									Skynova
-								</a>	
-							</span>
+					<a class="navbar-brand pe-3" itemprop="url" href='{{url_for("public_{}.index".format(session["lang"]))}}' aria-label="Globodain">
+						<div>
+							{% block logo %}
+								{% if header_dark_mode %}
+								<img itemprop="logo" class="c-image" src="{{url_for('static',filename='svg/logos/logotipo-white.svg')}}"
+									role="presentation" aria-hidden="true" width="110" alt="Globodain" />
+								{% else %}
+								<img itemprop="logo" class="c-image" src="{{url_for('static',filename='svg/logos/logo-2024.svg')}}"
+									role="presentation" aria-hidden="true" width="160" alt="Globodain" />
+								{% endif %}
+							{% endblock %}
 						</div>
-					</div>
+						<div class="ms-1 text-middle fs-6">
+						  Skynova
+						</div>
+					</a>
 					<div id="navbarNav" class="offcanvas offcanvas-end ">
 							<div class="offcanvas-header border-bottom">
 							<h5 class="offcanvas-title">Menu</h5>

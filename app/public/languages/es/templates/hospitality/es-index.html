@@ -128,8 +128,8 @@
 
         <!-- Images -->
         <div class="col-lg-6 mt-xl-3 pt-5 pt-lg-4">
-          <div class="row row-cols-2 gx-3 gx-lg-4">
-            <div class="col pt-lg-5 mt-lg-1">
+          <div class="row row-cols-md-2 gx-3 gx-lg-4">
+            <div class="col-12 col-md-6 pt-lg-5 mt-lg-1">
               <div class="border border-softcamp rounded-4 p-3">
                 <img src="{{lang_data.page.sections.first.features.0.img_src}}" width="60" alt="{{lang_data.page.sections.first.features.0.img_alt}}" class="ms-3">
                 <div class="ps-2 ms-1">
@@ -205,7 +205,7 @@
       {% for tab in lang_data.page.sections.second.tabs %}
       <div class="tab-pane fade {{tab.additional_class}}" id="{{tab.id}}" role="tabpanel" aria-labelledby="{{tab.id}}-tab">
         <div class="row align-items-center pt-3 pt-sm-4 pt-md-0 px-3 px-sm-4 px-lg-0">
-          <div class="col-lg-6 text-center text-md-start">
+          <div class="col-lg-6 text-start">
             <h3 class="fs-2 mb-lg-4">{{tab.title|safe}}</h3>
             <p class="fs-xl">{{tab.subtitle|safe}}</p>
             <ul class="list-unstyled">
@@ -217,7 +217,7 @@
               {% endfor %}
             </ul>
           </div>
-          <div class="col-lg-6 col-md-7 mt-2 mb-3 mt-md-3">
+          <div class="col-lg-6 col-md-7 mt-4 mb-3 mt-md-3">
             <img src="{{tab.img}}" class="d-block rounded-3 my-lg-2 mx-auto me-md-0" width="564" alt="Image">
           </div>
         </div>
@@ -235,16 +235,16 @@
             <h2 class="display-5 pb-1 pb-md-3 pb-lg-4 text-white">{{lang_data.page.sections.third.title|safe}}</h2>
             <p class="fs-6 text-white">{{lang_data.page.sections.third.subtitle}}</p>
 
-            <div class="border border-softcamp rounded-4 p-3 fs-lg d-md-none">
+            <div class="rounded-4 p-3 fs-lg d-md-none">
               <div class="ps-2 ms-1">
-                <h3 class="h5 mb-3 mt-3">{{lang_data.page.sections.third.sections.0.title}}</h3>
+                <h3 class="h5 mb-3 mt-3 text-light">{{lang_data.page.sections.third.sections.0.title}}</h3>
                 <p class="mb-0 text-light">{{lang_data.page.sections.third.sections.0.desc}}</p>
               </div>
             </div>
   
-            <div class="mt-4 border border-softcamp rounded-4 p-3 fs-lg d-md-none">
+            <div class="mt-4 rounded-4 p-3 fs-lg d-md-none">
               <div class="ps-2 ms-1">
-                <h3 class="h5 mb-3 mt-3">{{lang_data.page.sections.third.sections.1.title}}</h3>
+                <h3 class="h5 mb-3 mt-3 text-light">{{lang_data.page.sections.third.sections.1.title}}</h3>
                 <p class="mb-0 text-light">{{lang_data.page.sections.third.sections.1.desc}}</p>
               </div>
             </div>
@@ -276,7 +276,7 @@
       <div class="col col-lg-6 mt-2 mb-3 mt-md-3">
         <img src="https://cdn-static.globodain.com/ms/landing-collaborative" class="d-block rounded-3 my-lg-2 mx-auto me-md-0" width="600" alt="Image">
       </div>
-      <div class="col-12 col-lg-6 text-center text-md-start">
+      <div class="col-12 col-lg-6 text-start">
         <h2 class="display-5 mb-lg-4">{{lang_data.page.sections.fourth.title|safe}}</h2>
         <p class="fs-5">{{lang_data.page.sections.fourth.subtitle|safe}}</p>
         <div class="card shadow">
@@ -323,7 +323,7 @@
   </section>
 
   <section id="business" class="position-relative container mb-5">
-    <div class="text-center pb-3 pb-lg-4">
+    <div class="text-start text-md-center pb-3 pb-lg-4">
       <h2 class="display-5 mb-2">{{lang_data.page.sections.seventh.title}}</h2>
       <p class="fs-xl">{{lang_data.page.sections.seventh.subtitle}}</p>
     </div>

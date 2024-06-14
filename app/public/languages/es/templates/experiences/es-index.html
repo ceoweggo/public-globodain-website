@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {% extends 'bases/es-experiences-base.html' %}
 
 {# <!-- SEO SECTION--> #}
@@ -27,24 +26,6 @@
       <div class="row justify-content-md-start justify-content-center flex-md-nowrap">
         <div class="col-xl-5 col-md-6 col-sm-10 d-flex flex-column justify-content-between mb-md-5 mb-md-4 mb-3 pb-xl-5">
           <div class="text-md-start text-center mt-5 pt-md-5">
-=======
-{% extends 'bases/es-base.html' %}
-
-{# <!-- SEO SECTION--> #}
-{% set title = lang_data.page_title %}
-{% set metadescription = lang_data.page_metadescription %}
-{% set keywords = lang_data.page_keywords %}
-
-{% block css %}
-{% endblock %}
-
-{% block content %}
-<section id="hero" class="pt-5 mt-md-0 pt-md-0 position-relative" style="background-color: #EDF5FF !important;">
-    <div class="container pt-xxl-5 mb-xxl-5 py-5 my-5">
-      <div class="row justify-content-md-start justify-content-center flex-md-nowrap">
-        <div class="col-xl-6 col-md-6 col-sm-10 d-flex flex-column justify-content-between mb-md-5 mb-md-4 mb-3 pb-xl-5">
-          <div class="text-md-start text-center mt-md-5 pt-md-5">
->>>>>>> 353c311599c35e239451c55a2f3251d1f6eb64f8
             <!-- Slider -->
             <div class="swiper" data-swiper-options='{
               "effect": "fade",
@@ -66,19 +47,11 @@
 
                 <!-- Main item  -->
                 <div class="swiper-slide">
-<<<<<<< HEAD
                   <h1 class="from-start mb-lg-4 mb-3">{{lang_data.page.hero.title|safe}}</h1>
                   <p class="from-end mb-4 mx-md-0 mx-auto pb-xl-3 pb-lg-2 fs-5" style="max-width: 30.5rem;">{{lang_data.page.hero.subtitle|safe}}</p>
 
                   <div class="scale-up delay-1">
                     <a href="https://cx.globodain.com/auth/register" class="btn btn-primary shadow-primary btn-lg me-3 me-sm-4">{{lang_data.page.hero.button1}}</a>
-=======
-                  <h1 class="from-start display-6 mb-lg-4 mb-3">{{lang_data.page.hero.title|safe}}</h1>
-                  <p class="from-end mb-4 mx-md-0 mx-auto pb-xl-3 pb-lg-2 fs-5" style="max-width: 30.5rem;">{{lang_data.page.hero.subtitle|safe}}</p>
-
-                  <div class="scale-up delay-1">
-                    <a href="https://app.softcamp.eu/auth/register" class="btn btn-primary btn-lg me-3 me-sm-4">{{lang_data.page.hero.button1}}</a>
->>>>>>> 353c311599c35e239451c55a2f3251d1f6eb64f8
                     <a href="#features" class="mt-3 mt-sm-none btn btn-outline-primary btn-lg me-3 me-sm-4">{{lang_data.page.hero.button2}}</a>
                   </div>
                 </div>
@@ -86,19 +59,11 @@
                 {#
                 {% for item in lang_data.page.hero.subsections %}
                 <div class="swiper-slide">
-<<<<<<< HEAD
                   <h2 class="from-start display-5 mb-lg-4 mb-3">{{item.title|safe}}</h2>
                   <p class="from-end mb-4 mx-md-0 mx-auto pb-xl-3 pb-lg-2 fs-lg" style="max-width: 30.5rem;">{{item.subtitle|safe}}.</p>
 
                   <div class="scale-up delay-1">
                     <a href="https://ms.globodain.com/auth/register" class="btn btn-primary shadow-primary btn-lg me-3 me-sm-4">{{lang_data.page.hero.button1}}</a>
-=======
-                  <h2 class="from-start display-4 mb-lg-4 mb-3">{{item.title|safe}}</h2>
-                  <p class="from-end mb-4 mx-md-0 mx-auto pb-xl-3 pb-lg-2 fs-lg" style="max-width: 30.5rem;">{{item.subtitle|safe}}.</p>
-
-                  <div class="scale-up delay-1">
-                    <a href="https://app.softcamp.eu/auth/register" class="btn btn-primary shadow-primary btn-lg me-3 me-sm-4">{{lang_data.page.hero.button1}}</a>
->>>>>>> 353c311599c35e239451c55a2f3251d1f6eb64f8
                     {% if item.button %}
                     <a href="{{url_for('public_{}.{}'.format(session.lang[0:2],item.button.href))}}" class="mt-3 mt-sm-none btn btn-outline-primary btn-lg me-3 me-sm-4">{{item.button.text}}</a>
                     {% endif %}
@@ -130,22 +95,8 @@
           </div>
         </div>
         <div class="col-md-12 offset-xl-1 d-flex mt-xxl-4 mb-4">
-<<<<<<< HEAD
           <div class="mb-4 pt-2 align-self-end ms-xl-0 ms-md-4 p-xxl-4 p-2 overflow-hidden">
             <img class="rounded" src="https://cdn-static.globodain.com/cx/landing-hero" width="760" alt="Globodain CX hero image">
-=======
-          <div class="align-self-end ms-xl-0 ms-md-4 p-xxl-4 p-2 rounded-4 overflow-hidden">
-            <div class="tilt-3d" data-tilt data-tilt-full-page-listening data-tilt-max="12" data-tilt-perspective="1200">
-              <div class="rounded mt-4 mt-xxl-0">
-                <img src="{{url_for('static', filename='v102/img/landing/hero-3.svg')}}" alt="Dashboard">
-              </div>
-              <!--
-              <div class="tilt-3d-inner position-absolute bottom-0 start-20 w-100 h-100">
-                <img src="{{url_for('static', filename='v102/img/landing/hero-2.svg')}}" alt="Cards">
-              </div>
-              -->
-            </div>            
->>>>>>> 353c311599c35e239451c55a2f3251d1f6eb64f8
           </div>
         </div>
       </div>
@@ -154,7 +105,6 @@
       <span class="d-dark-mode-none d-block w-100 h-100 py-xl-5 pt-lg-4 pt-md-0 pt-4 pb-5 bg-light"></span>
       <span class="d-dark-mode-block d-none w-100 h-100 py-xl-5 pt-lg-4 pt-md-0 pt-4 pb-5 bg-dark"></span>
     </span>
-<<<<<<< HEAD
   </section>
 
   <section id="ideal" class="position-relative">
@@ -331,232 +281,6 @@
   <section id="business" class="position-relative container mb-5">
     <div class="text-center pb-3 pb-lg-4">
       <h2 class="display-5 mb-2">{{lang_data.page.sections.seventh.title}}</h2>
-=======
-</section>
-
-<section id="features" class="position-relative">
-  <div class="container position-relative zindex-5 pt-5">
-    <div class="row">
-      <div class="col-lg-6">
-
-          <h1 class="pb-2 display-xxl-4 pb-md-3">{{lang_data.page.sections.first.title|safe}}</h1>
-          <p class="fs-xl pb-4 mb-1 mb-md-2 mb-lg-3" style="max-width: 526px;">{{lang_data.page.sections.first.subtitle|safe}}</p>
-
-          <div class="row row-cols-3 pt-4 pt-md-5 mt-2 mt-xl-4">
-          {% for col in lang_data.page.sections.first.cols %}
-          <div class="col">
-              <span class="h2 mb-2">{{col.h3|safe}}</span>
-              <p class="mb-0">{{col.p|safe}}</p>
-          </div>
-          {% endfor %}
-          </div>
-
-      </div>
-
-      <!-- Images -->
-      <div class="col-lg-6 mt-xl-3 pt-5 pt-lg-4">
-          <div class="row row-cols-2 gx-3 gx-lg-4">
-          <div class="col pt-lg-5 mt-lg-1">
-              <div class="border border-primary rounded-4 p-3">
-              <img src="{{url_for('static',filename='{}'.format(lang_data.page.sections.first.features.0.img_src))}}" width="60" alt="{{lang_data.page.sections.first.features.0.img_alt}}" class="ms-3">
-              <div class="ps-2 ms-1">
-                  <h3 class="h5 mb-3 mt-3">{{lang_data.page.sections.first.features.0.title|safe}}</h3>
-                  <p class="mb-0">{{lang_data.page.sections.first.features.0.subtitle|safe}}</p>
-              </div>
-              </div>
-
-              <div class="mt-4 border rounded-4 p-3">
-                  <img src="{{url_for('static',filename='{}'.format(lang_data.page.sections.first.features.1.img_src))}}" width="60" alt="{{lang_data.page.sections.first.features.1.img_alt}}" class="ms-3">
-                  <div class="ps-2 ms-1">
-                  <h3 class="h5 mb-3 mt-3">{{lang_data.page.sections.first.features.1.title|safe}}</h3>
-                  <p class="mb-0">{{lang_data.page.sections.first.features.1.subtitle|safe}}</p>                  
-                  </div>
-              </div>
-          </div>
-
-          <div class="col">
-              <div class="border rounded-4 p-3 mb-4 mt-4">
-              <img src="{{url_for('static',filename='{}'.format(lang_data.page.sections.first.features.2.img_src))}}" width="60" alt="{{lang_data.page.sections.first.features.2.img_alt}}" class="ms-3">
-              <div class="ps-2 ms-1">
-                  <h3 class="h5 mb-3 mt-3">{{lang_data.page.sections.first.features.2.title|safe}}</h3>
-                  <p class="mb-0">{{lang_data.page.sections.first.features.2.subtitle|safe}}</p>                  
-              </div>
-              </div>
-
-              <div class="border rounded-4 p-3">
-              <img src="{{url_for('static',filename='{}'.format(lang_data.page.sections.first.features.3.img_src))}}" width="60" alt="{{lang_data.page.sections.first.features.3.img_alt}}" class="ms-3">
-              <div class="ps-2 ms-1">
-                  <h3 class="h5 mb-3 mt-3">{{lang_data.page.sections.first.features.3.title|safe}}</h3>
-                  <p class="mb-0">{{lang_data.page.sections.first.features.3.subtitle|safe}}</p>                  
-              </div>
-              </div>
-          </div>
-          </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="solutions" class="position-relative container">
-<div class="text-center pb-3 pb-lg-4">
-    <h2 class="display-4 mb-2"></h2>
-    <p class="fs-xl"></p>
-</div>
-
-<nav class="overflow-auto">
-    <ul class="mt-4 nav nav-tabs-alt flex-nowrap border-0 justify-content-between" role="tablist">
-    <li class="nav-item" role="presentation">
-        <button class="nav-link text-nowrap active fs-5" id="pms-tab" data-bs-toggle="tab" data-bs-target="#pms" type="button" role="tab" aria-controls="pms" aria-selected="true">
-        <img src="../../static/v102/svg/icon-5.svg" width="24" alt="Icon" class="me-3">
-        PMS
-        </button>
-    </li>
-    <li class="nav-item" role="presentation">
-        <button class="nav-link text-nowrap fs-5" id="cm-tab" data-bs-toggle="tab" data-bs-target="#cm" type="button" role="tab" aria-controls="cm" aria-selected="true">
-        <img src="../../static/v102/svg/icon-3.svg" width="24" alt="Icon" class="me-3">
-        Channel Manager
-        </button>
-    </li>
-    <li class="nav-item" role="presentation">
-        <button class="nav-link text-nowrap fs-5" id="cloud-tab" data-bs-toggle="tab" data-bs-target="#cloud" type="button" role="tab" aria-controls="cloud" aria-selected="true">
-        <img src="../../static/v102/svg/icon-4.svg" width="24" alt="Icon" class="me-3">
-        Cloud Management
-        </button>
-    </li>
-    <li class="nav-item" role="presentation">
-        <button class="nav-link text-nowrap fs-5" id="vsaas-tab" data-bs-toggle="tab" data-bs-target="#vsaas" type="button" role="tab" aria-controls="vsaas" aria-selected="true">
-        <img src="../../static/v102/svg/icon-2.svg" width="24" alt="Icon" class="me-3">
-        VSaaS
-        </button>
-    </li>
-    </ul>
-</nav>
-
-<div class="tab-content rounded-3 py-4">
-    {% for tab in lang_data.page.sections.second.tabs %}
-    <div class="tab-pane fade {{tab.additional_class}}" id="{{tab.id}}" role="tabpanel" aria-labelledby="{{tab.id}}-tab">
-    <div class="row align-items-center pt-3 pt-sm-4 pt-md-0 px-3 px-sm-4 px-lg-0">
-        <div class="col-lg-6 text-center text-md-start">
-        <h3 class="fs-2 mb-lg-4">{{tab.title|safe}}</h3>
-        <p class="fs-xl">{{tab.subtitle|safe}}</p>
-        <ul class="list-unstyled">
-            {% for feature in tab.features %}
-            <li class="d-flex fw-semibold py-1 fs-5">
-            <img src="../../static/v102/svg/icon-check-primary.svg" width="12" alt="Icon" class="me-3">
-            {{feature}}
-            </li>
-            {% endfor %}
-        </ul>
-        </div>
-        <div class="col-lg-6 col-md-7 mt-2 mb-3 mt-md-3">
-        <img src="{{url_for('static',filename='v102/img/landing/2/{}'.format(tab.img))}}" class="d-block rounded-3 my-lg-2 mx-auto me-md-0" width="564" alt="Image">
-        </div>
-    </div>
-    </div>
-    {% endfor %}
-
-</div>
-</section>
-
-<section id="for-all-sizes" class="container">
-<div class="bg-dark bg-size-cover bg-position-center bg-repeat-0 position-relative overflow-hidden rounded-3 py-lg-3 py-xl-5 px-4 px-lg-5 px-xl-0" style="background-image: url(assets/img/landing/saas-3/cta-bg.jpg);" data-bs-theme="dark">
-    <div class="row position-relative zindex-2 py-5 my-1 my-md-3">
-    <div class="col-md-6">
-        <div class="mx-auto" style="max-width: 440px;">
-        <h2 class="display-4 pb-1 pb-md-3 pb-lg-4">{{lang_data.page.sections.third.title}}</h2>
-        <p class="fs-md text-white">{{lang_data.page.sections.third.subtitle}}</p>
-
-        <div class="border border-primary rounded-4 p-3 fs-lg d-md-none">
-            <div class="ps-2 ms-1">
-            <h3 class="h5 mb-3 mt-3">{{lang_data.page.sections.third.sections.0.title}}</h3>
-            <p class="mb-0 text-light">{{lang_data.page.sections.third.sections.0.desc}}</p>
-            </div>
-        </div>
-
-        <div class="mt-4 border border-primary rounded-4 p-3 fs-lg d-md-none">
-            <div class="ps-2 ms-1">
-            <h3 class="h5 mb-3 mt-3">{{lang_data.page.sections.third.sections.1.title}}</h3>
-            <p class="mb-0 text-light">{{lang_data.page.sections.third.sections.1.desc}}</p>
-            </div>
-        </div>
-
-        <a href="{{url_for('public_{}.experiences_demo'.format(session.lang[0:2]))}}" class="mt-4 btn btn-lg btn-primary shadow-primary w-100 w-sm-auto">{{lang_data.page.sections.third.button}}</a>
-        </div>
-    </div>
-    <div class="col-md-6 pt-lg-3 pt-xl-4" style="max-width: 560px;">
-        <div class="border border-primary rounded-4 p-3 fs-lg d-none d-md-block">
-        <div class="ps-2 ms-1">
-            <h3 class="h5 mb-3 mt-3">{{lang_data.page.sections.third.sections.0.title}}</h3>
-            <p class="mb-0 text-light">{{lang_data.page.sections.third.sections.0.desc}}</p>
-        </div>
-        </div>
-
-        <div class="mt-4 border border-primary rounded-4 p-3 fs-lg d-none d-md-block">
-        <div class="ps-2 ms-1">
-            <h3 class="h5 mb-3 mt-3">{{lang_data.page.sections.third.sections.1.title}}</h3>
-            <p class="mb-0 text-light">{{lang_data.page.sections.third.sections.1.desc}}</p>
-        </div>
-        </div>
-    </div>
-    </div>
-</div>
-</section>
-
-<section id="collaborative" class="container">
-<div class="row align-items-center pt-3 pt-sm-4 pt-md-0 px-3 px-sm-4 px-lg-0">
-    <div class="col col-lg-6 mt-2 mb-3 mt-md-3">
-    <img src="{{url_for('static',filename='v102/img/landing/img-section-4.svg')}}" class="d-block rounded-3 my-lg-2 mx-auto me-md-0" width="600" alt="Image">
-    </div>
-    <div class="col-12 col-lg-6 text-center text-md-start">
-    <h2 class="display-xxl-4 mb-lg-4">{{lang_data.page.sections.fourth.title|safe}}</h2>
-    <p class="fs-md">{{lang_data.page.sections.fourth.subtitle|safe}}</p>
-    <div class="card shadow">
-        <div class="card-body">
-        <div id="title" class="d-flex">
-            <img src="{{url_for('static',filename='v102/svg/icon-check.svg')}}" width="24" alt="Icon" />
-            <h3 class="ms-3 fs-5 mb-0">{{lang_data.page.sections.fourth.features.0.title|safe}}</h3>
-        </div>
-        <div class="mt-4 fs-md">
-            {{lang_data.page.sections.fourth.features.0.desc|safe}}
-        </div>
-        </div>
-    </div>
-    <div class="card shadow mt-4">
-        <div class="card-body">
-        <div id="title" class="d-flex">
-            <img src="{{url_for('static',filename='v102/svg/icon-check.svg')}}" width="24" alt="Icon" />
-            <h3 class="ms-3 fs-5 mb-0">{{lang_data.page.sections.fourth.features.1.title|safe}}</h3>
-        </div>
-        <div class="mt-4 fs-md">
-            {{lang_data.page.sections.fourth.features.1.desc|safe}}
-        </div>
-        </div>
-    </div>
-    </div>
-</div>
-</section>
-
-<section id="statistics" class="container">
-<div class="row justify-content-between">
-    {% for statistic in lang_data.page.sections.fifth.statistics %}
-    <div class="col {{statistic.bg}} text-center rounded-4 m-2">
-    <div class="p-3">
-        <img src="{{url_for('static',filename='v102/svg/{}'.format(statistic.icon))}}" width="60" alt="Icon" />
-        <h2 class="mt-3">{{statistic.title}}</h2>
-        <p>{{statistic.desc|safe}}</p>
-    </div>
-    </div>
-    {% endfor %}
-</div>
-</section>
-
-<section id="map" class="container">
-</section>
-
-<section id="business" class="position-relative container mb-0">
-    <div class="text-center pb-3 pb-lg-4">
-      <h2 class="display-4 mb-2">{{lang_data.page.sections.seventh.title}}</h2>
->>>>>>> 353c311599c35e239451c55a2f3251d1f6eb64f8
       <p class="fs-xl">{{lang_data.page.sections.seventh.subtitle}}</p>
     </div>
 
@@ -564,11 +288,7 @@
     <ul class="mt-4 nav nav-tabs flex-nowrap justify-content-lg-center overflow-auto pb-2 mb-3 mb-lg-4" role="tablist">
       {% for sector in lang_data.page.sections.seventh.sectors %}
       <li class="nav-item" role="presentation">
-<<<<<<< HEAD
         <button class="me-3 fs-6 fw-normal nav-link text-nowrap {{ 'active' if 'status' in sector }}" id="{{sector.title.replace(' ','-')}}-tab" data-bs-toggle="tab" data-bs-target="#{{sector.title.replace(' ','-')}}" type="button" role="tab" aria-controls="{{sector.title.replace(' ','-')}}" aria-selected="true">
-=======
-        <button class="nav-link text-nowrap {{ 'active' if 'status' in sector }}" id="{{sector.title.replace(' ','-')}}-tab" data-bs-toggle="tab" data-bs-target="#{{sector.title.replace(' ','-')}}" type="button" role="tab" aria-controls="{{sector.title.replace(' ','-')}}" aria-selected="true">
->>>>>>> 353c311599c35e239451c55a2f3251d1f6eb64f8
           {{sector.title}}
         </button>
       </li>
@@ -576,34 +296,22 @@
     </ul>
 
     <!-- Tab panes -->
-<<<<<<< HEAD
     <div class="tab-content rounded-3 py-4" style="background-color: #EDF8FF;">
-=======
-    <div class="tab-content bg-secondary rounded-3 py-4">
->>>>>>> 353c311599c35e239451c55a2f3251d1f6eb64f8
 
       {% for sector in lang_data.page.sections.seventh.sectors %}
       <div class="tab-pane fade {{ 'show active' if 'status' in sector }}" id="{{sector.title.replace(' ','-')}}" role="tabpanel" aria-labelledby="{{sector.title.replace(' ','-')}}-tab">
         <div class="row align-items-center pt-3 pt-sm-4 pt-md-0 px-3 px-sm-4 px-lg-0">
           <div class="col-lg-4 col-md-5 offset-lg-1 text-center text-md-start">
             <h3 class="mb-lg-4">{{sector.title}}</h3>
-<<<<<<< HEAD
             <p class="fs-5">{{sector.desc|safe}}</p>
           </div>
           <div class="col-lg-6 col-md-7 mt-2 mb-3 mt-md-3">
             <img src="https://cdn-static.globodain.com/ms/landing-{{sector.img}}" class="d-block rounded-4 my-lg-2 mx-auto me-md-0" width="400" alt="Image">
-=======
-            <p>{{sector.desc|safe}}</p>
-          </div>
-          <div class="col-lg-6 col-md-7 mt-2 mb-3 mt-md-3">
-            <img src="{{url_for('static',filename='v102/img/landing/7/{}'.format(sector.img))}}" class="d-block rounded-4 my-lg-2 mx-auto me-md-0" width="400" alt="Image">
->>>>>>> 353c311599c35e239451c55a2f3251d1f6eb64f8
           </div>
         </div>
       </div>
       {% endfor %}
     </div>
-<<<<<<< HEAD
   </section>
 
   <section class="position-relative pt-lg-4 pt-xl-5">
@@ -745,7 +453,4 @@
 
   </section>
 </main>
-=======
-</section>
->>>>>>> 353c311599c35e239451c55a2f3251d1f6eb64f8
 {% endblock %}
